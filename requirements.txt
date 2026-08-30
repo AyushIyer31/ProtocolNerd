@@ -1,0 +1,23 @@
+fastapi==0.115.10
+uvicorn==0.29.0
+sse-starlette==2.2.1
+starlette==0.46.0
+python-multipart==0.0.20
+python-dotenv==1.0.1
+pydantic==2.7.0
+openai>=1.52.0
+anthropic>=0.69.0
+pymupdf==1.25.3
+beautifulsoup4==4.13.3
+scikit-learn==1.6.1
+certifi>=2024.8.30
+# Dense (embedding) retrieval fused with TF-IDF. ONNX Runtime, NOT torch: the CPU
+# torch wheel would add ~1GB to the image and a large resident footprint, and the
+# task runs on 1 vCPU / 2GB. Only ever embeds one short query at runtime.
+onnxruntime>=1.20.0
+tokenizers>=0.20.0
+huggingface_hub>=0.26.0
+
+# Durable query-log persistence to S3 (query_logger.py). Optional at runtime:
+# no bucket configured => local-file logging only.
+boto3>=1.34.0

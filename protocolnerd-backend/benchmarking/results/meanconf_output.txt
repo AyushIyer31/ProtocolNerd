@@ -1,0 +1,4 @@
+Observed mean: 0.46
+We have 90.0 % confidence that the true mean is between: 0.38 and 0.54
+***** Bias Corrected Confidence Interval *****
+We have 90.0 % confidence that the true mean is between: 0.37 and 0.53

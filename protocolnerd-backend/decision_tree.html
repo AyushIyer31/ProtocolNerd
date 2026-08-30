@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProtocolsNerd — Decision Tree</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #0f1117;
+    color: #c9d1d9;
+    line-height: 1.6;
+    padding: 32px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #e6edf3;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    text-align: center;
+    color: #7d8590;
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  /* ── Section tabs ── */
+  .tab-bar {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+
+  .tab-btn {
+    background: #161b22;
+    border: 1px solid #30363d;
+    color: #8b949e;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s;
+  }
+
+  .tab-btn:hover { background: #1c2129; color: #c9d1d9; }
+  .tab-btn.active { background: #1f6feb; border-color: #1f6feb; color: #fff; }
+
+  .section { display: none; }
+  .section.active { display: block; }
+
+  /* ── Flow diagram ── */
+  .flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .flow-node {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 16px 24px;
+    max-width: 620px;
+    width: 100%;
+    position: relative;
+  }
+
+  .flow-node h3 {
+    font-size: 14px;
+    color: #e6edf3;
+    margin-bottom: 6px;
+  }
+
+  .flow-node p {
+    font-size: 12px;
+    color: #8b949e;
+  }
+
+  .flow-node.highlight { border-color: #1f6feb; background: #111a2e; }
+  .flow-node.warn { border-color: #d29922; background: #1c1a11; }
+  .flow-node.success { border-color: #238636; background: #0d1f0d; }
+  .flow-node.gate { border-color: #f85149; background: #200d0d; }
+
+  .flow-arrow {
+    width: 2px;
+    height: 28px;
+    background: #30363d;
+    position: relative;
+  }
+
+  .flow-arrow::after {
+    content: '▼';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #30363d;
+    font-size: 10px;
+  }
+
+  .flow-arrow-label {
+    color: #58a6ff;
+    font-size: 11px;
+    text-align: center;
+    padding: 2px 0;
+  }
+
+  .step-num {
+    display: inline-block;
+    background: #1f6feb;
+    color: #fff;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 22px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-right: 8px;
+  }
+
+  /* ── Decision tree ── */
+  .tree {
+    padding-left: 0;
+  }
+
+  .tree-node {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 8px;
+    position: relative;
+  }
+
+  .tree-node .question {
+    color: #58a6ff;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .tree-branches {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  .tree-branch {
+    flex: 1;
+    min-width: 200px;
+    background: #0d1117;
+    border: 1px solid #21262d;
+    border-radius: 6px;
+    padding: 10px 14px;
+  }
+
+  .tree-branch .branch-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .tree-branch .branch-label.yes { color: #3fb950; }
+  .tree-branch .branch-label.no { color: #f85149; }
+
+  .tree-branch .result {
+    font-size: 12px;
+    color: #c9d1d9;
+  }
+
+  .result-intent {
+    display: inline-block;
+    background: #1f6feb22;
+    border: 1px solid #1f6feb55;
+    color: #58a6ff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    font-family: 'SFMono-Regular', monospace;
+  }
+
+  /* ── Priority chain ── */
+  .priority-chain {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .priority-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .priority-num {
+    background: #30363d;
+    color: #e6edf3;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .priority-rule {
+    flex: 1;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .priority-condition {
+    font-size: 12px;
+    color: #c9d1d9;
+    flex: 1;
+  }
+
+  .priority-condition code {
+    background: #0d1117;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 11px;
+    color: #f0883e;
+  }
+
+  .priority-result {
+    flex-shrink: 0;
+  }
+
+  .priority-connector {
+    width: 2px;
+    height: 12px;
+    background: #30363d;
+    margin-left: 13px;
+  }
+
+  /* ── Clarification cards ── */
+  .clar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 16px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .clar-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .clar-card h3 {
+    font-size: 14px;
+    color: #58a6ff;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .clar-card h3 .clar-intent {
+    font-size: 11px;
+    background: #1f6feb22;
+    border: 1px solid #1f6feb44;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+  }
+
+  .clar-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .clar-step-num {
+    background: #21262d;
+    color: #8b949e;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .clar-step-num.filled { background: #238636; color: #fff; }
+
+  .clar-field {
+    font-size: 12px;
+    color: #c9d1d9;
+  }
+
+  .clar-field strong { color: #e6edf3; }
+
+  .clar-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 4px;
+  }
+
+  .clar-option {
+    background: #0d1117;
+    border: 1px solid #21262d;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    color: #8b949e;
+  }
+
+  /* ── Search gate ── */
+  .gate-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+
+  .gate-table th {
+    background: #161b22;
+    color: #e6edf3;
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 12px;
+    border-bottom: 2px solid #30363d;
+  }
+
+  .gate-table td {
+    padding: 10px 14px;
+    font-size: 12px;
+    border-bottom: 1px solid #21262d;
+    vertical-align: top;
+  }
+
+  .gate-table tr:hover td { background: #161b2288; }
+
+  .field-tag {
+    display: inline-block;
+    background: #21262d;
+    color: #c9d1d9;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-family: monospace;
+    margin: 1px 2px;
+  }
+
+  .field-tag.required { border: 1px solid #f8514966; color: #f85149; }
+  .field-tag.or { background: none; color: #7d8590; font-family: inherit; }
+
+  /* ── Organism system ── */
+  .org-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .org-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 14px;
+  }
+
+  .org-card h4 {
+    font-size: 13px;
+    color: #e6edf3;
+    margin-bottom: 6px;
+  }
+
+  .org-terms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+  }
+
+  .org-term {
+    background: #0d1117;
+    border: 1px solid #21262d;
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    color: #8b949e;
+    font-family: monospace;
+  }
+
+  /* ── Example traces ── */
+  .trace {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 16px;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .trace h3 {
+    font-size: 13px;
+    color: #e6edf3;
+    margin-bottom: 4px;
+  }
+
+  .trace .trace-query {
+    background: #0d1117;
+    border: 1px solid #21262d;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #f0883e;
+    font-style: italic;
+    margin-bottom: 12px;
+  }
+
+  .trace-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .trace-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .trace-icon.pass { background: #238636; color: #fff; }
+  .trace-icon.fail { background: #f85149; color: #fff; }
+  .trace-icon.info { background: #1f6feb; color: #fff; }
+  .trace-icon.warn { background: #d29922; color: #fff; }
+
+  .trace-text {
+    font-size: 12px;
+    color: #c9d1d9;
+  }
+
+  .trace-text code {
+    background: #0d1117;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 11px;
+    color: #79c0ff;
+  }
+
+  /* ── Section headers ── */
+  .section-header {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .section-header h2 {
+    font-size: 20px;
+    color: #e6edf3;
+    margin-bottom: 4px;
+  }
+
+  .section-header p {
+    color: #7d8590;
+    font-size: 13px;
+  }
+
+  /* ── Legend ── */
+  .legend {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: #8b949e;
+  }
+
+  .legend-swatch {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    border: 1px solid;
+  }
+
+  .legend-swatch.blue { background: #111a2e; border-color: #1f6feb; }
+  .legend-swatch.yellow { background: #1c1a11; border-color: #d29922; }
+  .legend-swatch.green { background: #0d1f0d; border-color: #238636; }
+  .legend-swatch.red { background: #200d0d; border-color: #f85149; }
+  .legend-swatch.default { background: #161b22; border-color: #30363d; }
+</style>
+</head>
+<body>
+
+<h1>ProtocolsNerd Decision Tree</h1>
+<p class="subtitle">Rule-based intent classification, clarification, search gating, and LLM re-ranking</p>
+
+<div class="tab-bar">
+  <button class="tab-btn active" onclick="showSection('full-flow')">Full Flow</button>
+  <button class="tab-btn" onclick="showSection('intent-rules')">Intent Rules</button>
+  <button class="tab-btn" onclick="showSection('overexpression-guard')">Overexpression Guard</button>
+  <button class="tab-btn" onclick="showSection('organism-system')">Organism System</button>
+  <button class="tab-btn" onclick="showSection('clarification')">Clarification Priority</button>
+  <button class="tab-btn" onclick="showSection('search-gate')">Search Gate</button>
+  <button class="tab-btn" onclick="showSection('examples')">Example Traces</button>
+</div>
+
+<!-- ════════════════════════════════════════════ FULL FLOW ════════════════════════════════════════════ -->
+<div id="full-flow" class="section active">
+  <div class="section-header">
+    <h2>Request Flow</h2>
+    <p>Every user query follows this 9-step pipeline</p>
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><div class="legend-swatch blue"></div> LLM step</div>
+    <div class="legend-item"><div class="legend-swatch yellow"></div> Validation</div>
+    <div class="legend-item"><div class="legend-swatch red"></div> Gate / block</div>
+    <div class="legend-item"><div class="legend-swatch green"></div> Output</div>
+    <div class="legend-item"><div class="legend-swatch default"></div> Processing</div>
+  </div>
+
+  <div class="flow">
+    <div class="flow-node">
+      <h3><span class="step-num">0</span>User sends query</h3>
+      <p>Natural-language biology request enters the /chat endpoint</p>
+    </div>
+
+    <div class="flow-arrow"></div>
+
+    <div class="flow-node highlight">
+      <h3><span class="step-num">1</span>LLM extraction (Claude Sonnet 4.6)</h3>
+      <p>Best-effort structured JSON: intent, profile fields, clarifying question, candidate queries. <strong>May fail or hallucinate</strong> — treated as suggestion only.</p>
+    </div>
+
+    <div class="flow-arrow"></div>
+
+    <div class="flow-node warn">
+      <h3><span class="step-num">2</span>Rule-based validation</h3>
+      <p>Regex intent classification (priority chain). Overexpression guard. Extract organism, target, tissue, stress, multiplex. <strong>Overrides bad LLM output.</strong></p>
+    </div>
+
+    <div class="flow-arrow"></div>
+
+    <div class="flow-node">
+      <h3><span class="step-num">3</span>Chitchat check</h3>
+      <p>If intent = chitchat and no active experiment context → return friendly reply, no search.</p>
+    </div>
+
+    <div class="flow-arrow"></div>
+    <div class="flow-arrow-label">not chitchat</div>
+
+    <div class="flow-node gate">
+      <h3><span class="step-num">4</span>Clarification check</h3>
+      <p>Walk the priority list for the current sub-intent. First missing required field → return question + options to user. <strong>Blocks search until answered.</strong></p>
+    </div>
+
+    <div class="flow-arrow"></div>
+    <div class="flow-arrow-label">all required fields filled</div>
+
+    <div class="flow-node gate">
+      <h3><span class="step-num">5</span>Search gate</h3>
+      <p>can_generate_search_queries() checks that critical fields exist for this intent. If not ready → ask the next clarification.</p>
+    </div>
+
+    <div class="flow-arrow"></div>
+    <div class="flow-arrow-label">gate passed</div>
+
+    <div class="flow-node">
+      <h3><span class="step-num">6</span>Generate candidate queries</h3>
+      <p>LLM queries (filtered for concept preservation) + rule-based template queries → merge + dedup → max 5 candidates. User selects, edits, or searches all.</p>
+    </div>
+
+    <div class="flow-arrow"></div>
+    <div class="flow-arrow-label">user confirms</div>
+
+    <div class="flow-node">
+      <h3><span class="step-num">7</span>Retrieve candidates (both sources)</h3>
+      <p><strong>protocols.io</strong> — Live: concept expansion → protocols.io API. Local (default): TF-IDF over the 22,687-protocol index.<br>
+      <strong>PubMed</strong> — ONE batched <strong>Claude Haiku</strong> call writes a <em>precise</em> + <em>broad</em> search query for every selected angle, keeping the species / technique / sample / target that a rule-based trim used to throw away. Each angle walks a <strong>0-hit ladder</strong> (precise → broad → relaxed → token core) so a rare topic still returns something.</p>
+    </div>
+
+    <div class="flow-arrow"></div>
+
+    <div class="flow-node highlight">
+      <h3><span class="step-num">8</span>Rank → re-rank pass 1 (Claude Haiku 4.5)</h3>
+      <p><strong>a.</strong> Deterministic profile-aware <strong>base ranking</strong> (multi-signal: organism → title → relevance, false-positive penalties). <strong>b.</strong> LLM <strong>re-ranker — ON by default</strong>: Claude Haiku 4.5 re-orders the protocols.io shortlist (profile top-15 ∪ lexical top-15, ~20–30 candidates) by how directly each result helps <em>run</em> the experiment → <strong>top 10 protocols</strong>. Falls back to the base order on any failure, so it can never rank worse than without it. Per-request override via <code>enable_reranker</code>.</p>
+    </div>
+
+    <div class="flow-arrow"></div>
+
+    <div class="flow-node success">
+      <h3><span class="step-num">9</span>Joint re-rank pass 2 + return</h3>
+      <p>Haiku weighs those <strong>10 protocols against up to 5 PubMed papers together in one pass</strong> and keeps the <strong>best 10</strong>. <strong>No slots are reserved</strong> — a paper appears only if it out-competes a protocol, so a page runs anywhere from 10+0 to 5+5 (measured: 2.6 papers on average, ≥1 paper on 85 of 100 held-out questions). This joint order is what the user sees — it persists through the profile ranking, which only annotates + gates. Return top-K + per-result "why it matches / may not fit" explanations.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════ INTENT RULES ════════════════════════════════════════════ -->
+<div id="intent-rules" class="section">
+  <div class="section-header">
+    <h2>Intent Classification Priority Chain</h2>
+    <p>Rules are evaluated top-to-bottom. First match wins.</p>
+  </div>
+
+  <div class="priority-chain">
+    <div class="priority-row">
+      <div class="priority-num">1</div>
+      <div class="priority-rule">
+        <div class="priority-condition">
+          Contains <code>drought|salt|heat|cold|stress</code> AND <code>tolerance|resistance|phenotype|test</code>
+        </div>
+        <div class="priority-result"><span class="result-intent">stress_tolerance_assay</span></div>
+      </div>
+    </div>
+    <div class="priority-connector"></div>
+
+    <div class="priority-row">
+      <div class="priority-num">2</div>
+      <div class="priority-rule">
+        <div class="priority-condition">
+          Contains <code>more than one|multiple|simultaneously</code> AND <code>gene|target</code> AND <code>modify|edit|knock</code>
+        </div>
+        <div class="priority-result"><span class="result-intent">multiplex_gene_modification</span></div>
+      </div>
+    </div>
+    <div class="priority-connector"></div>
+
+    <div class="priority-row">
+      <div class="priority-num">3</div>
+      <div class="priority-rule">
+        <div class="priority-condition">
+          Contains <code>overexpress|overexpression|forced expression|ectopic expression</code>
+        </div>
+        <div class="priority-result"><span class="result-intent">gene_overexpression</span></div>
+      </div>
+    </div>
+    <div class="priority-connector"></div>
+
+    <div class="priority-row">
+      <div class="priority-num">4</div>
+      <div class="priority-rule">
+        <div class="priority-condition">
+          Contains <code>knockdown|silencing|siRNA|shRNA|RNAi|VIGS</code>
+        </div>
+        <div class="priority-result"><span class="result-intent">gene_knockdown</span></div>
+      </div>
+    </div>
+    <div class="priority-connector"></div>
+
+    <div class="priority-row">
+      <div class="priority-num">5</div>
+      <div class="priority-rule">
+        <div class="priority-condition">
+          Contains <code>CRISPR|Cas9|Cas12|base editing|prime editing|gRNA</code>
+        </div>
+        <div class="priority-result"><span class="result-intent">genome_editing</span></div>
+      </div>
+    </div>
+    <div class="priority-connector"></div>
+
+    <div class="priority-row">
+      <div class="priority-num">6</div>
+      <div class="priority-rule">
+        <div class="priority-condition">
+          Contains <code>gene modification|modify genes|modified genes|genome editing</code> — without overexpress terms
+        </div>
+        <div class="priority-result"><span class="result-intent">gene_modification</span></div>
+      </div>
+    </div>
+    <div class="priority-connector"></div>
+
+    <div class="priority-row">
+      <div class="priority-num">7</div>
+      <div class="priority-rule">
+        <div class="priority-condition">
+          LLM returned a valid sub-intent → normalize to controlled value
+        </div>
+        <div class="priority-result"><span class="result-intent">llm_suggestion</span></div>
+      </div>
+    </div>
+    <div class="priority-connector"></div>
+
+    <div class="priority-row">
+      <div class="priority-num">8</div>
+      <div class="priority-rule">
+        <div class="priority-condition">
+          Profile has <code>experimental_method</code> set → derive sub-intent from method
+        </div>
+        <div class="priority-result"><span class="result-intent">from_profile</span></div>
+      </div>
+    </div>
+    <div class="priority-connector"></div>
+
+    <div class="priority-row">
+      <div class="priority-num">∅</div>
+      <div class="priority-rule" style="border-color: #f8514966;">
+        <div class="priority-condition">None matched</div>
+        <div class="priority-result"><span class="result-intent">unknown</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════ OVEREXPRESSION GUARD ════════════════════════════════════════════ -->
+<div id="overexpression-guard" class="section">
+  <div class="section-header">
+    <h2>Overexpression Guard Rule</h2>
+    <p>"modified genes" ≠ overexpression — this is the core disambiguation rule</p>
+  </div>
+
+  <div style="max-width: 650px; margin: 0 auto;">
+    <div class="tree-node">
+      <div class="question">Does the query contain "modified genes", "genes are modified", or "gene modification"?</div>
+      <div class="tree-branches">
+        <div class="tree-branch">
+          <div class="branch-label yes">YES</div>
+          <div class="result">
+            <div class="tree-node" style="margin-top: 8px; margin-bottom: 0;">
+              <div class="question">Does it also contain "overexpress", "overexpression", "forced expression", or "ectopic expression"?</div>
+              <div class="tree-branches">
+                <div class="tree-branch">
+                  <div class="branch-label yes">YES</div>
+                  <div class="result"><span class="result-intent">gene_overexpression</span><br><span style="font-size:11px; color:#8b949e;">Explicit — user said overexpress</span></div>
+                </div>
+                <div class="tree-branch">
+                  <div class="branch-label no">NO</div>
+                  <div class="result"><span class="result-intent">gene_modification</span><br><span style="font-size:11px; color:#8b949e;">Ambiguous — ask modification_type</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tree-branch">
+          <div class="branch-label no">NO</div>
+          <div class="result" style="color: #8b949e;">Continue normal classification chain</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 24px;">
+      <div class="tree-node">
+        <div class="question">Modification Type Upgrade: when user answers the clarification</div>
+        <div style="margin-top: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="clar-option" style="font-size:11px;">CRISPR / genome editing</span>
+            <span style="color:#30363d;">→</span>
+            <span class="result-intent">genome_editing</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="clar-option" style="font-size:11px;">overexpression</span>
+            <span style="color:#30363d;">→</span>
+            <span class="result-intent">gene_overexpression</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="clar-option" style="font-size:11px;">knockdown / silencing</span>
+            <span style="color:#30363d;">→</span>
+            <span class="result-intent">gene_knockdown</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="clar-option" style="font-size:11px;">mutation / mutagenesis</span>
+            <span style="color:#30363d;">→</span>
+            <span class="result-intent">mutagenesis</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="clar-option" style="font-size:11px;">stable transformation</span>
+            <span style="color:#30363d;">→</span>
+            <span class="result-intent">transformation</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="clar-option" style="font-size:11px;">not sure</span>
+            <span style="color:#30363d;">→</span>
+            <span class="result-intent">gene_modification</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════ ORGANISM SYSTEM ════════════════════════════════════════════ -->
+<div id="organism-system" class="section">
+  <div class="section-header">
+    <h2>Organism System Classification</h2>
+    <p>Filters clarification options based on what the profile already implies</p>
+  </div>
+
+  <div class="org-grid">
+    <div class="org-card">
+      <h4 style="color:#3fb950;">🌱 plant</h4>
+      <div class="org-terms">
+        <span class="org-term">arabidopsis</span><span class="org-term">rice</span><span class="org-term">maize</span>
+        <span class="org-term">tobacco</span><span class="org-term">nicotiana</span><span class="org-term">wheat</span>
+        <span class="org-term">tomato</span><span class="org-term">in planta</span><span class="org-term">leaf</span>
+        <span class="org-term">callus</span><span class="org-term">protoplast</span><span class="org-term">bean</span>
+        <span class="org-term">pumpkin</span><span class="org-term">potato</span><span class="org-term">pea</span>
+      </div>
+    </div>
+    <div class="org-card">
+      <h4 style="color:#f0883e;">🐛 insect</h4>
+      <div class="org-terms">
+        <span class="org-term">drosophila</span><span class="org-term">fruit fly</span><span class="org-term">mosquito</span>
+        <span class="org-term">anopheles</span><span class="org-term">aedes</span><span class="org-term">silkworm</span>
+        <span class="org-term">bombyx</span><span class="org-term">insect</span>
+      </div>
+    </div>
+    <div class="org-card">
+      <h4 style="color:#58a6ff;">🐟 fish</h4>
+      <div class="org-terms">
+        <span class="org-term">zebrafish</span><span class="org-term">danio rerio</span><span class="org-term">medaka</span>
+        <span class="org-term">fish</span>
+      </div>
+    </div>
+    <div class="org-card">
+      <h4 style="color:#d2a8ff;">🪱 worm</h4>
+      <div class="org-terms">
+        <span class="org-term">c. elegans</span><span class="org-term">caenorhabditis</span><span class="org-term">planaria</span>
+        <span class="org-term">nematode</span><span class="org-term">worm</span>
+      </div>
+    </div>
+    <div class="org-card">
+      <h4 style="color:#79c0ff;">🐸 amphibian</h4>
+      <div class="org-terms">
+        <span class="org-term">xenopus</span><span class="org-term">frog</span><span class="org-term">axolotl</span>
+        <span class="org-term">amphibian</span><span class="org-term">newt</span>
+      </div>
+    </div>
+    <div class="org-card">
+      <h4 style="color:#f85149;">🐭 mammalian_in_vivo</h4>
+      <div class="org-terms">
+        <span class="org-term">mouse</span><span class="org-term">mice</span><span class="org-term">rat</span>
+        <span class="org-term">animal</span><span class="org-term">in vivo</span><span class="org-term">rabbit</span>
+        <span class="org-term">hamster</span><span class="org-term">pig</span><span class="org-term">primate</span>
+      </div>
+    </div>
+    <div class="org-card">
+      <h4 style="color:#ff7b72;">🧫 mammalian_cells</h4>
+      <div class="org-terms">
+        <span class="org-term">human</span><span class="org-term">homo sapiens</span><span class="org-term">mammalian</span>
+        <span class="org-term">HeLa</span><span class="org-term">HEK293</span><span class="org-term">Jurkat</span>
+      </div>
+    </div>
+    <div class="org-card">
+      <h4 style="color:#d29922;">🦠 bacteria</h4>
+      <div class="org-terms">
+        <span class="org-term">e. coli</span><span class="org-term">escherichia coli</span><span class="org-term">bacteria</span>
+        <span class="org-term">agrobacterium</span>
+      </div>
+    </div>
+    <div class="org-card">
+      <h4 style="color:#a5d6ff;">🍄 yeast</h4>
+      <div class="org-terms">
+        <span class="org-term">saccharomyces</span><span class="org-term">pichia</span><span class="org-term">yeast</span>
+        <span class="org-term">schizosaccharomyces</span>
+      </div>
+    </div>
+    <div class="org-card">
+      <h4 style="color:#7ee787;">🍄 fungi</h4>
+      <div class="org-terms">
+        <span class="org-term">aspergillus</span><span class="org-term">neurospora</span><span class="org-term">fungus</span>
+        <span class="org-term">trichoderma</span><span class="org-term">penicillium</span>
+      </div>
+    </div>
+    <div class="org-card">
+      <h4 style="color:#56d364;">🌿 algae</h4>
+      <div class="org-terms">
+        <span class="org-term">chlamydomonas</span><span class="org-term">chlorella</span><span class="org-term">algae</span>
+        <span class="org-term">spirulina</span><span class="org-term">cyanobacteria</span>
+      </div>
+    </div>
+    <div class="org-card">
+      <h4 style="color:#8b949e;">🧪 cell_free</h4>
+      <div class="org-terms">
+        <span class="org-term">cell-free</span><span class="org-term">in vitro transcription</span><span class="org-term">lysate</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════ CLARIFICATION ════════════════════════════════════════════ -->
+<div id="clarification" class="section">
+  <div class="section-header">
+    <h2>Clarification Priority</h2>
+    <p>Each intent has an ordered list of fields to ask about. First missing field → ask user.</p>
+  </div>
+
+  <div class="clar-grid">
+    <div class="clar-card">
+      <h3><span class="clar-intent">gene_modification</span></h3>
+      <div class="clar-step"><div class="clar-step-num">1</div><div class="clar-field"><strong>modification_type</strong><br>"What kind of gene modification?"<div class="clar-options"><span class="clar-option">CRISPR</span><span class="clar-option">overexpression</span><span class="clar-option">knockdown</span><span class="clar-option">mutagenesis</span><span class="clar-option">stable transformation</span></div></div></div>
+      <div class="clar-step"><div class="clar-step-num">2</div><div class="clar-field"><strong>organism</strong> — context-aware options</div></div>
+      <div class="clar-step"><div class="clar-step-num">3</div><div class="clar-field"><strong>tissue_or_cell_type</strong> — context-aware options</div></div>
+      <div class="clar-step"><div class="clar-step-num">4</div><div class="clar-field"><strong>delivery_method</strong></div></div>
+      <div class="clar-step"><div class="clar-step-num">5</div><div class="clar-field"><strong>readout_assay</strong></div></div>
+    </div>
+
+    <div class="clar-card">
+      <h3><span class="clar-intent">multiplex_gene_modification</span></h3>
+      <div class="clar-step"><div class="clar-step-num">1</div><div class="clar-field"><strong>modification_type</strong></div></div>
+      <div class="clar-step"><div class="clar-step-num">2</div><div class="clar-field"><strong>organism</strong></div></div>
+      <div class="clar-step"><div class="clar-step-num">3</div><div class="clar-field"><strong>target</strong><br>"What gene targets?"<div class="clar-options"><span class="clar-option">transcription factors</span><span class="clar-option">two named genes</span><span class="clar-option">gene family</span></div></div></div>
+      <div class="clar-step"><div class="clar-step-num">4</div><div class="clar-field"><strong>tissue_or_cell_type</strong></div></div>
+      <div class="clar-step"><div class="clar-step-num">5</div><div class="clar-field"><strong>delivery_method</strong></div></div>
+      <div class="clar-step"><div class="clar-step-num">6</div><div class="clar-field"><strong>readout_assay</strong></div></div>
+    </div>
+
+    <div class="clar-card">
+      <h3><span class="clar-intent">stress_tolerance_assay</span></h3>
+      <div class="clar-step"><div class="clar-step-num">1</div><div class="clar-field"><strong>organism</strong><br>Context-aware (defaults to plant options for stress)</div></div>
+      <div class="clar-step"><div class="clar-step-num">2</div><div class="clar-field"><strong>growth_stage</strong><br>"What growth stage?"<div class="clar-options"><span class="clar-option">seedlings</span><span class="clar-option">adult plants</span><span class="clar-option">leaf tissue</span></div></div></div>
+      <div class="clar-step"><div class="clar-step-num">3</div><div class="clar-field"><strong>treatment_condition</strong><br>"What stress treatment?"<div class="clar-options"><span class="clar-option">drought stress</span><span class="clar-option">PEG/osmotic</span><span class="clar-option">withholding water</span></div></div></div>
+      <div class="clar-step"><div class="clar-step-num">4</div><div class="clar-field"><strong>readout_assay</strong><br>"How should tolerance be measured?"</div></div>
+    </div>
+
+    <div class="clar-card">
+      <h3><span class="clar-intent">protein_purification</span></h3>
+      <div class="clar-step"><div class="clar-step-num">1</div><div class="clar-field"><strong>expression_host</strong><br>"What expression host?"<div class="clar-options"><span class="clar-option">E. coli</span><span class="clar-option">yeast</span><span class="clar-option">mammalian</span><span class="clar-option">plant</span></div></div></div>
+      <div class="clar-step"><div class="clar-step-num">2</div><div class="clar-field"><strong>target</strong><br>"What protein or tag?"</div></div>
+      <div class="clar-step"><div class="clar-step-num">3</div><div class="clar-field"><strong>purification_method</strong></div></div>
+    </div>
+
+    <div class="clar-card">
+      <h3><span class="clar-intent">gene_overexpression</span></h3>
+      <div class="clar-step"><div class="clar-step-num">1</div><div class="clar-field"><strong>organism</strong> — context-aware</div></div>
+      <div class="clar-step"><div class="clar-step-num">2</div><div class="clar-field"><strong>expression_type</strong><br>"Stable or transient?"</div></div>
+      <div class="clar-step"><div class="clar-step-num">3</div><div class="clar-field"><strong>tissue_or_cell_type</strong></div></div>
+      <div class="clar-step"><div class="clar-step-num">4</div><div class="clar-field"><strong>readout_assay</strong></div></div>
+    </div>
+
+    <div class="clar-card">
+      <h3><span class="clar-intent">general / other intents</span></h3>
+      <div class="clar-step"><div class="clar-step-num">1</div><div class="clar-field"><strong>organism</strong> — context-aware</div></div>
+      <div class="clar-step"><div class="clar-step-num">2</div><div class="clar-field">Intent-specific field (readout for pcr_qpcr, tissue for microscopy, etc.)</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════ SEARCH GATE ════════════════════════════════════════════ -->
+<div id="search-gate" class="section">
+  <div class="section-header">
+    <h2>Search Gate</h2>
+    <p>Search queries are blocked until these critical fields are filled</p>
+  </div>
+
+  <table class="gate-table">
+    <thead>
+      <tr>
+        <th>Sub-intent</th>
+        <th>Required fields (all must be present)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="result-intent">gene_modification</span></td>
+        <td>
+          <span class="field-tag required">modification_type</span>
+          <span class="field-tag required">organism</span>
+          <span class="field-tag required">tissue_or_cell_type</span>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="result-intent">genome_editing</span></td>
+        <td>
+          <span class="field-tag required">modification_type</span>
+          <span class="field-tag required">organism</span>
+          <span class="field-tag required">tissue_or_cell_type</span>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="result-intent">multiplex_gene_modification</span></td>
+        <td>
+          <span class="field-tag required">modification_type</span>
+          <span class="field-tag required">organism</span>
+          <span class="field-tag required">tissue_or_cell_type</span>
+          <span class="field-tag required">target</span>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="result-intent">stress_tolerance_assay</span></td>
+        <td>
+          <span class="field-tag required">organism</span>
+          <span class="field-tag required">stress_type</span>
+          <span class="field-tag or">+</span>
+          <span class="field-tag required">growth_stage</span>
+          <span class="field-tag or">OR</span>
+          <span class="field-tag required">tissue</span>
+          <span class="field-tag or">OR</span>
+          <span class="field-tag required">readout</span>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="result-intent">protein_purification</span></td>
+        <td>
+          <span class="field-tag required">target</span>
+          <span class="field-tag or">OR</span>
+          <span class="field-tag required">protein_source</span>
+          <span class="field-tag or">OR</span>
+          <span class="field-tag required">expression_host</span>
+          <span class="field-tag or">OR</span>
+          <span class="field-tag required">organism</span>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="result-intent">gene_overexpression</span></td>
+        <td>
+          <span class="field-tag required">organism</span>
+          <span class="field-tag required">expression_type</span>
+          <span class="field-tag required">tissue_or_cell_type</span>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="result-intent">general / other</span></td>
+        <td>
+          <span class="field-tag required">method</span>
+          <span class="field-tag or">OR</span>
+          <span class="field-tag required">target</span>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="result-intent" style="border-color:#f8514955; color:#f85149;">unknown / chitchat</span></td>
+        <td style="color:#f85149; font-size:12px; font-weight:600;">ALWAYS BLOCKED</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ════════════════════════════════════════════ EXAMPLES ════════════════════════════════════════════ -->
+<div id="examples" class="section">
+  <div class="section-header">
+    <h2>Example Traces</h2>
+    <p>How the three target queries flow through the decision tree</p>
+  </div>
+
+  <div class="trace">
+    <h3>Test A</h3>
+    <div class="trace-query">"Find protocols that can allow in-planta tests in which genes are modified."</div>
+    <div class="trace-step"><div class="trace-icon warn">1</div><div class="trace-text">LLM may return <code>gene_overexpression</code> (WRONG)</div></div>
+    <div class="trace-step"><div class="trace-icon pass">2</div><div class="trace-text">Regex: "genes are modified" → <code>gene_modification</code> ✓ (no "overexpress" found)</div></div>
+    <div class="trace-step"><div class="trace-icon pass">2</div><div class="trace-text">Regex: "in planta" → <code>tissue = "in planta / whole plant"</code></div></div>
+    <div class="trace-step"><div class="trace-icon info">4</div><div class="trace-text"><code>modification_type = null</code> → ASK "What kind of gene modification?"</div></div>
+    <div class="trace-step"><div class="trace-icon fail">5</div><div class="trace-text">Search BLOCKED — missing modification_type</div></div>
+    <div class="trace-step"><div class="trace-icon fail">6</div><div class="trace-text"><code>candidate_search_queries = []</code></div></div>
+  </div>
+
+  <div class="trace">
+    <h3>Test B</h3>
+    <div class="trace-query">"Find protocols that allow more than one transcription factor to be modified at the same time for mice."</div>
+    <div class="trace-step"><div class="trace-icon pass">2</div><div class="trace-text">Regex: "more than one" + "transcription factor" + "modified" → <code>multiplex_gene_modification</code></div></div>
+    <div class="trace-step"><div class="trace-icon pass">2</div><div class="trace-text">Regex: "mice" → <code>organism = mouse</code></div></div>
+    <div class="trace-step"><div class="trace-icon pass">2</div><div class="trace-text">Target extraction: <code>target = "transcription factors"</code>, <code>multiplex = true</code></div></div>
+    <div class="trace-step"><div class="trace-icon info">4</div><div class="trace-text"><code>modification_type = null</code> → ASK "What kind of gene modification?"</div></div>
+    <div class="trace-step"><div class="trace-icon fail">5</div><div class="trace-text">Search BLOCKED — missing modification_type, tissue</div></div>
+  </div>
+
+  <div class="trace">
+    <h3>Test C</h3>
+    <div class="trace-query">"Find protocols that test for drought tolerance in Rice."</div>
+    <div class="trace-step"><div class="trace-icon pass">2</div><div class="trace-text">Regex: "drought" + "tolerance" → <code>stress_tolerance_assay</code></div></div>
+    <div class="trace-step"><div class="trace-icon pass">2</div><div class="trace-text">Regex: "rice" → <code>organism = rice</code></div></div>
+    <div class="trace-step"><div class="trace-icon pass">2</div><div class="trace-text">Auto-fill: <code>stress_type = drought</code>, <code>readout = "drought tolerance / phenotype"</code></div></div>
+    <div class="trace-step"><div class="trace-icon pass">5</div><div class="trace-text">Search gate PASSED (organism + stress_type + readout all present)</div></div>
+    <div class="trace-step"><div class="trace-icon info">4</div><div class="trace-text">Optional: may ask growth_stage for tighter results OR proceed to queries</div></div>
+    <div class="trace-step"><div class="trace-icon pass">6</div><div class="trace-text">Generates: <code>rice drought tolerance phenotyping</code>, <code>Oryza sativa drought stress assay</code>, ...</div></div>
+  </div>
+
+  <div class="trace">
+    <h3>Negative Test</h3>
+    <div class="trace-query">"genes are modified"</div>
+    <div class="trace-step"><div class="trace-icon pass">2</div><div class="trace-text">Regex: "genes are modified" matches → <code>gene_modification</code></div></div>
+    <div class="trace-step"><div class="trace-icon pass">2</div><div class="trace-text">No "overexpress" → NOT <code>gene_overexpression</code> ✓</div></div>
+    <div class="trace-step"><div class="trace-icon info">4</div><div class="trace-text">ASK modification_type first, then organism, then tissue</div></div>
+  </div>
+</div>
+
+<script>
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+
+</body>
+</html>

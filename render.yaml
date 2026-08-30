@@ -1,0 +1,75 @@
+services:
+  - type: web
+    name: protocolsnerd-backend
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: cd protocolnerd-backend && uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: EXECUTION_STRATEGY
+        value: agentic
+      # Claude (Sonnet) is the canonical default everywhere — hosted and local
+      # dev (local sets the same LLM_PROVIDER=claude in variables.env).
+      - key: LLM_PROVIDER
+        value: claude
+      - key: CLAUDE_MODEL
+        value: claude-sonnet-4-6
+      # Shipped ranking = "nerd_combined_reranked": Haiku re-ranks protocols.io and
+      # PubMed jointly and keeps the best K (no reserved slots), and Haiku also writes
+      # the PubMed query. These match the code defaults; set explicitly so prod config
+      # is self-documenting.
+      - key: ENABLE_RERANKER
+        value: "true"
+      - key: RERANK_COMBINED_PUBMED
+        value: "true"
+      - key: COMBINED_PUBMED_CANDIDATES
+        value: "5"
+      - key: RERANKER_MODEL
+        value: claude-haiku-4-5
+      # Widened first-stage shortlist (profile-top-N U lexical-top-N). 30/30 recovers
+      # best matches buried below the old 15/15 window: +0.023 nDCG@10 / +5pts >=1-best
+      # on held-out set #3, concentrated on ambiguous queries.
+      - key: RERANKER_SHORTLIST_PROFILE
+        value: "30"
+      - key: RERANKER_SHORTLIST_LEXICAL
+        value: "30"
+      - key: PUBMED_QUERY_MODEL
+        value: claude-haiku-4-5
+      # Dense (embedding) retrieval fused with TF-IDF via RRF. K=60 is the swept
+      # optimum: larger slices buy no extra reach and cost ordering quality.
+      # Multi-part queries 0.442 -> 0.506 nDCG@10 on held-out set #3.
+      - key: DENSE_FUSION
+        value: "1"
+      - key: DENSE_TOP_K
+        value: "60"
+      # Durable query logging: mirror the daily JSONL files to S3 so they survive task
+      # restarts (Fargate local disk is ephemeral). Bucket is private + encrypted.
+      - key: QUERY_LOGGING_ENABLED
+        value: "1"
+      - key: QUERY_LOG_S3_BUCKET
+        value: protocolsnerd-query-logs-921135845455
+      - key: QUERY_LOG_S3_PREFIX
+        value: query_logs/
+      # Query-log viewer open (no token). Anyone who reaches the app can read the logs —
+      # protect these paths at the edge (Cloudflare Access) since the app is public.
+      - key: QUERY_LOG_VIEWER_OPEN
+        value: "1"
+      - key: PROTOCOLS_IO_TOKEN
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+
+  - type: web
+    name: protocolsnerd-frontend
+    runtime: static
+    buildCommand: python3 scripts/write_frontend_env.py
+    staticPublishPath: protocolnerd-website
+    envVars:
+      - key: PROTOCOLSNERD_API_URL
+        fromService:
+          type: web
+          name: protocolsnerd-backend
+          envVarKey: RENDER_EXTERNAL_URL

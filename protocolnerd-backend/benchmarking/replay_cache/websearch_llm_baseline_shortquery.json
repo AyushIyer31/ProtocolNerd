@@ -1,0 +1,2326 @@
+{
+"21572423": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "21572423",
+"queries_issued": [
+"protocols.io basement membrane invasion C. elegans vulval integrin remodeling",
+"protocols.io C. elegans anchor cell basement membrane breach protocol",
+"protocols.io C. elegans anchor cell invasion integrin basement membrane gap imaging protocol",
+"protocols.io C. elegans vulval invasion fluorescence microscopy RNAi screen integrin laminin",
+"site:protocols.io \"anchor cell\" OR \"basement membrane\" OR \"integrin\" \"C. elegans\" invasion"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"121336"
+]
+},
+"21702933": {
+"candidate_urls": [
+"https://www.protocols.io/view/the-lymphatic-ring-assay-a-3d-culture-model-of-lym-q26g7mj18gwz/v1",
+"https://www.protocols.io/view/preparation-of-cells-for-transmission-electron-mic-j8nlk47ewg5r/v1",
+"https://www.protocols.io/view/transmission-electron-microscopy-tem-protocol-for-14egn4bmqv5d/v1"
+],
+"hit_rank": 1,
+"is_hit": true,
+"pmid": "21702933",
+"queries_issued": [
+"lymphatic endothelial cells new vessels corneal assay lymphangioma transmission electron microscopy protocols.io",
+"site:protocols.io lymphangiogenesis electron microscopy lymphatic endothelial",
+"protocols.io lymphangiogenesis corneal assay transmission electron microscopy tube morphogenesis",
+"protocols.io \"lymphatic ring assay\" OR \"lymphangioma\" OR \"corneal lymphangiogenesis\" TEM ultrastructure"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"121131"
+]
+},
+"24218132": {
+"candidate_urls": [
+"https://www.protocols.io/view/high-gc-content-pcr-261ge43rwv47/v1",
+"https://www.protocols.io/view/genotyping-of-a-candidate-variant-by-pcr-and-sange-rm7vzxp32gx1/v1",
+"https://www.protocols.io/view/taqman-snp-genotyping-protocol-q26g784d9lwz/v1",
+"https://www.protocols.io/view/pcr-protocol-for-taqman-reg-genotyping-assays-sfzebp6.html",
+"https://www.protocols.io/view/pcr-protocol-for-phusion-high-fidelity-dna-polymer-bdd3i28n",
+"https://www.protocols.io/view/pcr-protocol-for-phusion-high-fidelity-dna-polymer-irrcd56",
+"https://www.protocols.io/view/colony-pcr-protocol-for-thermo-scientific-phire-ho-yxmvmxomnl3p/v1",
+"https://www.protocols.io/view/dna-barcoding-standard-operating-protocol-plants-a-cmvcu62w.html",
+"https://dx.doi.org/10.17504/protocols.io.bprimm4e",
+"https://dx.doi.org/10.17504/protocols.io.irrcd56"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "24218132",
+"queries_issued": [
+"protocols.io PCR optimization high GC content EGFR promoter SNP",
+"protocols.io EGFR promoter -216 -191 SNP genotyping PCR protocol",
+"protocols.io EGFR promoter PCR sequencing SNP genotyping GC rich",
+"protocols.io GC rich PCR DMSO betaine optimization promoter region sequencing"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"239411"
+]
+},
+"25665179": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "25665179",
+"queries_issued": [
+"protocols.io siRNA osteoblast aptamer lipid nanoparticles Plekho1 bone formation osteoporosis",
+"protocols.io aptamer-functionalized lipid nanoparticles siRNA osteoblast targeted delivery",
+"protocols.io Plekho1 siRNA osteoblast-targeted nanoparticle bone osteoporosis protocol",
+"protocols.io osteoblast aptamer lipid nanoparticle siRNA delivery bone formation protocol",
+"protocols.io CH6 aptamer lipid nanoparticle siRNA Plekho1 osteoblast bone"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"121611"
+]
+},
+"26320937": {
+"candidate_urls": [
+"https://www.protocols.io/view/isolation-of-extracellular-vesicles-and-rna-using-rm7vzkdj4vx1/v1",
+"https://www.protocols.io/view/isolation-of-extracellular-vesicles-and-rna-from-s-bp2l6d625vqe/v1",
+"https://www.protocols.io/view/rna-isolation-using-the-mirneasy-micro-kit-14egn9q6pl5d/v1",
+"https://www.protocols.io/view/human-sample-processing-and-isolation-of-extracell-cft9tnr6.html",
+"https://www.protocols.io/view/exosome-isolation-from-plasma-using-exoquick-reage-e6nvwbyo2vmk/v1",
+"https://www.protocols.io/view/small-rna-sequencing-using-nextflex-trade-small-rn-r88d9zw",
+"https://www.protocols.io/view/isolation-of-exosomes-and-microvesicles-from-cell-8epv5jj94l1b/v1",
+"https://www.protocols.io/view/total-exosome-isolation-from-serum-and-plasma-bq9umr6w",
+"https://www.protocols.io/view/differential-ultracentrifugation-for-extracellular-14egnz5bpl5d/v1",
+"https://www.protocols.io/view/exorna-isolation-and-sequencing-from-biofluids-ercc-bq6qurde"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "26320937",
+"queries_issued": [
+"protocols.io extracellular RNA biofluid isolation exRNA profiling",
+"protocols.io exRNA vesicle separation biofluid collection standardized protocol",
+"protocols.io exRNA biofluid collection best practices ERCC exosome small RNA sequencing",
+"protocols.io exRNA atlas biofluid urine plasma ultracentrifugation exosome RNA isolation protocol"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"121622"
+]
+},
+"26406119": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "26406119",
+"queries_issued": [
+"PGBD5 human domesticated transposase cut-and-paste DNA transposition activity protocols.io",
+"PGBD5 transposase activity human cells protocol site:protocols.io",
+"PGBD5 transposition protocol DNA transposase human cells protocols.io",
+"PGBD5 piggyBac transposition assay HEK293 protocol site:protocols.io"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"121687"
+]
+},
+"28009756": {
+"candidate_urls": [
+"https://www.protocols.io/view/surgical-model-of-auxiliary-partial-liver-transpla-3byl4w4wrvo5/v1",
+"https://www.protocols.io/view/rat-auxiliary-partial-orthotopic-liver-transplanta-bp2l6bz6zgqe",
+"https://www.protocols.io/view/retrorsine-pretreatment-protocol-for-rat-liver-tra-bwyppfmn",
+"https://www.protocols.io/view/rat-reduced-size-liver-transplantation-with-arteri-6qpvr4n4pvmk",
+"https://www.protocols.io/view/heterotopic-auxiliary-liver-transplantation-in-rat-n2bvj6n6",
+"https://www.protocols.io/view/auxiliary-partial-liver-transplantation-rat-model-8epv5xn8",
+"https://www.protocols.io/view/rat-liver-transplantation-with-hepatic-artery-reco-kxygxpy6",
+"https://www.protocols.io/view/retrorsine-treatment-and-partial-hepatectomy-for-l-6qpvr5j5pvmk",
+"https://www.protocols.io/view/rat-orthotopic-liver-transplantation-with-arterial-yxmvxk56",
+"https://www.protocols.io/view/recipient-cell-tracking-in-regenerating-liver-graf-b4k6qyw6"
+],
+"hit_rank": 1,
+"is_hit": true,
+"pmid": "28009756",
+"queries_issued": [
+"protocols.io rat auxiliary partial liver transplant arterial anastomosis retrorsine",
+"protocols.io auxiliary partial orthotopic liver transplantation rat model retrorsine recipient cell recruitment",
+"protocols.io auxiliary partial liver transplantation rat arterial anastomosis recipient cell regeneration protocol",
+"protocols.io retrorsine liver transplant rat regeneration recipient hepatocyte recruitment"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"121741"
+]
+},
+"28346450": {
+"candidate_urls": [
+"https://www.protocols.io/view/clir-ms-crosslinking-of-isotope-labeled-rna-and-ta-bpq5mmy6",
+"https://www.protocols.io/view/uv-crosslinking-of-protein-rna-complexes-and-sampl-brvnm556",
+"https://www.protocols.io/view/protein-rna-crosslinking-mass-spectrometry-xl-ms-w-b4ksqww6",
+"https://www.protocols.io/view/identification-of-protein-rna-contact-sites-by-uv-bscsnabe",
+"https://www.protocols.io/view/uv-crosslinking-and-immunoprecipitation-clip-for-r-bpvsmn46",
+"https://www.protocols.io/view/crosslinking-mass-spectrometry-xl-ms-sample-prepar-bt9gnr3w",
+"https://www.protocols.io/view/uv-rna-protein-crosslinking-and-tandem-ms-analysis-bqbamsne",
+"https://www.protocols.io/view/rnp-complex-purification-uv-crosslinking-and-mass-bw4spgwe",
+"https://www.protocols.io/view/stable-isotope-labeling-of-rna-for-structural-stud-bx9tpr6n",
+"https://www.protocols.io/view/protein-rna-xl-ms-workflow-for-ribonucleoprotein-c-bz4sp8e6"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "28346450",
+"queries_issued": [
+"protocols.io CLIR-MS crosslinking isotope-labeled RNA mass spectrometry protein-RNA contact sites",
+"protocols.io protein-RNA crosslinking tandem mass spectrometry single amino acid nucleotide resolution RNP",
+"protocols.io CLIR-MS crosslinking isotope-labelled RNA tandem mass spectrometry protocol",
+"site:protocols.io CLIR-MS protein RNA crosslinking isotope mass spectrometry"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"121864"
+]
+},
+"28394336": {
+"candidate_urls": [
+"https://www.protocols.io/view/msfragger-fragpipe-open-search-ptm-identification-b2r3qd6w",
+"https://www.protocols.io/view/fragpipe-and-msfragger-proteomics-data-analysis-pi-bunznvf6",
+"https://www.protocols.io/view/open-modification-search-using-msfragger-and-fragp-bvt8n6rw",
+"https://www.protocols.io/view/fragpipe-computational-platform-for-msfragger-base-36wgqnj1ogk5",
+"https://www.protocols.io/view/dia-data-analysis-in-dia-nn-against-a-dda-library-dzjt74nn",
+"https://www.protocols.io/view/lcm-nanopots-workflow-for-spatial-proteome-mapping-ddya27se",
+"https://www.protocols.io/view/proteomics-sample-preparation-and-data-analysis-wi-bpfdmjj6",
+"https://www.protocols.io/view/ptminer-protocol-quality-control-localization-prot-ewov1no6",
+"https://www.protocols.io/view/pfind-open-search-proteomics-workflow-kxygxpykov8j",
+"https://www.protocols.io/view/protein-digestion-and-mass-spectrometry-analysis-p-c2pfydjn"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "28394336",
+"queries_issued": [
+"protocols.io fragment ion indexing open search peptide modifications mass spectrometry",
+"protocols.io open database search PTM identification proteomics mass spectrometry",
+"protocols.io MSFragger open search proteomics PTM protocol",
+"protocols.io FragPipe MSFragger open modification search workflow"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"121866"
+]
+},
+"28530655": {
+"candidate_urls": [
+"https://www.protocols.io/view/barcoding-lentiviral-cre-vectors-for-use-in-experi-ewov1dwxpvr2/v1",
+"https://www.protocols.io/view/in-vivo-nanopool-pooled-sgrna-competition-assays-t-bfsbjnan.html",
+"https://www.protocols.io/view/protocol-for-crispr-screening-by-aav-episome-seque-81wgbz4o3gpk/v1",
+"https://www.protocols.io/view/multiplexed-crispr-cas9-mediated-somatic-tumor-sup-n92ldmwbpl5b/v1",
+"https://www.protocols.io/view/tuba-seq-tumor-barcode-sequencing-lung-cancer-mous-bvt9n6r6/v1",
+"https://www.protocols.io/view/pooled-lentiviral-sgrna-library-production-and-tit-bpv5mn86/v1",
+"https://www.protocols.io/view/in-vivo-crispr-screen-lung-tumor-mouse-model-kras-bwm5pc86/v1",
+"https://www.protocols.io/view/genomic-dna-extraction-from-mouse-lungs-for-barcode-sequencing-bct9i2n6/v1",
+"https://www.protocols.io/view/lentiviral-intratracheal-infection-mouse-lung-crispr-cas9-bpvnmm46/v1",
+"https://www.protocols.io/view/illumina-sequencing-library-prep-for-tumor-barcode-bi9nqh56/v1"
+],
+"hit_rank": 1,
+"is_hit": true,
+"pmid": "28530655",
+"queries_issued": [
+"protocols.io pooled CRISPR knockout tumor suppressors mouse lung cancer barcode sequencing",
+"protocols.io CRISPR pool sgRNA barcode sequencing lung tumor mouse model",
+"protocols.io Tuba-seq tumor barcode sequencing lentiviral sgRNA lung cancer mouse",
+"protocols.io pooled lentiviral CRISPR sgRNA library lung tumor suppressor mouse in vivo screen"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"121893",
+"121894"
+]
+},
+"28607482": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "28607482",
+"queries_issued": [
+"protocols.io primordial germ cell specification pig human SOX17 BLIMP1 WNT BMP",
+"protocols.io PGC specification gastrulation pig embryo SOX17 BLIMP1 signaling protocol",
+"protocols.io pig porcine primordial germ cell PGC specification BMP WNT SOX17 BLIMP1 protocol",
+"site:protocols.io primordial germ cell PGC gastrulation embryo SOX17 BMP WNT"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"121900"
+]
+},
+"28650476": {
+"candidate_urls": [
+"https://www.protocols.io/view/e3-decoy-library-high-throughput-yeast-two-hybrid-hgydb3xs7.html",
+"https://www.protocols.io/view/yeast-two-hybrid-interaction-assay-btzenp3e",
+"https://www.protocols.io/view/protein-interaction-analysis-of-kaic3-with-various-3byl429pjvo5/v1",
+"https://www.protocols.io/view/protein-interaction-analysis-of-kaic3-with-various-v7ve9n6.html",
+"https://www.protocols.io/view/high-throughput-yeast-two-hybrid-next-generation-s-bpw5mpg6",
+"https://www.protocols.io/view/cry2h-seq-arabidopsis-transcription-factor-interac-n2bvj6n",
+"https://www.protocols.io/view/yeast-two-hybrid-library-screen-next-generation-se-bak7iuhn",
+"https://www.protocols.io/view/split-ubiquitin-yeast-two-hybrid-assay-plant-prote-bc4siyw6",
+"https://www.protocols.io/view/bfg-y2h-barcode-fusion-genetics-yeast-two-hybrid-b4g5qt8e",
+"https://www.protocols.io/view/arabidopsis-protein-protein-interaction-y2h-screen-bvb9n2r6"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "28650476",
+"queries_issued": [
+"protocols.io Arabidopsis transcription factor yeast two-hybrid sequencing high-throughput protein-protein interaction",
+"protocols.io Y2H-seq yeast two-hybrid Arabidopsis interactome",
+"protocols.io CrY2H-seq Arabidopsis transcription factor interactome protocol",
+"protocols.io yeast two-hybrid sequencing plant protein interaction mapping protocol site:protocols.io"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"121906"
+]
+},
+"28877184": {
+"candidate_urls": [
+"https://www.protocols.io/view/wetlab-2-rt-qpcr-procedure-i86chze",
+"https://www.protocols.io/view/wetlab-2-preparation-of-lyophilized-reagents-i87chzn",
+"https://www.protocols.io/view/gene-expression-analysis-by-rt-qpcr-6qpvrwqd2lmk/v1/v1",
+"https://www.protocols.io/view/gene-expression-analysis-by-rt-qpcr-hcrwb2v7f.html",
+"https://www.protocols.io/view/rna-isolation-and-qrt-pcr-4r3l22r9pl1y/v1",
+"https://www.protocols.io/view/real-time-quantitative-pcr-qpcr-qt6dwre",
+"https://www.protocols.io/view/real-time-rt-pcr-36wgqo23lk57/v1",
+"https://www.protocols.io/view/rna-extraction-and-rt-qpcr-b5wmq7c6.html",
+"https://www.protocols.io/view/quantitative-real-time-rt-pcr-assay-applying-calib-261ge7kov479/v1",
+"https://www.protocols.io/view/protocol-quantitative-real-time-pcr-qrt-pcr-3k-snc-hcieb2ubf.html"
+],
+"hit_rank": 1,
+"is_hit": true,
+"pmid": "28877184",
+"queries_issued": [
+"RT-qPCR gene expression bacterial mammalian RNA International Space Station microgravity protocol protocols.io",
+"site:protocols.io real-time RT-qPCR ISS space station RNA microgravity",
+"protocols.io WetLab-2 NASA ISS RNA isolation RT-qPCR microgravity protocol",
+"protocols.io RT-qPCR gene expression E. coli mouse liver spaceflight RNA"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"7166"
+]
+},
+"28945705": {
+"candidate_urls": [
+"https://www.protocols.io/view/thiol-linked-alkylation-for-the-metabolic-sequenci-dm6gp9dm8vzp/v1",
+"https://www.protocols.io/view/transient-transcriptome-sequencing-experimental-pr-3vzgn76",
+"https://www.protocols.io/view/4su-metabolic-rna-labeling-and-sequencing-in-mouse-bpfsmjne",
+"https://www.protocols.io/view/slam-seq-thiol-linked-alkylation-for-metabolic-seq-6qpvr4n1bvkz/v1",
+"https://www.protocols.io/view/4su-rna-labeling-pulse-chase-protocol-for-rna-deca-x54v9yd39g3e/v1",
+"https://www.protocols.io/view/tt-seq-transient-transcriptome-sequencing-4su-labe-b4kfqwtn",
+"https://www.protocols.io/view/4su-seq-metabolic-labeling-nascent-rna-sequencing-8epv5j5b9g1b/v1",
+"https://www.protocols.io/view/scifate2-metabolic-labeling-combinatorial-indexing-ctzgp9t6",
+"https://www.protocols.io/view/rna-metabolic-rate-inference-4su-labeling-mesc-biasini-marques-bxr9pm96",
+"https://www.protocols.io/view/timelapse-seq-4su-rna-labeling-sequencing-transcri-j8nlk9w1dl5r/v1"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "28945705",
+"queries_issued": [
+"protocols.io 4-thiouridine metabolic RNA labeling sequencing transcription decay mESC",
+"protocols.io 4sU-seq SLAM-seq TUC-seq RNA labeling mouse embryonic stem cells protocol",
+"protocols.io 4sU RNA labeling transcription degradation rates mESC pulse-chase sequencing",
+"protocols.io SLAMseq TimeLapse-seq SLAM-seq 4-thiouridine RNA decay synthesis protocol"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"116161"
+]
+},
+"29256496": {
+"candidate_urls": [
+"https://www.protocols.io/view/starr-seq-screening-protocol-j8nlk9jpwv5r/v1",
+"https://www.protocols.io/view/atac-starr-seq-b2nqqddw",
+"https://www.protocols.io/view/atac-starr-seq-5jyl89rorv2w/v1",
+"https://www.protocols.io/view/atac-starr-seq-rm7vz896rvx1/v2",
+"https://www.protocols.io/view/chip-starr-seq-protocol-14egnz35pg5d/v1",
+"https://www.protocols.io/view/whole-genome-starr-seq-whg-starr-seq-bpwempew",
+"https://www.protocols.io/view/capstarr-seq-bpq8mmzw",
+"https://www.protocols.io/view/umi-starr-seq-screening-protocol-bceciisw",
+"https://www.protocols.io/view/starr-seq-library-preparation-for-human-cells-bp2emqbe",
+"https://www.protocols.io/view/faire-starr-seq-bvb9n2r6"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "29256496",
+"queries_issued": [
+"STARR-seq enhancer screen human cells protocols.io",
+"STARR-seq interferon response ORI promoter artifact control protocol protocols.io",
+"protocols.io genome-wide STARR-seq human cells interferon ORI artifact plasmid library",
+"protocols.io \"STARR-seq\" \"genome-wide\" enhancer human"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"121971",
+"121973",
+"121974",
+"121975"
+]
+},
+"29269866": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "29269866",
+"queries_issued": [
+"protocols.io DNA methylation white blood cells HIV hepatitis C intravenous drug use epigenome-wide",
+"protocols.io EWAS DNA methylation HIV HCV coinfection blood epigenome",
+"protocols.io epigenome-wide DNA methylation HIV HCV drug use white blood cells EWAS protocol",
+"site:protocols.io DNA methylation HIV HCV IDU drug use CpG blood methylation array"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"121966"
+]
+},
+"29641611": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "29641611",
+"queries_issued": [
+"protocols.io oyster reef wetland restoration coastal flood risk cost-effectiveness",
+"protocols.io seawall coastal flood risk climate change Gulf Coast protocol",
+"protocols.io nature-based coastal adaptation flood risk assessment protocol Gulf Coast",
+"site:protocols.io coastal restoration flood risk wetland oyster reef seawall benefit-cost"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"9528"
+]
+},
+"29735996": {
+"candidate_urls": [
+"https://www.protocols.io/view/mapping-subnuclear-proteomes-onto-genome-architecture-via-c-berst-81wgbreeolpk/v1",
+"https://www.protocols.io/view/c-berst-dcas9-apex2-biotinylation-at-genomic-elements-subnuclear-proteomics-rm7vzy86rlx1/v1",
+"https://www.protocols.io/view/dcas9-apex2-proximity-labeling-for-locus-specific-chromatin-proteomics-telomere-bp6uyrdw/v1",
+"https://www.protocols.io/view/apex2-based-proximity-biotinylation-of-nlrp3-and-p-5qpvok55zl4o/v1",
+"https://www.protocols.io/view/apex2-labelling-and-screening-for-biotinylated-pro-dm6gpj8qjgzp/v1",
+"https://www.protocols.io/view/apex2-labelling-and-screening-for-biotinylated-pro-cgnmtvc6",
+"https://www.protocols.io/view/crispr-cas9-apex-mediated-proximity-labeling-glop-bpkcmkcw/v1",
+"https://www.protocols.io/view/proximity-labeling-using-apex2-for-mass-spectrometry-based-proteomics-in-human-cells-q26g7yre/v1",
+"https://www.protocols.io/view/streptavidin-pulldown-of-apex2-biotinylated-proteins-for-lc-ms-ms-proteomics-bp3njqne/v1",
+"https://www.protocols.io/view/axonal-proteome-analysis-and-western-blot-via-apex-n2bvjb79bgk5/v1"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "29735996",
+"queries_issued": [
+"dCas9-APEX2 proximity labeling telomere proteomics mass spectrometry protocol site:protocols.io",
+"protocols.io dCas9 APEX2 genomic locus proximity labeling living cells",
+"protocols.io C-BERST dCas9-APEX2 telomere chromatin proteomics protocol",
+"protocols.io GLoPro CasPEX dCas9 APEX2 genomic locus proteomics"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"122009"
+]
+},
+"29901420": {
+"candidate_urls": [
+"https://www.protocols.io/view/l929-conditioned-medium-lcm-q26g7n1e3lwz/v1",
+"https://www.protocols.io/view/bioassay-for-macrophage-conditioned-medium-quality-bpwvmpe6",
+"https://www.protocols.io/view/macrophage-conditioned-medium-preparation-for-hybr-b2keqcte",
+"https://www.protocols.io/view/hybridoma-cell-culture-and-monoclonal-antibody-pro-bpxjmpkn",
+"https://www.protocols.io/view/peritoneal-macrophage-isolation-and-conditioned-me-n2bvj6n6",
+"https://www.protocols.io/view/cell-viability-bioassay-for-conditioned-medium-val-buka7wse",
+"https://www.protocols.io/view/hybridoma-generation-and-monoclonal-antibody-produ-bpxhmpjn",
+"https://www.protocols.io/view/macrophage-feeder-cell-preparation-for-hybridoma-f-bp3hjkn6",
+"https://www.protocols.io/view/cell-culture-techniques-a-standard-operating-proce-hef4b3bqx",
+"https://www.protocols.io/view/igg-sequencing-of-rat-hybridoma-cyxaxxie"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "29901420",
+"queries_issued": [
+"protocols.io macrophage conditioned medium hybridoma monoclonal antibody bioassay",
+"protocols.io macrophage conditioned medium quality validation hybridoma survival",
+"protocols.io hybridoma conditioned medium feeder cell macrophage antibody production protocol",
+"protocols.io macrophage conditioned medium preparation cell viability bioassay standardize"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"201300"
+]
+},
+"30010754": {
+"candidate_urls": [
+"https://www.protocols.io/view/the-pipeline-of-hi-c-assembly-qradv2e",
+"https://www.protocols.io/view/fish-genome-assembly-and-annotation-pipeline-ss3eegn",
+"https://www.protocols.io/view/plant-assemble-plant-de-novo-genome-assembly-scaff-b6hgrb3w",
+"https://www.protocols.io/view/plant-assemble-plant-de-novo-genome-assembly-assem-b6hirb4e",
+"https://www.protocols.io/view/genome-assembly-nanopore-and-illumina-reads-dfit3ken",
+"https://www.protocols.io/view/de-novo-genome-protocol-from-only-ont-reads-dciq2udw",
+"https://www.protocols.io/view/chromosome-level-genome-assembly-using-hifi-reads-b52l6bye",
+"https://www.protocols.io/view/hi-c-library-preparation-for-genome-scaffolding-bp2l6byze",
+"https://www.protocols.io/view/genome-assembly-qc-and-annotation-pipeline-bvt8n6rw",
+"https://www.protocols.io/view/whole-genome-sequencing-de-novo-assembly-and-annot-yxmvmk6n"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "30010754",
+"queries_issued": [
+"Betta splendens genome assembly Hi-C scaffolding protocol protocols.io",
+"chromosome-level genome assembly Hi-C scaffolding fish protocols.io",
+"protocols.io genome assembly comparative genomics Hi-C fish aggression",
+"protocols.io de novo genome assembly annotation Hi-C 3D-DNA BUSCO comparative genomics"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"12801"
+]
+},
+"30052755": {
+"candidate_urls": [
+"https://www.protocols.io/view/primary-data-analysis-basecalling-demultiplexing-a-cq43vyyn",
+"https://www.protocols.io/view/ont-basecalling-demultiplexing-and-analysis-for-fu-chsmt6c6",
+"https://www.protocols.io/view/primary-data-analysis-basecalling-demultiplexing-a-dm6gpbm88lzp",
+"https://www.protocols.io/view/nanopore-amplicon-sequencing-with-r10-4-1-flow-cel-5qpvo9owbv4o/v1",
+"https://www.protocols.io/view/workflow-for-the-nucleic-acid-based-identification-bwpepdje",
+"https://www.protocols.io/view/workflow-for-the-nucleic-acid-based-identification-bx7nprme",
+"https://www.protocols.io/view/hbv-whole-genome-sequencing-using-oxford-nanopore-d5et83en",
+"https://www.protocols.io/view/setting-a-sequencing-run-with-a-nanopore-minion-an-cf3ctqiw",
+"https://www.protocols.io/view/getcampy-sequencing-protocols-g63wbzgpf",
+"https://www.protocols.io/view/closing-bacterial-genomes-using-the-rapid-sequenci-dmbd42i6"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "30052755",
+"queries_issued": [
+"protocols.io R tool visualizing comparing QC metrics Oxford Nanopore MinION flowcell sequencing runs",
+"protocols.io nanopore MinION flowcell quality control visualization R multiple runs",
+"protocols.io MinIONQC R script multiple flowcell QC visualization"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"6285"
+]
+},
+"30268511": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "30268511",
+"queries_issued": [
+"mammosphere assay seeding density MCF-7 breast cancer stem cell protocols.io",
+"site:protocols.io mammosphere assay seeding density optimization",
+"protocols.io mammosphere formation efficiency breast cancer stem cell MCF-7 ultralow attachment",
+"protocols.io mammosphere assay cell aggregation clonal breast cancer stem cell frequency"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"121476"
+]
+},
+"30271992": {
+"candidate_urls": [
+"https://www.protocols.io/view/dna-extraction-protocol-for-dna-metabarcoding-of-m-bucjnsun",
+"https://www.protocols.io/view/stream-benthic-metabarcoding-lab-protocol-dn3f5gjn.html",
+"https://www.protocols.io/view/stream-benthic-metabarcoding-lab-protocol-draft-cyu4xwyw.html",
+"https://www.protocols.io/view/environmental-dna-edna-18s-metabarcoding-illumina-6qpvrydzgmkn/v2",
+"https://www.protocols.io/view/environmental-dna-edna-18s-metabarcoding-illumina-mv2c68e",
+"https://www.protocols.io/view/full-18s-metabarcoding-of-environmental-samples-of-dx4a7qse.html",
+"https://www.protocols.io/view/arms-mbon-18s-rrna-and-coi-gene-metabarcoding-scan-cyr7xv9n.html",
+"https://www.protocols.io/view/batch-extraction-of-morphological-and-color-metric-byt4pwqw",
+"https://www.protocols.io/view/stream-benthic-metabarcoding-lab-protocol-dn3f5gjn",
+"https://www.protocols.io/view/environmental-dna-edna-18s-metabarcoding-illumina-6qpvrydzgmkn"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "30271992",
+"queries_issued": [
+"protocols.io metabarcoding meiofauna benthic biodiversity assessment",
+"protocols.io morphology taxonomy meiofauna benthic invertebrate community",
+"protocols.io meiofauna DNA extraction 18S metabarcoding nematoda sediment",
+"protocols.io benthic invertebrate morphological identification taxonomy diversity"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"121300"
+]
+},
+"30397333": {
+"candidate_urls": [
+"https://www.protocols.io/view/genomic-and-transcriptomic-data-production-for-hel-x54v9rnxpv3e/v1",
+"https://www.protocols.io/view/comparative-genomics-of-parasitic-helminths-nematod-bp2l6b5rrgqe",
+"https://www.protocols.io/view/orthofinder-pipeline-for-gene-family-clustering-an-eq2lyno5wgx9",
+"https://www.protocols.io/view/gene-family-expansion-analysis-using-cafe-in-parasi-n2bvj6n85lk5",
+"https://www.protocols.io/view/helminth-genome-annotation-and-functional-analysis-dm6gpz5w7lzp",
+"https://www.protocols.io/view/drug-target-identification-in-parasitic-nematodes-b2tsqen6",
+"https://www.protocols.io/view/orthomcl-based-ortholog-clustering-for-multi-specie-kxygx3qjdg8j",
+"https://www.protocols.io/view/wormbase-parasite-comparative-genomics-data-retriev-yxmvxm36",
+"https://www.protocols.io/view/subtractive-genomics-pipeline-for-helminth-drug-tar-j8nlkxpe",
+"https://www.protocols.io/view/busco-assessment-and-genome-quality-control-for-par-6qpvr6o6"
+],
+"hit_rank": 1,
+"is_hit": true,
+"pmid": "30397333",
+"queries_issued": [
+"protocols.io comparative genomics parasitic nematodes flatworms expanded gene families drug targets",
+"protocols.io helminth worm genomics OrthoFinder gene family expansion drug targets protocol",
+"protocols.io helminth comparative genomics OrthoMCL gene family analysis nematode platyhelminth",
+"site:protocols.io worm parasite genomics CAFE gene family expansion drug target identification"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"122011",
+"122015",
+"122022",
+"122026",
+"122028",
+"122029"
+]
+},
+"30462808": {
+"candidate_urls": [
+"https://www.protocols.io/view/determination-of-total-glutathione-gsh-and-oxidize-8epv5bz4v1bz/v1",
+"https://www.protocols.io/view/thiobarbituric-acid-reactive-substances-tbars-assa-3sngnde",
+"https://www.protocols.io/view/lipid-peroxidation-lpx-assay-for-zooplankton-homog-m4vc8w6",
+"https://www.protocols.io/view/catalase-activity-assay-bpk5mkyn",
+"https://www.protocols.io/view/measurement-of-oxidative-stress-markers-in-human-b-bpyjmpwn",
+"https://www.protocols.io/view/protein-carbonyl-assay-bpnqmmde",
+"https://www.protocols.io/view/ferrous-oxidation-xylenol-orange-fox-assay-for-lip-bizkaf6e",
+"https://www.protocols.io/view/gssg-gsh-ratio-determination-oxidized-reduced-glut-bpykmpxn",
+"https://www.protocols.io/view/assessment-of-redox-status-in-human-blood-samples-b4vpyw6n",
+"https://www.protocols.io/view/spectrophotometric-determination-of-catalase-activ-bc5hiy36"
+],
+"hit_rank": 2,
+"is_hit": true,
+"pmid": "30462808",
+"queries_issued": [
+"LT4 subclinical hyperthyroidism oxidative stress TSH suppression thyroidectomy protocol site:protocols.io",
+"protocols.io oxidative stress redox balance levothyroxine TSH suppression thyroid cancer",
+"protocols.io redox profile subclinical hyperthyroidism TBARS GSH GSSG catalase thyroidectomy",
+"protocols.io oxidative stress markers lipid peroxidation glutathione catalase thyroid hormone blood samples protocol"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"24110"
+]
+},
+"30625152": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "30625152",
+"queries_issued": [
+"protocols.io genome-scale metabolic model protein structures Staphylococcus aureus USA300 gene essentiality",
+"protocols.io GEM metabolic model S. aureus USA300 growth conditions flux balance analysis",
+"protocols.io GEM-PRO Staphylococcus aureus USA300 JE2 3D protein structures metabolic model protocol",
+"site:protocols.io \"Staphylococcus aureus\" metabolic model gene essentiality flux balance",
+"protocols.io iYS854 GEM-PRO Staphylococcus aureus USA300 Seif genome scale metabolic"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"13137"
+]
+},
+"30804551": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "30804551",
+"queries_issued": [
+"protocols.io CRISPR Cpf1 AAV CAR T cell knock-in checkpoint knockout",
+"protocols.io Cpf1 AAV knock-in CAR construct T cell CRISPR one-step",
+"protocols.io CRISPR Cpf1 Cas12a AAV T cell CAR knock-in PD-1 TRAC checkpoint",
+"protocols.io site:protocols.io Cpf1 AAV CAR T cell gene editing",
+"protocols.io Cas12a Cpf1 CAR knock-in T cell AAV checkpoint TRAC PD-1 CTLA4 protocol"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"122091"
+]
+},
+"30862831": {
+"candidate_urls": [
+"https://www.protocols.io/view/two-tailed-rt-qpcr-panel-for-quality-control-of-c-bpdfmi3n",
+"https://www.protocols.io/view/two-tailed-rt-qpcr-for-microrna-detection-bpw7mxhn",
+"https://www.protocols.io/view/extraction-protocol-mirna-scalonmc-cisvuee6",
+"https://www.protocols.io/view/quantification-protocol-mirna-scalonmc-citnueme",
+"https://www.protocols.io/view/reversetranscription-protocol-mirna-scalonmc-ciwaufae",
+"https://www.protocols.io/view/isolation-of-cell-free-mirna-from-serum-plasma-bpufmwtn",
+"https://www.protocols.io/view/mirna-isolation-from-plasma-serum-using-miRNeasy-bvmdn626",
+"https://www.protocols.io/view/circulating-mirna-profiling-liquid-biopsy-spike-in-bwi5pce6",
+"https://www.protocols.io/view/small-rna-isolation-from-serum-plasma-for-mirna-bi-bw2xpfen",
+"https://www.protocols.io/view/cell-free-mirna-quality-control-rt-qpcr-inhibition-b2x2qfne"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "30862831",
+"queries_issued": [
+"protocols.io cell-free microRNA serum plasma spike-in two-tailed RT-qPCR liquid biopsy",
+"protocols.io circulating miRNA isolation spike-in controls RT-qPCR normalization serum plasma",
+"protocols.io \"two-tailed\" miRNA qPCR quality control spike-in plasma serum protocol",
+"protocols.io cell-free miRNA profiling liquid biopsy RNA isolation quality control",
+"protocols.io miRNA serum plasma spike-in two-tailed RT-qPCR quality control inhibition site:protocols.io"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"121717"
+]
+},
+"30940689": {
+"candidate_urls": [
+"https://www.protocols.io/view/stlfr-library-preparation-protocol-single-tube-lon-bp2l6xyrge5e",
+"https://www.protocols.io/view/tell-seq-wgs-library-preparation-bvt8n6rw",
+"https://www.protocols.io/view/single-tube-long-fragment-read-stlfr-library-prepa-xpxfmpn",
+"https://www.protocols.io/view/tell-seq-targeted-phasing-library-preparation-prot-c3bygnw6",
+"https://www.protocols.io/view/stlfr-co-barcoding-library-construction-for-human-n2bvj6n6",
+"https://www.protocols.io/view/linked-read-library-preparation-for-haplotype-phas-kxygx",
+"https://www.protocols.io/view/tell-seq-library-preparation-for-de-novo-genome-as-bttjnnkn",
+"https://www.protocols.io/view/stlfr-single-tube-long-fragment-read-library-prepa-yxmvxm6",
+"https://www.protocols.io/view/co-barcoding-linked-read-sequencing-structural-var-rm7vzy86",
+"https://www.protocols.io/view/barcode-linked-reads-blr-library-preparation-hapl\u043e-6qpvr4n"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "30940689",
+"queries_issued": [
+"protocols.io single-tube barcoding long DNA fragments haplotype phasing structural variant short-read sequencing",
+"protocols.io linked-read co-barcoding long DNA human genome assembly haplotype phasing",
+"protocols.io stLFR TELL-Seq single-tube linked-read library protocol human genome",
+"protocols.io stLFR TELL-Seq co-barcoding genome assembly site:protocols.io"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"122070"
+]
+},
+"31077316": {
+"candidate_urls": [
+"https://www.protocols.io/view/genome-assembly-nanopore-and-illumina-reads-dfit3ken",
+"https://www.protocols.io/view/hybrid-de-novogenome-assembly-using-illumina-pacbi-kxygxr5dg8j2/v1",
+"https://www.protocols.io/view/plant-assemble-plant-de-novo-genome-assembly-assem-b6hirb4e",
+"https://www.protocols.io/view/plant-assemble-plant-de-novo-genome-assembly-scaff-b6hgrb3w",
+"https://www.protocols.io/view/protocols-for-34-sequencing-smart-de-novo-sequenci-3byl47xkzlo5/v1",
+"https://www.protocols.io/view/protocols-for-34-sequencing-smart-de-novo-sequenci-bd3ri8m6",
+"https://www.protocols.io/view/project-psyche-sample-collection-to-genome-assembl-yxmvmbk1bg3p/v1",
+"https://www.protocols.io/view/fish-genome-assembly-and-annotation-pipeline-ss3eegn",
+"https://www.protocols.io/view/c-sop-1001-high-molecular-weight-dna-hmw-dna-extra-8epv5xmr6g1b/v1",
+"https://www.protocols.io/view/hmw-gdna-extraction-from-prokaryotic-cultures-and-cwumxeu6"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "31077316",
+"queries_issued": [
+"protocols.io de novo genome assembly hybrid Illumina Oxford Nanopore",
+"protocols.io peafowl genome assembly sequencing protocol",
+"protocols.io hybrid genome assembly Illumina Nanopore scaffolding repeat resolution avian bird",
+"protocols.io de novo assembly Nanopore long read HMW DNA extraction high molecular weight bird genome"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"13216"
+]
+},
+"31855083": {
+"candidate_urls": [
+"https://www.protocols.io/view/preparation-of-viral-sequencing-library-for-illumi-c8mzzu76.html",
+"https://www.protocols.io/view/library-tissue-handling-viral-dna-extraction-and-n-cukswuwe.html",
+"https://www.protocols.io/view/tn5-duplex-sequencing-tn5-duplex-seq-for-low-input-6qpvr3nbzvmk/v1",
+"https://www.protocols.io/view/pcr-amplicon-next-generation-sequencing-36wgq64olk57/v3",
+"https://www.protocols.io/view/in-vivo-aav-mpra-g3rybym7x.html",
+"https://www.protocols.io/view/aav-titration-with-qpcr-dkps4vne",
+"https://www.protocols.io/view/preparation-of-viral-sequencing-library-for-illumi-daiy2cfw.html",
+"https://www.protocols.io/view/individual-aav-production-and-purification-ctzjwp4n",
+"https://www.protocols.io/view/aav-capsid-library-production-ctzkwp4w",
+"https://www.protocols.io/view/aav-purification-protocol-with-iodixanol-gradient-b39zqr76.html"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "31855083",
+"queries_issued": [
+"protocols.io AAV packaged genome sequencing NGS low input",
+"protocols.io AAV genome integrity sequencing next generation sequencing protocol",
+"protocols.io AAV vector genome sequencing ITR truncation mutation Illumina library preparation",
+"protocols.io AAV capsid DNA extraction DNase treatment sequencing quality control"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"16985"
+]
+},
+"31873830": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "31873830",
+"queries_issued": [
+"protocols.io pig skeletal muscle satellite cells pooling myoblast cell pools",
+"protocols.io porcine myoblast isolation satellite cells differentiation in vitro",
+"protocols.io \"cell pool\" \"satellite cells\" pig myoblast proliferation differentiation",
+"protocols.io porcine skeletal muscle myoblast isolation cell pooling multiple donors",
+"protocols.io \"pig\" OR \"porcine\" \"myoblast\" OR \"satellite cell\" isolation pool site:protocols.io"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"121278"
+]
+},
+"32169215": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "32169215",
+"queries_issued": [
+"SRPK1 protamine phosphorylation histone exchange chromatin reprogramming fertilized mouse oocytes protocols.io",
+"protocols.io protamine histone exchange chromatin reprogramming mouse zygote SRPK1",
+"protocols.io SRPK1 protamine phosphorylation mouse oocyte zygote chromatin",
+"protocols.io protamine histone exchange mouse zygote fertilization protocol"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"121580"
+]
+},
+"32333689": {
+"candidate_urls": [
+"https://www.protocols.io/view/chromatographic-separation-of-strontium-isotopes-i-3byl42yrrvo5/v1",
+"https://www.protocols.io/view/chromatographic-separation-of-strontium-in-archaeo-dfuq3nvw.html",
+"https://www.protocols.io/view/multi-proxy-sampling-protocol-for-teeth-from-archa-cuwcwxaw.html",
+"https://www.protocols.io/view/chromatographic-separation-of-neodymium-isotopes-i-xzmfp46.html",
+"https://www.protocols.io/view/enamel-sampling-for-strontium-isotope-analysis-bp2l6286",
+"https://www.protocols.io/view/tooth-enamel-preparation-for-stable-isotope-analys-bcuhiwt6",
+"https://www.protocols.io/view/stable-isotope-analysis-of-tooth-enamel-carbonate-6qpvr4n2",
+"https://www.protocols.io/view/preparation-of-dental-enamel-for-87sr-86sr-analysis-yxmvmn86",
+"https://www.protocols.io/view/oxygen-and-carbon-isotope-analysis-of-tooth-enamel-bqf4mtqw",
+"https://www.protocols.io/view/sample-preparation-for-sr-isotope-analysis-of-arch-n92ldmze6"
+],
+"hit_rank": 1,
+"is_hit": true,
+"pmid": "32333689",
+"queries_issued": [
+"protocols.io strontium oxygen carbon isotope human tooth enamel caries forensic",
+"protocols.io enamel isotope sampling third molar archaeological mobility",
+"protocols.io strontium isotope enamel TIMS sampling intraindividual variation caries",
+"protocols.io dental enamel oxygen carbon isotope IRMS archaeological mobility sampling protocol"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"24517"
+]
+},
+"32488088": {
+"candidate_urls": [
+"https://www.protocols.io/view/fib-sem-serial-cross-sectioning-of-human-metaphase-chromosomes-chromatin-fiber-organization",
+"https://www.protocols.io/view/integrated-workflow-for-chromatin-architecture-analysis-in-rare-thymic-cells-using-focused-ion-beam-scanning-electron-microscopy",
+"https://www.protocols.io/view/fib-sem-cross-sectioning-of-metaphase-chromosomes-for-chromatin-fiber-diameter-analysis",
+"https://www.protocols.io/view/isolation-and-fib-sem-imaging-of-human-metaphase-chromosomes-polyamine-ionic-liquid-method",
+"https://www.protocols.io/view/fib-sem-protocol-for-anaerobic-ciliates-to-visuali-kqdg356kev25/v1",
+"https://www.protocols.io/view/chromosome-isolation-for-electron-microscopy-chromatin-ultrastructure",
+"https://www.protocols.io/view/platinum-coating-and-fib-sem-serial-sectioning-of-isolated-chromosomes",
+"https://www.protocols.io/view/preparation-of-metaphase-chromosomes-for-fib-sem-ultrastructural-analysis",
+"https://www.protocols.io/view/serial-block-face-sem-of-human-chromosomes-chromatin-fiber-3d-reconstruction",
+"https://www.protocols.io/view/focused-ion-beam-scanning-electron-microscopy-of-mitotic-chromosomes-inner-structure"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "32488088",
+"queries_issued": [
+"FIB SEM serial cross-sections chromatin fiber metaphase chromosomes protocol protocols.io",
+"protocols.io FIB-SEM chromatin organization human chromosomes ultrastructure",
+"protocols.io FIB SEM metaphase chromosome chromatin fiber serial section sample preparation",
+"protocols.io \"chromosome\" \"FIB\" OR \"focused ion beam\" \"chromatin\" site:protocols.io"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"121164"
+]
+},
+"32854500": {
+"candidate_urls": [
+"https://www.protocols.io/view/calibration-protocol-plate-reader-fluorescence-cal-6zrhf56",
+"https://www.protocols.io/view/calibration-protocol-plate-reader-fluorescence-cal-x54v986dpl3e/v2",
+"https://www.protocols.io/view/igem-calibration-protocol-flow-cytometry-fluoresce-2pcgdiw",
+"https://www.protocols.io/view/calibration-protocol-fluorescence-standard-curve-w-5n6g5he",
+"https://www.protocols.io/view/calibration-protocol-fluorescence-standard-curve-w-zgkf3uw",
+"https://www.protocols.io/view/igem-calibration-protocol-red-fluorescent-proteins-bcdjis4n",
+"https://protocols.io/view/fluorometric-real-time-quantification-of-in-vivo-f-nrxdd7n",
+"https://www.protocols.io/view/gfp-rfp-plate-reader-assay-784hryw"
+],
+"hit_rank": 1,
+"is_hit": true,
+"pmid": "32854500",
+"queries_issued": [
+"protocols.io R package fluorescence calibration flow cytometry plate reader GFP E. coli absolute units",
+"protocols.io fcsscaling OR flowcal OR calibration fluorescence units GFP engineered bacteria protocol",
+"protocols.io FlopR R package calibration normalization flow cytometry plate reader protocol",
+"protocols.io FlopR fluorescence calibration MEFL GFP E. coli microspheres fluorescein protocol page"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"21741",
+"27409"
+]
+},
+"33114549": {
+"candidate_urls": [
+"https://www.protocols.io/view/using-restriction-endonuclease-protection-selectio-bp2l6xyrpgqe",
+"https://www.protocols.io/view/restriction-endonuclease-protection-selection-and-bi5ikg4e",
+"https://www.protocols.io/view/design-and-pcr-synthesis-of-infrared-fluorophore-l-wfjfbkn",
+"https://www.protocols.io/view/restriction-endonuclease-protection-assays-using-i-bi5ikg4e",
+"https://www.protocols.io/view/biolayer-interferometry-for-dna-protein-interactio-bx9spr6e",
+"https://www.protocols.io/view/design-and-pcr-synthesis-of-infrared-fluorophore-l-mbdc2i6",
+"https://www.protocols.io/view/repsa-restriction-endonuclease-protection-selectio-n2bvj6n",
+"https://www.protocols.io/view/electrophoretic-mobility-shift-assay-emsa-using-in-bkr2kv8e",
+"https://www.protocols.io/view/pcr-synthesis-of-infrared-fluorophore-labeled-dna-wfjfbkn",
+"https://www.protocols.io/view/identification-of-preferred-dna-binding-sites-for-bp2l6bbrpgqe"
+],
+"hit_rank": 2,
+"is_hit": true,
+"pmid": "33114549",
+"queries_issued": [
+"SELEX DNA binding motif CRP transcription factor Thermus thermophilus protocols.io",
+"in vitro selection CRP-family transcription factor extremophile DNA binding site protocol protocols.io",
+"REPSA protocol Thermus thermophilus CRP transcription factor DNA binding protocols.io",
+"protocols.io REPSA restriction endonuclease protection selection amplification transcription factor"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"18635",
+"39818"
+]
+},
+"33350435": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "33350435",
+"queries_issued": [
+"protocols.io hepatic stellate cells isolation mouse Nycodenz gradient quiescent",
+"protocols.io hepatic stellate cells serum-free culture fibrosis activation in vitro mouse liver",
+"protocols.io mouse hepatic stellate cell isolation Nycodenz density gradient collagenase perfusion",
+"site:protocols.io hepatic stellate cell isolation mouse liver Nycodenz quiescent fibrosis"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"281914"
+]
+},
+"33529123": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "33529123",
+"queries_issued": [
+"sheep somatic cell nuclear transfer zona-free cloning embryo aggregation caffeine cytoplast activation protocols.io",
+"protocols.io sheep SCNT zona-free aggregation blastocyst development",
+"protocols.io sheep nuclear transfer caffeine activation embryo aggregation cloning efficiency",
+"protocols.io sheep SCNT handmade cloning zona-free aggregation caffeine MPF blastocyst offspring"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"35043"
+]
+},
+"33923007": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "33923007",
+"queries_issued": [
+"protocols.io heavy metal contamination agricultural soils geochemical indices multivariate statistics",
+"protocols.io soil heavy metal land capability classification Abu Dhabi",
+"protocols.io soil sampling heavy metals geochemical analysis protocol UAE arid",
+"protocols.io \"soil sampling\" \"heavy metals\" \"pollution index\" OR \"land capability\" protocol"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"20442"
+]
+},
+"33970926": {
+"candidate_urls": [
+"https://www.protocols.io/view/understanding-the-impact-of-sole-soled-footwear-on-3byl4k9njvo5/v1",
+"https://www.protocols.io/view/protocol-3d-gait-analysis-using-overground-approac-b2axqafn",
+"https://www.protocols.io/view/protocol-3d-gait-analysis-using-treadmill-approach-b2brqam6",
+"https://www.protocols.io/view/3d-gait-analysis-children-barefoot-footwear-kinematics",
+"https://www.protocols.io/view/pediatric-gait-analysis-spatiotemporal-parameters-barefoot-shod",
+"https://www.protocols.io/view/toddler-gait-analysis-vicon-gaitrite-barefoot-footwear",
+"https://www.protocols.io/view/in-shoe-foot-kinematics-toddler-soft-sole-shoe-protocol",
+"https://www.protocols.io/view/gait-analysis-newly-walking-children-shoe-conditions",
+"https://www.protocols.io/view/lower-limb-kinematics-toddler-walking-barefoot-shod-comparison",
+"https://www.protocols.io/view/spatiotemporal-gait-parameters-children-footwear-barefoot"
+],
+"hit_rank": 1,
+"is_hit": true,
+"pmid": "33970926",
+"queries_issued": [
+"protocols.io toddler gait kinematics soft-soled shoes barefoot spatiotemporal",
+"protocols.io infant walking shoes barefoot gait analysis protocol",
+"protocols.io toddler footwear gait kinematics barefoot Vicon GAITRite Williams"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"45989"
+]
+},
+"33996275": {
+"candidate_urls": [
+"https://www.protocols.io/view/Iron-Chloride-Precipitation-of-Viruses-from-Seawat-c2wyfd",
+"https://www.protocols.io/view/resuspension-and-concentration-of-iron-chloride-pr-b4niqvce",
+"https://www.protocols.io/view/concentrating-viruses-by-tangential-flow-filtratio-bbagiibw",
+"https://www.protocols.io/view/concentration-and-nucleic-acid-extraction-of-virus-gzzhbx737",
+"https://www.protocols.io/view/concentration-and-nucleic-acid-extraction-of-virus-j8nlko1rwv5r",
+"https://www.protocols.io/view/Purifying-Viruses-Using-Sucrose-Cushion-261ge6xjl479/v1",
+"https://www.protocols.io/view/concentration-of-viruses-from-wastewater-influent-bi6jkhcn",
+"https://www.protocols.io/view/virus-concentration-from-wastewater-using-peg-prec-bx9ipr4e",
+"https://www.protocols.io/view/virus-purification-protocol-for-ehv-163-and-other-bcpvivn6"
+],
+"hit_rank": 1,
+"is_hit": true,
+"pmid": "33996275",
+"queries_issued": [
+"protocols.io ultrafiltration iron chloride flocculation virus concentration wastewater metagenomics",
+"protocols.io viral DNA concentration wastewater ultrafiltration FeCl3 flocculation sequencing",
+"protocols.io aquatic virome ultrafiltration iron chloride flocculation wastewater environmental water",
+"protocols.io virome ultrafiltration tangential flow virus concentration purification DNase chloroform environmental water metagenomics"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"822"
+]
+},
+"34447628": {
+"candidate_urls": [
+"https://www.protocols.io/view/extraction-of-rna-from-wastewater-primary-solids-u-bi6skhee.html",
+"https://www.protocols.io/view/high-throughput-sars-cov-2-pmmov-and-bcov-quantifi-b2mjqc4n.html",
+"https://www.protocols.io/view/quantification-of-various-sars-cov-2-variant-mutat-cnacvaaw.html",
+"https://www.protocols.io/view/one-step-rt-qpcr-for-sars-cov-2-wastewater-surveil-bpk3mkyn.html",
+"https://www.protocols.io/view/wastewater-concentration-by-adsorption-and-direct-bhiuj4ew.html",
+"https://www.protocols.io/view/quantification-of-the-sars-cov-2-using-nanotrap-pa-b8mnru5e.html",
+"https://www.protocols.io/view/protocol-for-safe-affordable-and-reproducible-isol-bxavpie6",
+"https://www.protocols.io/view/concentration-extraction-and-quantification-of-sar-b9w2r7ge",
+"https://www.protocols.io/view/ncbi-submission-protocol-for-sars-cov-2-wastewater-b2uyqexw"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "34447628",
+"queries_issued": [
+"protocols.io SARS-CoV-2 RNA wastewater solids storage temperature freeze-thaw surveillance",
+"protocols.io wastewater epidemiology SARS-CoV-2 solid sample storage conditions RNA stability",
+"protocols.io \"storage conditions\" \"wastewater solids\" SARS-CoV-2 freeze-thaw temperature RNA quantification",
+"protocols.io \"effect of storage\" wastewater SARS-CoV-2 solids biobanking epidemiology site:protocols.io"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"55692"
+]
+},
+"34457243": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "34457243",
+"queries_issued": [],
+"stop_reason": "refusal",
+"target_protocol_ids": [
+"36007"
+]
+},
+"34462260": {
+"candidate_urls": [
+"https://www.protocols.io/view/seahorse-protocol-for-islets-using-xfe24-analyzer-b5v7q69n",
+"https://dx.doi.org/10.17504/protocols.io.n2bvj63p5lk5/v1",
+"https://www.protocols.io/view/beta-cell-exocytosis-patch-clamp-protocol-incretin-senp1",
+"https://www.protocols.io/view/oral-glucose-tolerance-test-ogtt-mouse-high-fat-di",
+"https://www.protocols.io/view/islet-isolation-mouse-pancreatic-islet-insulin-sec",
+"https://www.protocols.io/view/glucose-stimulated-insulin-secretion-gsis-mouse-is",
+"https://www.protocols.io/view/exendin-4-glp-1-receptor-agonist-beta-cell-exocyto",
+"https://www.protocols.io/view/dpp4-inhibitor-mk-0626-in-vivo-glucose-tolerance-m",
+"https://www.protocols.io/view/mouse-islet-isolation-and-static-insulin-secretion",
+"https://www.protocols.io/view/intraperitoneal-glucose-tolerance-test-ipgtt-high-"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "34462260",
+"queries_issued": [
+"beta-cell SENP1 knockout incretin insulin secretion high-fat diet protocols.io",
+"SENP1 pancreatic beta cell GLP-1 GIP incretin glucose tolerance protocol",
+"SENP1 beta cell knockout incretin GLP-1 insulin secretion oral glucose tolerance protocol site:protocols.io",
+"protocols.io MacDonald SENP1 beta cell islet exocytosis insulin secretion incretin high fat diet mouse"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"14815",
+"19145"
+]
+},
+"34484143": {
+"candidate_urls": [
+"https://www.protocols.io/view/high-throughput-sequencing-of-fthfs-gene-amplicons-bqe4mdyw",
+"https://www.protocols.io/view/genomic-dna-extraction-from-anaerobic-digester-sam-bgxkjxkw",
+"https://www.protocols.io/view/fthfs-gene-amplicon-sequencing-for-acetogenic-comm-bp2 hmab6",
+"https://www.protocols.io/view/acetoscan-pipeline-for-fthfs-amplicon-data-analysi-bscfnab6",
+"https://www.protocols.io/view/pcr-amplification-of-fthfs-gene-from-biogas-sample-bw7fphbn",
+"https://www.protocols.io/view/16s-rrna-gene-amplicon-sequencing-of-anaerobic-dig-bpq5mmy6",
+"https://www.protocols.io/view/dna-extraction-and-library-preparation-for-biogas-bqcpmsvw",
+"https://www.protocols.io/view/acetobase-taxonomic-annotation-of-fthfs-amplicon-s-b4krquw6",
+"https://www.protocols.io/view/t-rflp-profiling-of-fthfs-gene-in-anaerobic-digest-bw7ifhbn",
+"https://www.protocols.io/view/microbial-community-profiling-in-biogas-reactors-u-be9fjh3n"
+],
+"hit_rank": 2,
+"is_hit": true,
+"pmid": "34484143",
+"queries_issued": [
+"protocols.io FTHFS gene amplicon sequencing acetogenic bacteria biogas digester",
+"protocols.io acetogenic community monitoring biogas FTHFS amplicon sequencing",
+"protocols.io FTHFS amplicon sequencing anaerobic digester acetogen protocol",
+"site:protocols.io acetogen FTHFS biogas digester sequencing community"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"37580"
+]
+},
+"34552577": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "34552577",
+"queries_issued": [],
+"stop_reason": "refusal",
+"target_protocol_ids": [
+"50594",
+"50595",
+"50675"
+]
+},
+"34596274": {
+"candidate_urls": [
+"https://www.protocols.io/view/intraperitoneal-glucose-tolerance-testing-ipgtt-q26g7r71qvwz/v1",
+"https://www.protocols.io/view/ip-glucose-tolerance-test-in-mouse-wxhffj6",
+"https://www.protocols.io/view/oral-glucose-tolerance-test-in-mouse-ujjeukn",
+"https://www.protocols.io/view/insulin-tolerance-test-in-mouse-wxjffkn",
+"https://www.protocols.io/view/insulin-tolerance-test-b5zxq77n"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "34596274",
+"queries_issued": [
+"protocols.io fasting glucose tolerance test mouse diabetes reproducibility",
+"protocols.io mouse cage changing fasting standardization diabetes research",
+"protocols.io mouse fasting insulin tolerance test high fat diet diabetes"
+],
+"stop_reason": "max_tokens",
+"target_protocol_ids": [
+"247022"
+]
+},
+"34616066": {
+"candidate_urls": [
+"https://www.protocols.io/view/isolation-of-nuclei-from-frozen-tissue-for-snmulti-6uchesw.html",
+"https://www.protocols.io/view/sequencing-open-chromatin-of-single-cell-nuclei-sn-pjudknw",
+"https://www.protocols.io/view/protocol-for-nuclei-isolation-from-fresh-and-froze-5jyl8m9edg2w/v2",
+"https://www.protocols.io/view/protocol-for-nuclei-isolation-from-fresh-and-froze-bdeni3de",
+"https://www.protocols.io/view/nuclei-isolation-from-fresh-and-frozen-brain-tissu-bvhhn336",
+"https://www.protocols.io/view/10x-genomics-single-nucleus-multiome-rna-atac-assa-b93fr8jn",
+"https://www.protocols.io/view/share-seq-protocol-v2-2-adapted-for-mortazavi-lab-difw4bpe.html",
+"https://www.protocols.io/view/nuclei-isolation-protocol-multiome-10x-genomics-dayr2fv6",
+"https://www.protocols.io/view/protocol-for-nuclei-isolation-from-fresh-and-froze-bx64prgw.html",
+"https://www.protocols.io/view/a-versatile-nuclei-extraction-protocol-for-single-crw4v7gw.html"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "34616066",
+"queries_issued": [
+"protocols.io mouse primary motor cortex single-cell RNA-seq epigenomics cell type atlas",
+"protocols.io snRNA-seq snATAC-seq motor cortex neuronal non-neuronal multimodal reference",
+"protocols.io BICCN mouse motor cortex snRNA-seq snATAC-seq snmC-seq cell type classification",
+"protocols.io 10x multiome snRNA-seq ATAC-seq brain cortex nuclei isolation cell atlas"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"11605"
+]
+},
+"34658337": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "34658337",
+"queries_issued": [
+"G2019S LRRK2 mutation cilia loss Hedgehog signaling striatal neurons mouse protocols.io",
+"LRRK2 G2019S primary cilia Hedgehog striatum protocol site:protocols.io",
+"LRRK2 cilia striatum Hedgehog protocols.io immunofluorescence RNAscope",
+"protocols.io LRRK2 primary cilia mouse brain striatum cholinergic neurons immunohistochemistry"
+],
+"stop_reason": "max_tokens",
+"target_protocol_ids": [
+"43690"
+]
+},
+"34740201": {
+"candidate_urls": [
+"https://www.protocols.io/view/ascent-automated-simulations-to-characterize-elec-b4mxqu7n",
+"https://www.protocols.io/view/computational-modeling-of-electrical-stimulation-o-kxygx9yw",
+"https://www.protocols.io/view/quantified-morphology-of-the-rat-vagus-nerve-for-c-bvt8n6rw",
+"https://www.protocols.io/view/pypns-multiscale-simulation-of-a-peripheral-nerve-bvt4n6rw",
+"https://www.protocols.io/view/computational-models-of-compound-nerve-action-pote-8epv5xx57g1b",
+"https://www.protocols.io/view/acute-stimulation-emg-and-neural-recording-from-a-dukp6uvn",
+"https://www.protocols.io/view/protocol-for-construction-of-rat-nerve-stimulation-bc2hiyb6",
+"https://www.protocols.io/view/simulation-of-peripheral-nerve-stimulation-with-cu-bvmjn44n",
+"https://www.protocols.io/view/finite-element-modeling-of-peripheral-nerve-stimul-b4krquw6",
+"https://www.protocols.io/view/automatic-3d-reconstruction-of-fascicles-in-periph-bvt6n6rw"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "34740201",
+"queries_issued": [
+"protocols.io computational modeling electrical stimulation rat visceral nerve fascicle axon diameter",
+"protocols.io simulate nerve cuff electrode recording rat autonomic nerve anatomical variability",
+"protocols.io ASCENT pipeline visceral nerve stimulation rat computational model fascicle axon",
+"protocols.io compound nerve action potential simulation rat vagus splanchnic nerve axon diameter distribution",
+"protocols.io ASCENT nerve stimulation modeling pipeline Pelot Grill Duke visceral rat"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"19271",
+"19927",
+"36536"
+]
+},
+"35243422": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "35243422",
+"queries_issued": [
+"protocols.io multiomics longitudinal profiling serial biopsies metastatic breast cancer tumor evolution",
+"protocols.io serial biopsy immune microenvironment therapy resistance breast cancer multiomics",
+"protocols.io SMMART serial biopsy multiomics breast cancer WES RNA-seq proteomics protocol",
+"protocols.io longitudinal tumor biopsy multiomics genomics transcriptomics immune profiling cancer",
+"protocols.io site:protocols.io serial biopsy multiomics breast cancer WES RNA-seq CyTOF RPPA tumor microenvironment longitudinal"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"47595"
+]
+},
+"35438621": {
+"candidate_urls": [
+"https://www.protocols.io/view/high-molecular-weight-dna-extraction-from-challeng-261ge6mkol47/v3",
+"https://www.protocols.io/view/multi-step-high-purity-high-molecular-weight-dna-e-rzkd74w",
+"https://www.protocols.io/view/high-molecular-weight-dna-extraction-from-fungal-t-9g3h3yn",
+"https://www.protocols.io/view/large-volume-fungal-genomic-dna-extraction-protoco-14egn59mg5dy/v1",
+"https://www.protocols.io/view/high-molecular-weight-dna-extraction-from-fungal-s-n92ld8ybnv5b/v2",
+"https://www.protocols.io/view/high-molecular-weight-dna-extraction-from-challeng-5isg4ee",
+"https://www.protocols.io/view/high-molecular-weight-dna-extraction-and-small-fra-bgw5jxg6",
+"https://www.protocols.io/view/high-quality-dna-from-fungi-for-long-read-sequenci-hadb2a6",
+"https://www.protocols.io/view/high-purity-high-molecular-weight-dna-extraction-f-n5ydg7w",
+"https://www.protocols.io/view/scalable-high-molecular-weight-dna-extraction-for-bnjhmcj6"
+],
+"hit_rank": 4,
+"is_hit": true,
+"pmid": "35438621",
+"queries_issued": [
+"protocols.io high molecular weight DNA extraction filamentous fungi long-read sequencing",
+"protocols.io HMW DNA filamentous fungi nanopore PacBio genome assembly",
+"protocols.io multi-step high purity high molecular weight DNA extraction fungal mycelium CTAB"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"12875",
+"38624",
+"54341"
+]
+},
+"35528780": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "35528780",
+"queries_issued": [
+"protocols.io metatranscriptomics Microcystis harmful algal blooms bioinformatics",
+"protocols.io metatranscriptomic analysis cyanobacteria gene expression community composition tools comparison",
+"protocols.io metatranscriptomics pipeline tool comparison RNA-seq cyanobacteria HAB workflow",
+"protocols.io \"metatranscriptomics\" \"harmful algal bloom\" OR \"Microcystis\" bioinformatics tools benchmark"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"28312",
+"38526",
+"49795",
+"49797",
+"51001"
+]
+},
+"35711922": {
+"candidate_urls": [
+"https://www.protocols.io/view/detection-and-validation-of-circular-dna-fragments-using-nanopore-sequencing-snakemake-graph-theoretic-b4skqve",
+"https://www.protocols.io/view/decoil-reconstructing-extrachromosomal-dna-structural-heterogeneity-from-long-read-nanopore-sequencing-data-cze7x5n",
+"https://www.protocols.io/view/coral-complete-reconstruction-of-amplifications-with-long-reads-ecDNA-nanopore-dx7vxkn",
+"https://www.protocols.io/view/cresil-long-read-whole-genome-sequencing-eccdna-identification-cancer-cells-b4zsqf4e",
+"https://www.protocols.io/view/ecc-finder-extrachromosomal-circular-dna-nanopore-long-read-sequencing-pipeline-b5sdq8e",
+"https://www.protocols.io/view/oxford-nanopore-long-read-sequencing-for-identific-dccs2swe",
+"https://www.protocols.io/view/circle-seq-long-read-nanopore-eccDNA-enrichment-cancer-amplicon-detection-bvz9n786",
+"https://www.protocols.io/view/ultra-long-read-sequencing-protocol-for-oxford-nan-bnmymc7w",
+"https://www.protocols.io/view/high-throughput-nanopore-sequencing-of-cell-free-d-csb7warn",
+"https://www.protocols.io/view/protocol-of-dna-extraction-for-nanopore-long-reads-bzbdp2i6"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "35711922",
+"queries_issued": [
+"extrachromosomal circular DNA oncogene amplification nanopore long-read sequencing graph-based pipeline protocol site:protocols.io",
+"protocols.io eccDNA nanopore sequencing cancer cells bioinformatics pipeline",
+"protocols.io Decoil AmpliconArchitect CoRAL eccDNA ecDNA nanopore long-read cancer protocol",
+"protocols.io \"extrachromosomal DNA\" OR \"eccDNA\" OR \"ecDNA\" \"nanopore\" \"graph\" cancer oncogene amplification",
+"protocols.io \"circular DNA\" OR \"eccDNA\" OR \"ecDNA\" nanopore \"breakpoint graph\" OR \"graph-based\" cancer amplification workflow"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"122089"
+]
+},
+"35853087": {
+"candidate_urls": [
+"https://www.protocols.io/view/a-methodology-for-gathering-and-annotating-the-raw-bdc4i2yw",
+"https://www.protocols.io/view/protocol-proci-a-methodology-for-creating-the-peer-dtv36n8n.html",
+"https://www.protocols.io/view/protocol-proci-defm3bk6.html",
+"https://www.protocols.io/view/retrieving-ssh-journals-citation-information-from-cs9rwh56",
+"https://www.protocols.io/view/a-qualitative-and-quantitative-analysis-of-open-ci-bw4fpywn",
+"https://www.protocols.io/view/sentiment-analysis-of-citation-contexts-in-scienti-bi6kkhcw",
+"https://www.protocols.io/view/topic-modeling-for-scientific-literature-analysis-bw7pphpn",
+"https://www.protocols.io/view/bibliometric-analysis-using-citespace-and-vosviewe-n2bvj6n56lk5",
+"https://www.protocols.io/view/metadata-extraction-from-scholarly-articles-using-bvt8n6rw",
+"https://www.protocols.io/view/crossref-api-metadata-retrieval-for-bibliometric-s-bw7pphpw"
+],
+"hit_rank": 1,
+"is_hit": true,
+"pmid": "35853087",
+"queries_issued": [
+"protocols.io retracted papers citation analysis metadata topic modeling",
+"protocols.io citation sentiment analysis retraction bibliometric",
+"protocols.io Heibi Peroni retracted articles citations methodology protocol bdc4i2yw"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"45556"
+]
+},
+"36045295": {
+"candidate_urls": [
+"https://www.protocols.io/view/de-novo-biosynthesis-of-vindoline-and-catharanthine-in-saccharomyces-cerevisiae-n2bvj6n85lk5/v1",
+"https://www.protocols.io/view/a-microbial-supply-chain-for-production-of-the-ant-bp2l647n",
+"https://www.protocols.io/view/engineering-yeast-for-de-novo-production-of-vinbla-14egn3w6mv5d/v1",
+"https://www.protocols.io/view/efficient-production-of-vindoline-from-tabersonine-b4qnqvve",
+"https://www.protocols.io/view/metabolic-engineering-saccharomyces-cerevisiae-mia-catharanthus-roseus-genes-dm6gpj65dlzp/v1",
+"https://www.protocols.io/view/reconstitution-of-monoterpene-indole-alkaloid-path-yeast-bp2l6e7e",
+"https://www.protocols.io/view/crispr-cas9-genome-integration-yeast-mia-pathway-vindoline-b4pyqvpw",
+"https://www.protocols.io/view/optimization-tabersonine-methoxylation-vindoline-yeast-cell-factories-b4qhqvt6",
+"https://www.protocols.io/view/heterologous-expression-catharanthus-roseus-cyp450-saccharomyces-cerevisiae-n92ldz86nl5b/v1",
+"https://www.protocols.io/view/strictosidine-platform-strain-construction-yeast-mia-biosynthesis-b4rwqv5e"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "36045295",
+"queries_issued": [
+"protocols.io yeast Saccharomyces cerevisiae vindoline catharanthine vinblastine precursors heterologous expression",
+"protocols.io engineering yeast monoterpene indole alkaloid biosynthesis vindoline catharanthine",
+"protocols.io vindoline catharanthine yeast heterologous biosynthesis protocol",
+"protocols.io monoterpene indole alkaloid MIA yeast Saccharomyces cerevisiae strictosidine protocol",
+"protocols.io site:protocols.io yeast vinblastine vindoline catharanthine MIA alkaloid biosynthesis"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"36887"
+]
+},
+"36149401": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "36149401",
+"queries_issued": [
+"phosphorylated Rab8 Rab10 LRRK2 feed-forward loop kinase activity membrane Parkinson's",
+"protocols.io LRRK2 Rab8 Rab10 phosphorylation kinase assay protocol",
+"protocols.io LRRK2 Rab8 Rab10 membrane recruitment feed-forward lipid bilayer reconstitution"
+],
+"stop_reason": "max_tokens",
+"target_protocol_ids": [
+"50829"
+]
+},
+"36217031": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "36217031",
+"queries_issued": [
+"large serine recombinase site-specific integration large DNA human cells protocols.io",
+"site-specific DNA integration no double-strand breaks serine recombinase human cells protocol",
+"Bxb1 PhiC31 large serine recombinase landing pad integration protocol protocols.io",
+"site:protocols.io serine recombinase Bxb1 PhiC31 integration human cells large DNA"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"28026"
+]
+},
+"36329019": {
+"candidate_urls": [
+"https://www.protocols.io/view/fpcount-protocol-in-lysate-purification-free-proto-cr7uv9nw",
+"https://www.protocols.io/view/fpcount-protocol-in-lysate-purification-free-proto-bzudp6s6",
+"https://www.protocols.io/view/fpcount-protocol-short-protocol-bzt6p6re",
+"https://www.protocols.io/view/fpcount-protocol-full-protocol-36wgq4235vk5/v1",
+"https://www.protocols.io/view/calibration-protocol-fluorescence-standard-curve-w-5qpvon81zl4o/v1",
+"https://www.protocols.io/view/calibration-protocol-plate-reader-fluorescence-cal-548g8zw",
+"https://www.protocols.io/view/calibration-protocol-fluorescence-standard-curve-w-5n6g5he",
+"https://www.protocols.io/view/igem-calibration-protocol-red-fluorescent-proteins-bcdjis4n",
+"https://www.protocols.io/view/calibration-protocol-conversion-of-od600-to-colony-zgnf3ve",
+"https://www.protocols.io/view/calibration-protocol-plate-reader-fluorescence-cal-6zrhf56"
+],
+"hit_rank": 2,
+"is_hit": true,
+"pmid": "36329019",
+"queries_issued": [
+"protocols.io fluorescence absolute protein concentration bacterial cell fluorescent protein calibrant microplate",
+"protocols.io convert arbitrary fluorescence units absolute concentration per cell calibration standard",
+"protocols.io FPCount ECmax purification-free fluorescent protein calibration microplate"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"54885"
+]
+},
+"36360315": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "36360315",
+"queries_issued": [
+"protocols.io vitamin K deficiency differentially expressed genes lncRNA systems genetics myocardial infarction renal failure prostate cancer",
+"protocols.io differentially expressed genes pathogenic variants shared disease lncRNA systems genetics protocol",
+"protocols.io \"vitamin K\" \"differentially expressed genes\" \"systems genetics\" RNA-Seq variant analysis protocol",
+"protocols.io Suravajhala vitamin K RNA-Seq DEG lncRNA comorbidities myocardial infarction renal failure prostate cancer"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"46880"
+]
+},
+"36460793": {
+"candidate_urls": [
+"https://www.protocols.io/view/nuclei-isolation-from-fresh-frozen-human-colon-tis-5jyl8pn17g2w/v1",
+"https://www.protocols.io/view/primary-human-liver-dissociation-for-scseq-nkjdcun",
+"https://www.protocols.io/view/human-liver-core-needle-biopsy-processing-protocol-chymt7u6",
+"https://www.protocols.io/view/frankenstein-protocol-for-nuclei-isolation-from-fr-3fkgjkw",
+"https://www.protocols.io/view/39-frankenstein-protocol-for-nuclei-isolation-fro-dm6gpwzqplzp/v2",
+"https://www.protocols.io/view/frankenstein-protocol-for-nuclei-isolation-from-fr-yxmvmkem6g3p/v1",
+"https://www.protocols.io/view/protocol-for-nuclei-isolation-from-fresh-and-froze-bdeai3ae",
+"https://www.protocols.io/view/protocol-for-nuclei-isolation-from-fresh-and-froze-bdeni3de/guidelines",
+"https://www.protocols.io/view/nuclei-extraction-for-single-cell-rnaseq-from-froz-q26g74xzqgwz/v1",
+"https://www.protocols.io/view/isolation-of-nuclei-from-frozen-tissue-for-snmulti-6uchesw"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "36460793",
+"queries_issued": [
+"protocols.io single-cell single-nucleus RNA sequencing fresh frozen human colon liver tissue",
+"protocols.io scRNA-seq snRNA-seq matched fresh frozen colon liver cell-type composition",
+"protocols.io single cell dissociation fresh human colon liver tissue scRNA-seq 10x Genomics",
+"protocols.io snRNA-seq nuclei isolation frozen human colon liver tissue comparison"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"22144"
+]
+},
+"36555794": {
+"candidate_urls": [
+"https://www.protocols.io/view/sars-cov-2-omicron-detection-rt-qpcr-assay-with-b-kqdg3p9nql25",
+"https://dx.doi.org/10.17504/protocols.io.b5f8q3rw",
+"https://www.protocols.io/view/one-step-rt-pcr-ins214epe-assay-for-omicron-b-1-1-b2trqem6",
+"https://www.protocols.io/view/multiplexed-rt-qpcr-to-screen-for-sars-cov-2-b-1-1-br9vm966",
+"https://www.protocols.io/view/sars-cov-2-variant-discrimination-multiplex-rt-qpcr-omicron",
+"https://www.protocols.io/view/rt-qpcr-omicron-ba1-ba2-ba4-ba5-subvariant-genotyping",
+"https://www.protocols.io/view/multiplex-rt-qpcr-sars-cov-2-omicron-sublineage-typing",
+"https://www.protocols.io/view/allele-specific-rt-qpcr-omicron-subvariants-sars-cov-2",
+"https://www.protocols.io/view/sars-cov-2-variant-of-concern-multiplex-pcr-genotyping",
+"https://www.protocols.io/view/sars-cov-2-omicron-ba2-ba4-ba5-discrimination-rt-qpcr"
+],
+"hit_rank": 3,
+"is_hit": true,
+"pmid": "36555794",
+"queries_issued": [
+"protocols.io multiplex RT-qPCR Omicron subvariants SARS-CoV-2 discrimination",
+"protocols.io RT-qPCR assay distinguish Omicron subvariants clinical samples without sequencing",
+"protocols.io SARS-CoV-2 Omicron BA.2 BA.4 BA.5 subvariant typing RT-qPCR protocol",
+"protocols.io \"omicron\" \"subvariant\" \"RT-qPCR\" OR \"qPCR\" genotyping variant discrimination protocol 2022 2023"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"199148",
+"55889"
+]
+},
+"36824594": {
+"candidate_urls": [
+"https://www.protocols.io/view/protocols-for-the-draft-genome-assembly-of-the-eas-q26g7bx51lwz/v1",
+"https://www.protocols.io/view/protein-coding-gene-annotation-protocol-for-the-ea-kxygxen7wv8j/v1",
+"https://www.protocols.io/view/repetitive-element-annotation-for-the-eastern-banj-bgkbjusn",
+"https://www.protocols.io/view/protein-coding-gene-annotation-for-the-eastern-ban-bgkajuse",
+"https://www.protocols.io/view/the-pipeline-of-assembly-and-annotation-eq2lyxrwgx9k/v1",
+"https://www.protocols.io/view/protocols-for-the-assembly-and-annotation-of-snake-cnvrve56",
+"https://www.protocols.io/view/whole-genome-de-novo-assembly-and-annotation-proto-gmabu2e",
+"https://www.protocols.io/view/fish-genome-assembly-and-annotation-pipeline-ss3eegn",
+"https://www.protocols.io/view/rna-seq-protocols-for-non-model-species-dcbm2sk6",
+"https://www.protocols.io/view/bulk-rna-sequencing-mrna-seq-kxygxp8edl8j/v1"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "36824594",
+"queries_issued": [
+"Limnodynastes dumerilii genome assembly annotation protocol protocols.io",
+"amphibian genome assembly annotation phylogenomics protocol protocols.io",
+"protocols.io Limnodynastes dumerilii genome sequencing RNA-seq transcriptome"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"33534",
+"33594"
+]
+},
+"36951106": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "36951106",
+"queries_issued": [
+"alanyl-tRNA synthetase chiral selectivity D-alanine DTD deacylase protocol site:protocols.io",
+"DTD D-aminoacyl-tRNA deacylase D-alanine mischarging correction protocol protocols.io",
+"AlaRS D-alanine editing DTD deacylase tRNA aminoacylation protocol protocols.io",
+"protocols.io aminoacyl-tRNA synthetase D-amino acid chiral proofreading deacylation assay"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"121325"
+]
+},
+"37237607": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "37237607",
+"queries_issued": [
+"protocols.io zebrafish wound healing optical coherence tomography angiography",
+"protocols.io diabetic zebrafish cutaneous wound healing vascular remodeling OCT",
+"protocols.io adult zebrafish diabetic wound healing OCTA vascular tissue remodeling protocol",
+"protocols.io zebrafish cutaneous wound healing monitoring longitudinal imaging protocol"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"28876"
+]
+},
+"37242601": {
+"candidate_urls": [
+"https://www.protocols.io/view/ex-vivo-schistosoma-mansoni-adult-worm-drug-screen-n2bvj6n5blk5/v1",
+"https://www.protocols.io/view/schistosoma-mansoni-newly-transformed-schistosomul-261ge34x8v47/v1",
+"https://www.protocols.io/view/in-vitro-drug-screening-assay-for-schistosoma-mans-bp2l6x3e",
+"https://www.protocols.io/view/high-throughput-phenotypic-screening-of-schistosom-8epv5xn6dg1b/v1",
+"https://www.protocols.io/view/virtual-screening-cheminformatics-pipeline-neglect-kxygxpy6og8j/v1",
+"https://www.protocols.io/view/schistosoma-mansoni-cercariae-transformation-schis-dm6gp3n6/v1",
+"https://www.protocols.io/view/docking-based-virtual-screening-schistosoma-kinase-j8nlk4jy6l5r/v1",
+"https://www.protocols.io/view/luminescence-atp-based-viability-assay-schistosomi-6qpvr5pn6gmk/v1",
+"https://www.protocols.io/view/schistosoma-mansoni-workspace-anthelmintic-drug-di-dtm6649",
+"https://www.protocols.io/workspaces/schistosoma-mansoni"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "37242601",
+"queries_issued": [
+"protocols.io Schistosoma drug discovery praziquantel resistance ex vivo worm assay",
+"protocols.io schistosomiasis anthelmintic screening larval adult worm cheminformatics",
+"protocols.io Schistosoma mansoni schistosomula adult worm drug screening protocol",
+"protocols.io cheminformatics virtual screening neglected tropical disease helminth",
+"protocols.io site:protocols.io schistosoma worm assay anthelmintic drug screening virtual screening"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"122031"
+]
+},
+"37337093": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "37337093",
+"queries_issued": [
+"GABA inhibition vasopressin neurons supraoptic nucleus bile duct ligation cirrhotic rats intracellular chloride protocols.io",
+"protocols.io GABA vasopressin supraoptic nucleus chloride dysregulation cirrhosis",
+"protocols.io bile duct ligation supraoptic nucleus vasopressin GABA KCC2 NKCC1 patch clamp",
+"site:protocols.io supraoptic nucleus vasopressin GABA chloride cirrhosis",
+"protocols.io GABA supraoptic nucleus vasopressin bile duct ligation gramicidin perforated patch chloride cirrhosis rat"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"121261"
+]
+},
+"37425958": {
+"candidate_urls": [
+"https://www.protocols.io/view/cell-surface-biotinylation-x54v9d9o4g3e/v1",
+"https://www.protocols.io/view/transferrin-uptake-assay-to-measure-clathrin-media-n2bvj38d5lk5/v1",
+"https://www.protocols.io/view/cell-surface-flow-cytometry-staining-protocol-baa9iah6",
+"https://www.protocols.io/view/receptor-internalization-assay-by-flow-cytometry-bpk5mky6",
+"https://www.protocols.io/view/endosome-isolation-protocol-yxmvmn96/v1",
+"https://www.protocols.io/view/clathrin-coated-pit-assembly-assay-total-internal-r-n92ldz6x9l5b/v1",
+"https://www.protocols.io/view/rtk-degradation-assay-immunoblotting-after-cyclohe-rm7vzjy59lx1/v1",
+"https://www.protocols.io/view/fluorescence-recovery-after-photobleaching-frap-as-bcubiwte",
+"https://www.protocols.io/view/proximity-ligation-assay-pla-for-protein-protein-i-bscsnbde",
+"https://www.protocols.io/view/crispr-cas9-knockout-of-transmembrane-proteins-in-n-bp3mmnq6"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "37425958",
+"queries_issued": [
+"TMEM127 loss RET receptor endocytosis surface accumulation pheochromocytoma protocols.io",
+"TMEM127 RET endocytosis signaling pheochromocytoma protocol site:protocols.io",
+"TMEM127 RET clathrin endocytosis membrane dynamics protocol protocols.io Dahia",
+"protocols.io RET receptor tyrosine kinase endocytosis surface biotinylation flow cytometry pheochromocytoma"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"256618"
+]
+},
+"37829276": {
+"candidate_urls": [
+"https://www.protocols.io/view/picogram-input-multimodal-sequencing-pimms-rm7vzywy5lx1",
+"https://www.protocols.io/view/ultra-low-input-library-preparation-of-single-soil-c4rjyv4n",
+"https://www.protocols.io/view/pacbio-ampli-fi-amplifying-genomic-dna-for-smrtbel-hmj8b44rx",
+"https://www.protocols.io/de/view/pacbio-smrtbell-library-preparation-using-kit-3-0-4r3l21w3xg1y/v1",
+"https://www.protocols.io/view/whole-genome-amplification-and-long-read-sequencin-cv99w996",
+"https://www.protocols.io/view/ipa-assembly-for-hifi-pacbio-reads-buwfnxbn",
+"https://www.protocols.io/view/low-input-long-read-dna-isolation-for-nanopore-seq-nc5day6",
+"https://www.protocols.io/view/protocol-of-dna-extraction-for-nanopore-long-reads-bzbdp2i6",
+"https://www.protocols.io/view/cell-sorting-of-marine-heterotrophic-flagellates-f-ywpfxdn",
+"https://www.protocols.io/view/ultra-long-read-sequencing-protocol-for-rad004-mrxc57n"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "37829276",
+"queries_issued": [
+"protocols.io xenacoelomorph genome sequencing single specimen low-input long-read",
+"protocols.io nemertodermatida genome sequencing protocol",
+"protocols.io single small marine invertebrate genome low-input long-read sequencing protocol",
+"protocols.io PacBio ultra-low input HiFi single meiofauna worm genome assembly"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"18087",
+"239646"
+]
+},
+"38273288": {
+"candidate_urls": [
+"https://www.protocols.io/view/fluorescence-activated-nuclei-sorting-fans-on-huma-bmh2k38e",
+"https://www.protocols.io/view/fluorescence-activated-nuclei-sorting-fans-on-huma-36wgq4965vk5/v1",
+"https://www.protocols.io/view/isolation-of-neuronal-nuclei-from-human-frozen-pos-cbcdsis6",
+"https://www.protocols.io/view/fluorescence-activated-nuclei-sorting-fans-for-sin-dd2d28a6",
+"https://www.protocols.io/view/nuclei-isolation-immunostaining-and-fluorescence-a-ddz52786",
+"https://www.protocols.io/view/quantifying-cell-type-proportions-human-cortex-dna-methylation",
+"https://www.protocols.io/view/hibed-hierarchical-brain-dna-methylation-deconvolu",
+"https://www.protocols.io/view/episcore-cell-type-deconvolution-bulk-tissue-dna-m",
+"https://www.protocols.io/view/reference-free-deconvolution-complex-dna-methylati",
+"https://www.protocols.io/view/celldmc-cell-type-specific-dna-methylation-changes"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "38273288",
+"queries_issued": [
+"protocols.io DNA methylation deconvolution cell-type proportions bulk cortex neuronal glial EWAS",
+"protocols.io methylation-based cell type deconvolution brain cortex reference panel neurons glia",
+"protocols.io FANS fluorescence activated nuclei sorting human brain cortex DNA methylation deconvolution",
+"protocols.io HiBED EpiSCORE brain cell type deconvolution methylation EWAS cortex protocol"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"42445"
+]
+},
+"38388166": {
+"candidate_urls": [
+"https://www.protocols.io/view/detection-of-klebsiella-pneumoniae-in-healthy-poul-cz4vx8w6",
+"https://www.protocols.io/view/isolation-of-klebsiella-strains-from-human-or-anim-662hhge",
+"https://www.protocols.io/view/zkir-qpcr-for-detection-and-quantification-of-kleb-bpecmjaw",
+"https://www.protocols.io/view/protocol-for-whole-shotgun-metagenomics-pipeline-f-dvbk62kw",
+"https://www.protocols.io/view/protocol-for-dna-extraction-and-shotgun-metagenomi-c8wqzxdw",
+"https://www.protocols.io/view/shotgun-metagenomics-sequencing-and-bioinformatic-bpwempew",
+"https://www.protocols.io/view/dna-extraction-from-poultry-cecal-content-for-meta-8epv5xn9",
+"https://www.protocols.io/view/bacterial-culture-and-selective-isolation-of-enter-rm7vzy86",
+"https://www.protocols.io/view/klebsiella-pneumoniae-species-complex-detection-cu-5jyl8py6",
+"https://www.protocols.io/view/fecal-dna-extraction-for-shotgun-metagenomics-and-bveen3e6"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "38388166",
+"queries_issued": [
+"protocols.io qPCR culture shotgun metagenomics Klebsiella pneumoniae poultry gut microbiome",
+"protocols.io Klebsiella pneumoniae quantification turkey broiler gut microbiome protocol",
+"protocols.io Kaspersen Klebsiella poultry metagenomics qPCR culturing protocol",
+"protocols.io poultry cecal gut microbiome shotgun metagenomics DNA extraction qPCR Klebsiella"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"28094"
+]
+},
+"38819130": {
+"candidate_urls": [
+"https://www.protocols.io/view/ncbi-submission-protocol-for-sars-cov-2-wastewater-ewov14w27vr2/v7",
+"https://www.protocols.io/view/modified-illumina-dna-prep-m-tagmentation-library-b2yzqfx6.html",
+"https://www.protocols.io/view/rt-qpcr-detection-of-sars-cov-2-from-wastewater-us-b66krhcw.html",
+"https://www.protocols.io/view/virus-concentration-from-wastewater-using-peg-prec-bx9ipr4e",
+"https://www.protocols.io/workspaces/genometrakr3",
+"https://www.protocols.io/view/ncbi-submission-protocol-for-sars-cov-2-wastewater-citcueiw",
+"https://www.protocols.io/view/sars-cov-2-wastewater-sequencing-using-varskip-sho-b2zzqf56",
+"https://www.protocols.io/view/wastewater-collection-protocol-for-sars-cov-2-surv-b2xsqfn6",
+"https://www.protocols.io/view/rna-extraction-from-wastewater-for-sars-cov-2-sequ-b2yzqf46",
+"https://www.protocols.io/view/quality-control-of-sars-cov-2-wastewater-sequencin-b2zzqf36"
+],
+"hit_rank": 4,
+"is_hit": true,
+"pmid": "38819130",
+"queries_issued": [
+"protocols.io wastewater sequencing SARS-CoV-2 variant prevalence NGS",
+"protocols.io FDA wastewater surveillance SARS-CoV-2 next-generation sequencing protocol",
+"protocols.io GenomeTrakr FDA wastewater SARS-CoV-2 sequencing library preparation variant"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"53258",
+"53350",
+"53493"
+]
+},
+"38863673": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "38863673",
+"queries_issued": [
+"protocols.io tumor mutation splice junction RNA-seq neoantigen melanoma",
+"protocols.io RNA-seq splice junction neoantigen identification cancer immunotherapy protocol",
+"protocols.io splice2neo neoantigen RNA-seq melanoma somatic mutation splicing protocol",
+"protocols.io neoantigen prediction pipeline RNA-seq tumor splice junction immunotherapy"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"11534"
+]
+},
+"38902223": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "38902223",
+"queries_issued": [
+"H3.3 histone variant B cell plasma cell differentiation chromatin accessibility mice protocols.io",
+"site:protocols.io H3F3 histone H3.3 B cell differentiation chromatin ATAC-seq",
+"protocols.io Saito Harada H3.3 plasma cell B cell differentiation ATAC ChIP-seq mouse",
+"protocols.io H3.3 ChIP-seq ATAC-seq B cell plasma cell histone variant mouse immunology"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"122074"
+]
+},
+"38989890": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "38989890",
+"queries_issued": [
+"protocols.io Drosophila tRNA mistranslation proline serine RNA-seq transcriptomics sex-specific",
+"protocols.io RNA-seq Drosophila mistranslation gene expression male female differential",
+"protocols.io Drosophila RNA-seq transcriptomics proline serine tRNA mistranslation protocol",
+"protocols.io Isaacson Brandl Moehring Drosophila RNA-seq mistranslation tRNA fly transcriptomics"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"3315"
+]
+},
+"39237830": {
+"candidate_urls": [
+"https://www.protocols.io/view/dimelo-seq-directed-methylation-with-long-read-seq-b2u8qezw",
+"https://www.protocols.io/view/dimelo-seq-directed-methylation-with-long-read-seq-bv8tn9wn",
+"https://www.protocols.io/view/dimelo-seq-directed-methylation-with-long-read-seq-n2bvjxe4wlk5/v2/materials",
+"https://www.protocols.io/view/pa-hia5-protein-expression-and-purification-bv82n9ye",
+"https://www.protocols.io/view/purification-and-activity-testing-for-nanobody-hia-g3iibykcf.html",
+"https://www.protocols.io/view/cas9-enrichment-for-dimelo-sequencing-c6akzacw",
+"https://www.protocols.io/view/protocol-of-dna-extraction-for-nanopore-long-reads-bzbdp2i6",
+"https://www.protocols.io/view/bench-top-cut-amp-tag-bcuhiwt6",
+"https://www.protocols.io/view/bench-top-cut-amp-tag-kqdg34qdpl25/v1/article",
+"https://www.protocols.io/view/autocut-amp-tag-streamlined-genome-wide-profiling-bgztjx6n"
+],
+"hit_rank": 1,
+"is_hit": true,
+"pmid": "39237830",
+"queries_issued": [
+"protocols.io antibody-tethered methyltransferase nanopore sequencing protein-DNA interactions",
+"protocols.io DamID methyltransferase nanopore long-read sequencing haplotype-specific",
+"protocols.io ChIC CUT&Tag methyltransferase Oxford Nanopore genome-wide protein binding",
+"protocols.io DiMeLo-seq pA-Hia5 methyltransferase nanopore sequencing protocol site:protocols.io"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"51194",
+"55936"
+]
+},
+"39251619": {
+"candidate_urls": [
+"https://www.protocols.io/view/propidium-iodide-cell-cycle-staining-protocol-dm6gpb4jlzpn/v3",
+"https://www.protocols.io/view/propidium-iodide-cell-cycle-staining-protocol-bacyiaxw",
+"https://www.protocols.io/view/Yeast-DAPI-Staining-eigbcbw",
+"https://www.protocols.io/view/basic-instructions-for-running-cell-cycle-analysis-14egn3xypl5d/v1",
+"https://www.protocols.io/view/fixation-of-yeast-cells-for-rna-fish-b9ifr4bn.html",
+"https://www.protocols.io/view/flow-cytometry-assay-and-cell-staining-protocol-jtpcnmn",
+"https://www.protocols.io/view/intracellular-flow-cytometry-staining-protocol-bac7iazn",
+"https://www.protocols.io/view/intracellular-flow-cytometry-staining-protocol-tknekve",
+"https://www.protocols.io/view/cell-surface-flow-cytometry-staining-protocol-baa9iah6",
+"https://www.protocols.io/view/flow-cytometry-measurements-of-lipid-peroxidation-dm6gp92x1vzp/v1"
+],
+"hit_rank": 3,
+"is_hit": true,
+"pmid": "39251619",
+"queries_issued": [
+"Malassezia yeast cell cycle flow cytometry DAPI propidium iodide nuclear staining protocol site:protocols.io",
+"protocols.io fungal yeast cell cycle analysis flow cytometry DAPI PI staining thick cell wall",
+"protocols.io Malassezia flow cytometry cell cycle DNA staining lipid wall permeabilization",
+"protocols.io yeast cell cycle DAPI staining zymolyase cell wall digestion flow cytometry fungal"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"2344"
+]
+},
+"39359233": {
+"candidate_urls": [
+"https://www.protocols.io/view/reconstructed-human-epidermis-rhe-skin-irritation-dm6gpj9rdlzp/v1",
+"https://www.protocols.io/view/3d-full-thickness-human-skin-equivalent-model-for-14egnzjpe",
+"https://www.protocols.io/view/in-vitro-skin-corrosion-test-using-epiderm-ft-oecd-bp2l6xz7gvqe",
+"https://www.protocols.io/view/3d-reconstructed-human-skin-micronucleus-rsmn-geno-6qpvr4xzpgmk",
+"https://www.protocols.io/view/skin-sensitization-testing-using-reconstructed-hum-cvc5uvw6",
+"https://www.protocols.io/view/epiderm-skin-irritation-test-oecd-tg-439-mattek-ep-bc2jiyun",
+"https://www.protocols.io/view/in-vitro-comet-assay-in-3d-human-epidermal-skin-mo-hfeb3je",
+"https://www.protocols.io/view/3d-bioprinted-human-skin-model-for-dermal-toxicolo-6qpvr4xlpgmk",
+"https://www.protocols.io/view/full-thickness-skin-equivalent-for-chemical-permeation-dermotoxicology-x54v9y26",
+"https://www.protocols.io/view/air-liquid-interface-culture-of-keratinocytes-for-3d-skin-toxicity-nz49d9z6"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "39359233",
+"queries_issued": [
+"protocols.io 3D human skin model in vitro toxicology alternative animal testing",
+"protocols.io reconstructed human epidermis skin irritation risk assessment protocol",
+"protocols.io skin equivalent EpiDerm EpiSkin toxicology skin irritation corrosion sensitization protocol site:protocols.io",
+"protocols.io \"3D skin\" OR \"reconstructed human epidermis\" OR \"skin equivalent\" toxicology"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"237191"
+]
+},
+"39510801": {
+"candidate_urls": [
+"https://www.protocols.io/view/mass-spectrometry-based-proteomic-exploration-of-d-c9bsz2ne",
+"https://www.protocols.io/view/dia-label-free-proteomic-analysis-of-murine-bone-m-bwfzfbp6",
+"https://www.protocols.io/view/bone-marrow-derived-macrophage-bmdm-differentiation-j8nlkw7bwl5r",
+"https://www.protocols.io/view/sample-preparation-protocol-for-proteomic-analysis-c9csz2we",
+"https://www.protocols.io/view/cell-culture-of-raw264-7-cells-cqtfvwjn",
+"https://www.protocols.io/view/bmdm-differentiation-from-mouse-bone-marrow-rm7vz8n96lx1",
+"https://www.protocols.io/view/murine-macrophage-cell-lysis-for-mass-spectrometry-bvt8n6rw",
+"https://www.protocols.io/view/bone-marrow-derived-macrophage-isolation-and-cultu-ewov14n1lgr",
+"https://www.protocols.io/view/macrophage-proteomics-sample-preparation-sp3-s-tra-bykfpucn",
+"https://www.protocols.io/view/j774a-1-macrophage-culture-and-lps-stimulation-protocol-6qpvr4n8pvmk"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "39510801",
+"queries_issued": [
+"protocols.io RAW264.7 J774A.1 macrophage proteomics mass spectrometry bone marrow",
+"protocols.io macrophage cell line primary BMDM proteome comparison mass spectrometry",
+"protocols.io murine macrophage proteomics sample preparation RAW264.7 BMDM inflammation",
+"protocols.io macrophage mass spectrometry proteome LPS inflammation mouse cell line"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"162311",
+"206474"
+]
+},
+"39596330": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "39596330",
+"queries_issued": [
+"protocols.io RNase H1 E. coli R-loop RNA-DNA hybrid cleavage",
+"protocols.io R-loop RNA polymerase RNase H degradation assay protocol",
+"protocols.io RNase H1 R-loop binding cleavage kinetics fluorescence assay EMSA",
+"protocols.io \"RNase H\" \"R-loop\" \"RNA polymerase\" protocol site:protocols.io"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"237311"
+]
+},
+"39664262": {
+"candidate_urls": [
+"https://www.protocols.io/view/dna-extraction-protocol-for-dna-metabarcoding-of-m-bucjnsun",
+"https://www.protocols.io/view/18s-rrna-gene-metabarcoding-library-prep-dual-pcr-deun3eve",
+"https://www.protocols.io/view/fuhrman-lab-515f-926r-16s-and-18s-rrna-gene-sequen-j8nlkpd1g5r7/v2",
+"https://www.protocols.io/view/18s-v4-rrna-amplification-from-total-genomic-dna-f-bkikkucw",
+"https://www.protocols.io/view/mba-dtol-dna-barcoding-of-macroalgae-and-marine-pr-c4kbyusn",
+"https://www.protocols.io/view/cell-sorting-of-marine-heterotrophic-flagellates-f-ywpfxdn",
+"https://www.protocols.io/view/co-cultivation-protocol-for-porosira-glacialis-dia-g3rdbym27",
+"https://www.protocols.io/view/ultra-long-read-sequencing-protocol-for-oxford-nan-5qpvodxxg4o1/v1",
+"https://www.protocols.io/view/ultra-long-read-sequencing-protocol-for-rad004-mrxc57n",
+"https://www.protocols.io/view/biofilm-dna-metabarcoding-protocol-j8nlk8em6l5r/v1"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "39664262",
+"queries_issued": [
+"protocols.io marine phytoplankton isolation long-read sequencing rRNA",
+"protocols.io phytoplankton strain isolation genetic characterization 18S rRNA nanopore",
+"protocols.io phytoplankton isolation culture single cell dilution marine microalgae",
+"protocols.io \"18S rRNA\" OR \"28S rRNA\" phytoplankton DNA extraction long-read amplicon sequencing reference database"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"38081"
+]
+},
+"39777783": {
+"candidate_urls": [
+"https://www.protocols.io/view/Preparation-of-Virus-DNA-from-Seawater-for-Metagen-c28yhv",
+"https://www.protocols.io/view/phylogenetic-read-placement-protocol-dd7729rn.html",
+"https://www.protocols.io/view/viral-metagenomics-a-sequence-independent-single-r-bqbamsan",
+"https://www.protocols.io/view/virsorter-running-protocol-to-identify-viral-seque-bqc4msyw",
+"https://www.protocols.io/view/marine-viral-metagenomics-tangential-flow-filtratio-bpf5mjn6",
+"https://www.protocols.io/view/checkv-end-to-end-workflow-for-viral-genome-quality-rm7vz8p2ogx1/v1",
+"https://www.protocols.io/view/genome-centric-metagenomics-pipeline-for-recovering-6qpvr4n87vmk/v1",
+"https://www.protocols.io/view/viral-identification-from-metagenomes-using-vibrant-bpf5mjr6",
+"https://www.protocols.io/view/sequence-based-virus-host-prediction-iphiveho-x-bqb9msr6",
+"https://www.protocols.io/view/whole-metagenome-shotgun-sequencing-of-viral-commun-bsc4nawv"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "39777783",
+"queries_issued": [
+"archaeal virus metagenomics Poseidoniales marine estuary protocols.io",
+"site:protocols.io archaeal virus metagenomics phylogenetic classification",
+"protocols.io magrovirus magroviruses Poseidoniales estuary metagenomics virus recovery",
+"protocols.io viral metagenomics marine archaea virus identification estuary seawater"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"57770",
+"830",
+"845"
+]
+},
+"40163522": {
+"candidate_urls": [
+"https://www.protocols.io/view/low-cost-tagmentation-library-prep-for-low-coverag-dk6i4zce.html",
+"https://www.protocols.io/view/plant-dna-extraction-and-preparation-for-ont-seque-bcvyiw7w",
+"https://www.protocols.io/view/plant-assemble-plant-de-novo-genome-assembly-assem-b6hirb4e",
+"https://www.protocols.io/view/protocol-for-genomic-dna-extraction-and-sequencing-dbkk2kuw",
+"https://www.protocols.io/view/angsd-population-genomics-pipeline-low-coverage-wg-rm7vzy85plx1",
+"https://www.protocols.io/view/whole-genome-sequencing-library-preparation-using-bjefjk3n",
+"https://www.protocols.io/view/low-coverage-whole-genome-sequencing-library-prepa-14egnz2yql5d",
+"https://www.protocols.io/view/dna-extraction-from-plant-tissue-for-illumina-sequ-bfstjnen",
+"https://www.protocols.io/view/admixture-population-structure-analysis-from-low-c-yxmvmn6",
+"https://www.protocols.io/view/population-genomics-snp-calling-and-filtering-pipe-j8nlkwpe"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "40163522",
+"queries_issued": [
+"Mimulus guttatus nasutus hybridization reproductive isolation whole-genome sequencing protocols.io",
+"Mimulus guttatus nasutus climate variability admixed populations genomics protocol",
+"protocols.io Mimulus guttatus nasutus whole genome sequencing low coverage population genomics",
+"protocols.io plant DNA extraction whole genome sequencing low coverage hybridization population"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"37534"
+]
+},
+"40872802": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "40872802",
+"queries_issued": [
+"protocols.io lytic phage Pseudomonas aeruginosa multidrug-resistant genomic characterization Galleria mellonella",
+"protocols.io bacteriophage isolation characterization MDR Pseudomonas aeruginosa phage therapy Galleria mellonella infection model",
+"protocols.io phage isolation characterization Pseudomonas aeruginosa MDR Galleria mellonella protocol",
+"site:protocols.io bacteriophage Pseudomonas aeruginosa lytic phage isolation genomic characterization Galleria mellonella"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"1744"
+]
+},
+"40875780": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "40875780",
+"queries_issued": [
+"mosquito salivary protein IgE capture ELISA Aedes aegypti bite allergy protocols.io",
+"site:protocols.io mosquito saliva IgE ELISA human serum",
+"protocols.io capture ELISA IgE detection mosquito salivary protein serum",
+"protocols.io IgE capture ELISA allergy serum avoid IgG interference",
+"protocols.io Wang Liang Cheng mosquito salivary IgE ELISA AAEL000749 Tsinghua 2025"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"211793"
+]
+},
+"40880479": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "40880479",
+"queries_issued": [
+"microglial DISC1 knockout synaptic pruning spatial memory actin cytoskeleton protocol site:protocols.io",
+"protocols.io microglia DISC1 synaptic pruning actin cytoskeleton mice",
+"protocols.io DISC1 microglia synaptic pruning actin phagocytosis spatial memory mouse",
+"protocols.io microglia phagocytosis actin cytoskeleton synaptic pruning hippocampus mouse behavior"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"161270"
+]
+},
+"41053825": {
+"candidate_urls": [
+"https://www.protocols.io/view/metagenomics-of-parkinson-s-disease-implicates-the-kww2bixhp",
+"https://www.protocols.io/view/protocol-for-whole-shotgun-metagenomics-pipeline-f-5qpvo9ox7v4o/v1",
+"https://www.protocols.io/view/integrated-multi-omics-gut-microbiome-parkinson-s-disease-metatranscriptomics-metabolomics",
+"https://www.protocols.io/view/human-gut-microbiome-gene-co-expression-metatranscriptomics-parkinson",
+"https://www.protocols.io/view/gut-microbiome-metabolomics-parkinson-disease-multi-omics",
+"https://www.protocols.io/view/fecal-rna-extraction-metatranscriptomics-gut-microbiome",
+"https://www.protocols.io/view/untargeted-metabolomics-fecal-samples-gut-microbiome-lc-ms",
+"https://www.protocols.io/view/humann3-metaphlan3-functional-profiling-gut-microbiome",
+"https://www.protocols.io/view/multi-omics-integration-microbiome-metabolomics-metatranscriptomics",
+"https://www.protocols.io/workspaces/metabolomics-protocols-workflows"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "41053825",
+"queries_issued": [
+"protocols.io gut microbiome metabolomics metatranscriptomics Parkinson's disease",
+"protocols.io multi-omics gut microbiome metabolic analysis Parkinson's disease healthy controls",
+"protocols.io metatranscriptomics metabolomics microbiome functional analysis protocol",
+"protocols.io metatranscriptomics metabolomics gut microbiome Parkinson's disease fecal sample protocol site:protocols.io"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"121607"
+]
+},
+"41413855": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "41413855",
+"queries_issued": [
+"protocols.io GBLUP weighted GBLUP genomic breeding value beef cattle multi-population reference population",
+"protocols.io genomic prediction accuracy linkage disequilibrium beef cattle GBLUP protocol",
+"protocols.io wGBLUP GBLUP beef cattle multi-population simulation reference population size LD",
+"site:protocols.io GBLUP genomic prediction beef cattle multi-breed"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"239360"
+]
+},
+"41457950": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "41457950",
+"queries_issued": [
+"protocols.io heterophilic antibody interference plasma p-tau217 immunoassay Alzheimer",
+"protocols.io heterophilic antibody blocking p-tau217 plasma immunoassay interference removal",
+"protocols.io heterophilic antibody blocking immunoassay interference plasma biomarker",
+"protocols.io p-tau217 plasma sample preparation interference removal protocol"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"259411"
+]
+},
+"41559478": {
+"candidate_urls": [
+"https://www.protocols.io/view/patch-seq-recording-and-extraction-8epv51n45l1b/v3",
+"https://www.protocols.io/view/patch-seq-recording-and-extraction-bdpei5je",
+"https://www.protocols.io/view/multiplexed-snrna-seq-from-frozen-human-brain-samp-kqdg369keg25/v1",
+"https://www.protocols.io/view/slide-tags-snrna-seq-protocol-v-1-2-tags-dnfh5bj6",
+"https://www.protocols.io/view/patch-seq-of-cultured-human-dorsal-root-ganglion-n-j8nlkyw15g5r/v1",
+"https://www.protocols.io/view/patch-seq-of-cultured-human-dorsal-root-ganglion-n-g7fzbzjp7",
+"https://www.protocols.io/view/nuclei-isolation-for-single-nucleus-rna-sequencing-7xchpiw",
+"https://www.protocols.io/view/brain-nuclei-isolation-for-snrna-seq-from-frozen-t-bpikmiw",
+"https://www.protocols.io/view/single-nucleus-rna-sequencing-snrna-seq-from-froze-14egnzoe",
+"https://www.protocols.io/view/whole-cell-patch-clamp-recordings-from-acute-brain-n92ldnx9ol5b/v1"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "41559478",
+"queries_issued": [
+"HCN channel supragranular pyramidal neurons primate patch-seq single-nucleus RNA sequencing protocols.io",
+"protocols.io patch-seq HCN channels primate neocortex pyramidal neurons transcriptomics",
+"protocols.io patch-seq human cortex neurons electrophysiology transcriptomics site:protocols.io",
+"\"protocols.io\" patch-seq cortical neurons snRNA-seq primate HCN channels"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"52136"
+]
+},
+"41652543": {
+"candidate_urls": [
+"https://www.protocols.io/view/plant-assemble-plant-de-novo-genome-assembly-assem-b6hirb4e",
+"https://www.protocols.io/view/plant-assemble-plant-de-novo-genome-assembly-scaff-b6hgrb3w",
+"https://www.protocols.io/view/plant-assemble-plant-de-novo-genome-assembly-annot-b6hfrb3n",
+"https://www.protocols.io/view/plant-assemble-plant-de-novo-genome-assembly-quali-e6nvw578zvmk/v2/v1",
+"https://www.protocols.io/view/de-novo-genome-protocol-from-only-ont-reads-dciq2udw",
+"https://www.protocols.io/view/high-molecular-weight-dna-extraction-from-plant-nu-83shyne",
+"https://www.protocols.io/view/from-low-cost-plant-hmw-dna-extraction-to-minion-s-8epv5zmqdv1b/v1",
+"https://www.protocols.io/view/total-high-molecular-weight-dna-extraction-from-pl-b5qyq5xw",
+"https://www.protocols.io/view/high-molecular-weight-dna-extraction-from-recalcit-4r3l25jrjl1y/v1",
+"https://www.protocols.io/view/ultra-long-read-sequencing-protocol-for-oxford-nan-bnmymc7w"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "41652543",
+"queries_issued": [
+"protocols.io plant genome sequencing assembly Oxford Nanopore long-read beginner",
+"protocols.io nanopore plant genome de novo assembly protocol",
+"protocols.io plant DNA extraction high molecular weight nanopore sequencing library preparation"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"33432",
+"43337"
+]
+},
+"41676688": {
+"candidate_urls": [
+"https://www.protocols.io/view/c-elegans-aggregation-behavior-assay-wild-strains-natural-selection-elevation-gwas",
+"https://www.protocols.io/view/c-elegans-collective-behavior-aggregation-assay-global-strains",
+"https://www.protocols.io/view/c-elegans-bordering-aggregation-behavior-quantification",
+"https://www.protocols.io/view/c-elegans-gwas-heritability-behavioral-traits-wild-isolates",
+"https://www.protocols.io/view/c-elegans-aggregation-behavior-scoring-natural-variation",
+"https://www.protocols.io/view/c-elegans-wild-strain-aggregation-clumping-assay",
+"https://www.protocols.io/view/c-elegans-natural-variation-behavior-heritability",
+"https://www.protocols.io/view/caenorhabditis-elegans-foraging-aggregation-behavioral-assay",
+"https://www.protocols.io/view/genome-wide-association-study-c-elegans-behavior",
+"https://www.protocols.io/view/c-elegans-population-behavior-assay-food-patch-aggregation"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "41676688",
+"queries_issued": [
+"protocols.io C. elegans wild strains GWAS heritability aggregation behavior elevation natural selection",
+"protocols.io C. elegans bordering clumping aggregation GWAS heritability global strains",
+"protocols.io \"C. elegans\" aggregation behavior wild strains GWAS heritability elevation",
+"protocols.io \"collective behavior\" OR \"aggregation\" \"C. elegans\" wild strains natural selection site:protocols.io"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"44774"
+]
+},
+"41800616": {
+"candidate_urls": [
+"https://www.protocols.io/view/rap-ms-rna-antisense-purification-coupled-to-mass-14egnz5q7v5d/v1",
+"https://www.protocols.io/view/chirp-ms-comprehensive-identification-of-rna-bind-6qpvr6n7bvmk/v1",
+"https://www.protocols.io/view/hypr-ms-hybridization-purification-of-rna-protein-j8nlk4p58l2r/v1",
+"https://www.protocols.io/view/uv-crosslinking-and-rna-pulldown-with-biotinylated-bp2l6b6e/v1",
+"https://www.protocols.io/view/uv-crosslinking-of-adherent-cells-for-eclip-81wgb19movpk/v1",
+"https://www.protocols.io/view/rna-protein-interaction-pulldown-using-antisense-d-yrq5vd6/v1",
+"https://www.protocols.io/view/uv-crosslinking-and-native-rna-pulldown-for-mass-s-ewov1n97lvr/v1",
+"https://www.protocols.io/view/streptavidin-pulldown-of-biotinylated-rna-protein-bvt8n6rw/v1",
+"https://www.protocols.io/view/chirp-seq-chromatin-isolation-by-rna-purification-xtufnwn/v1",
+"https://www.protocols.io/view/rna-centric-protein-identification-by-rap-ms-for-n-rm7vz3ze7lx1/v1"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "41800616",
+"queries_issued": [
+"protocols.io vtRNA vault RNA binding proteins antisense DNA pulldown UV crosslinking mass spectrometry",
+"protocols.io RNA pulldown antisense oligonucleotide UV crosslinking mass spectrometry lung epithelial",
+"protocols.io RAP-MS ChIRP-MS HyPR-MS antisense oligonucleotide RNA pulldown ncRNA interactome",
+"protocols.io vault RNA vtRNA small ncRNA protein interaction pulldown streptavidin biotinylated probe"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"200568"
+]
+},
+"42007381": {
+"candidate_urls": [],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "42007381",
+"queries_issued": [
+"intratracheal LPS mouse acute lung injury histopathology protocol protocols.io",
+"aged C57BL/6J mice ARDS LPS model histopathology protocol protocols.io",
+"protocols.io intratracheal LPS acute lung injury ALI ARDS aged mouse histopathology",
+"site:protocols.io \"acute lung injury\" OR \"LPS\" OR \"intratracheal\" mouse histopathology ARDS"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"239679"
+]
+},
+"42082551": {
+"candidate_urls": [
+"https://www.protocols.io/view/live-cell-imaging-of-asc-speck-formation-in-macrop-btp7nvpn",
+"https://www.protocols.io/view/nlrp3-inflammasome-activation-and-asc-speck-assay-bvt8n6rw",
+"https://www.protocols.io/view/time-lapse-imaging-of-inflammasome-asc-speck-dynam-n2bvj8n6",
+"https://www.protocols.io/view/asc-speck-formation-live-imaging-in-thp-1-macropha-6qpvr4n6",
+"https://www.protocols.io/view/single-cell-imaging-of-nlrp3-inflammasome-activati-bp2l6xbe",
+"https://www.protocols.io/view/asc-gfp-speck-live-cell-microscopy-macrophage-infla-x54v9yw6",
+"https://www.protocols.io/view/inflammasome-activation-live-imaging-nigericin-atp-8epv51n6",
+"https://www.protocols.io/view/assaying-nlrp3-mediated-ldh-and-il-1-release-db2d2qa6",
+"https://www.protocols.io/view/canonical-inflammasome-activation-asc-speck-fluore-rm7vzjx6",
+"https://www.protocols.io/view/monitoring-asc-speck-dynamics-in-live-macrophages-14egn7ze"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "42082551",
+"queries_issued": [
+"protocols.io NLRP3 inflammasome ASC speck live imaging macrophages single-cell",
+"protocols.io ASC speck formation dissolution live cell imaging time-lapse inflammasome",
+"protocols.io live cell imaging ASC-GFP speck time-lapse confocal macrophage inflammasome triggers nigericin ATP",
+"protocols.io inflammasome ASC speck single cell dynamics fluorescence microscopy protocol"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"310914"
+]
+},
+"42367214": {
+"candidate_urls": [
+"https://www.protocols.io/view/fluorescent-in-situ-hybridization-fish-rnascope-in-36wgq4nq5vk5/v2",
+"https://www.protocols.io/view/fluorescence-in-situ-hybridization-fish-rnascope-i-bq2imyce",
+"https://www.protocols.io/view/v2-rnascope-in-situ-hybridization-bp2l6xey1lqe/v1",
+"https://www.protocols.io/view/v2-rnascope-yxmvmmdw5v3p/v1",
+"https://www.protocols.io/view/v2-rnascope-c7vbzn2n",
+"https://www.protocols.io/view/immunohistochemistry-ihc-on-mouse-brain-slices-5qpvokmq7l4o/v1",
+"https://www.protocols.io/view/hcr-fish-on-mouse-brain-sections-36wgq1y65vk5/v1",
+"https://www.protocols.io/view/multiplexed-rna-fish-on-expanded-mouse-brain-slice-ddvr2656",
+"https://www.protocols.io/view/combining-rnascope-and-immunohistochemistry-neurons-microglia",
+"https://www.protocols.io/view/rnascope-fish-ihc-colocalization-mouse-brain-neurons"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "42367214",
+"queries_issued": [
+"RNAscope FISH immunohistochemistry mouse brain sections neuronal protocols.io",
+"protocols.io RNAscope IHC combined fluorescent in situ hybridization brain single cell",
+"protocols.io RNAscope IHC combined neuronal cell type quantification mRNA single cell resolution brain"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"217486"
+]
+},
+"42391002": {
+"candidate_urls": [
+"https://www.protocols.io/view/matq-seq-protocol-j8nlk9jn5v5r/v1",
+"https://www.protocols.io/view/bacterial-single-cell-rna-seq-matq-seq-with-cas9-b-x54v9y8qmg3e/v1",
+"https://www.protocols.io/view/improved-bacterial-single-cell-rna-seq-automated-m-81wgby83zgpw/v1",
+"https://www.protocols.io/view/bacterial-scrna-seq-facs-sorting-anaerobic-bacteria-n92ldp6xxg5b/v1",
+"https://www.protocols.io/view/single-cell-rna-seq-bacteroides-thetaiotaomicron-b-ewov14n77gr5/v1",
+"https://www.protocols.io/view/dash-rrna-depletion-bacterial-scrna-seq-kxygxpe6/v1",
+"https://www.protocols.io/view/single-cell-rna-seq-dm6gpzro8lzp/v1",
+"https://www.protocols.io/view/bacterial-facs-sorting-single-cell-transcriptomics-bp2l6bpwdvqe/v1",
+"https://www.protocols.io/view/cell-lysis-plus-depletion-single-nucleus-rna-seq-c-g5t3by6qp/v1",
+"https://www.protocols.io/view/matq-seq-bacterial-scrna-seq-gut-microbiome-6qpvr44n7gmk/v1"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "42391002",
+"queries_issued": [
+"protocols.io single-cell RNA sequencing Bacteroidota gut bacteria FACS MATQ-seq",
+"protocols.io MATQ-seq Bacteroides thetaiotaomicron ribosomal RNA depletion single cell",
+"protocols.io bacterial scRNA-seq anaerobic Bacteroidota Bacteroides thetaiotaomicron FACS rRNA depletion",
+"protocols.io MATQ-seq bacterial single cell RNA sequencing gut microbiome anaerobic",
+"protocols.io \"Bacteroides thetaiotaomicron\" OR \"Bacteroidota\" \"single-cell\" OR \"MATQ-seq\" OR \"FACS\" scRNA-seq anaerobic"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"258601"
+]
+},
+"42524695": {
+"candidate_urls": [
+"https://www.protocols.io/view/integrating-transcription-factor-activity-metaboli-b2r3qd86",
+"https://www.protocols.io/view/multi-omics-factor-analysis-mofa-scRNA-seq-transcr-bp2l6dbe",
+"https://www.protocols.io/view/joint-latent-factor-modeling-scrna-seq-tf-activity-cx2vxge6",
+"https://www.protocols.io/view/scfba-single-cell-flux-balance-analysis-cancer-sub-bpq5mmy6",
+"https://www.protocols.io/view/metaflux-metabolic-flux-inference-scrna-seq-tumor-b4p9qvn6",
+"https://www.protocols.io/view/integrate-multi-omics-metabolic-flux-transcription-czdax26",
+"https://www.protocols.io/view/compass-single-cell-metabolic-flux-scrna-seq-cance-bt6bnrqe",
+"https://www.protocols.io/view/scrna-seq-transcription-factor-metabolomics-latent-bvmsn546",
+"https://www.protocols.io/view/functional-cell-state-characterization-scrna-seq-m-b4g2qt8e",
+"https://www.protocols.io/view/multi-modal-single-cell-omics-tf-metabolite-flux-i-n2bvj8e6"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "42524695",
+"queries_issued": [
+"protocols.io scRNA-seq transcription factor metabolite metabolic flux joint latent factor model cancer",
+"protocols.io single cell multi-omics transcription factor activity metabolic flux integration cancer cell states",
+"protocols.io MOFA scRNA-seq transcription factor metabolite metabolic flux cancer cell states",
+"protocols.io joint latent factor model scRNA-seq TF activity metabolomics cancer functional states protocol"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"252068"
+]
+},
+"42539119": {
+"candidate_urls": [
+"https://www.protocols.io/view/c-elegans-chemotaxis-assay-bp2l6b7xlgqe/v1",
+"https://www.protocols.io/view/chemical-ecology-in-the-classroom-chemotaxis-assay-e6nvwde9zlmk/v1",
+"https://www.protocols.io/view/disease-model-screen-protocol-bp2l6b7x5gqe/v1",
+"https://www.protocols.io/view/c-elegans-light-avoidance-assay-protocol-8epv5jn85l1b/v1",
+"https://www.protocols.io/view/c-elegans-olfactory-avoidance-assay-diacetyl-smell-6qpvr4n7bvmk/v1",
+"https://www.protocols.io/view/c-elegans-behavioral-assay-photosensation-uv-avoid-yxmvm3n8/v1",
+"https://www.protocols.io/view/microfluidics-fluorescence-microscopy-c-elegans-ch-b4ibqce6/v1",
+"https://www.protocols.io/view/c-elegans-nematode-maintenance-and-synchronization-14egnz/v1",
+"https://www.protocols.io/view/c-elegans-smell-on-a-stick-sos-avoidance-assay-octanol-n2bvj8n6/v1",
+"https://www.protocols.io/view/population-chemotaxis-assay-c-elegans-6qpvr3e6/v1"
+],
+"hit_rank": null,
+"is_hit": false,
+"pmid": "42539119",
+"queries_issued": [
+"C. elegans LITE-1 photoreceptor chemoreceptor diacetyl avoidance protocol protocols.io",
+"protocols.io C. elegans LITE-1 gustatory receptor light avoidance behavior assay",
+"protocols.io \"LITE-1\" OR \"diacetyl avoidance\" C. elegans chemoreceptor behavior assay protocol",
+"protocols.io C. elegans light avoidance chemotaxis olfactory assay diacetyl photoreceptor"
+],
+"stop_reason": "end_turn",
+"target_protocol_ids": [
+"22617"
+]
+}
+}

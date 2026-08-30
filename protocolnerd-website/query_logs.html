@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Protocol Nerd — Query Log Viewer</title>
+<style>
+  :root{
+    --bg:#f4f7f8; --surface:#fff; --ink:#0e1519; --soft:#41505a; --slate:#64757f; --rule:#dbe3e7;
+    --accent:#2f6fb0; --accent-bg:#e4eef8;
+    --nq:#0e8f84; --nq-bg:#e2f2f0; --clar:#b8722a; --clar-bg:#f8eddf;
+    --sugg:#7a5ea8; --sugg-bg:#efe9f6; --srch:#0e1519;
+    --pio:#0e8f84; --pubmed:#b8722a;
+  }
+  @media(prefers-color-scheme:dark){:root{
+    --bg:#0b1114; --surface:#131c21; --ink:#eef4f6; --soft:#adbcc4; --slate:#8a9ba4; --rule:#24333a;
+    --accent:#6fa9de; --accent-bg:#12222f;
+    --nq:#3fc4b6; --nq-bg:#0f2a29; --clar:#e0a057; --clar-bg:#2c2015;
+    --sugg:#b39ae0; --sugg-bg:#211a2e; --srch:#eef4f6;
+    --pio:#3fc4b6; --pubmed:#e0a057;
+  }}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  .top{position:sticky;top:0;z-index:5;background:var(--surface);border-bottom:1px solid var(--rule);
+    padding:14px 22px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+  .top h1{margin:0;font-size:18px;letter-spacing:-.01em;}
+  .top .grow{flex:1}
+  select,input,button{font:inherit;color:var(--ink);background:var(--surface);
+    border:1px solid var(--rule);border-radius:8px;padding:7px 11px;}
+  select:focus,input:focus,button:focus{outline:2px solid var(--accent);outline-offset:1px;}
+  button{cursor:pointer;font-weight:600;}
+  .meta{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--slate);}
+  .wrap{max-width:1100px;margin:0 auto;padding:22px 22px 70px;}
+  .gate{max-width:440px;margin:70px auto;text-align:center;display:flex;flex-direction:column;gap:12px;}
+  .gate p{color:var(--soft);font-size:14px;}
+  .empty{color:var(--slate);text-align:center;padding:60px 0;font-style:italic;}
+
+  .sess{background:var(--surface);border:1px solid var(--rule);border-radius:12px;margin:0 0 16px;overflow:hidden;}
+  .sess-hd{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding:11px 16px;border-bottom:1px solid var(--rule);
+    background:linear-gradient(0deg,transparent,var(--accent-bg));}
+  .sess-hd .sid{font-family:ui-monospace,Menlo,monospace;font-size:12.5px;font-weight:700;color:var(--accent);}
+  .sess-hd .t{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:var(--slate);}
+  .sess-hd .q{font-size:15px;font-weight:650;letter-spacing:-.01em;}
+  .events{padding:6px 16px 14px;}
+
+  .ev{display:flex;gap:12px;padding:10px 0;border-top:1px solid var(--rule);}
+  .ev:first-child{border-top:none;}
+  .tag{flex:0 0 auto;align-self:flex-start;font-family:ui-monospace,Menlo,monospace;font-size:9.5px;font-weight:700;
+    letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:5px;white-space:nowrap;margin-top:2px;}
+  .t-nq{background:var(--nq-bg);color:var(--nq);} .t-clar{background:var(--clar-bg);color:var(--clar);}
+  .t-sugg{background:var(--sugg-bg);color:var(--sugg);} .t-srch{background:var(--ink);color:var(--bg);}
+  .ev .body{flex:1;min-width:0;}
+  .ev .line{font-size:14px;}
+  .ev .sub{font-size:12.5px;color:var(--soft);margin-top:2px;}
+  .qlist{list-style:none;margin:5px 0 0;padding:0;display:flex;flex-direction:column;gap:2px;}
+  .qlist li{font-family:ui-monospace,Menlo,monospace;font-size:11.8px;color:var(--soft);}
+  .qlist li::before{content:"›";color:var(--slate);margin-right:6px;}
+  .sel{font-weight:700;color:var(--clar);}
+
+  .results{display:flex;flex-direction:column;gap:5px;margin-top:7px;}
+  .r{display:grid;grid-template-columns:auto auto 1fr;gap:9px;align-items:baseline;font-size:12.8px;}
+  .r .rk{font-family:ui-monospace,Menlo,monospace;font-size:11px;color:var(--slate);}
+  .r .src{font-family:ui-monospace,Menlo,monospace;font-size:9.5px;font-weight:700;text-transform:uppercase;
+    padding:1px 6px;border-radius:3px;white-space:nowrap;}
+  .src-pio{background:var(--nq-bg);color:var(--pio);} .src-pubmed{background:var(--clar-bg);color:var(--pubmed);}
+  .r a,.r .ttl{color:var(--ink);text-decoration:none;line-height:1.35;}
+  .r a:hover{text-decoration:underline;}
+</style>
+</head>
+<body>
+
+<div class="top" id="top" style="display:none">
+  <h1>🗒️ Query Logs</h1>
+  <label class="meta">Date
+    <select id="date"></select>
+  </label>
+  <span class="meta" id="summary"></span>
+  <div class="grow"></div>
+  <button id="refresh">Refresh</button>
+</div>
+
+<div class="wrap">
+  <div class="gate" id="gate">
+    <h1>🗒️ Query Log Viewer</h1>
+    <p>These logs contain users' raw queries. Enter the viewer token to continue.</p>
+    <input id="token" type="password" placeholder="viewer token" />
+    <button id="enter">View logs</button>
+    <p class="meta" id="gate-err" style="color:#c0392b"></p>
+  </div>
+  <div id="content"></div>
+</div>
+
+<script>
+  const API = window.location.origin;          // page is served by the backend
+  const $ = (id) => document.getElementById(id);
+  let TOKEN = new URLSearchParams(location.search).get("token")
+           || sessionStorage.getItem("qlToken") || "";
+
+  const esc = (s) => String(s ?? "").replace(/[&<>"]/g, c =>
+    ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const fmtTime = (ts) => { const d = new Date(ts); return isNaN(d) ? "" :
+    d.toLocaleString(undefined,{month:"short",day:"numeric",hour:"2-digit",minute:"2-digit",second:"2-digit"}); };
+
+  async function api(path){
+    // Token is only appended when we have one — open mode needs no token at all.
+    const url = TOKEN ? `${API}${path}${path.includes("?")?"&":"?"}token=${encodeURIComponent(TOKEN)}` : `${API}${path}`;
+    const r = await fetch(url);
+    if(r.status===403){ const e = new Error("A viewer token is required."); e.needsToken = true; throw e; }
+    if(r.status===404) throw new Error("Log viewer is disabled on the server.");
+    if(!r.ok) throw new Error("Request failed ("+r.status+")");
+    return r.json();
+  }
+
+  function srcClass(s){ return s==="pubmed" ? "src-pubmed" : "src-pio"; }
+
+  function renderEvent(ev){
+    const type = ev.event;
+    if(type==="new_query")
+      return `<div class="ev"><span class="tag t-nq">new query</span><div class="body">
+        <div class="line">${esc(ev.original_query)}</div>
+        <div class="sub">${fmtTime(ev.ts)}${ev.search_mode?" · "+esc(ev.search_mode):""}</div></div></div>`;
+    if(type==="clarification")
+      return `<div class="ev"><span class="tag t-clar">clarify</span><div class="body">
+        <div class="line">${esc(ev.question)||"<em>clarification</em>"}</div>
+        <div class="sub">selected: <span class="sel">${esc(ev.selection)}</span>${ev.field?" · "+esc(ev.field):""}</div></div></div>`;
+    if(type==="suggestions"){
+      const qs = (ev.suggested_queries||[]).map(q=>`<li>${esc(q)}</li>`).join("");
+      return `<div class="ev"><span class="tag t-sugg">suggested</span><div class="body">
+        <div class="line">${(ev.suggested_queries||[]).length} candidate queries proposed</div>
+        <ul class="qlist">${qs}</ul></div></div>`;
+    }
+    if(type==="search"){
+      const sel = (ev.selected_queries||[]).map(q=>`<li>${esc(q)}</li>`).join("");
+      const results = (ev.results||[]).map(r=>{
+        const t = esc(r.title)||"(untitled)";
+        const ttl = r.url ? `<a href="${esc(r.url)}" target="_blank" rel="noopener">${t}</a>` : `<span class="ttl">${t}</span>`;
+        return `<div class="r"><span class="rk">#${r.rank}</span>
+          <span class="src ${srcClass(r.source)}">${esc(r.source)}</span>${ttl}</div>`;
+      }).join("");
+      return `<div class="ev"><span class="tag t-srch">search</span><div class="body">
+        <div class="line">${ev.result_count||0} results shown</div>
+        ${sel?`<div class="sub">ran: </div><ul class="qlist">${sel}</ul>`:""}
+        <div class="results">${results||"<span class='sub'>no results</span>"}</div></div></div>`;
+    }
+    return `<div class="ev"><span class="tag">${esc(type)}</span><div class="body">
+      <div class="sub">${esc(JSON.stringify(ev))}</div></div></div>`;
+  }
+
+  function renderSessions(data){
+    if(!data.sessions.length){ $("content").innerHTML = `<div class="empty">No queries logged on ${esc(data.date)}.</div>`; return; }
+    $("content").innerHTML = data.sessions.map(s=>{
+      const nq = s.events.find(e=>e.event==="new_query");
+      const headline = nq ? nq.original_query : (s.events[0]?.original_query || "(session)");
+      return `<div class="sess">
+        <div class="sess-hd">
+          <span class="q">${esc(headline)}</span>
+          <span class="sid">${esc((s.session_id||"—").slice(0,18))}</span>
+          <span class="t">${fmtTime(s.first_ts)} · ${s.events.length} events</span>
+        </div>
+        <div class="events">${s.events.map(renderEvent).join("")}</div>
+      </div>`;
+    }).join("");
+  }
+
+  async function loadDate(date){
+    $("summary").textContent = "loading…";
+    try{
+      const data = await api(`/debug/query_logs/${date}`);
+      $("summary").textContent = `${data.sessions.length} sessions · ${data.record_count} records`;
+      renderSessions(data);
+    }catch(e){ $("content").innerHTML = `<div class="empty">${esc(e.message)}</div>`; }
+  }
+
+  async function boot(){
+    try{
+      const {dates} = await api(`/debug/query_logs`);
+      sessionStorage.setItem("qlToken", TOKEN);
+      $("gate").style.display = "none";
+      $("top").style.display = "flex";
+      if(!dates.length){ $("content").innerHTML = `<div class="empty">No logs yet.</div>`; return; }
+      $("date").innerHTML = dates.map(d=>`<option value="${d}">${d}</option>`).join("");
+      $("date").onchange = () => loadDate($("date").value);
+      $("refresh").onclick = () => loadDate($("date").value);
+      loadDate(dates[0]);
+    }catch(e){
+      $("top").style.display = "none";
+      if(e.needsToken){                    // server requires a token — only then prompt
+        $("gate").style.display = "flex";
+        $("gate-err").textContent = TOKEN ? "That token was rejected." : "";
+      }else{
+        $("gate").style.display = "none";
+        $("content").innerHTML = `<div class="empty">${esc(e.message)}</div>`;
+      }
+    }
+  }
+
+  $("enter").onclick = () => { TOKEN = $("token").value.trim(); boot(); };
+  $("token").addEventListener("keydown", e => { if(e.key==="Enter") $("enter").click(); });
+  boot();   // try open-mode first; the gate appears only if the server demands a token
+</script>
+</body>
+</html>

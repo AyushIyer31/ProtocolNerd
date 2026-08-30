@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - ProtocolNerd</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f5f6fa;
+      color: #2c2f36;
+      min-height: 100vh;
+    }
+    .toolbar {
+      position: absolute;
+      top: 14px;
+      right: 18px;
+    }
+    .toolbar a {
+      margin-left: 16px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .toolbar a:hover { color: #5e35b1; }
+    .logo-wrap { text-align: center; padding: 34px 0 6px; }
+    .logo-wrap img { height: 110px; width: auto; }
+    #container {
+      max-width: 780px;
+      margin: 0 auto 60px;
+      background: #fff;
+      border: 1px solid #e3e6ee;
+      border-radius: 12px;
+      padding: 34px 40px;
+    }
+    h2 { font-size: 20px; margin: 22px 0 10px; }
+    h2:first-child { margin-top: 0; }
+    p { font-size: 16px; line-height: 1.55; }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 14px;
+    }
+    .team-member {
+      background: #fafafa;
+      border: 1px solid #e3e6ee;
+      border-radius: 10px;
+      padding: 18px;
+    }
+    .team-member img {
+      width: 120px; height: 120px; object-fit: cover; object-position: top;
+      border-radius: 50%; margin-bottom: 12px; border: 1px solid #e3e6ee;
+    }
+    .team-member { text-align: center; }
+    .team-member h3 { font-size: 17px; margin-bottom: 6px; }
+    .team-member h3 a { color: #5e35b1; text-decoration: none; }
+    .team-member h3 a:hover { text-decoration: underline; }
+    .team-member p { font-size: 14.5px; color: #555; }
+    .team-member .li-link {
+      display: inline-block; margin-top: 8px; font-size: 13.5px; font-weight: 600;
+      color: #0a66c2; text-decoration: none;
+    }
+    .team-member .li-link:hover { text-decoration: underline; }
+    .footer-nav { text-align: center; margin-top: 26px; }
+    .footer-nav a {
+      display: inline-block;
+      background: #5e35b1;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <a href="chat.html">Home</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <div class="logo-wrap">
+    <a href="chat.html"><img src="assets/ProtocolNerd_Logo.png" alt="ProtocolNerd Logo"></a>
+  </div>
+
+  <div id="container">
+    <h2>About Us:</h2>
+    <p>ProtocolNerd is a large language model-based assistant that helps scientists find the right experimental protocol. A researcher describes an experiment in plain English, and the system finds and ranks the most relevant protocols and papers, explaining why each result fits and what it may not cover. It currently supports biology and chemistry.</p>
+
+    <h2>How It Works:</h2>
+    <p>ProtocolNerd turns a request into a structured experiment profile, asking a targeted clarifying question when an essential detail is missing. It then searches a curated corpus of Protocols.io protocols with both keyword and semantic search, alongside the scientific literature: <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed</a> for biology and <a href="https://europepmc.org/" target="_blank">Europe PMC</a> for chemistry. Protocols and papers compete in one ranking ordered by how well each matches the experiment, and every result is annotated with why it matches, what may not fit, and which details remain to be checked.</p>
+
+    <h2>Meet Our Team</h2>
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="assets/ayush_iyer.png" alt="Ayush Iyer">
+        <h3><a href="https://www.linkedin.com/in/ayush-iyer-020a63375/" target="_blank">Ayush Iyer</a></h3>
+        <p>AI/ML Researcher<br>
+        Dougherty Valley High School, San Ramon, CA</p>
+        <a class="li-link" href="https://www.linkedin.com/in/ayush-iyer-020a63375/" target="_blank">LinkedIn</a>
+      </div>
+      <div class="team-member">
+        <img src="assets/shela.png" alt="Shela Wu">
+        <h3><a href="https://www.linkedin.com/in/shelawu/" target="_blank">Shela Wu</a></h3>
+        <p>Researcher<br>
+        NYU Courant Institute School of Mathematics, Computing, and Data Science</p>
+        <a class="li-link" href="https://www.linkedin.com/in/shelawu/" target="_blank">LinkedIn</a>
+      </div>
+      <div class="team-member">
+        <img src="assets/dennis_shasha.jpg" alt="Dennis Shasha">
+        <h3><a href="https://cs.nyu.edu/~shasha/" target="_blank">Dennis Shasha</a></h3>
+        <p>Professor of Computer Science<br>
+        Courant Institute of Mathematical Sciences, NYU</p>
+        <a class="li-link" href="https://www.linkedin.com/in/dennis-shasha-a91a567/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="footer-nav">
+      <a href="chat.html">Try ProtocolNerd</a>
+    </div>
+  </div>
+</body>
+</html>

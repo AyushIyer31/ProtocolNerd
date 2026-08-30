@@ -1,0 +1,6 @@
+# Working cache: grows with every experiment ever run, ~9 MB, regenerable.
+# The committed subset needed to replay the paper's four numbers lives in
+# replay_cache/ instead (written by export_replay_cache.py); _bootstrap.py seeds
+# cache/ from it on a fresh clone.
+cache/
+archive/results/

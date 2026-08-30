@@ -1,0 +1,620 @@
+pmid,keywords,used_query,rank,result_protocol_id,result_title,is_confirmed_target
+26406119,transposase human genome,transposase,1,113438,CUT&Tag-direct for whole cells with CUTAC ,False
+26406119,transposase human genome,transposase,2,13920,"A high throughput, cost-efficient library preparation protocol for large scale next generation sequencing",False
+26406119,transposase human genome,transposase,3,16803,Cost-conscious generation of multiplexed short-read DNA libraries for whole genome sequencing,False
+26406119,transposase human genome,transposase,4,16985,"Fast-Seq, a universal method for rapid and inexpensive genomic validation of rAAV vectors in preclinical settings",False
+26406119,transposase human genome,transposase,5,33385,Bench top CUT&Tag,False
+26406119,transposase human genome,transposase,6,19680,scTHS-seq ,False
+26406119,transposase human genome,transposase,7,20081,Mammalian Calling Cards Quick Start Guide,False
+26406119,transposase human genome,transposase,8,20137,Bulk Calling Cards Library Preparation,False
+26406119,transposase human genome,transposase,9,20138,Single Cell Calling Cards Library Preparation,False
+26406119,transposase human genome,transposase,10,20139,Processing Bulk Calling Card Sequencing Data,False
+37242601,schistosome drug discovery,schistosome,1,15476,Manual microdissection of schistosomes for proteomic and transcriptomic characterisation of the worm alimentary tract,False
+37242601,schistosome drug discovery,schistosome,2,15866,Manual dissection of the Schistosoma mansoni esophagus and back end for proteomic analysis,False
+37242601,schistosome drug discovery,schistosome,3,16891,Manual dissection of the Schistosoma mansoni and S. japonicum head and back end for transcriptomic analysis,False
+37242601,schistosome drug discovery,schistosome,4,30910,A simple ATAC-seq protocol for population epigenetics,False
+37242601,schistosome drug discovery,schistosome,5,68546,Hamster infestation with cercariae,False
+37242601,schistosome drug discovery,schistosome,6,74016,Schistosome DNA Isolation and Colorimetric LAMP protocol for the detection of Schistosomiasis,False
+37242601,schistosome drug discovery,schistosome,7,83740,Genetic Characterization of Schistosomes,False
+37242601,schistosome drug discovery,schistosome,8,315662,Schistosoma haematobium larva FTA-to-WGS,False
+28009756,auxiliary liver transplantation rat,auxiliary liver transplantation,1,121741,Surgical Model of Auxiliary Partial Liver Transplantation in the Rat,True
+30940689,linked read sequencing,linked,1,321831,Age-dependent brain pigmentation drives early neuroinflammatory molecular signatures linked to neurodegeneration,False
+30940689,linked read sequencing,linked,2,318639,X-PIE curation,False
+30940689,linked read sequencing,linked,3,38262,Cross-linking of IgG to Protein A or G Beads (S1425/S1430),False
+30940689,linked read sequencing,linked,4,9434,ELISA Protocol,False
+30940689,linked read sequencing,linked,5,9458,Fluorescent in situ sequencing (FISSEQ) of RNA for gene expression profiling in intact cells and tissues,False
+30940689,linked read sequencing,linked,6,11074,Peroxidase-linked lectin assay to determine neuraminidase-inhibiting antibodies using reassortant influenza viruses,False
+30940689,linked read sequencing,linked,7,13676,Production of lentiviral vectors pseudotyped with influenza neuraminidase (NA),False
+30940689,linked read sequencing,linked,8,14499,Endo F1 Protocol for Deglycosylating Glycoproteins,False
+30940689,linked read sequencing,linked,9,14502,Endo F2,False
+30940689,linked read sequencing,linked,10,19606,Urea-mediated dissociation alleviate the false-positive Treponema pallidum-specific antibodies detected by ELISA,False
+39237830,long-read protein-DNA mapping,long-read,1,322267,Closing bacterial genomes using the  Rapid Sequencing Kit (SQK-RBK114) from Oxford Nanopore Technologies (ONT),False
+39237830,long-read protein-DNA mapping,long-read,2,321639,Whole-Genome Sequencing of Escherichia coli Using Oxford Nanopore Technology,False
+39237830,long-read protein-DNA mapping,long-read,3,321556,Paw-CTAB: High-Molecular-Weight DNA Extraction from Phenolic-Rich Anigozanthos,False
+39237830,long-read protein-DNA mapping,long-read,4,228082,"Long-read single-cell genome, transcriptome and open chromatin profiling links genotype to phenotypes.",False
+39237830,long-read protein-DNA mapping,long-read,5,318252,RAPID - RNA Analysis Pipeline for Integrated Diagnostics,False
+39237830,long-read protein-DNA mapping,long-read,6,317788,SOP for methods paper GUI,False
+39237830,long-read protein-DNA mapping,long-read,7,123614,Processing human brain tissue and cultured cells for population-scale SQK-PCS114 Oxford Nanopore long-read cDNA-PCR sequencing SOP ,False
+39237830,long-read protein-DNA mapping,long-read,8,9136,"High quality DNA from Fungi for long read sequencing e.g. PacBio, Nanopore MinION",False
+39237830,long-read protein-DNA mapping,long-read,9,9751,Ultra-long read sequencing protocol for RAD004,False
+39237830,long-read protein-DNA mapping,long-read,10,10365,Low input long-read DNA isolation  for Nanopore sequencing,False
+29735996,proximity labeling proteomics chromatin,proximity labeling,1,70061,APEX2 labelling and screening for biotinylated proteins by proteomics,False
+29735996,proximity labeling proteomics chromatin,proximity labeling,2,93712,A proximity proteomics pipeline for subcellular proteome and protein interaction mapping,False
+29735996,proximity labeling proteomics chromatin,proximity labeling,3,97988,APEX2-based proximity biotinylation of NLRP3 and P4C (SidC) during inflammasome activation,False
+29735996,proximity labeling proteomics chromatin,proximity labeling,4,117120,APEX-seq: RNA subcellular localization by proximity labeling,False
+29735996,proximity labeling proteomics chromatin,proximity labeling,5,121955,Biotinylation by antibody recognition,False
+29735996,proximity labeling proteomics chromatin,proximity labeling,6,122037,Identification of interacting proteins using PUP-IT,False
+29735996,proximity labeling proteomics chromatin,proximity labeling,7,125791,APEX2-based proximity biotinylation of ATG2A ,False
+41676688,C. elegans aggregation behavior,C. elegans,1,317464,High-throughput Larval Development Assay (HTLDA),False
+41676688,C. elegans aggregation behavior,C. elegans,2,1546,Direct delivery CRISPR-HDR editing protocol for C. elegans,False
+41676688,C. elegans aggregation behavior,C. elegans,3,1726,Seamless editing of the C. elegans genome using CRISPR/Cas9,False
+41676688,C. elegans aggregation behavior,C. elegans,4,13913,High-throughput assessment of changes in the Caenorhabditis elegans gut microbiome,False
+41676688,C. elegans aggregation behavior,C. elegans,5,16424,Swarming assay (high number),False
+41676688,C. elegans aggregation behavior,C. elegans,6,18187,fluorescence aggregation imaging,False
+41676688,C. elegans aggregation behavior,C. elegans,7,18147,bright field standard swarming imaging,False
+41676688,C. elegans aggregation behavior,C. elegans,8,18153,bright field big patch swarming imaging,False
+41676688,C. elegans aggregation behavior,C. elegans,9,18154,bright field pheromone imaging,False
+41676688,C. elegans aggregation behavior,C. elegans,10,18350,Using fluorescent beads to measure feeding rate in C. elegans,False
+36460793,single nucleus single cell RNA sequencing comparison,single nucleus,1,35391,Tissue Dissociation and Nuclei Isolation,False
+36460793,single nucleus single cell RNA sequencing comparison,single nucleus,2,320196,(P75) Isolation of single nuclei from frozen tissues,False
+36460793,single nucleus single cell RNA sequencing comparison,single nucleus,3,233703,OCT embedding (for spatial transcriptomics) and flash freezing (for single nucleus RNA-seq) of human myometrial and decidual tissues,False
+36460793,single nucleus single cell RNA sequencing comparison,single nucleus,4,90671,ONT Library Prep for Split-seq cDNA,False
+36460793,single nucleus single cell RNA sequencing comparison,single nucleus,5,17371,Zoospore Isolation of Aurantiochytrium limacinum,False
+36460793,single nucleus single cell RNA sequencing comparison,single nucleus,6,18394,Single Nucleus RNAseq Sample Prep from Nodose Ganglia,False
+36460793,single nucleus single cell RNA sequencing comparison,single nucleus,7,315862,10x Multiome (snRNA/ATACseq) of HuBMAP MOSDAP Tissues,False
+36460793,single nucleus single cell RNA sequencing comparison,single nucleus,8,19266,Processing Human Colon muscle layers for Single Nuclei RNA-seq using PHOX2B antibody immunoselection,False
+36460793,single nucleus single cell RNA sequencing comparison,single nucleus,9,19680,scTHS-seq ,False
+36460793,single nucleus single cell RNA sequencing comparison,single nucleus,10,22144,Single-nucleus isolation from frozen human lung tissue for single-nucleus RNA-seq,True
+41457950,plasma tau immunoassay,plasma,1,322288,Study protocol: Prevalence-calibrated thresholds for plasma p-tau217/Aβ42 ratio to detect cerebral amyloid-β: a systematic review and meta-analysis with comparison to FDA-approved cutoffs,False
+41457950,plasma tau immunoassay,plasma,2,318634,"703 and 704.  Whole Blood Peripheral Blood Mononuclear Cell (PBMC) Isolation, Freezing and Thawing.  LungMAP HTC SOP",False
+41457950,plasma tau immunoassay,plasma,3,319372,Mycoplasma Detection and Elimination Protocol for Cell Culture,False
+41457950,plasma tau immunoassay,plasma,4,318000,Microbial cfDNA sample processing and extraction protocol with the QIAamp MinElute ccfDNA Kit,False
+41457950,plasma tau immunoassay,plasma,5,318110,"LUMC Biobank adapted protocol for plasma isolation from whole blood, based on the national Dutch standard",False
+41457950,plasma tau immunoassay,plasma,6,317914,A Cost-Optimized 5-Protein Panel Revolutionizes Systemic Lupus Erythematosus Diagnosis,False
+41457950,plasma tau immunoassay,plasma,7,318135,Inductively coupled plasma mass spectrometry (ICP-MS),False
+41457950,plasma tau immunoassay,plasma,8,228138,From Bone to Flow: Comprehensive Flow Cytometry Protocol for Profiling B Cell Populations in Mouse Bone Marrow,False
+41457950,plasma tau immunoassay,plasma,9,103864,"Measurement of trimethylamine compounds - choline, L-carnitine, TMA and TMAO by LC-MS/MS in plasma and urine",False
+41457950,plasma tau immunoassay,plasma,10,3977,Total RNA Purification from Plasma or Serum (ISOLATE II Biofluids RNA Kit),False
+41053825,gut microbiome multiomics,gut microbiome,1,1848,Finding the core vs flexible microbiome,False
+41053825,gut microbiome multiomics,gut microbiome,2,13913,High-throughput assessment of changes in the Caenorhabditis elegans gut microbiome,False
+41053825,gut microbiome multiomics,gut microbiome,3,20843,UC Davis - Gut Microbiome Analysis (454-10K reads),False
+41053825,gut microbiome multiomics,gut microbiome,4,20908,UC Davis - Gut Microbiome Analysis (454-3K reads),False
+41053825,gut microbiome multiomics,gut microbiome,5,20911,"UC Davis - Gut Microbiome Analysis (Illumina-20K reads, 2X300bp)",False
+41053825,gut microbiome multiomics,gut microbiome,6,29935,High-Throughput Stool Metaproteome Extraction,False
+41053825,gut microbiome multiomics,gut microbiome,7,45750,Protocols for &#34;Shotgun Metagenomics of 361 elderly women reveals gut microbiome change in bone mass loss&#34;,False
+41053825,gut microbiome multiomics,gut microbiome,8,45993,Protocols for &#34;Shotgun Metagenomics of 361 elderly women reveals gut microbiome change in bone mass loss&#34;,False
+41053825,gut microbiome multiomics,gut microbiome,9,45994,Protocols for &#34;Linking gut microbiome to bone mineral density: a shotgun metagenomic study of 361 eldly women&#34;,False
+41053825,gut microbiome multiomics,gut microbiome,10,46092,Protocols for &#34;Linking gut microbiome to bone mineral density: a shotgun metagenomic dataset from 361 elderly women&#34;,False
+41413855,genomic selection livestock,genomic selection,1,43927,Novel In Vivo Regeneration System of Tomato,False
+41413855,genomic selection livestock,genomic selection,2,92516,Crop DNA Extraction with Lab-Made Magnetic Nanoparticles,False
+42082551,NLRP3 inflammasome live imaging,NLRP3,1,97988,APEX2-based proximity biotinylation of NLRP3 and P4C (SidC) during inflammasome activation,False
+42082551,NLRP3 inflammasome live imaging,NLRP3,2,98085,Assaying NLRP3-mediated LDH and IL-1β release,False
+28945705,metabolic RNA sequencing,metabolic RNA,1,116161,Thiol-linked alkylation for the metabolic sequencing of RNA (SLAMseq),True
+28945705,metabolic RNA sequencing,metabolic RNA,2,122399,"Massively parallel and time-resolved RNA sequencing in single cells with scNT-Seq
+",False
+41652543,plant nanopore sequencing,plant,1,322942,Manual cryo-milling,False
+41652543,plant nanopore sequencing,plant,2,323048,Making the cut: experimental bamboo processing using chert tools from Island Southeast Asia,False
+41652543,plant nanopore sequencing,plant,3,322845,Rotary milling,False
+41652543,plant nanopore sequencing,plant,4,317991,Genomic DNA extraction from Wahlenbergia (Bluebell) leaves,False
+41652543,plant nanopore sequencing,plant,5,243168,Total RNA Purification from Bluebell Leaves,False
+41652543,plant nanopore sequencing,plant,6,322451,Identifying direct TARGETs of transcription factors in wheat,False
+41652543,plant nanopore sequencing,plant,7,322362,Shoot Structure and Leaf Morphometry Measurements for Seagrass Nursery Plants,False
+41652543,plant nanopore sequencing,plant,8,322363,Transplanting Seagrass Plants into Nursery Raceways,False
+41652543,plant nanopore sequencing,plant,9,322421,Historic fungal museum specimen DNA recovery: a modified E.Z.N.A.® HP Plant & Fungal DNA Kit protocol for herbarium fungi,False
+41652543,plant nanopore sequencing,plant,10,322281,Sediment Nutrient Amendment for Seagrass Nursery Plants,False
+34596274,preclinical diabetes mouse,preclinical,1,319608,Rearing Collection and Processing Protocol,False
+34596274,preclinical diabetes mouse,preclinical,2,320013,Open Field Activity Monitoring Processing Protocol,False
+34596274,preclinical diabetes mouse,preclinical,3,319607,Open Field Activity Monitoring Collection Protocol,False
+34596274,preclinical diabetes mouse,preclinical,4,319117,Cardiac Tissue-Specific Cell-Free DNA Methylation Profiling for Preclinical Detection of Hereditary ATTR Cardiomyopathy (hATTR-CM),False
+34596274,preclinical diabetes mouse,preclinical,5,317289,Slow flowing MRI phantom for FLAIR validation,False
+34596274,preclinical diabetes mouse,preclinical,6,10786,The anxiolytic effect of probiotics: A systematic review and meta-analysis of the clinical and preclinical literature,False
+34596274,preclinical diabetes mouse,preclinical,7,11662,Reconstruction of simultaneous multislice imaging magnetic resonance data (example),False
+34596274,preclinical diabetes mouse,preclinical,8,27616,UC Davis - Imaging CMGI,False
+34596274,preclinical diabetes mouse,preclinical,9,28466,Image-based 3D cell culture cytotoxicity assay,False
+34596274,preclinical diabetes mouse,preclinical,10,60964,Open-Skull Controlled Cortical Impact (CCI) model in rats,False
+28530655,tumor barcoding sequencing,tumor,1,322298,In Vivo Checkpoint Antibody Administration in Mouse Tumor Models,False
+28530655,tumor barcoding sequencing,tumor,2,99608,CUTAC for FFPEs,False
+28530655,tumor barcoding sequencing,tumor,3,319393,Mesenchymal Stem Cell Isolation and Culture from Murine Bones,False
+28530655,tumor barcoding sequencing,tumor,4,319854,Immunolabeling and Tissue Clearing for Calcified Tissues,False
+28530655,tumor barcoding sequencing,tumor,5,319427,Immuolabelling and Tissue Clearing for Large Tissues and Organs,False
+28530655,tumor barcoding sequencing,tumor,6,319389,Comprehensive protocols for H1-10 nucleolar functional characterization,False
+28530655,tumor barcoding sequencing,tumor,7,319963,A standardized protocol for establishing minimally invasive mouse models of jaw osteonecrosis: bisphosphonate-related and radiation-induced models,False
+28530655,tumor barcoding sequencing,tumor,8,319431,3D Light-Sheet Fluorescence Imaging and Imaris-Based Analysis of Cleared Tissues,False
+28530655,tumor barcoding sequencing,tumor,9,124927,Lightweight Brain Tumor Segmentation on Low-Resource Systems: A Step-by-Step Guide with 3D U-Net,False
+28530655,tumor barcoding sequencing,tumor,10,7499,"Differentiation of Glioblastoma Multiforme, Metastases and Primary Central Nervous System Lymphomas using Multiparametric Perfusion and Diffusion MR Imaging of a Tumor Core and a Peritumoral Zone – Searching for a Practical Approach.",False
+25665179,aptamer lipid nanoparticles,aptamer,1,19401,Wireless electrochemical measurement of kanamycin in whole blood,False
+25665179,aptamer lipid nanoparticles,aptamer,2,26872,Streptavidin dot blot with aptamers,False
+25665179,aptamer lipid nanoparticles,aptamer,3,28933,Quantitative paper ELONA,False
+25665179,aptamer lipid nanoparticles,aptamer,4,28269,Cell-ELONA,False
+25665179,aptamer lipid nanoparticles,aptamer,5,28895,Qualitative paper ELONA test,False
+25665179,aptamer lipid nanoparticles,aptamer,6,29220,Magnetic Beads Cell Separation,False
+25665179,aptamer lipid nanoparticles,aptamer,7,29222,Plate cell – SELEX,False
+25665179,aptamer lipid nanoparticles,aptamer,8,29221,Structuralization and Incubation,False
+25665179,aptamer lipid nanoparticles,aptamer,9,28945,Aptamer 2-step conjugation protocol (INSA-Lyon 2016),False
+25665179,aptamer lipid nanoparticles,aptamer,10,28951,Aptamer conjugated beads affinity assay,False
+35853087,retraction citation analysis,retraction citation,1,21623,Post-retraction citation: a case for radiology-imaging diagnostic,False
+28394336,open database search proteomics,open database,1,121866,Using MSFragger for ultrafast database searching,True
+30010754,Betta splendens genome,Betta splendens genome,1,12798,DNA extration for the Betta splendens genome,False
+30010754,Betta splendens genome,Betta splendens genome,2,12799,RNA extration for the Betta splendens genome,False
+30010754,Betta splendens genome,Betta splendens genome,3,12801,An analytical pipeline of assembly and annotation of the Betta splendens genome.,True
+30010754,Betta splendens genome,Betta splendens genome,4,12802,The pipeline of Hi-C assembly,False
+30010754,Betta splendens genome,Betta splendens genome,5,12934,DNA extraction for the Betta splendens genome,False
+30010754,Betta splendens genome,Betta splendens genome,6,12935,RNA extraction for the Betta splendens genome,False
+31873830,myoblast primary culture,myoblast,1,7736,Implication of SPARC in the modulation of the extracellular matrix and mitochondrial function in muscle cells,False
+31873830,myoblast primary culture,myoblast,2,57834,"Development of a simple and versatile in vitro method for production, stimulation, and analysis of bioengineered muscle",False
+31873830,myoblast primary culture,myoblast,3,65633,"Development of a simple and versatile in vitro method for production, stimulation, and analysis of bioengineered muscle",False
+31873830,myoblast primary culture,myoblast,4,123119,"A step by step protocol for stabilizing specific DNA G-quadruplexes by CRISPR guided G-quadruplex binding proteins and ligands
+",False
+39596330,RNase H R-loop,RNase H,1,89895,Detection of knockdown resistance mutations in Musca domestica by rhPCR,False
+34552577,fungal antimycobacterial screening,fungal,1,322421,Historic fungal museum specimen DNA recovery: a modified E.Z.N.A.® HP Plant & Fungal DNA Kit protocol for herbarium fungi,False
+34552577,fungal antimycobacterial screening,fungal,2,229510,Establishing ecto- and ericoid mycorrhizal symbioses in vitro,False
+34552577,fungal antimycobacterial screening,fungal,3,318676,Solid medium fungal culture extraction,False
+34552577,fungal antimycobacterial screening,fungal,4,319408,OSMAC Culture procedure for fungi,False
+34552577,fungal antimycobacterial screening,fungal,5,318698,Chemical profiling for fungal culture extract,False
+34552577,fungal antimycobacterial screening,fungal,6,319394,Microfractionation of a fungal culture extract,False
+34552577,fungal antimycobacterial screening,fungal,7,243287,Simplified Agrobacterium-mediated transformation of Botrytis cinerea using mycelia,False
+34552577,fungal antimycobacterial screening,fungal,8,109693,Universal HMW genomic DNA extraction protocol for long reads sequencing,False
+34552577,fungal antimycobacterial screening,fungal,9,2566,Detecting Fungal Infections in Almonds,False
+34552577,fungal antimycobacterial screening,fungal,10,2984,OmniPrep™ For High Quality Genomic DNA Extraction From Fungal Tissue,False
+31077316,avian genome assembly,avian,1,6047,DCX Immunohistochemistry Protocol,False
+31077316,avian genome assembly,avian,2,6046,NeuN Immunohistochemistry Protocol,False
+31077316,avian genome assembly,avian,3,6253,Rapid and Broad Detection of H5 Hemagglutinin by an Immunochromatographic Kit Using Novel Monoclonal Antibody against Highly Pathogenic Avian Influenza Virus Belonging to the Genetic Clade 2.3.4.4,False
+31077316,avian genome assembly,avian,4,9352,Metagenomic Analysis of Microbial profile of Guinea Fowls and Chickens,False
+31077316,avian genome assembly,avian,5,13676,Production of lentiviral vectors pseudotyped with influenza neuraminidase (NA),False
+31077316,avian genome assembly,avian,6,16620,Skin lesions monitoring on slaughtered pigs,False
+31077316,avian genome assembly,avian,7,17598,DNA extraction from avian faeces stored in ethanol,False
+31077316,avian genome assembly,avian,8,22324,"Stable isotopes in avian research: a step by step protocol to feather sample preparation for stable isotope analysis of carbon (δ13C), nitrogen (δ15N), and hydrogen (δ2H). Version 1.1",False
+31077316,avian genome assembly,avian,9,22853,Amplicon library protocol for metabarcoding-based diet analysis in blue tits (Cyanistes caeruleus) using faecal DNA,False
+31077316,avian genome assembly,avian,10,28513,Identify fetal yawns based on temporal dynamics of mouth opening. ,False
+38388166,poultry metagenomics Klebsiella,poultry,1,316287,Protocol  for collection of various environmental sample types  for screening  of Influenza A viruses,False
+38388166,poultry metagenomics Klebsiella,poultry,2,9352,Metagenomic Analysis of Microbial profile of Guinea Fowls and Chickens,False
+38388166,poultry metagenomics Klebsiella,poultry,3,11183,Poultry Enterprise Environmental Sample Handling and Processing for Salmonella Spp. Detection,False
+38388166,poultry metagenomics Klebsiella,poultry,4,11186,Poultry Enterprise Environmental Sample Microbiological Testing for Salmonella spp.,False
+38388166,poultry metagenomics Klebsiella,poultry,5,11193,Poultry Enterprise Environmental Sampling Methodology for Salmonella spp. Detection,False
+38388166,poultry metagenomics Klebsiella,poultry,6,19791,Lymphocyte proliferation in poultry species,False
+38388166,poultry metagenomics Klebsiella,poultry,7,84175,Optimized conditions for whole genome sequencing of avian reoviruses.,False
+38388166,poultry metagenomics Klebsiella,poultry,8,100540,Detection of avian Influenza Virus H5N1 with a Real time PCR kit,False
+38388166,poultry metagenomics Klebsiella,poultry,9,103796,Optimized RT-PCR Protocols for Whole Genome Amplification of Influenza A Virus for NGS,False
+38388166,poultry metagenomics Klebsiella,poultry,10,110623,Quantitative Controls for Environmental and Agricultural Surveillance of Extended-Spectrum Beta-Lactamase Producing Escherichia coli,False
+37829276,single specimen genome assembly,single specimen,1,1994,An. gambiae complex species identification by PCR,False
+37829276,single specimen genome assembly,single specimen,2,90635,Ultra low input library preparation of single soil invertebrate specimens for Hifi PacBio sequencing,False
+30268511,mammosphere assay breast,mammosphere,1,121476,Tumorsphere Passage for Breast Cancer Stem Cells,True
+40872802,bacteriophage Pseudomonas therapy,bacteriophage,1,322664,Isolation of bacteriophage genomic DNA using the Beckman Coulter GenFind V3 Genomic DNA Extraction Kit,False
+40872802,bacteriophage Pseudomonas therapy,bacteriophage,2,235876,Single-step monolithic chromatography for Pseudomonas aeruginosa phages purification,False
+40872802,bacteriophage Pseudomonas therapy,bacteriophage,3,320823,Genome Editing and Synthetic Biology for Climate-Resilient Crop Disease Management and Antimicrobial Resistance Mitigation: A One Health Scoping Review Protocol,False
+40872802,bacteriophage Pseudomonas therapy,bacteriophage,4,1166,FASP Kit Protocol-ORNL Developed for Bacteriophage,False
+40872802,bacteriophage Pseudomonas therapy,bacteriophage,5,1193,Urea/SDS Solution,False
+40872802,bacteriophage Pseudomonas therapy,bacteriophage,6,1194,Urea Solution,False
+40872802,bacteriophage Pseudomonas therapy,bacteriophage,7,1195,Iodoacetamide Solution,False
+40872802,bacteriophage Pseudomonas therapy,bacteriophage,8,1196,Digestion Solution,False
+40872802,bacteriophage Pseudomonas therapy,bacteriophage,9,1475,Viruses from Sulfolobus and close relatives,False
+40872802,bacteriophage Pseudomonas therapy,bacteriophage,10,1491,Bacteriophage isolation using enrichment cultures,False
+35438621,fungal DNA extraction long-read,fungal DNA extraction,1,322421,Historic fungal museum specimen DNA recovery: a modified E.Z.N.A.® HP Plant & Fungal DNA Kit protocol for herbarium fungi,False
+35438621,fungal DNA extraction long-read,fungal DNA extraction,2,3718,Quick Fungal DNA Extraction ,False
+35438621,fungal DNA extraction long-read,fungal DNA extraction,3,51665,Quick Fungal DNA extraction from colonies on plates,False
+35438621,fungal DNA extraction long-read,fungal DNA extraction,4,33575,Plant and fungal DNA extraction using a QIAGEN QIAxtractor,False
+35438621,fungal DNA extraction long-read,fungal DNA extraction,5,55943,Fungal DNA extraction for  Nanopore sequencing,False
+35438621,fungal DNA extraction long-read,fungal DNA extraction,6,76750,Extraction of Yeast High-Molecular-Weight Genomic DNA ,False
+35438621,fungal DNA extraction long-read,fungal DNA extraction,7,86920,General Fungal DNA Extraction,False
+35438621,fungal DNA extraction long-read,fungal DNA extraction,8,96788,Endophytic fungal DNA extraction from seeds using Qiagen DNeasy Plant Mini,False
+35438621,fungal DNA extraction long-read,fungal DNA extraction,9,101404,Bacterial and fungal DNA extraction protocol for long-read whole genome sequencing,False
+35438621,fungal DNA extraction long-read,fungal DNA extraction,10,119303,Optimized CTAB DNA extraction for different tissues,False
+28607482,primordial germ cell specification,primordial germ cell,1,121615,Ultra-low-input native ChIP-seq for rare cell populations,False
+28607482,primordial germ cell specification,primordial germ cell,2,121806,Oocyte production from mouse pluripotent stem cells in culture,False
+28607482,primordial germ cell specification,primordial germ cell,3,121900,Simulating gastrulation development and germ cell fate in vitro using human and monkey pluripotent stem cells,True
+28607482,primordial germ cell specification,primordial germ cell,4,122204,"Protocol for controlled modeling of human epiblast and amnion development using stem cells
+",False
+28607482,primordial germ cell specification,primordial germ cell,5,122459,"Production of Clone-like Chicken by Primordial Germ Cells Induced From Somatic Cells
+",False
+29641611,nature-based coastal adaptation,nature-based,1,243794,Nature-based play therapy: A protocol for a scoping review,False
+30625152,genome scale model Staphylococcus,genome scale,1,14903,"Protocols for chromosome-level genome assembly of the spotted sea bass, Lateolabrax maculatus",False
+30625152,genome scale model Staphylococcus,genome scale,2,93708,CompDuplex: Accurate detection of somatic mutations by duplex-seq with comprehensive genome coverage,False
+36329019,fluorescence calibration microplate,fluorescence calibration,1,319210,Cross-Calibration: Assignment of instrument-specific fluorescence standard units to multi-peak rainbow beads,False
+36329019,fluorescence calibration microplate,fluorescence calibration,2,22982,iGEM Calibration Protocol - Flow Cytometry Cell Size,False
+36329019,fluorescence calibration microplate,fluorescence calibration,3,26020,iGEM Calibration Protocol - Flow Cytometry Cell Size,False
+36329019,fluorescence calibration microplate,fluorescence calibration,4,27409,Calibration Protocol - Plate Reader Fluorescence Calibration,False
+36329019,fluorescence calibration microplate,fluorescence calibration,5,38552,FCMPASS - Fluorescence calibration,False
+36329019,fluorescence calibration microplate,fluorescence calibration,6,44594,Small-Volume Flow Cytometry-Based Multiplex Analysis of the Activity of Small GTPases,False
+36329019,fluorescence calibration microplate,fluorescence calibration,7,44624,3.1 Synthesis of Glutathione Beads,False
+36329019,fluorescence calibration microplate,fluorescence calibration,8,44625,3.2 Production of a Cleared Cell Lysate,False
+36329019,fluorescence calibration microplate,fluorescence calibration,9,44626,3.3 Molecular Assembly of GST Effector Proteins on Glutathione Beads,False
+36329019,fluorescence calibration microplate,fluorescence calibration,10,44627,3.4 Assay Runtime,False
+42007381,acute lung injury mouse model,acute lung injury,1,8166,"LPS-induce acute lung injury (LPS nebulization, mice)",False
+42007381,acute lung injury mouse model,acute lung injury,2,10627,Size matters: an observational study investigating estimated height as a reference size for calculating tidal volumes if low tidal volume ventilation is required,False
+42007381,acute lung injury mouse model,acute lung injury,3,47603,The impact of patient-ventilator asynchrony in adult mechanically ventilated patients on outcomes：A systematic review and meta-analysis,False
+40163522,plant hybridization genomics,plant hybridization,1,81174,PHYTOMap in Arabidopsis root tips,False
+35711922,circular DNA long-read sequencing,circular DNA,1,319038,Generation of circVDJ-seq libraries from 3’-barcoded cDNA,False
+35711922,circular DNA long-read sequencing,circular DNA,2,2342,RNA extraction using the 'home-made' Trizol substitute,False
+35711922,circular DNA long-read sequencing,circular DNA,3,27980,Yeast transformation,False
+35711922,circular DNA long-read sequencing,circular DNA,4,37343,Targeted ExSeq -- Sequencing Library Preparation,False
+35711922,circular DNA long-read sequencing,circular DNA,5,54093,OriCiro® Cell-Free Cloning System/PASS V4.1.2,False
+35711922,circular DNA long-read sequencing,circular DNA,6,122089,Purification and Sequencing of Large Circular DNA from Human Cells,True
+35711922,circular DNA long-read sequencing,circular DNA,7,122501,"Rolling circle amplification with electrochemical detection assay for SARS-CoV-2 
+",False
+35711922,circular DNA long-read sequencing,circular DNA,8,122666,"Ligation and supercoiling of plasmids containing single strand interruptions
+",False
+35711922,circular DNA long-read sequencing,circular DNA,9,122913,"scEC&T-seq: a method for parallel sequencing of extrachromosomal circular DNAs and transcriptomes in single human cells
+",False
+35711922,circular DNA long-read sequencing,circular DNA,10,123007,"scCircle-seq unveils the diversity and complexity of circular DNAs in single cells
+",False
+30052755,nanopore sequencing quality control,nanopore sequencing,1,108579,Custom Indexing for Nanopore Sequencing Platform,False
+30052755,nanopore sequencing quality control,nanopore sequencing,2,321639,Whole-Genome Sequencing of Escherichia coli Using Oxford Nanopore Technology,False
+30052755,nanopore sequencing quality control,nanopore sequencing,3,315450,DDNS Data analysis and quality control checks ,False
+30052755,nanopore sequencing quality control,nanopore sequencing,4,319898,Whole-Genome Nanopore Sequencing of Bacterial gDNA,False
+30052755,nanopore sequencing quality control,nanopore sequencing,5,319843,Determination of gRNA Efficiency In Vivo,False
+30052755,nanopore sequencing quality control,nanopore sequencing,6,316939,Ultra-long  DNA Extraction for UMI-Tagged rRNA Operon Amplification Nanopore sequencing,False
+30052755,nanopore sequencing quality control,nanopore sequencing,7,316554,Direct Detection of poliovirus and Nanopore Sequencing (DDNS) - Environmental Samples,False
+30052755,nanopore sequencing quality control,nanopore sequencing,8,123614,Processing human brain tissue and cultured cells for population-scale SQK-PCS114 Oxford Nanopore long-read cDNA-PCR sequencing SOP ,False
+30052755,nanopore sequencing quality control,nanopore sequencing,9,4757,SQK-MAP006 protocol for library preparation for Nanopore sequencing,False
+30052755,nanopore sequencing quality control,nanopore sequencing,10,10365,Low input long-read DNA isolation  for Nanopore sequencing,False
+33114549,transcription factor thermophile,transcription factor,1,322451,Identifying direct TARGETs of transcription factors in wheat,False
+33114549,transcription factor thermophile,transcription factor,2,9451,CUT&RUN: Targeted in situ genome-wide profiling with high efficiency for low cell numbers,False
+33114549,transcription factor thermophile,transcription factor,3,318907,ExpressPath: RNA-seq Time Course Analysis Protocol,False
+33114549,transcription factor thermophile,transcription factor,4,318304,Bulk TF ORF screen for regulators of TOX in primary human CD8+ T cells,False
+33114549,transcription factor thermophile,transcription factor,5,40314,CUT&Tag Data Processing and Analysis Tutorial,False
+33114549,transcription factor thermophile,transcription factor,6,5376,Code: Discovery of regulatory motifs in Labyrinthulomycete genomes,False
+33114549,transcription factor thermophile,transcription factor,7,8233,microarray analysis,False
+33114549,transcription factor thermophile,transcription factor,8,11690,"Protocol to accompany paper entitled ""Alternative splicing of helicase-like transcription factor (Hltf): Intron retention-dependent activation of immune tolerance at the feto-maternal interface""",False
+33114549,transcription factor thermophile,transcription factor,9,13224,Pi-ATAC,False
+33114549,transcription factor thermophile,transcription factor,10,16328,immunehistochemistry and transcriptomic analysis of iodine and breast cancer,False
+33970926,toddler footwear gait,toddler,1,42534,Latent class analyses on attendance of toddler safety promotion intervention,False
+33970926,toddler footwear gait,toddler,2,45989,"Understanding the impact of sole soled footwear on toddler spatial, temporal and kinetic gait parameters.",True
+32333689,dental enamel isotope,dental enamel,1,20237,Chromatographic separation of neodymium isotopes in human dental enamel for Thermal Ionisation Mass Spectrometry (TIMS) analysis,False
+32333689,dental enamel isotope,dental enamel,2,24517,Chromatographic separation of strontium isotopes in human dental enamel for Thermal Ionisation Mass Spectrometry (TIMS) analysis,True
+32333689,dental enamel isotope,dental enamel,3,86456,Protein Extraction from Dental Enamel,False
+39251619,Malassezia staining,Malassezia,1,17455,Modified Dixon’s Agar (Heitman Lab),False
+39251619,Malassezia staining,Malassezia,2,17456,Modified Leeming and Notman Agar,False
+39251619,Malassezia staining,Malassezia,3,17457,Sabouroud’s Dextrose Agar,False
+39251619,Malassezia staining,Malassezia,4,17458,CHROMagar Malassezia Medium (CHROM),False
+39251619,Malassezia staining,Malassezia,5,17459,Cremophor EL agar (EL slant),False
+39251619,Malassezia staining,Malassezia,6,17460,Tween 60-esculin Agar (TE slant),False
+39251619,Malassezia staining,Malassezia,7,40450,Malassezia culture on modified Dixon media,False
+28346450,crosslinking mass spectrometry RNA protein,crosslinking mass spectrometry,1,318475,X-PIE modeling,False
+28346450,crosslinking mass spectrometry RNA protein,crosslinking mass spectrometry,2,318639,X-PIE curation,False
+32854500,fluorescence calibration flow cytometry,fluorescence calibration,1,319210,Cross-Calibration: Assignment of instrument-specific fluorescence standard units to multi-peak rainbow beads,False
+32854500,fluorescence calibration flow cytometry,fluorescence calibration,2,22982,iGEM Calibration Protocol - Flow Cytometry Cell Size,False
+32854500,fluorescence calibration flow cytometry,fluorescence calibration,3,26020,iGEM Calibration Protocol - Flow Cytometry Cell Size,False
+32854500,fluorescence calibration flow cytometry,fluorescence calibration,4,27409,Calibration Protocol - Plate Reader Fluorescence Calibration,True
+32854500,fluorescence calibration flow cytometry,fluorescence calibration,5,38552,FCMPASS - Fluorescence calibration,False
+32854500,fluorescence calibration flow cytometry,fluorescence calibration,6,44594,Small-Volume Flow Cytometry-Based Multiplex Analysis of the Activity of Small GTPases,False
+32854500,fluorescence calibration flow cytometry,fluorescence calibration,7,44624,3.1 Synthesis of Glutathione Beads,False
+32854500,fluorescence calibration flow cytometry,fluorescence calibration,8,44625,3.2 Production of a Cleared Cell Lysate,False
+32854500,fluorescence calibration flow cytometry,fluorescence calibration,9,44626,3.3 Molecular Assembly of GST Effector Proteins on Glutathione Beads,False
+32854500,fluorescence calibration flow cytometry,fluorescence calibration,10,44627,3.4 Assay Runtime,False
+34740201,visceral nerve computational modeling,visceral,1,7973,"Prevalence and risk factors associated with Leishmania infection in Trang Province, southern Thailand",False
+34740201,visceral nerve computational modeling,visceral,2,17393,Wet-lab identification of Leishmania donovani antigens detected by human IgG1,False
+34740201,visceral nerve computational modeling,visceral,3,37432,A randomized clinical trial of exenatide onT2D,False
+34740201,visceral nerve computational modeling,visceral,4,51532,Modeling acute visceral pain in adult zebrafish,False
+34740201,visceral nerve computational modeling,visceral,5,62194,Cholera Toxin Subunit B (CTB) Retrograde tracing from the mouse colon and bladder wall.,False
+34740201,visceral nerve computational modeling,visceral,6,62200,Mapping dichotomising colon and bladder sensory afferent neurons and terminals and if they undergo structural plasticity post-colitis.,False
+34740201,visceral nerve computational modeling,visceral,7,62203,Mouse model of post-colitis (DNBS) chronic visceral hypersensitivity.,False
+34740201,visceral nerve computational modeling,visceral,8,62272,Dorsal Root Ganglia stimulation-block colorectal afferents,False
+34740201,visceral nerve computational modeling,visceral,9,65218,Use of cholera toxin subunit B to label neural projections to major pelvic ganglia,False
+34740201,visceral nerve computational modeling,visceral,10,67170,Protocol for vagus nerve stimulation in anesthetized pigs (subject-1),False
+31855083,AAV genome sequencing,AAV genome,1,108805,Absolute quantification of AAV genomes from total DNA with digital droplet PCR (ddPCR),False
+34462260,SUMOylation beta cell,SUMOylation,1,315616,Expression and Purification of Rice SUMOylation machinery,False
+34462260,SUMOylation beta cell,SUMOylation,2,120928,Sumoylation and desumoylation assays for a chromatin-remodelling complex in vivo and in vitro,False
+42524695,single-cell transcriptomics latent factor,single-cell transcriptomics,1,117865,Preparation of Mouse Kidney for Spatial and Single-Cell Transcriptomics,False
+42524695,single-cell transcriptomics latent factor,single-cell transcriptomics,2,119202,Ligation sequencing V14 —single-cell transcriptomics with 5&#39; cDNA prepared using 10XGenomics on PromethION(SQK-LSK114),False
+36360315,vitamin K systems genetics,vitamin K,1,82305,Characterization of the VKORC1 and CYP2C9 genotypes,False
+36360315,vitamin K systems genetics,vitamin K,2,87249,Characterization of the VKORC1 -1639G&gt;A (rs9923231) polymorphism-associated genotypes,False
+36360315,vitamin K systems genetics,vitamin K,3,109509,Staining Experiment and Sorting of 293F Cells,False
+36360315,vitamin K systems genetics,vitamin K,4,235092,GAM modified supplemented with vitamin K1,False
+38902223,histone variant plasma cell,histone variant,1,40949,Bench top CUT&RUN with antibodies-online™ CUT&RUN Sets,False
+38902223,histone variant plasma cell,histone variant,2,122197,Antibody-guided Chromatin Tagmentation (ACT-seq),False
+34457243,SARS-CoV-2 whole genome sequencing,SARS-CoV-2 whole genome sequencing,1,45027,SARS-CoV-2 Whole Genome Sequencing on Illumina - Tiling PCR,False
+34457243,SARS-CoV-2 whole genome sequencing,SARS-CoV-2 whole genome sequencing,2,46297,SARS-CoV-2 Whole Genome Sequencing on Illumina ,False
+34457243,SARS-CoV-2 whole genome sequencing,SARS-CoV-2 whole genome sequencing,3,49308,  VIRUSHUNTER™   ARTIC SARS-CoV-2 Whole Genome Sequencing Assay,False
+34457243,SARS-CoV-2 whole genome sequencing,SARS-CoV-2 whole genome sequencing,4,72183,Evaluation of miniaturized Illumina DNA preparation protocols for SARS-CoV-2 whole genome sequencing protocol,False
+39777783,archaeal virus metagenomics,archaeal,1,17579,Run Prodigal using iMicrobe,False
+39777783,archaeal virus metagenomics,archaeal,2,41583,Bacterial 16S-V4V5 rRNA amplification  for NGS Illumina sequencing (Metabarcoding),False
+39777783,archaeal virus metagenomics,archaeal,3,83293,Quick and dirty sequencing microbial genome extraction v1,False
+39777783,archaeal virus metagenomics,archaeal,4,84589,HMW gDNA extraction from prokaryotic cultures and cryo preservation stocks,False
+39777783,archaeal virus metagenomics,archaeal,5,118654,Multi-round smHCR-FISH for archaea,False
+39777783,archaeal virus metagenomics,archaeal,6,118972,Multi-round smHCR-FISH for archaea,False
+39777783,archaeal virus metagenomics,archaeal,7,121469,"CloVR-ITS: Automated ITS amplicon sequence analysis pipeline for fungal microbiota analysis– standard operating procedure, version 1.0",False
+39777783,archaeal virus metagenomics,archaeal,8,125390,Workflow for  F420-based fluorescence-activated cell sorting (FACS) of sedimentary microbes,False
+36149401,LRRK2 Rab phosphorylation,LRRK2,1,319255,Nigerian LRRK2 G2019S family - protocols,False
+36149401,LRRK2 Rab phosphorylation,LRRK2,2,43283,Dundee neutrophil isolation protocol (from whole blood),False
+36149401,LRRK2 Rab phosphorylation,LRRK2,3,43287,Dundee peripheral blood mononuclear cell (PBMC) isolation protocol (from whole blood),False
+36149401,LRRK2 Rab phosphorylation,LRRK2,4,43690,Analysis of Primary Cilia in Rodent Brain By Immunofluorescence Microscopy,False
+36149401,LRRK2 Rab phosphorylation,LRRK2,5,44465,Reconstituting LRRK2RCKW on Microtubules for cryo-EM studies,False
+36149401,LRRK2 Rab phosphorylation,LRRK2,6,44969,LRRK2RCKW   single molecule kinesin motility assays,False
+36149401,LRRK2 Rab phosphorylation,LRRK2,7,46831,Preparation of LRRK2 RCKW trimer cryo-EM grids,False
+36149401,LRRK2 Rab phosphorylation,LRRK2,8,46832,Preparation of LRRK2 RCKW cryo-EM grids,False
+36149401,LRRK2 Rab phosphorylation,LRRK2,9,87461,Quantitative Immunoblotting Analysis of LRRK2 Signalling Pathway,False
+36149401,LRRK2 Rab phosphorylation,LRRK2,10,49715,Assay for quantifying PPM1H phosphatase activity towards LRRK2 phosphorylated Rab proteins and peptides using the Malachite Green method,False
+37425958,endosomal trafficking pheochromocytoma,endosomal trafficking,1,5347,"Protocols  from Yao CK et al. (2017) ""Flower Ca2+ channel in CME and ADBE""",False
+37425958,endosomal trafficking pheochromocytoma,endosomal trafficking,2,316450,TaqMan SNP Genotyping for VAPB variants p.P56S and p.T46I.,False
+42539119,C. elegans photoreceptor,C. elegans,1,317464,High-throughput Larval Development Assay (HTLDA),False
+42539119,C. elegans photoreceptor,C. elegans,2,1546,Direct delivery CRISPR-HDR editing protocol for C. elegans,False
+42539119,C. elegans photoreceptor,C. elegans,3,1726,Seamless editing of the C. elegans genome using CRISPR/Cas9,False
+42539119,C. elegans photoreceptor,C. elegans,4,13913,High-throughput assessment of changes in the Caenorhabditis elegans gut microbiome,False
+42539119,C. elegans photoreceptor,C. elegans,5,16424,Swarming assay (high number),False
+42539119,C. elegans photoreceptor,C. elegans,6,18187,fluorescence aggregation imaging,False
+42539119,C. elegans photoreceptor,C. elegans,7,18147,bright field standard swarming imaging,False
+42539119,C. elegans photoreceptor,C. elegans,8,18153,bright field big patch swarming imaging,False
+42539119,C. elegans photoreceptor,C. elegans,9,18154,bright field pheromone imaging,False
+42539119,C. elegans photoreceptor,C. elegans,10,18350,Using fluorescent beads to measure feeding rate in C. elegans,False
+30862831,circulating microRNA biofluid qPCR,circulating microRNA,1,13242,Quantification of circulating microRNA using TaqMan Low Density Array (TLDA),False
+30862831,circulating microRNA biofluid qPCR,circulating microRNA,2,13286,Quantification of circulating microRNA using droplet digital PCR,False
+30862831,circulating microRNA biofluid qPCR,circulating microRNA,3,13318,Quantification of circulating microRNA using single TaqMan assays,False
+30862831,circulating microRNA biofluid qPCR,circulating microRNA,4,21973,Participants’ recruitment and samples collection,False
+30862831,circulating microRNA biofluid qPCR,circulating microRNA,5,21975,Selection of a “housekeeping” miRNA to normalize qRT-PCR data,False
+30862831,circulating microRNA biofluid qPCR,circulating microRNA,6,31453,"Association between circulating microRNA-122, microRNA-126-3p and microRNA-146a and inflammatory markers in patients with pre-diabetes and type 2 diabetes mellitus",False
+30862831,circulating microRNA biofluid qPCR,circulating microRNA,7,57620,Quantification of Isolated Circulating MicroRNAs using Qiagen LNA Panels,False
+38863673,splicing neoantigen tumor,splicing,1,7447,In silico analysis of DNA variants,False
+38863673,splicing neoantigen tumor,splicing,2,11534,Alternative Splicing Analysis,True
+38863673,splicing neoantigen tumor,splicing,3,11690,"Protocol to accompany paper entitled ""Alternative splicing of helicase-like transcription factor (Hltf): Intron retention-dependent activation of immune tolerance at the feto-maternal interface""",False
+38863673,splicing neoantigen tumor,splicing,4,20452,Addition of RNA sequins to sample for RNA sequencing.,False
+38863673,splicing neoantigen tumor,splicing,5,28026,Tn5 Library Prep for Deep Sequencing Loci of CRISPR/Cas9 Edited Cells. Single gene specific primer amplification (UDiTaS protocol with alterations),False
+38863673,splicing neoantigen tumor,splicing,6,90506,Testing ER stress induction in Cultured Induced Neurons via measuring ATF4 protein level or XBP-1 mRNA splicing,False
+38863673,splicing neoantigen tumor,splicing,7,120907,An alternatively spliced isoform of t(8;21) transcript promotes leukemogenesis,False
+38863673,splicing neoantigen tumor,splicing,8,121930,Alternative splicing analysis of RNA-seq data using SAJR,False
+38863673,splicing neoantigen tumor,splicing,9,122272,"Detection of aberrant events in RNA sequencing data
+",False
+38863673,splicing neoantigen tumor,splicing,10,122573,"Generation of cell lines for the exon-specific isoform expression reporter system (EXSISERS)
+",False
+34616066,single-cell transcriptomics brain,single-cell transcriptomics,1,117865,Preparation of Mouse Kidney for Spatial and Single-Cell Transcriptomics,False
+34616066,single-cell transcriptomics brain,single-cell transcriptomics,2,119202,Ligation sequencing V14 —single-cell transcriptomics with 5&#39; cDNA prepared using 10XGenomics on PromethION(SQK-LSK114),False
+26320937,extracellular RNA isolation,extracellular RNA isolation,1,121620,Isolation of extracellular vesicle RNA from bile,False
+26320937,extracellular RNA isolation,extracellular RNA isolation,2,121622,Isolation of extracellular vesicle RNA from serum,True
+26320937,extracellular RNA isolation,extracellular RNA isolation,3,121729,Extracellular RNA isolation using the SeraMir Kit,False
+28650476,yeast two-hybrid sequencing,yeast two-hybrid,1,18389,Protein interaction analysis of KaiC3 with various Kai homologs via yeast two-hybrid experiments (β-Galactosidase Assay),False
+28650476,yeast two-hybrid sequencing,yeast two-hybrid,2,18542,Protein interaction analysis of KaiC3 with various Kai homologs via yeast two-hybrid experiments (Growth Assay),False
+28650476,yeast two-hybrid sequencing,yeast two-hybrid,3,88439,A scalable multiplexed Yeast-two Hybrid (mY2H) assay for protein-to-protein interaction (PPIs) screening,False
+28650476,yeast two-hybrid sequencing,yeast two-hybrid,4,121061,Smart-pool-array protocol for a yeast two-hybrid array,False
+28650476,yeast two-hybrid sequencing,yeast two-hybrid,5,121906,CrY2H-seq interactome screening,True
+28650476,yeast two-hybrid sequencing,yeast two-hybrid,6,220608,Generation and High-Throughput Sequencing Validation of DINO-SL Based cDNA Libraries for Yeast Two-Hybrid Assays,False
+28650476,yeast two-hybrid sequencing,yeast two-hybrid,7,234213,E3 decoy library high-throughput yeast two-hybrid screening assay,False
+28650476,yeast two-hybrid sequencing,yeast two-hybrid,8,235072,semi-quantitivate Yeast Two-Hybrid (sqY2H),False
+36045295,monoterpene indole alkaloid yeast,monoterpene,1,114884,"Estimation of total Terpenoids concentration in plant tissues using a monoterpene, Linalool as standard reagent.",False
+36555794,RT-qPCR SARS-CoV-2 variants,RT-qPCR,1,227361,Optimized Protocol for the Amplification and Viral Titration of Dengue Virus Serotypes 1–4 (DENV1–4) / Protocolo optimizado para la amplificación y titulación de los virus del dengue serotipos 1–4 (DENV1–4),False
+36555794,RT-qPCR SARS-CoV-2 variants,RT-qPCR,2,320048,Workflow for Detection of Foot-and-Mouth Disease Virus (FMDV) and Lumpy Skin Disease Virus (LSDV) in Clinical and Environmental Samples,False
+36555794,RT-qPCR SARS-CoV-2 variants,RT-qPCR,3,7166,WetLab-2 RT-qPCR procedure,False
+36555794,RT-qPCR SARS-CoV-2 variants,RT-qPCR,4,9010,First strand cDNA synthesis,False
+36555794,RT-qPCR SARS-CoV-2 variants,RT-qPCR,5,9179,VLP RT-qPCR,False
+36555794,RT-qPCR SARS-CoV-2 variants,RT-qPCR,6,12807,Rat ACTB one-step RT-qPCR,False
+36555794,RT-qPCR SARS-CoV-2 variants,RT-qPCR,7,12808,Human GAPDH RT-qPCR,False
+36555794,RT-qPCR SARS-CoV-2 variants,RT-qPCR,8,16372,How to Setup and Perform a qPCR Experiment.,False
+36555794,RT-qPCR SARS-CoV-2 variants,RT-qPCR,9,21691,First strand cDNA synthesis (ThermoScientific RevertAid),False
+36555794,RT-qPCR SARS-CoV-2 variants,RT-qPCR,10,21863,Rabbit calicivirus capsid Taqman RT-qPCR,False
+38819130,wastewater genomic surveillance,wastewater genomic,1,321062,Multi-pathogen detection & quantification using digital PCR,False
+38819130,wastewater genomic surveillance,wastewater genomic,2,107675,Processing wastewater samples for bacterial & viral targets enrichment ,False
+38819130,wastewater genomic surveillance,wastewater genomic,3,217828,Clarification of wastewater samples,False
+40880479,microglial synaptic pruning,microglial,1,43523,Isolation and Phenotyping of Adult Mouse Microglial Cells,False
+40880479,microglial synaptic pruning,microglial,2,57955,Primary microglial culture,False
+40880479,microglial synaptic pruning,microglial,3,93109,Microglia validation by FACS-analysis,False
+40880479,microglial synaptic pruning,microglial,4,93764,Nuclei Isolation from human cortical tissue for enrichment of endothelial and microglial cells,False
+40880479,microglial synaptic pruning,microglial,5,121392,FACS of acutely isolated mouse microglia,False
+40880479,microglial synaptic pruning,microglial,6,121592,Microglial Sholl Analysis,False
+40880479,microglial synaptic pruning,microglial,7,124989,Single-Nucleus Microglial Enrichment from Frozen Brain Tissue,False
+40880479,microglial synaptic pruning,microglial,8,220423,Generation of iPSC-derived Microglia,False
+40880479,microglial synaptic pruning,microglial,9,230699,Immunostaining ,False
+40880479,microglial synaptic pruning,microglial,10,234321,Differentiation of Induced Pluripotent Stem Cells (iPSCs) into Microglia-like cells (iMG),False
+40875780,mosquito saliva IgE ELISA,mosquito saliva,1,35797,Dissociation of Anopheles sp midgut into single-cell suspension for scRNAseq,False
+30804551,CAR-T cell engineering,CAR-T cell,1,160850,Precision-Cut Tumor Tissue Slices as a Tool to Study the Tumor Microenvironment Interactions with Chimeric Antigen Receptor (CAR) T Cells,False
+36824594,amphibian genome assembly,amphibian genome,1,33631,Protocols for the draft genome assembly of the eastern banjo frog Limnodynastes dumerilii dumerilii,False
+29901420,hybridoma conditioned medium,hybridoma,1,322007,Mouse Immunization Protocol Using Aqueous Adjuvants,False
+29901420,hybridoma conditioned medium,hybridoma,2,3254,Optimized Concentrations for Developmental Studies Hybridoma Bank and Custom Antibodies for use with Drosophila Embryos - HeLa Cell Additions,False
+29901420,hybridoma conditioned medium,hybridoma,3,55491,Mitochondrial Antigen Presentation in RAW macrophages,False
+29901420,hybridoma conditioned medium,hybridoma,4,81623,Generating rabbit rAbs from heterohybridomas,False
+29901420,hybridoma conditioned medium,hybridoma,5,86722,IgG sequencing of rat hybridoma,False
+29901420,hybridoma conditioned medium,hybridoma,6,101940,Mitochondrial Antigen Presentation (MitAP) to 2CZ CD8+ T cell hybridoma,False
+29901420,hybridoma conditioned medium,hybridoma,7,123103,"A consensus platform for antibody characterization
+",False
+29901420,hybridoma conditioned medium,hybridoma,8,109230,Antibody screening by WB (Timing - 2 Days),False
+29901420,hybridoma conditioned medium,hybridoma,9,109329,Antibody screening by IP (Timing - 3 days),False
+29901420,hybridoma conditioned medium,hybridoma,10,109332,Antibody screening by IF (Timing - 2 d),False
+34658337,LRRK2 cilia striatum,LRRK2,1,319255,Nigerian LRRK2 G2019S family - protocols,False
+34658337,LRRK2 cilia striatum,LRRK2,2,43283,Dundee neutrophil isolation protocol (from whole blood),False
+34658337,LRRK2 cilia striatum,LRRK2,3,43287,Dundee peripheral blood mononuclear cell (PBMC) isolation protocol (from whole blood),False
+34658337,LRRK2 cilia striatum,LRRK2,4,43690,Analysis of Primary Cilia in Rodent Brain By Immunofluorescence Microscopy,True
+34658337,LRRK2 cilia striatum,LRRK2,5,44465,Reconstituting LRRK2RCKW on Microtubules for cryo-EM studies,False
+34658337,LRRK2 cilia striatum,LRRK2,6,44969,LRRK2RCKW   single molecule kinesin motility assays,False
+34658337,LRRK2 cilia striatum,LRRK2,7,46831,Preparation of LRRK2 RCKW trimer cryo-EM grids,False
+34658337,LRRK2 cilia striatum,LRRK2,8,46832,Preparation of LRRK2 RCKW cryo-EM grids,False
+34658337,LRRK2 cilia striatum,LRRK2,9,87461,Quantitative Immunoblotting Analysis of LRRK2 Signalling Pathway,False
+34658337,LRRK2 cilia striatum,LRRK2,10,49715,Assay for quantifying PPM1H phosphatase activity towards LRRK2 phosphorylated Rab proteins and peptides using the Malachite Green method,False
+41559478,HCN channel primate neurons,HCN,1,2987,OmniPrep™ For High Quality Genomic DNA Extraction From Body Fluids,False
+41559478,HCN channel primate neurons,HCN,2,5230,Transformation,False
+41559478,HCN channel primate neurons,HCN,3,20631,Cassava Root Sampling for Cyanide Analysis,False
+41559478,HCN channel primate neurons,HCN,4,20729,Determination of Total Hydrogen Cyanide Levels in Fresh Cassava Roots using the picrate paper method,False
+41559478,HCN channel primate neurons,HCN,5,22679,Hydrogen cyanide determination in cassava leaves using the picrate paper method,False
+41559478,HCN channel primate neurons,HCN,6,39851,Concentration of viruses from wastewater influent using organic flocculation (PEG),False
+41559478,HCN channel primate neurons,HCN,7,43947,Analysis of Breast Cancer Cell Invasion Using an Organotypic Culture System,False
+41559478,HCN channel primate neurons,HCN,8,48388,immunoblotting (JMS protocol),False
+41559478,HCN channel primate neurons,HCN,9,64427,Light sheet Sample Processing - Mouse Brain,False
+41559478,HCN channel primate neurons,HCN,10,80811,Evaluating Collaboratory Cultures,False
+38273288,DNA methylation deconvolution brain,DNA methylation,1,319390,"HRM - High‑Resolution Melting analysis for SNP genotyping, indel detection and CRISPR screening",False
+38273288,DNA methylation deconvolution brain,DNA methylation,2,319117,Cardiac Tissue-Specific Cell-Free DNA Methylation Profiling for Preclinical Detection of Hereditary ATTR Cardiomyopathy (hATTR-CM),False
+38273288,DNA methylation deconvolution brain,DNA methylation,3,318902,Direct enzymatic fragmentation of genomic DNA with NEBNext UltraShear for use with Illumina 5-Base DNA Library Prep without post-shearing cleanup,False
+38273288,DNA methylation deconvolution brain,DNA methylation,4,319842,Apple Leaf Field Collection Protocol for Enzymatic Methyl-seq,False
+38273288,DNA methylation deconvolution brain,DNA methylation,5,12288,MethylC-seq using EZ DNA Methylation-Gold Bisulfite and Accel-NGS DNA Library Kits,False
+38273288,DNA methylation deconvolution brain,DNA methylation,6,13879,"Integrated analysis of DNA methylation profiling and gene expression profiling identifies novel markers in lung cancer in Xuanwei, China",False
+38273288,DNA methylation deconvolution brain,DNA methylation,7,14725,DNA Methylation Signatures Predict HIV Prognosis and Mortality,False
+38273288,DNA methylation deconvolution brain,DNA methylation,8,20431,Machine learning approach yields epigenetic biomarkers of food allergy: A novel 13-gene signature to diagnose clinical reactivity,False
+38273288,DNA methylation deconvolution brain,DNA methylation,9,24874,scNMT-seq,False
+38273288,DNA methylation deconvolution brain,DNA methylation,10,48755,Multiplexed scNOMe-seq protocol based on isolated single nuclei,False
+34447628,wastewater surveillance SARS-CoV-2,wastewater surveillance,1,47349,"One-Step RT-qPCR for SARS-CoV-2 Wastewater Surveillance: N1, PMMoV, BCoV, SOC, CrAssphage, Bacteroides rRNA, 18S rRNA ",False
+34447628,wastewater surveillance SARS-CoV-2,wastewater surveillance,2,44614,Automated high throughput viral concentration from wastewater using the KingFisher Flex platform,False
+34447628,wastewater surveillance SARS-CoV-2,wastewater surveillance,3,70982,"Protocol for Safe, Affordable, and Reproducible Isolation of SARS-CoV-2 RNA from Wastewater",False
+34447628,wastewater surveillance SARS-CoV-2,wastewater surveillance,4,47381,High-throughput Wastewater SARS-CoV-2 Detection Pipeline,False
+34447628,wastewater surveillance SARS-CoV-2,wastewater surveillance,5,55692,High Throughput RNA Extraction and PCR Inhibitor Removal of Settled Solids for Wastewater Surveillance of SARS-CoV-2 RNA,True
+34447628,wastewater surveillance SARS-CoV-2,wastewater surveillance,6,61803,"High Throughput SARS-COV-2, PMMOV, and BCoV quantification in settled solids using digital RT-PCR",False
+34447628,wastewater surveillance SARS-CoV-2,wastewater surveillance,7,49246,Moore Swab Methods for Concentrating and Detecting Salmonella Typhi and Salmonella Paratyphi A in Environmental Wastewater Samples,False
+34447628,wastewater surveillance SARS-CoV-2,wastewater surveillance,8,76242,"Quantification of various SARS-CoV-2 variant mutations (characteristic of Alpha, Beta, Gamma, Delta, Omicron and Omicron sublineages) in settled solids using digital RT-PCR",False
+34447628,wastewater surveillance SARS-CoV-2,wastewater surveillance,9,52277,"Protocol for Safe, Affordable, and Reproducible Isolation of SARS-CoV-2 RNA from Wastewater",False
+34447628,wastewater surveillance SARS-CoV-2,wastewater surveillance,10,52713,"A Mixed-Methods Catchment Area Modelling Approach Using Free DEMs to Inform Environmental Surveillance in Kolkata, India and Accra, Ghana",False
+42367214,RNAscope immunohistochemistry brain,RNAscope,1,24359,RNAscope pretreatment optimized for fixed frozen retinas,False
+42367214,RNAscope immunohistochemistry brain,RNAscope,2,30852,Quantitative analysis method of mRNA expression using dual RNA in situ hybridization by comparison with housekeeping genes,False
+42367214,RNAscope immunohistochemistry brain,RNAscope,3,39786,RNA in situ hybridization on pancreatic sections using RNAscope® technology,False
+42367214,RNAscope immunohistochemistry brain,RNAscope,4,48774,Fluorescent In Situ Hybridization (FISH - RNAscope) in mouse brain sections,False
+42367214,RNAscope immunohistochemistry brain,RNAscope,5,56572,Dual In Situ Hybridization/Immunofluorescence,False
+42367214,RNAscope immunohistochemistry brain,RNAscope,6,57433,RNAScope in situ hybridization (ISH) multiplex fluorescent protocol,False
+42367214,RNAscope immunohistochemistry brain,RNAscope,7,60205,Expression of molecular markers in subpopulations of mouse stellate ganglion neurons,False
+42367214,RNAscope immunohistochemistry brain,RNAscope,8,61644,RNAscope spatial transcript imaging in fresh-frozen mouse and human liver tissue,False
+42367214,RNAscope immunohistochemistry brain,RNAscope,9,70223,"Dual staining for gamma delta and alpha beta T cell detection in formalin-fixed, paraffin-embedded (FFPE) pig tissues",False
+42367214,RNAscope immunohistochemistry brain,RNAscope,10,70231,"Dual staining for gamma delta and alpha beta T cell detection in formalin-fixed, paraffin-embedded (FFPE) pig tissues",False
+36217031,serine recombinase genome integration,serine,1,463,PhosphoSerine Western Blotting,False
+36217031,serine recombinase genome integration,serine,2,893,PhosphoThreonine Western Blotting,False
+36217031,serine recombinase genome integration,serine,3,37910,Thermolabile Proteinase K Typical Reaction Protocol,False
+36217031,serine recombinase genome integration,serine,4,44555,Quality of Care Index (QCI),False
+36217031,serine recombinase genome integration,serine,5,47622,Expression and purification of Tribolium castaneum orthologue of PINK1,False
+36217031,serine recombinase genome integration,serine,6,47646,PROCEDURE TO ISOLATE AND CULTURE NEURONS FROM EMBRYONIC MOUSE CORTEX ,False
+36217031,serine recombinase genome integration,serine,7,47748,PROCEDURE TO INDUCE MITOCHONDRIAL DEPOLARISATION AND LYSING OF MOUSE CORTICAL NEURONS ,False
+36217031,serine recombinase genome integration,serine,8,47778,Cell-based analysis of PINK1-Parkin pathway activation in primary mouse  cortical neurons,False
+36217031,serine recombinase genome integration,serine,9,67650,Collection: State-of-the-Art Analytical Methods of Viral Infections in Human Lung Organoids,False
+36217031,serine recombinase genome integration,serine,10,82502,In Situ Imaging of N-Glycans by MALDI Imaging Mass Spectrometry of Formalin-Fixed Paraffin-Embedded Tissue,False
+30397333,helminth comparative genomics,helminth,1,58007,"LABORATORY PROTOCOLS OF ANAEMIA TESTING USING PORTABLE HEMOCUE, MALARIA SCREENING USING RDT (HRP-2), PROCESSING OF WET PREPARATION,  KATO-KATZ  AND EXAMINATION OF STOOL SAMPLES, REPORTING OF SOIL-TRANSMITTED HELMINTHES AND FAECAL PARASITES  ",False
+30397333,helminth comparative genomics,helminth,2,60019,Golden monkey fecal sampling protocol,False
+30397333,helminth comparative genomics,helminth,3,80333,"Isolation of Schistosoma mansoni eggs, miracidia, and sporocysts for in vitro cultivation",False
+30397333,helminth comparative genomics,helminth,4,83740,Genetic Characterization of Schistosomes,False
+30397333,helminth comparative genomics,helminth,5,122011,Contamination screening of parasitic worm genome assemblies,True
+30397333,helminth comparative genomics,helminth,6,122019,Kinase annotation for helminths,False
+30397333,helminth comparative genomics,helminth,7,122020,"Finding set of ""core genes"" for Nematoda, Trematoda and Cestoda",False
+30397333,helminth comparative genomics,helminth,8,122021,GPCR identification in parasitic worm genome assemblies,False
+30397333,helminth comparative genomics,helminth,9,122022,Genomic and transcriptomic data production for helminths,True
+30397333,helminth comparative genomics,helminth,10,122024,Annotating metabolic enzymes in parasitic worm proteomes,False
+29269866,epigenome-wide association HIV,epigenome-wide,1,122747,"Artificial intelligence in the identification of prognostic DNA methylation biomarkers among patients with cancer: a scoping review of epigenome-wide studies
+",False
+21702933,lymphangiogenesis ultrastructure,lymphangiogenesis,1,121131,The lymphatic ring assay: a 3D-culture model of lymphangiogenesis,True
+36951106,aminoacyl-tRNA synthetase chirality,aminoacyl-tRNA synthetase,1,121898,"Parallel positive selections, deep sequencing and analysis for reprogramming aminoacyl-tRNA synthetase specificity",False
+42391002,bacterial single-cell transcriptomics,bacterial,1,322999, Protocol for Isolation and Glycerol Stock Preparation of Honey Bee Brood Cap Bacteria (AC3),False
+42391002,bacterial single-cell transcriptomics,bacterial,2,322948,Quality control assessment for microbial genomes: GalaxyTrakr MicroRunQC workflow,False
+42391002,bacterial single-cell transcriptomics,bacterial,3,322267,Closing bacterial genomes using the  Rapid Sequencing Kit (SQK-RBK114) from Oxford Nanopore Technologies (ONT),False
+42391002,bacterial single-cell transcriptomics,bacterial,4,322416,Quality control assessment for microbial genomes: GalaxyTrakr MicroRunQC workflow,False
+42391002,bacterial single-cell transcriptomics,bacterial,5,321827,Identifying culturable bacterial species of interest from wastewater,False
+42391002,bacterial single-cell transcriptomics,bacterial,6,320974,Protocol for bacterial genome isolation and sequencing using Oxford Nanopore Technologies,False
+42391002,bacterial single-cell transcriptomics,bacterial,7,320916,Protocol for bacterial plasmid isolation and sequencing using Oxford Nanopore Technologies,False
+42391002,bacterial single-cell transcriptomics,bacterial,8,319976,Construction and application of PhyloCode databases from bacterial cgMLST allele sequences,False
+42391002,bacterial single-cell transcriptomics,bacterial,9,243348,Prevalence of Brucellosis among animal handlers and cattle in India: A systematic review and meta-analysis,False
+42391002,bacterial single-cell transcriptomics,bacterial,10,320806,Optical Density Measurement of Bacterial Cultures,False
+35243422,multiomics serial biopsy,multiomics,1,321855,The dual-enhanced graph learning framework DePass allows paired data integration in single-cell and spatial multiomics V.1,False
+35243422,multiomics serial biopsy,multiomics,2,320923,Isolation of nuclei from human post-mortem brain tissue for single-cell multiomics,False
+35243422,multiomics serial biopsy,multiomics,3,26560,Preparation of Adult Human Kidney Tissue for Single Nucleus RNA-seq and Other Multiomics Studies,False
+35243422,multiomics serial biopsy,multiomics,4,28833,Massively parallel long-read sequencing of single cell RNA isoforms,False
+35243422,multiomics serial biopsy,multiomics,5,42929,Gene Regulatory Network,False
+35243422,multiomics serial biopsy,multiomics,6,43896,DAb-seq: Single-Cell DNA and Antibody Sequencing,False
+35243422,multiomics serial biopsy,multiomics,7,53078,CHOP TMC Single Cell Multiome ATAC + Gene Expression,False
+35243422,multiomics serial biopsy,multiomics,8,71406,Human Liver Tissue Storage Methods For Multiomic Applications,False
+35243422,multiomics serial biopsy,multiomics,9,97679,FFPE Tissue Processing for Multimodal Imaging Assays (Phenocycler-Fusion + H&E) following Xenium In Situ Gene Expression,False
+35243422,multiomics serial biopsy,multiomics,10,101871,MULTI-seq sample multiplexing for 10x Genomics RNA+ATAC multiomic profiling,False
+39359233,3D skin model toxicology,3D,1,323004,Pharmacokinetic Properties of Zingiber officinale and Its Major Bioactive Constituents: A Systematic Review protocol of Experimental and Clinical Evidence,False
+39359233,3D skin model toxicology,3D,2,322718,Generation of 3D Endometrial Assembloids and Co-culture with Human Blastoids or Blastocysts,False
+39359233,3D skin model toxicology,3D,3,323028,Cancer Genomics Research in Nigeria: A Scoping Review Protocol,False
+39359233,3D skin model toxicology,3D,4,118597,Isolation of uveal melanocytes from ovine eyes,False
+39359233,3D skin model toxicology,3D,5,322548,SIMPLseq protocol,False
+39359233,3D skin model toxicology,3D,6,321858,SCRAT: Screening Areas of Interest on Macrolithic Tools ,False
+39359233,3D skin model toxicology,3D,7,322069,Dimensional accuracy of 3D-printed versus CAD/CAM-milled denture bases: a systematic review and meta-analysis,False
+39359233,3D skin model toxicology,3D,8,321740,Multi-tube Holder for Vortexers,False
+39359233,3D skin model toxicology,3D,9,321621,A standardized XRCT protocol for quantitative 3D shape preferred orientation analysis in rocks,False
+39359233,3D skin model toxicology,3D,10,316229,Citation Impact Analysis of an AI-Annotated Biomedical Corpus,False
+30462808,subclinical hyperthyroidism oxidative stress,subclinical,1,7428,Genotypic and phenotypic ?-Lactam resistance and presence of PVL gene in Staphylococci from dry bovine udder ,False
+30462808,subclinical hyperthyroidism oxidative stress,subclinical,2,16495,Qiime 2 Workflow - Longitudinal study,False
+30462808,subclinical hyperthyroidism oxidative stress,subclinical,3,21777,"Microorganisms and culture conditions - Comparative genomics of Staphylococcus aureus associated with subclinical and clinical bovine mastitis (Rocha et al., 2019)",False
+30462808,subclinical hyperthyroidism oxidative stress,subclinical,4,21775,"Polymerase Chain Reaction - Comparative genomics of Staphylococcus aureus associated with subclinical and clinical bovine mastitis (Rocha et al., 2019)",False
+30462808,subclinical hyperthyroidism oxidative stress,subclinical,5,86414,Protocol of a systematic review with metanalysis:  forms of treatment in children diagnosed with congenital toxoplasmosis,False
+30462808,subclinical hyperthyroidism oxidative stress,subclinical,6,219918,Excessive Iodine Intake in Pregnancy and Its Effect on the Neurodevelopment of Offspring - A Systematic Review,False
+30462808,subclinical hyperthyroidism oxidative stress,subclinical,7,222787,Cardiovascular Risk in Psoriasis and Psoriatic Arthritis: An Umbrella Review of Systematic Reviews and Meta-Analyses,False
+33350435,hepatic stellate cell isolation,hepatic,1,6874,Targeting hepatic heparin-binding EGF-like growth factor (HB-EGF) using HB-EGF-specific antisense oligonucleotide (ASO),False
+33350435,hepatic stellate cell isolation,hepatic,2,6935,Hepatic VLDL secretion assay,False
+33350435,hepatic stellate cell isolation,hepatic,3,9230,ALT/GPT  Detection Assay,False
+33350435,hepatic stellate cell isolation,hepatic,4,9242,AST/GOT  Detection Assay,False
+33350435,hepatic stellate cell isolation,hepatic,5,20000,U Mass - Basal glucose metabolism,False
+33350435,hepatic stellate cell isolation,hepatic,6,20155,U Mass - Glucagon,False
+33350435,hepatic stellate cell isolation,hepatic,7,20223,U Mass - Hepatic gluconeogenesis,False
+33350435,hepatic stellate cell isolation,hepatic,8,20278,U Mass - Insulin clearance,False
+33350435,hepatic stellate cell isolation,hepatic,9,49398,"Mutational Analysis of Hepatitis B Virus Precore Region Molecular Variants in Ile-ife, Nigeria",False
+33350435,hepatic stellate cell isolation,hepatic,10,50707,Intrahepatic implantation of tumor cells,False
+30271992,meiofauna metabarcoding,meiofauna,1,68650,Picogram input multimodal sequencing (PiMmS) ,False
+30271992,meiofauna metabarcoding,meiofauna,2,49730,DNA extraction and genomic sequencing library preparation for individual root-knot nematodes,False
+30271992,meiofauna metabarcoding,meiofauna,3,68340,Extraction of meiofauna and meioflora from aquatic environmental samples,False
+30271992,meiofauna metabarcoding,meiofauna,4,121300,Isolation of marine meiofauna from sandy sediments: from decanting to DNA extraction.,True
+30271992,meiofauna metabarcoding,meiofauna,5,222975,Extraction of meiofauna and meioflora from aquatic environmental samples,False
+39510801,macrophage proteomics,macrophage,1,317160,MonoMacs- From PBMCs to adherent macrophages in culture,False
+39510801,macrophage proteomics,macrophage,2,4190,Macrophage Phagocytosis Assay,False
+39510801,macrophage proteomics,macrophage,3,8034,Isolation and ex vivo culture of alveolar macrophages from the resected lungs of patients with pulmonary tuberculosis,False
+39510801,macrophage proteomics,macrophage,4,10220,The production of monocytes and macrophages from human iPSCs,False
+39510801,macrophage proteomics,macrophage,5,10959,Unthawing RAW264.7 cells,False
+39510801,macrophage proteomics,macrophage,6,11637,MIF gene polymorphism - 5–8-CATT tetranucleotide repeat (rs5844572) at position -794 (-794*CATT5–8) and a single-nucleotide polymorphism (rs755622) at position -173 (-173*G/C),False
+39510801,macrophage proteomics,macrophage,7,12073,Cell Culture and estimation of cytokines by ELISA,False
+39510801,macrophage proteomics,macrophage,8,15079,Immunofluorescence staining protocol for co-staining of fetuin-A and CD68 in older human autopsy tissue,False
+39510801,macrophage proteomics,macrophage,9,20110,U Mass - Cytokines Panel I - multiplex,False
+39510801,macrophage proteomics,macrophage,10,20117,U Mass - Cytokines Panel II - multiplex,False
+21572423,basement membrane invasion,basement membrane,1,21331,Human Islet Microvasculature Immunofluorescence in Optically Cleared Samples ,False
+21572423,basement membrane invasion,basement membrane,2,119834,Long-term alterations of collagen reconstruction and basement membrane regeneration after corneal full-thickness penetrating injury in rabbits,False
+21572423,basement membrane invasion,basement membrane,3,121336,Optically Highlighting Basement Membrane Components in C. elegans,True
+21572423,basement membrane invasion,basement membrane,4,121352,The Matrigel Cytokine Assay,False
+24218132,PCR optimization GC-rich,PCR optimization,1,321006,GRADIENT PCR OPTIMIZATION PROTOCOL DEVELOPMENT FOR THE AMPLIFICATION OF Plasmodium falciparum TRAP-LIKE PROTEIN GENE,False
+24218132,PCR optimization GC-rich,PCR optimization,2,224257,Methyl-RAD protocol,False
+29256496,STARR-seq enhancer,STARR-seq,1,55732,ATAC-STARR-seq,False
+29256496,STARR-seq enhancer,STARR-seq,2,55728,ATAC-STARR-seq,False
+29256496,STARR-seq enhancer,STARR-seq,3,121710,CapStarr-seq protocol,False
+29256496,STARR-seq enhancer,STARR-seq,4,121971,STARR-seq Library Preparation,True
+29256496,STARR-seq enhancer,STARR-seq,5,121973,STARR-seq Screening protocol,True
+29256496,STARR-seq enhancer,STARR-seq,6,121974,qPCR assay to measure ISG expression in human cells,True
+29256496,STARR-seq enhancer,STARR-seq,7,121975,qPCR based reporter assay on luciferase transcripts,True
+29256496,STARR-seq enhancer,STARR-seq,8,126117,Whole-genome STARR-seq Protocol – Reddy Lab 2023,False
+33923007,soil pollution indices,soil,1,268764,Sorting and sequencing low biomass samples from different microbial ecologies,False
+33923007,soil pollution indices,soil,2,317496,Regarding the operational steps of finite element modeling in the literature &#34;Numerical investigation on the mechanical response of steel-frame polyethylene pipelines subjected to strike-slip faulting&#34;,False
+33923007,soil pollution indices,soil,3,1214,Estimation of Humus in Soil/Manure,False
+33923007,soil pollution indices,soil,4,2251,"The influence of agricultural tillage practices on soil biodiversity: Soil metagenomic methods, microbial community",False
+33923007,soil pollution indices,soil,5,2252,"The influence of agricultural tillage practices on soil biodiversity: Soil metagenomic methods, arthropod community",False
+33923007,soil pollution indices,soil,6,2253,The influence of agricultural tillage practices on soil biodiversity: Sequence analysis,False
+33923007,soil pollution indices,soil,7,2258,Methods from: The influence of agricultural tillage practices on soil biodiversity,False
+33923007,soil pollution indices,soil,8,16153,Soil viral extraction protocol for ssDNA & dsDNA viruses,False
+33923007,soil pollution indices,soil,9,6861,Extraction of PLFA from wood debris,False
+33923007,soil pollution indices,soil,10,7298,Identification and molecular characterization of a metagenome-derived L-lysine decarboxylase gene from subtropical soil microorganisms,False
+33529123,somatic cell nuclear transfer sheep,somatic cell nuclear transfer,1,35043,Generating cloned sheep embryos by zona-free somatic cell transfer,True
+33529123,somatic cell nuclear transfer sheep,somatic cell nuclear transfer,2,121572,A protocol for embryonic stem cell derivation by somatic cell nuclear transfer into human oocytes,False
+37237607,zebrafish wound healing,zebrafish,1,322700,Extraction of Whole-Body Cortisol from Adult Zebrafish (Danio rerio) and Quantification by ELISA,False
+37237607,zebrafish wound healing,zebrafish,2,235906,PhotoMap: unbiased mapping of Expansion Microscopy deformation fields,False
+37237607,zebrafish wound healing,zebrafish,3,112640,WHOLISTIC ExM: Whole-Body Expansion Microscopy with Fluorescence Insitu Hybridization (WB-ExM FISH),False
+37237607,zebrafish wound healing,zebrafish,4,318395,qRT-PCR for Zebrafish Brian Tissue,False
+37237607,zebrafish wound healing,zebrafish,5,14855,Light/dark preference test for adult zebrafish (Danio rerio),False
+37237607,zebrafish wound healing,zebrafish,6,12511,Melanophore response assay in zebrafish,False
+37237607,zebrafish wound healing,zebrafish,7,13414,Sudan Black staining of zebrafish larvae,False
+37237607,zebrafish wound healing,zebrafish,8,13933,Optimized protocol for brain and head kidney catalase activity in zebrafish,False
+37237607,zebrafish wound healing,zebrafish,9,13935,"Zebrafish (Danio rerio) Environmental Summary, LaNeC (Marab&aacute;/PA, Brazil)",False
+37237607,zebrafish wound healing,zebrafish,10,14394,Assessing vertebrate physiology: A simple and cost-effective method to exercise adult zebrafish.,False
+41800616,RNA antisense purification,RNA,1,322948,Quality control assessment for microbial genomes: GalaxyTrakr MicroRunQC workflow,False
+41800616,RNA antisense purification,RNA,2,322718,Generation of 3D Endometrial Assembloids and Co-culture with Human Blastoids or Blastocysts,False
+41800616,RNA antisense purification,RNA,3,322928,Temporal dynamics of rat auricle skin microbiota during early decomposition and association with postmortem interval estimation,False
+41800616,RNA antisense purification,RNA,4,321335,CC-Perturb-seq Protocol,False
+41800616,RNA antisense purification,RNA,5,321403,Protocol for Lab analysis of eDNA samples from frozen encapsulated filters,False
+41800616,RNA antisense purification,RNA,6,322153,The Neural Effects of Action Simulation and Motor Execution Paradigms of Gait in Parkinson’s Disease and Healthy Subjects: Protocol for a Review and Meta-Analysis of fMRI Studies (Retrospectively Registered),False
+41800616,RNA antisense purification,RNA,7,315366,Chess-Based Cognitive Remediation Training - Manual for group interventions,False
+41800616,RNA antisense purification,RNA,8,243168,Total RNA Purification from Bluebell Leaves,False
+41800616,RNA antisense purification,RNA,9,108579,Custom Indexing for Nanopore Sequencing Platform,False
+41800616,RNA antisense purification,RNA,10,322427,SDS-PAGE Protein Analysis with Rapid Staining (X-Stain),False
+35528780,metatranscriptomics harmful algal bloom,metatranscriptomics,1,1315,Metatranscriptomics sample preparation protocol w/ScriptSeq,False
+35528780,metatranscriptomics harmful algal bloom,metatranscriptomics,2,42595,NOAA-CalCOFI Ocean Genomics (NCOG) Sample Collection,False
+35528780,metatranscriptomics harmful algal bloom,metatranscriptomics,3,51907,"Total nucleic acids extraction, purification and cDNA synthesis from soil",False
+35528780,metatranscriptomics harmful algal bloom,metatranscriptomics,4,73946,Harvesting and stocking cheese rind community samples,False
+35528780,metatranscriptomics harmful algal bloom,metatranscriptomics,5,105383,Sample fixation and RNA extraction of brackish and marine samples with high sediment loads for metatranscriptomics sequencing,False
+35528780,metatranscriptomics harmful algal bloom,metatranscriptomics,6,106010,"An optimized CTAB based RNA extraction from rhizosphere, followed by universal rRNA depletion for metatranscriptomics",False
+35528780,metatranscriptomics harmful algal bloom,metatranscriptomics,7,232034,RNA extraction from Sterivex filters: An optimized protocol for metatranscriptomics in aquatic microbiomes,False
+33996275,virome concentration methods,virome concentration,1,87693,Seawater virome concentration with Vivaflow ,False
+32488088,chromatin fiber electron microscopy,chromatin fiber,1,67489,SAMOSA-Tag - combining in-situ adenine methyltransferase footprinting with transposase-mediated single-molecule sequencing,False
+32488088,chromatin fiber electron microscopy,chromatin fiber,2,121313,Protocol: Sonication-based Circular Chromosome Conformation Capture with next-generation sequencing analysis for the detection of chromatin interactions,False
+39664262,phytoplankton long-read sequencing,phytoplankton,1,315444,A Chain-Length-Independent Method for Particulate Polyphosphate Quantification from Phytoplankton,False
+39664262,phytoplankton long-read sequencing,phytoplankton,2,8717,Tangential flow filtration (TFF) concentration of phytoplankton,False
+39664262,phytoplankton long-read sequencing,phytoplankton,3,1388,Fixation of marine samples for flow cytometry analysis,False
+39664262,phytoplankton long-read sequencing,phytoplankton,4,1479,Estimation of viral-induced phytoplankton mortality using the modified dilution method,False
+39664262,phytoplankton long-read sequencing,phytoplankton,5,1501,Phytoplankton and bacteria filtration,False
+39664262,phytoplankton long-read sequencing,phytoplankton,6,1758,Simultaneous measurement of grazing and viral lysis of phytoplankton,False
+39664262,phytoplankton long-read sequencing,phytoplankton,7,1763,Simultaneous measurement of grazing and viral lysis of phytoplankton,False
+39664262,phytoplankton long-read sequencing,phytoplankton,8,1847,Fixation of marine samples for flow cytometry sorting,False
+39664262,phytoplankton long-read sequencing,phytoplankton,9,5428,Monterey Wharf II Weekly Phytoplankton Monitoring Sample Collection and Processing Notes,False
+39664262,phytoplankton long-read sequencing,phytoplankton,10,4225,ESAW Media for Marine Phytoplankton,False
+28877184,PCR microgravity spaceflight,PCR,1,322871,Protein-Bound InsP6 Extraction and LC–MS/MS Detection,False
+28877184,PCR microgravity spaceflight,PCR,2,322875,PIP Strip Protein–Lipid Overlay Assay,False
+28877184,PCR microgravity spaceflight,PCR,3,322255,Detailed method for use of PCR tags,False
+28877184,PCR microgravity spaceflight,PCR,4,322970,Size Exclusion Chromatography (SEC) Protocol,False
+28877184,PCR microgravity spaceflight,PCR,5,322364,Quantification of Salmonella invA in Metagenomic Samples Using QIAcuity dPCR,False
+28877184,PCR microgravity spaceflight,PCR,6,322935,Nested PCR Protocol for Amplicon of HPV L1 Gene,False
+28877184,PCR microgravity spaceflight,PCR,7,322917,Transferrin Uptake Assay,False
+28877184,PCR microgravity spaceflight,PCR,8,322868,Purification of DYKDDDDK/FLAG-Tagged Proteins Using Anti-DYKDDDDK G1 Affinity Resin,False
+28877184,PCR microgravity spaceflight,PCR,9,322918,Mass Photometry Protocol Using the Refeyn TwoMP,False
+28877184,PCR microgravity spaceflight,PCR,10,321403,Protocol for Lab analysis of eDNA samples from frozen encapsulated filters,False

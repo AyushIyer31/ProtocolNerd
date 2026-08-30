@@ -1,0 +1,4467 @@
+{
+"Analyze how retracted scientific papers continue to be cited by characterizing citing articles across disciplines, sentiment, and topics using metadata extraction and topic modeling.": {
+"cqs": [
+"Analyze how retracted scientific papers continue to be cited by characterizing citing articles across disciplines, sentiment, and topics using metadata extraction and topic modeling."
+],
+"profile": {
+"condition": null,
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": null,
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "unknown",
+"intent_specific": {
+"analysis_type": "bibliometric / citation analysis",
+"dimensions": [
+"discipline",
+"sentiment",
+"topics"
+],
+"focus": "retracted papers and their post-retraction citations",
+"methods": [
+"metadata extraction",
+"topic modeling",
+"sentiment analysis"
+]
+},
+"method": null,
+"modification_type": null,
+"organism": null,
+"protocol_difficulty": null,
+"readout": null,
+"readout_assay": null,
+"required_equipment": [],
+"sample_type": null,
+"sub_intent": "unknown",
+"target": null,
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Assessing heavy metal contamination and land capability classification of agricultural soils in Abu Dhabi using geochemical indices and multivariate statistics.": {
+"cqs": [
+"agricultural soil geochemical indices (e.g., geoaccumulation index, enrichment factor, contamination factor), multivariate statistics (e.g., PCA, cluster analysis)",
+"agricultural soil geochemical indices, multivariate statistics, land capability classification geochemical indices (e.g., geoaccumulation index, enrichment factor, contamination factor), multivariate statistics (e.g., PCA, cluster analysis)",
+"geochemical indices, multivariate statistics, land capability classification agricultural soil geochemical indices (e.g., geoaccumulation index, enrichment factor, contamination factor), multivariate statistics (e.g., PCA, cluster analysis)",
+"geochemical indices (e.g., geoaccumulation index, enrichment factor, contamination factor), multivariate statistics (e.g., PCA, cluster analysis)",
+"geochemical indices, multivariate statistics, land capability classification agricultural soil protocol",
+"heavy metal contamination agricultural soil geochemical indices multivariate statistics",
+"soil heavy metal pollution geoaccumulation index enrichment factor PCA",
+"land capability classification agricultural soil heavy metals arid region",
+"soil contamination assessment geoaccumulation enrichment factor cluster analysis",
+"heavy metal spatial distribution agricultural soil multivariate analysis arid environment"
+],
+"profile": {
+"condition": "Abu Dhabi agricultural soils",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "geochemical indices, multivariate statistics, land capability classification",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "phenotyping_physiology",
+"intent_specific": {
+"classification": "land capability classification",
+"contamination_type": "heavy metals",
+"indices": [
+"geoaccumulation index",
+"enrichment factor",
+"contamination factor",
+"pollution load index"
+],
+"region": "Abu Dhabi",
+"soil_type": "agricultural",
+"statistical_methods": [
+"PCA",
+"cluster analysis",
+"multivariate statistics"
+]
+},
+"method": "geochemical indices and multivariate statistics",
+"modification_type": null,
+"organism": null,
+"protocol_difficulty": null,
+"readout": "heavy metal contamination levels, land capability class",
+"readout_assay": "geochemical indices (e.g., geoaccumulation index, enrichment factor, contamination factor), multivariate statistics (e.g., PCA, cluster analysis)",
+"required_equipment": [],
+"sample_type": "agricultural soil",
+"sub_intent": "general_protocol_search",
+"target": "heavy metals",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Chromosome-level reference genome assembly for Betta splendens to study genetic basis of aggression using Hi-C scaffolding and comparative genomics.": {
+"cqs": [
+"Betta splendens genomic DNA comparative genomics",
+"Betta splendens genomic DNA chromosome-level genome assembly comparative genomics",
+"Betta splendens chromosome-level genome assembly genomic DNA comparative genomics",
+"Betta splendens comparative genomics",
+"Betta splendens chromosome-level genome assembly genomic DNA protocol"
+],
+"profile": {
+"condition": null,
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "chromosome-level genome assembly",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"assembly_goal": "chromosome-level reference genome",
+"downstream_analysis": "comparative genomics, genetic basis of aggression",
+"scaffolding_method": "Hi-C",
+"species_common_name": "Siamese fighting fish"
+},
+"method": "Hi-C scaffolding",
+"modification_type": null,
+"organism": "Betta splendens",
+"protocol_difficulty": null,
+"readout": "chromosome-level reference genome",
+"readout_assay": "comparative genomics",
+"required_equipment": [],
+"sample_type": "genomic DNA",
+"sub_intent": "sequencing_prep",
+"target": "whole genome",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Combine RNAscope FISH with immunohistochemistry on mouse brain sections to detect and quantify specific mRNA transcripts within defined neuronal cell populations at single-cell resolution.": {
+"cqs": [
+"mouse neuronal cell populations fluorescence microscopy / confocal imaging",
+"mouse neuronal cell populations RNAscope fluorescence in situ hybridization (FISH) + IHC fluorescence microscopy / confocal imaging",
+"mouse RNAscope fluorescence in situ hybridization (FISH) + IHC neuronal cell populations fluorescence microscopy / confocal imaging",
+"Mus musculus fluorescence microscopy / confocal imaging",
+"mouse RNAscope fluorescence in situ hybridization (FISH) + IHC neuronal cell populations protocol",
+"RNAscope FISH immunohistochemistry mouse brain sections neuronal mRNA single-cell",
+"RNAscope ISH IHC co-staining mouse brain neurons fluorescence",
+"combined RNAscope immunofluorescence mouse brain cryosection confocal quantification",
+"multiplex RNAscope FISH antibody staining mouse neural tissue mRNA protein co-detection",
+"RNAscope HiPlex IHC mouse brain neuronal populations single-cell resolution"
+],
+"profile": {
+"condition": null,
+"constraints": [
+"single-cell resolution",
+"defined neuronal populations"
+],
+"delivery_method": null,
+"difficulty": "advanced",
+"equipment": [
+"confocal microscope",
+"cryostat or vibratome"
+],
+"experimental_method": "RNAscope fluorescence in situ hybridization (FISH) + IHC",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "microscopy_imaging",
+"intent_specific": {
+"fish_method": "RNAscope",
+"multiplex": true,
+"protein_detection": "immunohistochemistry (IHC)",
+"quantification": true,
+"section_type": "brain sections"
+},
+"method": "RNAscope FISH combined with immunohistochemistry",
+"modification_type": null,
+"organism": "mouse",
+"protocol_difficulty": "advanced",
+"readout": "single-cell resolution mRNA detection and quantification",
+"readout_assay": "fluorescence microscopy / confocal imaging",
+"required_equipment": [
+"confocal microscope",
+"cryostat or vibratome"
+],
+"sample_type": "brain sections",
+"sub_intent": "microscopy",
+"target": "specific mRNA transcripts",
+"timeline": null,
+"tissue_or_cell_type": "neuronal cell populations"
+}
+},
+"Comparative genomics analysis of parasitic nematodes and flatworms to identify expanded gene families and potential drug targets across multiple worm species.": {
+"cqs": [
+"parasitic nematodes and flatworms whole organism / genomic DNA expanded gene families, potential drug targets",
+"parasitic nematodes and flatworms whole organism / genomic DNA comparative genomics, gene family analysis, ortholog identification expanded gene families, potential drug targets",
+"parasitic nematodes and flatworms comparative genomics, gene family analysis, ortholog identification whole organism / genomic DNA expanded gene families, potential drug targets",
+"parasitic nematodes and flatworms expanded gene families, potential drug targets",
+"parasitic nematodes and flatworms comparative genomics, gene family analysis, ortholog identification whole organism / genomic DNA protocol"
+],
+"profile": {
+"condition": "multi-species comparison",
+"constraints": [
+"multiple worm species",
+"parasitic"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "comparative genomics, gene family analysis, ortholog identification",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"analysis_type": "comparative genomics",
+"bioinformatics_tools_likely": [
+"OrthoFinder",
+"OrthoMCL",
+"BUSCO",
+"CAFE",
+"PAML",
+"BLAST",
+"InterPro"
+],
+"goals": [
+"expanded gene family identification",
+"drug target discovery"
+],
+"organisms_of_interest": [
+"nematodes",
+"flatworms (platyhelminthes)"
+]
+},
+"method": "comparative genomics",
+"modification_type": null,
+"organism": "parasitic nematodes and flatworms",
+"protocol_difficulty": null,
+"readout": "expanded gene families, potential drug targets",
+"readout_assay": null,
+"required_equipment": [],
+"sample_type": "whole organism / genomic DNA",
+"sub_intent": "sequencing_prep",
+"target": "expanded gene families and drug targets",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Compare metabarcoding versus morphology-based taxonomy for assessing meiofaunal biodiversity in benthic invertebrate communities to identify method-dependent biases in diversity estimates.": {
+"cqs": [
+"meiofauna (benthic invertebrates) benthic sediment metabarcoding (eDNA/bulk DNA) and morphological identification",
+"meiofauna (benthic invertebrates) benthic sediment comparative biodiversity assessment metabarcoding (eDNA/bulk DNA) and morphological identification",
+"meiofauna (benthic invertebrates) comparative biodiversity assessment benthic sediment metabarcoding (eDNA/bulk DNA) and morphological identification",
+"meiofauna (benthic invertebrates) metabarcoding (eDNA/bulk DNA) and morphological identification",
+"meiofauna (benthic invertebrates) comparative biodiversity assessment benthic sediment protocol",
+"meiofauna metabarcoding 18S rRNA benthic sediment biodiversity protocol",
+"meiofaunal morphology taxonomy identification benthic invertebrate community protocol",
+"benthic meiofauna DNA extraction bulk sediment metabarcoding amplicon sequencing",
+"meiofauna COI 18S metabarcoding diversity comparison morphological taxonomy",
+"benthic invertebrate community diversity assessment eDNA metabarcoding sediment core protocol"
+],
+"profile": {
+"condition": "benthic invertebrate communities",
+"constraints": [
+"method-dependent bias detection",
+"comparative framework"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "comparative biodiversity assessment",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"bias_focus": "method-dependent biases in diversity estimates",
+"comparison_methods": [
+"metabarcoding",
+"morphology-based taxonomy"
+],
+"habitat": "benthic/sediment",
+"marker_genes": [
+"18S rRNA",
+"COI",
+"28S rRNA"
+],
+"target_community": "meiofauna"
+},
+"method": "metabarcoding and morphology-based taxonomy",
+"modification_type": null,
+"organism": "meiofauna (benthic invertebrates)",
+"protocol_difficulty": null,
+"readout": "diversity estimates (alpha/beta diversity, OTU/ASV richness, taxonomic composition)",
+"readout_assay": "metabarcoding (eDNA/bulk DNA) and morphological identification",
+"required_equipment": [],
+"sample_type": "benthic sediment",
+"sub_intent": "sequencing_prep",
+"target": "meiofaunal biodiversity",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Comparing bioinformatics tools for metatranscriptomic analysis of Microcystis harmful algal blooms to determine which best captures gene expression and community composition.": {
+"cqs": [
+"Microcystis harmful algal bloom community metatranscriptomic analysis",
+"Microcystis harmful algal bloom community metatranscriptomic RNA-seq metatranscriptomic analysis",
+"Microcystis metatranscriptomic RNA-seq harmful algal bloom community metatranscriptomic analysis",
+"Microcystis metatranscriptomic analysis",
+"Microcystis metatranscriptomic RNA-seq harmful algal bloom community protocol"
+],
+"profile": {
+"condition": "harmful algal bloom",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "metatranscriptomic RNA-seq",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"analysis_goal": "bioinformatics tool benchmarking",
+"bloom_organism": "Microcystis spp.",
+"comparison_focus": "gene expression quantification and community composition profiling"
+},
+"method": "metatranscriptomics",
+"modification_type": null,
+"organism": "Microcystis",
+"protocol_difficulty": null,
+"readout": "gene expression profiles, community composition",
+"readout_assay": "metatranscriptomic analysis",
+"required_equipment": [],
+"sample_type": "harmful algal bloom community",
+"sub_intent": "general_protocol_search",
+"target": "gene expression and community composition",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Comparing cost-effectiveness of oyster reef and wetland restoration versus seawalls for reducing coastal flood risk along the US Gulf Coast under climate change scenarios.": {
+"cqs": [
+"Comparing cost-effectiveness of oyster reef and wetland restoration versus seawalls for reducing coastal flood risk along the US Gulf Coast under climate change scenarios."
+],
+"profile": {
+"condition": null,
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": null,
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": null,
+"intent_specific": {},
+"method": null,
+"modification_type": null,
+"organism": null,
+"protocol_difficulty": null,
+"readout": null,
+"readout_assay": null,
+"required_equipment": [],
+"sample_type": null,
+"sub_intent": null,
+"target": null,
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Comparing proteomes of mouse macrophage cell lines like RAW264.7 and J774A.1 versus primary bone marrow-derived macrophages using mass spectrometry to find the best model for inflammation research.": {
+"cqs": [
+"mouse macrophages (RAW264.7, J774A.1, bone marrow-derived macrophages) mass spectrometry-based proteomics",
+"mouse macrophages (RAW264.7, J774A.1, bone marrow-derived macrophages) quantitative proteomics mass spectrometry-based proteomics",
+"mouse quantitative proteomics macrophages (RAW264.7, J774A.1, bone marrow-derived macrophages) mass spectrometry-based proteomics",
+"Mus musculus mass spectrometry-based proteomics",
+"mouse quantitative proteomics macrophages (RAW264.7, J774A.1, bone marrow-derived macrophages) protocol",
+"mouse macrophage proteomics mass spectrometry RAW264.7 BMDM sample preparation",
+"bone marrow-derived macrophage LC-MS/MS proteome comparison protocol",
+"quantitative proteomics macrophage cell line primary cells inflammation",
+"RAW264.7 J774A.1 BMDM protein extraction mass spectrometry protocol",
+"macrophage proteome profiling TMT iTRAQ label-free quantification LC-MS"
+],
+"profile": {
+"condition": "inflammation research; comparative cell line vs primary cell proteomics",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [
+"mass spectrometer"
+],
+"experimental_method": "quantitative proteomics",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"comparison_groups": [
+"RAW264.7",
+"J774A.1",
+"bone marrow-derived macrophages (BMDM)"
+],
+"proteomics_goal": "identify best macrophage model for inflammation research",
+"quantification_type": null
+},
+"method": "mass spectrometry",
+"modification_type": null,
+"organism": "mouse",
+"protocol_difficulty": null,
+"readout": "proteome comparison",
+"readout_assay": "mass spectrometry-based proteomics",
+"required_equipment": [
+"mass spectrometer",
+"LC-MS/MS system"
+],
+"sample_type": "cell lines and primary cells",
+"sub_intent": "sequencing_prep",
+"target": "proteome",
+"timeline": null,
+"tissue_or_cell_type": "macrophages (RAW264.7, J774A.1, bone marrow-derived macrophages)"
+}
+},
+"Comparing qPCR, culture, and shotgun metagenomics to quantify Klebsiella pneumoniae abundance in turkey versus broiler poultry gut microbiome samples.": {
+"cqs": [
+"Klebsiella pneumoniae in turkey and broiler poultry intestinal/gut content qPCR, colony count, metagenomic read mapping",
+"Klebsiella pneumoniae in turkey and broiler poultry intestinal/gut content comparative quantification: qPCR vs culture vs shotgun metagenomics qPCR, colony count, metagenomic read mapping",
+"Klebsiella pneumoniae in turkey and broiler poultry comparative quantification: qPCR vs culture vs shotgun metagenomics intestinal/gut content qPCR, colony count, metagenomic read mapping",
+"Klebsiella pneumoniae in turkey and broiler poultry qPCR, colony count, metagenomic read mapping",
+"Klebsiella pneumoniae in turkey and broiler poultry comparative quantification: qPCR vs culture vs shotgun metagenomics intestinal/gut content protocol",
+"Klebsiella pneumoniae quantification qPCR poultry gut microbiome",
+"shotgun metagenomics Klebsiella pneumoniae abundance poultry intestinal samples",
+"culture-based quantification Klebsiella pneumoniae broiler chicken gut",
+"comparative qPCR culture metagenomics bacterial quantification poultry",
+"turkey broiler gut microbiome Klebsiella pneumoniae detection protocol"
+],
+"profile": {
+"condition": "turkey vs broiler poultry gut microbiome",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "comparative quantification: qPCR vs culture vs shotgun metagenomics",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"comparison_methods": [
+"qPCR",
+"culture",
+"shotgun metagenomics"
+],
+"host_comparison": [
+"turkey",
+"broiler chicken"
+],
+"sample_context": "poultry gut microbiome",
+"target_organism": "Klebsiella pneumoniae"
+},
+"method": "qPCR, culture-based quantification, shotgun metagenomics",
+"modification_type": null,
+"organism": "Klebsiella pneumoniae in turkey and broiler poultry",
+"protocol_difficulty": null,
+"readout": "bacterial abundance quantification",
+"readout_assay": "qPCR, colony count, metagenomic read mapping",
+"required_equipment": [],
+"sample_type": "gut microbiome",
+"sub_intent": "pcr_qpcr",
+"target": "Klebsiella pneumoniae abundance",
+"timeline": null,
+"tissue_or_cell_type": "intestinal/gut content"
+}
+},
+"Comparing single-cell versus single-nucleus RNA sequencing cell-type composition differences in matched fresh versus frozen human colon and liver tissue.": {
+"cqs": [
+"human colon and liver transcriptomic cell-type profiling",
+"human colon and liver single-cell RNA sequencing vs single-nucleus RNA sequencing transcriptomic cell-type profiling",
+"human single-cell RNA sequencing vs single-nucleus RNA sequencing colon and liver transcriptomic cell-type profiling",
+"Homo sapiens transcriptomic cell-type profiling",
+"human single-cell RNA sequencing vs single-nucleus RNA sequencing colon and liver protocol",
+"single-cell vs single-nucleus RNA sequencing fresh frozen human colon liver",
+"scRNA-seq snRNA-seq comparison cell-type composition human tissue fresh frozen",
+"snRNA-seq frozen human colon liver tissue dissociation protocol",
+"single-nucleus RNA sequencing cryopreserved human liver colon cell type profiling",
+"matched fresh frozen tissue scRNA-seq snRNA-seq library preparation human gut liver"
+],
+"profile": {
+"condition": "fresh versus frozen tissue",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "single-cell RNA sequencing vs single-nucleus RNA sequencing",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"analysis_focus": "cell-type composition",
+"comparison": "scRNA-seq vs snRNA-seq",
+"species": "human",
+"tissue_preservation": "fresh vs frozen",
+"tissues": [
+"colon",
+"liver"
+]
+},
+"method": "scRNA-seq and snRNA-seq",
+"modification_type": null,
+"organism": "human",
+"protocol_difficulty": null,
+"readout": "cell-type composition differences",
+"readout_assay": "transcriptomic cell-type profiling",
+"required_equipment": [],
+"sample_type": "fresh and frozen matched tissue",
+"sub_intent": "sequencing_prep",
+"target": "cell-type composition",
+"timeline": null,
+"tissue_or_cell_type": "colon and liver"
+}
+},
+"Comparing ultrafiltration versus iron chloride flocculation for concentrating and purifying viral DNA from wastewater and environmental water samples before metagenomic sequencing.": {
+"cqs": [
+"virus (environmental/wastewater) wastewater and environmental water samples metagenomics",
+"virus (environmental/wastewater) wastewater and environmental water samples virus concentration and purification metagenomics",
+"virus (environmental/wastewater) virus concentration and purification wastewater and environmental water samples metagenomics",
+"virus (environmental/wastewater) metagenomics",
+"virus (environmental/wastewater) virus concentration and purification wastewater and environmental water samples protocol",
+"ultrafiltration virus concentration wastewater viral metagenomics",
+"iron chloride flocculation virus concentration environmental water DNA extraction",
+"viral DNA concentration wastewater metagenomic sequencing protocol",
+"ultrafiltration vs flocculation virome environmental water samples",
+"wastewater virome concentration purification sequencing library preparation"
+],
+"profile": {
+"condition": "comparative: ultrafiltration versus iron chloride flocculation",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "virus concentration and purification",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"concentration_methods": [
+"ultrafiltration",
+"iron chloride flocculation"
+],
+"downstream_application": "viral metagenomics",
+"sample_source": "wastewater and environmental water"
+},
+"method": "ultrafiltration vs iron chloride flocculation",
+"modification_type": null,
+"organism": "virus (environmental/wastewater)",
+"protocol_difficulty": null,
+"readout": "metagenomic sequencing",
+"readout_assay": "metagenomics",
+"required_equipment": [],
+"sample_type": "wastewater and environmental water samples",
+"sub_intent": "sequencing_prep",
+"target": "viral DNA",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Computational modeling tool to simulate electrical stimulation and recording from rat visceral nerves accounting for anatomical variability in fascicle size and axon diameter.": {
+"cqs": [
+"rat visceral nerve fascicles in silico electrophysiology",
+"rat visceral nerve fascicles finite element modeling or cable model simulation of electrical stimulation and recording in silico electrophysiology",
+"rat finite element modeling or cable model simulation of electrical stimulation and recording visceral nerve fascicles in silico electrophysiology",
+"rat in silico electrophysiology",
+"rat finite element modeling or cable model simulation of electrical stimulation and recording visceral nerve fascicles protocol",
+"computational model electrical stimulation rat visceral nerve fascicle axon diameter",
+"finite element model peripheral nerve stimulation recording rat autonomic nerve",
+"nerve fiber model axon diameter distribution fascicle variability rat",
+"NEURON COMSOL model vagus visceral nerve electrical stimulation rat",
+"in silico simulation compound action potential rat visceral nerve anatomical variability"
+],
+"profile": {
+"condition": "anatomical variability in fascicle size and axon diameter",
+"constraints": [
+"accounts for anatomical variability in fascicle size",
+"accounts for axon diameter distribution",
+"rat visceral nerve geometry"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "finite element modeling or cable model simulation of electrical stimulation and recording",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "general_protocol_search",
+"intent_specific": {
+"anatomical_variability": true,
+"axon_diameter_distribution": true,
+"fascicle_size_variability": true,
+"modeling_framework": null,
+"nerve_type": "visceral (autonomic)",
+"simulation_target": "electrical stimulation and recording"
+},
+"method": "computational modeling / simulation",
+"modification_type": null,
+"organism": "rat",
+"protocol_difficulty": null,
+"readout": "simulated electrical activity / compound action potentials",
+"readout_assay": "in silico electrophysiology",
+"required_equipment": [],
+"sample_type": "visceral nerve",
+"sub_intent": "general_protocol_search",
+"target": "visceral nerves",
+"timeline": null,
+"tissue_or_cell_type": "visceral nerve fascicles"
+}
+},
+"Convert arbitrary fluorescence units from microplate reader measurements into absolute protein concentrations per bacterial cell using fluorescent protein calibrants without requiring protein purification.": {
+"cqs": [
+"bacterial cells fluorescence arbitrary unit conversion to absolute concentration",
+"bacterial cells fluorescent protein calibration without protein purification fluorescence arbitrary unit conversion to absolute concentration",
+"fluorescent protein calibration without protein purification bacterial cells fluorescence arbitrary unit conversion to absolute concentration",
+"fluorescence arbitrary unit conversion to absolute concentration",
+"fluorescent protein calibration without protein purification bacterial cells protocol"
+],
+"profile": {
+"condition": null,
+"constraints": [
+"no protein purification required",
+"uses fluorescent protein calibrants"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [
+"microplate reader"
+],
+"experimental_method": "fluorescent protein calibration without protein purification",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "protein_work",
+"intent_specific": {
+"calibration_method": "fluorescent protein calibrants",
+"measurement_unit_conversion": "arbitrary fluorescence units to absolute protein concentration",
+"normalization": "per bacterial cell"
+},
+"method": "microplate reader fluorescence measurement",
+"modification_type": null,
+"organism": "bacteria",
+"protocol_difficulty": null,
+"readout": "absolute protein concentration per cell",
+"readout_assay": "fluorescence arbitrary unit conversion to absolute concentration",
+"required_equipment": [
+"microplate reader"
+],
+"sample_type": "bacterial cells",
+"sub_intent": "protein_detection",
+"target": null,
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Delivering siRNA specifically to osteoblasts using aptamer-functionalized lipid nanoparticles to silence Plekho1 and promote bone formation in osteoporotic rodents.": {
+"cqs": [
+"rodent osteoblasts bone formation assay / osteoporosis phenotyping",
+"rodent osteoblasts targeted lipid nanoparticle delivery bone formation assay / osteoporosis phenotyping",
+"rodent targeted lipid nanoparticle delivery osteoblasts bone formation assay / osteoporosis phenotyping",
+"rodent bone formation assay / osteoporosis phenotyping",
+"rodent targeted lipid nanoparticle delivery osteoblasts protocol",
+"siRNA lipid nanoparticle osteoblast targeted delivery Plekho1 knockdown rodent",
+"aptamer-functionalized LNP siRNA delivery bone osteoporosis mouse rat",
+"osteoblast-targeted lipid nanoparticle siRNA gene silencing in vivo protocol",
+"Plekho1 siRNA knockdown bone formation osteoporotic mouse model",
+"aptamer lipid nanoparticle formulation siRNA osteoblast specificity protocol"
+],
+"profile": {
+"condition": "osteoporosis",
+"constraints": [
+"osteoblast-specific delivery",
+"aptamer-functionalized surface targeting"
+],
+"delivery_method": "aptamer-functionalized lipid nanoparticles (LNP)",
+"difficulty": null,
+"equipment": [],
+"experimental_method": "targeted lipid nanoparticle delivery",
+"expression_type": null,
+"gene_or_construct": "siRNA targeting Plekho1",
+"intent_family": "organism_transformation",
+"intent_specific": {
+"cell_specificity": "osteoblast-targeted delivery",
+"delivery_method": "aptamer-functionalized lipid nanoparticles (LNP)",
+"disease_model": "osteoporosis",
+"expected_outcome": "promote bone formation",
+"modification_type": "siRNA knockdown",
+"nanoparticle_type": "lipid nanoparticle (LNP)",
+"silencing_mechanism": "siRNA",
+"target_gene": "Plekho1",
+"targeting_ligand": "aptamer"
+},
+"method": "aptamer-functionalized lipid nanoparticles",
+"modification_type": "siRNA knockdown",
+"organism": "rodent",
+"protocol_difficulty": null,
+"readout": "bone formation",
+"readout_assay": "bone formation assay / osteoporosis phenotyping",
+"required_equipment": [],
+"sample_type": "in vivo",
+"sub_intent": "gene_knockdown",
+"target": "Plekho1",
+"timeline": null,
+"tissue_or_cell_type": "osteoblasts"
+}
+},
+"Detecting mosquito salivary protein-specific IgE in human serum using a capture ELISA to avoid IgG interference and improve sensitivity for diagnosing Aedes aegypti bite allergy.": {
+"cqs": [
+"human blood serum capture ELISA with anti-IgE capture antibody",
+"human blood serum capture ELISA capture ELISA with anti-IgE capture antibody",
+"human capture ELISA blood serum capture ELISA with anti-IgE capture antibody",
+"Homo sapiens capture ELISA with anti-IgE capture antibody",
+"human capture ELISA blood serum protocol",
+"capture ELISA allergen-specific IgE detection human serum",
+"Aedes aegypti salivary protein IgE ELISA allergy diagnosis",
+"mosquito saliva specific IgE sandwich ELISA serum protocol",
+"anti-IgE capture ELISA minimize IgG interference serum",
+"insect bite allergy IgE detection ELISA human blood"
+],
+"profile": {
+"condition": "Aedes aegypti bite allergy diagnosis; avoidance of IgG interference",
+"constraints": [
+"minimize IgG interference",
+"improve sensitivity for allergen-specific IgE"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "capture ELISA",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "protein_work",
+"intent_specific": {
+"allergen_source": "Aedes aegypti salivary proteins",
+"antibody_isotype": "IgE",
+"clinical_context": "allergy diagnosis",
+"elisa_format": "capture (sandwich) ELISA",
+"interference_concern": "IgG blocking"
+},
+"method": "capture ELISA",
+"modification_type": null,
+"organism": "human",
+"protocol_difficulty": null,
+"readout": "IgE detection",
+"readout_assay": "capture ELISA with anti-IgE capture antibody",
+"required_equipment": [],
+"sample_type": "serum",
+"sub_intent": "protein_detection",
+"target": "mosquito salivary protein-specific IgE",
+"timeline": null,
+"tissue_or_cell_type": "blood serum"
+}
+},
+"Does LT4-induced subclinical hyperthyroidism cause oxidative stress and redox imbalance in thyroidectomy patients receiving TSH suppression therapy?": {
+"cqs": [
+"Does LT4-induced subclinical hyperthyroidism cause oxidative stress and redox imbalance in thyroidectomy patients receiving TSH suppression therapy?"
+],
+"profile": {
+"condition": "LT4-induced subclinical hyperthyroidism, TSH suppression therapy, post-thyroidectomy",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": null,
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": null,
+"intent_specific": {
+"clinical_context": "thyroidectomy patients on TSH suppression therapy",
+"intervention": "Levothyroxine (LT4)",
+"phenotype_of_interest": "subclinical hyperthyroidism, oxidative stress, redox imbalance"
+},
+"method": null,
+"modification_type": null,
+"organism": "human",
+"protocol_difficulty": null,
+"readout": null,
+"readout_assay": null,
+"required_equipment": [],
+"sample_type": null,
+"sub_intent": null,
+"target": "oxidative stress markers, redox balance",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Does the C. elegans gustatory receptor LITE-1 function as both a photoreceptor and chemoreceptor for diacetyl avoidance behavior?": {
+"cqs": [
+"Does the C. elegans gustatory receptor LITE-1 function as both a photoreceptor and chemoreceptor for diacetyl avoidance behavior?"
+],
+"profile": {
+"condition": null,
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": null,
+"expression_type": null,
+"gene_or_construct": "lite-1",
+"intent_family": null,
+"intent_specific": {
+"behavior": "diacetyl avoidance",
+"question_type": "receptor_function",
+"topic": "LITE-1 dual function as photoreceptor and chemoreceptor"
+},
+"method": null,
+"modification_type": null,
+"organism": "C. elegans",
+"protocol_difficulty": null,
+"readout": null,
+"readout_assay": null,
+"required_equipment": [],
+"sample_type": null,
+"sub_intent": null,
+"target": "LITE-1",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Draft de novo genome assembly of Indian peafowl using hybrid Illumina and Oxford Nanopore sequencing to improve scaffold contiguity and repeat resolution.": {
+"cqs": [
+"Indian peafowl (Pavo cristatus) genomic DNA de novo genome assembly",
+"Indian peafowl (Pavo cristatus) genomic DNA Illumina short-read sequencing + Oxford Nanopore long-read sequencing de novo genome assembly",
+"Indian peafowl (Pavo cristatus) Illumina short-read sequencing + Oxford Nanopore long-read sequencing genomic DNA de novo genome assembly",
+"Indian peafowl (Pavo cristatus) de novo genome assembly",
+"Indian peafowl (Pavo cristatus) Illumina short-read sequencing + Oxford Nanopore long-read sequencing genomic DNA protocol"
+],
+"profile": {
+"condition": null,
+"constraints": [
+"improve scaffold contiguity",
+"improve repeat resolution"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [
+"Illumina sequencer",
+"Oxford Nanopore sequencer"
+],
+"experimental_method": "Illumina short-read sequencing + Oxford Nanopore long-read sequencing",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"assembly_goal": "hybrid assembly with improved contiguity and repeat resolution",
+"assembly_type": "de novo",
+"genome_features_of_interest": [
+"scaffold contiguity",
+"repeat elements"
+],
+"organism_common_name": "Indian peafowl",
+"organism_scientific_name": "Pavo cristatus",
+"sequencing_platforms": [
+"Illumina",
+"Oxford Nanopore Technology (ONT)"
+]
+},
+"method": "hybrid genome assembly",
+"modification_type": null,
+"organism": "Indian peafowl (Pavo cristatus)",
+"protocol_difficulty": null,
+"readout": "scaffold contiguity, repeat resolution, genome assembly quality",
+"readout_assay": "de novo genome assembly",
+"required_equipment": [
+"Illumina sequencer",
+"Oxford Nanopore sequencer"
+],
+"sample_type": "genomic DNA",
+"sub_intent": "sequencing_prep",
+"target": null,
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Draft genome assembly and annotation of the Australian banjo frog Limnodynastes dumerilii to serve as a reference for amphibian phylogenomics.": {
+"cqs": [
+"Limnodynastes dumerilii (Australian banjo frog) genomic DNA amphibian phylogenomics reference",
+"Limnodynastes dumerilii (Australian banjo frog) genomic DNA de novo genome assembly and structural/functional annotation amphibian phylogenomics reference",
+"Limnodynastes dumerilii (Australian banjo frog) de novo genome assembly and structural/functional annotation genomic DNA amphibian phylogenomics reference",
+"Limnodynastes dumerilii (Australian banjo frog) amphibian phylogenomics reference",
+"Limnodynastes dumerilii (Australian banjo frog) de novo genome assembly and structural/functional annotation genomic DNA protocol"
+],
+"profile": {
+"condition": null,
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "de novo genome assembly and structural/functional annotation",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"annotation_type": "structural and functional",
+"application": "amphibian phylogenomics reference",
+"assembly_approach": "de novo",
+"sequencing_platform": null
+},
+"method": "draft genome assembly and annotation",
+"modification_type": null,
+"organism": "Limnodynastes dumerilii (Australian banjo frog)",
+"protocol_difficulty": null,
+"readout": "draft genome assembly with gene annotations",
+"readout_assay": "amphibian phylogenomics reference",
+"required_equipment": [],
+"sample_type": "genomic DNA",
+"sub_intent": "sequencing_prep",
+"target": "whole genome",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Engineering yeast to produce vinblastine precursors vindoline and catharanthine from scratch using heterologous plant genes expressed in Saccharomyces cerevisiae.": {
+"cqs": [
+"Saccharomyces cerevisiae heterologous / ectopic yeast culture vindoline and catharanthine production",
+"Saccharomyces cerevisiae yeast culture heterologous / ectopic heterologous pathway expression vindoline and catharanthine production",
+"Saccharomyces cerevisiae heterologous pathway expression yeast culture vindoline and catharanthine production",
+"Saccharomyces cerevisiae heterologous / ectopic vindoline and catharanthine production",
+"Saccharomyces cerevisiae heterologous pathway expression heterologous / ectopic yeast culture protocol"
+],
+"profile": {
+"condition": "de novo biosynthesis from simple carbon sources",
+"constraints": [
+"vinblastine precursors",
+"de novo production",
+"plant monoterpene indole alkaloid pathway"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "heterologous pathway expression",
+"expression_type": "heterologous / ectopic",
+"gene_or_construct": "heterologous plant biosynthetic genes (vindoline and catharanthine pathway)",
+"intent_family": "organism_transformation",
+"intent_specific": {
+"final_product_context": "vinblastine",
+"modification_type": "heterologous gene expression",
+"pathway": "monoterpene indole alkaloid (MIA) biosynthesis",
+"precursors": [
+"vindoline",
+"catharanthine"
+],
+"source_organism_of_genes": "plant (e.g., Catharanthus roseus)"
+},
+"method": "metabolic engineering",
+"modification_type": "heterologous gene expression",
+"organism": "Saccharomyces cerevisiae",
+"protocol_difficulty": null,
+"readout": "vindoline and catharanthine production",
+"readout_assay": null,
+"required_equipment": [],
+"sample_type": "yeast culture",
+"sub_intent": "gene_overexpression",
+"target": "vindoline and catharanthine biosynthesis pathway",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Epigenome-wide DNA methylation differences in white blood cells associated with intravenous drug use and hepatitis C coinfection in HIV-positive patients.": {
+"cqs": [
+"human white blood cells (PBMCs or WBCs) methylation array or WGBS",
+"human white blood cells (PBMCs or WBCs) EWAS / bisulfite sequencing or methylation array methylation array or WGBS",
+"human EWAS / bisulfite sequencing or methylation array white blood cells (PBMCs or WBCs) methylation array or WGBS",
+"Homo sapiens methylation array or WGBS",
+"human EWAS / bisulfite sequencing or methylation array white blood cells (PBMCs or WBCs) protocol"
+],
+"profile": {
+"condition": "HIV-positive patients with intravenous drug use and hepatitis C coinfection",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "EWAS / bisulfite sequencing or methylation array",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"comparison_groups": "IVDU+HCV+HIV vs controls within HIV+ cohort",
+"disease_context": "HIV, HCV coinfection, IVDU",
+"epigenetic_mark": "DNA methylation (CpG)",
+"likely_platform": "Illumina EPIC array or 450K array, WGBS"
+},
+"method": "epigenome-wide association study (EWAS)",
+"modification_type": null,
+"organism": "human",
+"protocol_difficulty": null,
+"readout": "differential DNA methylation",
+"readout_assay": "methylation array or WGBS",
+"required_equipment": [],
+"sample_type": "white blood cells",
+"sub_intent": "sequencing_prep",
+"target": "DNA methylation",
+"timeline": null,
+"tissue_or_cell_type": "white blood cells (PBMCs or WBCs)"
+}
+},
+"Estimate cell-type proportions in bulk human cortex tissue using DNA methylation-based deconvolution with a reference panel including neuronal and glial subtypes for EWAS studies.": {
+"cqs": [
+"human cortex EWAS",
+"human cortex reference-based cell-type deconvolution EWAS",
+"human reference-based cell-type deconvolution cortex EWAS",
+"Homo sapiens EWAS",
+"human reference-based cell-type deconvolution cortex protocol",
+"DNA methylation cell-type deconvolution bulk human cortex neuronal glial reference panel",
+"EWAS cell-type proportion estimation brain tissue methylation reference panel neurons glia",
+"reference-based deconvolution human brain bulk methylation EPIC array neuronal subtypes",
+"cell-type composition correction bulk cortex EWAS DNA methylation 450k EPIC",
+"methylation deconvolution human brain neuronal oligodendrocyte astrocyte microglia reference"
+],
+"profile": {
+"condition": null,
+"constraints": [
+"reference panel must include neuronal and glial subtypes"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "reference-based cell-type deconvolution",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"application": "EWAS",
+"cell_types_of_interest": [
+"neurons",
+"oligodendrocytes",
+"astrocytes",
+"microglia",
+"glial subtypes"
+],
+"deconvolution_method": "DNA methylation-based",
+"reference_panel": "neuronal and glial subtypes",
+"tissue": "bulk human cortex"
+},
+"method": "DNA methylation-based deconvolution",
+"modification_type": null,
+"organism": "human",
+"protocol_difficulty": null,
+"readout": "cell-type proportion estimates",
+"readout_assay": "EWAS",
+"required_equipment": [],
+"sample_type": "bulk tissue",
+"sub_intent": "sequencing_prep",
+"target": "cell-type proportions",
+"timeline": null,
+"tissue_or_cell_type": "cortex"
+}
+},
+"Fast open-database search tool for identifying peptide modifications in mass spectrometry proteomics data using fragment-ion indexing to catch post-translational and chemical modifications typically missed.": {
+"cqs": [
+"peptide/proteomics sample mass spectrometry (MS/MS)",
+"peptide/proteomics sample mass spectrometry proteomics mass spectrometry (MS/MS)",
+"mass spectrometry proteomics peptide/proteomics sample mass spectrometry (MS/MS)",
+"mass spectrometry (MS/MS)",
+"mass spectrometry proteomics peptide/proteomics sample protocol",
+"open database search mass spectrometry peptide modifications fragment-ion indexing",
+"fast open search PTM identification proteomics MS/MS",
+"fragment-ion index open search post-translational modifications mass spectrometry protocol",
+"MSFragger open search peptide modification discovery proteomics",
+"open proteomics database search chemical modifications mass spectrometry workflow"
+],
+"profile": {
+"condition": null,
+"constraints": [
+"fast",
+"open-database search",
+"fragment-ion indexing",
+"catches missed modifications"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [
+"mass spectrometer"
+],
+"experimental_method": "mass spectrometry proteomics",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"indexing_method": "fragment-ion indexing",
+"modification_scope": "post-translational and chemical modifications",
+"search_type": "open database search",
+"tool_characteristics": [
+"fast",
+"open search",
+"PTM discovery"
+]
+},
+"method": "open database search, fragment-ion indexing",
+"modification_type": null,
+"organism": null,
+"protocol_difficulty": null,
+"readout": "peptide modification identification",
+"readout_assay": "mass spectrometry (MS/MS)",
+"required_equipment": [
+"mass spectrometer"
+],
+"sample_type": "peptide/proteomics sample",
+"sub_intent": "general_protocol_search",
+"target": "post-translational modifications, chemical modifications",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Find differentially expressed genes and pathogenic variants shared across vitamin K deficiency-related conditions like myocardial infarction, renal failure, and prostate cancer using systems genetics and lncRNA analysis.": {
+"cqs": [
+"human myocardial, renal, prostate DEG analysis, lncRNA profiling, systems genetics integration",
+"human myocardial, renal, prostate RNA-seq / transcriptomics, GWAS/variant calling, co-expression network analysis DEG analysis, lncRNA profiling, systems genetics integration",
+"human RNA-seq / transcriptomics, GWAS/variant calling, co-expression network analysis myocardial, renal, prostate DEG analysis, lncRNA profiling, systems genetics integration",
+"Homo sapiens DEG analysis, lncRNA profiling, systems genetics integration",
+"human RNA-seq / transcriptomics, GWAS/variant calling, co-expression network analysis myocardial, renal, prostate protocol",
+"differentially expressed genes lncRNA vitamin K deficiency myocardial infarction renal failure prostate cancer RNA-seq",
+"systems genetics shared pathogenic variants cross-disease transcriptomics lncRNA analysis human",
+"lncRNA differential expression co-expression network vitamin K deficiency cardiovascular renal cancer",
+"integrative omics DEG analysis pathogenic variants myocardial infarction renal failure prostate cancer",
+"weighted gene co-expression network WGCNA lncRNA systems genetics multi-disease vitamin K"
+],
+"profile": {
+"condition": "vitamin K deficiency-related conditions: myocardial infarction, renal failure, prostate cancer",
+"constraints": [
+"cross-disease comparison",
+"vitamin K deficiency context",
+"lncRNA inclusion",
+"systems genetics framework"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "RNA-seq / transcriptomics, GWAS/variant calling, co-expression network analysis",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"analysis_type": "integrative multi-disease omics",
+"diseases": [
+"myocardial infarction",
+"renal failure",
+"prostate cancer"
+],
+"lncRNA_analysis": true,
+"shared_variant_analysis": true,
+"systems_genetics": true,
+"vitamin_K_deficiency_context": true
+},
+"method": "systems genetics, lncRNA analysis, differential gene expression, variant analysis",
+"modification_type": null,
+"organism": "human",
+"protocol_difficulty": null,
+"readout": "differentially expressed genes, shared pathogenic variants",
+"readout_assay": "DEG analysis, lncRNA profiling, systems genetics integration",
+"required_equipment": [],
+"sample_type": "disease tissue / patient datasets",
+"sub_intent": "sequencing_prep",
+"target": "differentially expressed genes, pathogenic variants, lncRNAs",
+"timeline": null,
+"tissue_or_cell_type": "myocardial, renal, prostate"
+}
+},
+"Find the DNA binding motif of a CRP-family transcription factor in Thermus thermophilus using in vitro selection to identify regulated genes in this extremophile.": {
+"cqs": [
+"Thermus thermophilus recombinant protein / genomic DNA electrophoretic mobility shift assay (EMSA) or high-throughput sequencing of selected aptamers",
+"Thermus thermophilus recombinant protein / genomic DNA SELEX (Systematic Evolution of Ligands by EXponential enrichment) electrophoretic mobility shift assay (EMSA) or high-throughput sequencing of selected aptamers",
+"Thermus thermophilus SELEX (Systematic Evolution of Ligands by EXponential enrichment) recombinant protein / genomic DNA electrophoretic mobility shift assay (EMSA) or high-throughput sequencing of selected aptamers",
+"Thermus thermophilus electrophoretic mobility shift assay (EMSA) or high-throughput sequencing of selected aptamers",
+"Thermus thermophilus SELEX (Systematic Evolution of Ligands by EXponential enrichment) recombinant protein / genomic DNA protocol",
+"SELEX DNA binding motif CRP transcription factor Thermus thermophilus",
+"genomic SELEX CRP-family transcription factor thermophile regulated genes",
+"in vitro selection DNA binding site CRP transcription factor extremophile",
+"EMSA SELEX CRP transcription factor binding motif Thermus thermophilus high temperature",
+"systematic evolution ligands exponential enrichment transcription factor binding site thermophilic bacteria"
+],
+"profile": {
+"condition": "thermophile / high temperature",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "SELEX (Systematic Evolution of Ligands by EXponential enrichment)",
+"expression_type": null,
+"gene_or_construct": "CRP-family transcription factor",
+"intent_family": "gene_expression_analysis",
+"intent_specific": {
+"application": "identify DNA binding motif and regulated genes",
+"organism_type": "extremophile / thermophile",
+"selection_method": "SELEX or genomic SELEX",
+"transcription_factor_family": "CRP/CAP family"
+},
+"method": "in vitro selection / SELEX",
+"modification_type": null,
+"organism": "Thermus thermophilus",
+"protocol_difficulty": null,
+"readout": "DNA binding motif / regulated gene identification",
+"readout_assay": "electrophoretic mobility shift assay (EMSA) or high-throughput sequencing of selected aptamers",
+"required_equipment": [],
+"sample_type": "recombinant protein / genomic DNA",
+"sub_intent": "general_protocol_search",
+"target": "CRP-family transcription factor",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Find tumor-specific mutation-derived splice junctions from RNA-seq data in melanoma patients to identify neoantigen candidates for immunotherapy.": {
+"cqs": [
+"human melanoma splice junction detection",
+"human melanoma RNA-seq splice junction analysis splice junction detection",
+"human RNA-seq splice junction analysis melanoma splice junction detection",
+"Homo sapiens splice junction detection",
+"human RNA-seq splice junction analysis melanoma protocol"
+],
+"profile": {
+"condition": "tumor-specific mutations",
+"constraints": [
+"immunotherapy application",
+"mutation-derived junctions"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "RNA-seq splice junction analysis",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"analysis_focus": "tumor-specific mutation-derived splice junctions",
+"application": "neoantigen identification for immunotherapy",
+"cancer_type": "melanoma",
+"data_type": "RNA-seq"
+},
+"method": "RNA-seq",
+"modification_type": null,
+"organism": "human",
+"protocol_difficulty": null,
+"readout": "neoantigen candidates",
+"readout_assay": "splice junction detection",
+"required_equipment": [],
+"sample_type": "tumor tissue",
+"sub_intent": "sequencing_prep",
+"target": "tumor-specific splice junctions",
+"timeline": null,
+"tissue_or_cell_type": "melanoma"
+}
+},
+"Genome-scale metabolic model with protein structures for Staphylococcus aureus USA300 to predict gene essentiality and metabolic responses under different growth conditions.": {
+"cqs": [
+"Staphylococcus aureus USA300 gene essentiality predictions, metabolic flux distributions",
+"Staphylococcus aureus USA300 constraint-based metabolic modeling, flux balance analysis (FBA) gene essentiality predictions, metabolic flux distributions",
+"Staphylococcus aureus USA300 constraint-based metabolic modeling, flux balance analysis (FBA) protocol",
+"Staphylococcus aureus USA300 genome-scale metabolic modeling (GEM) with protein structure integration constraint-based metabolic modeling, flux balance analysis (FBA) gene essentiality, metabolic responses gene essentiality predictions, metabolic flux distributions different growth conditions genome-scale metabolic model (GEM) USA300 gene essentiality prediction metabolic response simulation flux balance analysis COBRApy MEMOTE AlphaFold or PDB structures",
+"Genome-scale metabolic model with protein structures for Staphylococcus aureus USA300 to predict gene essentiality and metabolic responses under different growth conditions.",
+"genome-scale metabolic model Staphylococcus aureus gene essentiality flux balance analysis",
+"Staphylococcus aureus USA300 GEM reconstruction protein structure integration COBRApy",
+"S. aureus metabolic network model growth condition simulation essentiality prediction",
+"genome-scale metabolic reconstruction Staphylococcus aureus USA300 constraint-based modeling",
+"Staphylococcus aureus proteome-integrated metabolic model flux balance gene knockout essentiality"
+],
+"profile": {
+"condition": "different growth conditions",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "constraint-based metabolic modeling, flux balance analysis (FBA)",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"analysis_type": [
+"gene essentiality prediction",
+"metabolic response simulation"
+],
+"computational_tools": [
+"flux balance analysis",
+"COBRApy",
+"MEMOTE",
+"AlphaFold or PDB structures"
+],
+"model_type": "genome-scale metabolic model (GEM)",
+"protein_structure_integration": true,
+"strain": "USA300"
+},
+"method": "genome-scale metabolic modeling (GEM) with protein structure integration",
+"modification_type": null,
+"organism": "Staphylococcus aureus USA300",
+"protocol_difficulty": null,
+"readout": "gene essentiality predictions, metabolic flux distributions",
+"readout_assay": null,
+"required_equipment": [],
+"sample_type": null,
+"sub_intent": "general_protocol_search",
+"target": "gene essentiality, metabolic responses",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Genome-wide STARR-seq screen to identify active enhancers in human cells while controlling for plasmid-based artifacts like interferon response and ORI promoter activity.": {
+"cqs": [
+"human cell line RNA-seq",
+"human cell line Self-Transcribing Active Regulatory Region sequencing (STARR-seq) RNA-seq",
+"human Self-Transcribing Active Regulatory Region sequencing (STARR-seq) cell line RNA-seq",
+"Homo sapiens RNA-seq",
+"human Self-Transcribing Active Regulatory Region sequencing (STARR-seq) cell line protocol"
+],
+"profile": {
+"condition": "genome-wide screen with controls for interferon response and ORI promoter activity",
+"constraints": [
+"control for plasmid-based interferon response artifacts",
+"control for ORI promoter activity",
+"genome-wide coverage"
+],
+"delivery_method": "plasmid transfection",
+"difficulty": "advanced",
+"equipment": [],
+"experimental_method": "Self-Transcribing Active Regulatory Region sequencing (STARR-seq)",
+"expression_type": null,
+"gene_or_construct": "STARR-seq reporter plasmid",
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"artifact_controls": [
+"interferon response",
+"ORI promoter activity"
+],
+"delivery_method": "plasmid transfection",
+"library_type": "genomic DNA fragmented library cloned into STARR-seq reporter",
+"screen_type": "genome-wide enhancer activity screen",
+"sequencing_modality": "RNA-seq of reporter transcripts vs input DNA"
+},
+"method": "STARR-seq",
+"modification_type": null,
+"organism": "human",
+"protocol_difficulty": "advanced",
+"readout": "RNA sequencing of self-transcribed enhancer regions",
+"readout_assay": "RNA-seq",
+"required_equipment": [],
+"sample_type": "cell line",
+"sub_intent": "sequencing_prep",
+"target": "active enhancers genome-wide",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"How are primordial germ cells specified in pig embryos compared to humans, focusing on SOX17, BLIMP1, WNT, and BMP signaling during gastrulation?": {
+"cqs": [
+"How are primordial germ cells specified in pig embryos compared to humans, focusing on SOX17, BLIMP1, WNT, and BMP signaling during gastrulation?"
+],
+"profile": {
+"condition": "gastrulation",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": null,
+"expression_type": null,
+"gene_or_construct": "SOX17, BLIMP1",
+"intent_family": null,
+"intent_specific": {
+"comparison": "pig vs human primordial germ cell specification",
+"developmental_stage": "gastrulation",
+"signaling_pathways": [
+"WNT",
+"BMP"
+],
+"transcription_factors": [
+"SOX17",
+"BLIMP1"
+]
+},
+"method": null,
+"modification_type": null,
+"organism": "pig, human",
+"protocol_difficulty": null,
+"readout": null,
+"readout_assay": null,
+"required_equipment": [],
+"sample_type": null,
+"sub_intent": null,
+"target": "SOX17, BLIMP1, WNT signaling, BMP signaling",
+"timeline": null,
+"tissue_or_cell_type": "primordial germ cells, embryo"
+}
+},
+"How can I standardize and validate macrophage-conditioned medium quality to optimize hybridoma cell survival and monoclonal antibody production using a bioassay?": {
+"cqs": [
+"mouse or human macrophage; hybridoma cells bioassay",
+"mouse or human macrophage; hybridoma cells conditioned medium quality standardization and validation bioassay",
+"mouse or human conditioned medium quality standardization and validation macrophage; hybridoma cells bioassay",
+"mouse or human bioassay",
+"mouse or human conditioned medium quality standardization and validation macrophage; hybridoma cells protocol",
+"macrophage conditioned medium hybridoma cell survival bioassay standardization",
+"macrophage conditioned medium quality validation monoclonal antibody production protocol",
+"hybridoma culture macrophage feeder conditioned medium optimization bioassay",
+"macrophage-conditioned medium standardization hybridoma growth assay protocol",
+"monoclonal antibody production hybridoma conditioned medium quality control validation"
+],
+"profile": {
+"condition": "macrophage-conditioned medium supplementation",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "conditioned medium quality standardization and validation",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "protein_work",
+"intent_specific": {
+"cell_line": "hybridoma",
+"conditioned_medium_source": "macrophage",
+"production_goal": "monoclonal antibody production optimization",
+"validation_goal": "standardization and quality control of conditioned medium"
+},
+"method": "bioassay",
+"modification_type": null,
+"organism": "mouse or human",
+"protocol_difficulty": null,
+"readout": "hybridoma cell survival and monoclonal antibody production",
+"readout_assay": "bioassay",
+"required_equipment": [],
+"sample_type": "macrophage-conditioned medium",
+"sub_intent": "protein_detection",
+"target": "monoclonal antibody",
+"timeline": null,
+"tissue_or_cell_type": "macrophage; hybridoma cells"
+}
+},
+"How did the FDA use wastewater sequencing to track SARS-CoV-2 variant prevalence across US communities during the COVID-19 pandemic using next-generation sequencing?": {
+"cqs": [
+"SARS-CoV-2 wastewater amplicon sequencing or metagenomics",
+"SARS-CoV-2 wastewater wastewater epidemiology / metagenomics sequencing amplicon sequencing or metagenomics",
+"SARS-CoV-2 wastewater epidemiology / metagenomics sequencing wastewater amplicon sequencing or metagenomics",
+"SARS-CoV-2 amplicon sequencing or metagenomics",
+"SARS-CoV-2 wastewater epidemiology / metagenomics sequencing wastewater protocol",
+"wastewater SARS-CoV-2 variant sequencing NGS protocol",
+"wastewater epidemiology SARS-CoV-2 amplicon sequencing variant surveillance",
+"SARS-CoV-2 wastewater metagenomics next-generation sequencing community monitoring",
+"COVID-19 wastewater surveillance whole genome sequencing protocol",
+"SARS-CoV-2 variant frequency wastewater RNA extraction sequencing workflow"
+],
+"profile": {
+"condition": "COVID-19 pandemic community surveillance",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "wastewater epidemiology / metagenomics sequencing",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"analysis_goal": "variant prevalence tracking",
+"sequencing_platform": "next-generation sequencing",
+"surveillance_context": "FDA / US community wastewater monitoring",
+"target_pathogen": "SARS-CoV-2"
+},
+"method": "next-generation sequencing (NGS)",
+"modification_type": null,
+"organism": "SARS-CoV-2",
+"protocol_difficulty": null,
+"readout": "variant prevalence / frequency",
+"readout_assay": "amplicon sequencing or metagenomics",
+"required_equipment": [],
+"sample_type": "wastewater",
+"sub_intent": "sequencing_prep",
+"target": "SARS-CoV-2 variants",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"How do HCN channel properties in supragranular pyramidal neurons compare across primate species using patch-seq and single-nucleus RNA sequencing?": {
+"cqs": [
+"primate supragranular pyramidal neurons patch-clamp electrophysiology; snRNA-seq transcriptomics",
+"primate supragranular pyramidal neurons patch-seq; snRNA-seq patch-clamp electrophysiology; snRNA-seq transcriptomics",
+"primate patch-seq; snRNA-seq supragranular pyramidal neurons patch-clamp electrophysiology; snRNA-seq transcriptomics",
+"primate patch-clamp electrophysiology; snRNA-seq transcriptomics",
+"primate patch-seq; snRNA-seq supragranular pyramidal neurons protocol"
+],
+"profile": {
+"condition": "cross-species comparative analysis",
+"constraints": [
+"cross-species comparison",
+"supragranular cortical layers"
+],
+"delivery_method": null,
+"difficulty": "high",
+"equipment": [
+"patch-clamp amplifier",
+"sequencing platform"
+],
+"experimental_method": "patch-seq; snRNA-seq",
+"expression_type": null,
+"gene_or_construct": "HCN1, HCN2, HCN3, HCN4",
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"channel_type": "HCN (hyperpolarization-activated cyclic nucleotide-gated)",
+"comparison": "across primate species",
+"cortical_layer": "supragranular (layers 2/3)",
+"multi_modal": true,
+"neuron_type": "pyramidal neurons"
+},
+"method": "patch-seq and single-nucleus RNA sequencing",
+"modification_type": null,
+"organism": "primate",
+"protocol_difficulty": "high",
+"readout": "electrophysiological properties and transcriptomic profile",
+"readout_assay": "patch-clamp electrophysiology; snRNA-seq transcriptomics",
+"required_equipment": [
+"patch-clamp amplifier",
+"micromanipulator",
+"sequencing platform (e.g. 10x Genomics)"
+],
+"sample_type": "brain tissue",
+"sub_intent": "sequencing_prep",
+"target": "HCN channels",
+"timeline": null,
+"tissue_or_cell_type": "supragranular pyramidal neurons"
+}
+},
+"How do I optimize mammosphere assay seeding density to avoid cell aggregation when measuring breast cancer stem cell frequency in MCF-7 cells?": {
+"cqs": [
+"human MCF-7 breast cancer cells mammosphere formation efficiency",
+"human MCF-7 breast cancer cells mammosphere formation assay mammosphere formation efficiency",
+"human mammosphere formation assay MCF-7 breast cancer cells mammosphere formation efficiency",
+"Homo sapiens mammosphere formation efficiency",
+"human mammosphere formation assay MCF-7 breast cancer cells protocol",
+"mammosphere assay seeding density MCF-7 breast cancer stem cell",
+"mammosphere formation assay optimization single cell suspension aggregation prevention",
+"breast cancer stem cell mammosphere frequency MCF-7 ultra-low attachment protocol",
+"mammosphere assay seeding density optimization cancer stem cell frequency",
+"MCF-7 mammosphere protocol cell aggregation ultra-low attachment serum-free"
+],
+"profile": {
+"condition": "ultra-low attachment, serum-free conditions",
+"constraints": [
+"avoid cell aggregation",
+"optimize seeding density"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "mammosphere formation assay",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "phenotyping_physiology",
+"intent_specific": {
+"assay_type": "mammosphere formation",
+"cell_line": "MCF-7",
+"measurement": "cancer stem cell frequency",
+"optimization_goal": "seeding density to prevent aggregation"
+},
+"method": "mammosphere assay",
+"modification_type": null,
+"organism": "human",
+"protocol_difficulty": null,
+"readout": "sphere frequency / cancer stem cell frequency",
+"readout_assay": "mammosphere formation efficiency",
+"required_equipment": [],
+"sample_type": "cancer cell line",
+"sub_intent": "phenotyping_assay",
+"target": "breast cancer stem cells",
+"timeline": null,
+"tissue_or_cell_type": "MCF-7 breast cancer cells"
+}
+},
+"How do I sequence and assemble a plant genome from scratch using Oxford Nanopore long-read sequencing as a beginner?": {
+"cqs": [
+"assembled genome sequence",
+"Oxford Nanopore Technology (ONT) long-read sequencing and de novo genome assembly assembled genome sequence",
+"Oxford Nanopore Technology (ONT) long-read sequencing and de novo genome assembly protocol",
+"Oxford Nanopore long-read sequencing Oxford Nanopore Technology (ONT) long-read sequencing and de novo genome assembly whole genome assembled genome sequence beginner beginner-friendly Oxford Nanopore Technology (ONT) long-read de novo beginner level de novo assembly",
+"Oxford Nanopore long-read sequencing Oxford Nanopore Technology (ONT) long-read sequencing and de novo genome assembly whole genome assembled genome sequence beginner beginner-friendly Oxford Nanopore Technology (ONT) long-read de novo beginner level de novo assembly beginner level de novo assembly"
+],
+"profile": {
+"condition": "beginner",
+"constraints": [
+"beginner level",
+"de novo assembly"
+],
+"delivery_method": null,
+"difficulty": "beginner",
+"equipment": [
+"Oxford Nanopore MinION or PromethION"
+],
+"experimental_method": "Oxford Nanopore Technology (ONT) long-read sequencing and de novo genome assembly",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"assembly_type": "de novo",
+"read_type": "long-read",
+"scope": "whole genome",
+"sequencing_platform": "Oxford Nanopore Technology (ONT)"
+},
+"method": "Oxford Nanopore long-read sequencing",
+"modification_type": null,
+"organism": "plant",
+"protocol_difficulty": "beginner-friendly",
+"readout": "assembled genome sequence",
+"readout_assay": null,
+"required_equipment": [
+"Oxford Nanopore sequencer"
+],
+"sample_type": null,
+"sub_intent": "sequencing_prep",
+"target": "whole genome",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"How do basement membrane gaps form during vulval invasion in C. elegans, and what role do integrins play in regulating basement membrane remodeling?": {
+"cqs": [
+"How do basement membrane gaps form during vulval invasion in C. elegans, and what role do integrins play in regulating basement membrane remodeling?"
+],
+"profile": {
+"condition": null,
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": null,
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": null,
+"intent_specific": {
+"key_concepts": [
+"basement membrane gaps",
+"vulval invasion",
+"integrins",
+"basement membrane remodeling"
+],
+"topic": "basement membrane remodeling during vulval invasion"
+},
+"method": null,
+"modification_type": null,
+"organism": "C. elegans",
+"protocol_difficulty": null,
+"readout": null,
+"readout_assay": null,
+"required_equipment": [],
+"sample_type": null,
+"sub_intent": null,
+"target": null,
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"How do lymphatic endothelial cells form new vessels in adult pathological models like corneal assay and lymphangioma, examined by transmission electron microscopy?": {
+"cqs": [
+"lymphatic endothelial cells TEM ultrastructure",
+"lymphatic endothelial cells transmission electron microscopy TEM ultrastructure",
+"transmission electron microscopy lymphatic endothelial cells TEM ultrastructure",
+"TEM ultrastructure",
+"transmission electron microscopy lymphatic endothelial cells protocol"
+],
+"profile": {
+"condition": "pathological models: corneal assay and lymphangioma",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [
+"transmission electron microscope"
+],
+"experimental_method": "transmission electron microscopy",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "microscopy_imaging",
+"intent_specific": {
+"biological_context": "adult pathological lymphangiogenesis",
+"imaging_modality": "TEM",
+"model_types": [
+"corneal lymphangiogenesis assay",
+"lymphangioma"
+],
+"process_of_interest": "lymphangiogenesis"
+},
+"method": "transmission electron microscopy",
+"modification_type": null,
+"organism": null,
+"protocol_difficulty": null,
+"readout": "ultrastructural imaging of lymphatic vessel formation",
+"readout_assay": "TEM ultrastructure",
+"required_equipment": [
+"transmission electron microscope"
+],
+"sample_type": "lymphatic endothelial cells",
+"sub_intent": "microscopy",
+"target": "lymphangiogenesis / new vessel formation",
+"timeline": "adult",
+"tissue_or_cell_type": "lymphatic endothelial cells"
+}
+},
+"How do you perform real-time RT-qPCR gene expression analysis on bacterial and mammalian RNA samples aboard the International Space Station in microgravity conditions?": {
+"cqs": [
+"bacterial and mammalian RNA RT-qPCR",
+"bacterial and mammalian RNA RT-qPCR RT-qPCR",
+"bacterial and mammalian RT-qPCR RNA RT-qPCR",
+"bacterial and mammalian RT-qPCR",
+"bacterial and mammalian RT-qPCR RNA protocol",
+"RT-qPCR RNA extraction microgravity ISS spaceflight protocol",
+"real-time PCR gene expression bacterial mammalian cells spaceflight conditions",
+"RNA isolation RT-qPCR International Space Station microgravity",
+"spaceflight RT-qPCR mammalian bacterial RNA gene expression analysis",
+"microgravity qPCR protocol RNA preservation spaceflight hardware"
+],
+"profile": {
+"condition": "microgravity, International Space Station",
+"constraints": [
+"microgravity environment",
+"space-rated equipment",
+"ISS safety compliance"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "RT-qPCR",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "gene_expression_analysis",
+"intent_specific": {
+"analysis_type": "gene expression profiling",
+"environment": "International Space Station (ISS)",
+"gravity_condition": "microgravity",
+"rna_source_organisms": [
+"bacterial",
+"mammalian"
+]
+},
+"method": "real-time RT-qPCR",
+"modification_type": null,
+"organism": "bacterial and mammalian",
+"protocol_difficulty": null,
+"readout": "gene expression",
+"readout_assay": "RT-qPCR",
+"required_equipment": [],
+"sample_type": "RNA",
+"sub_intent": "pcr_qpcr",
+"target": null,
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"How does E. coli RNase H1 bind and cleave R-loops of different RNA-DNA hybrid lengths, and does RNA polymerase protect these structures from degradation?": {
+"cqs": [
+"E. coli in vitro biochemical assay gel electrophoresis / radioactive or fluorescent cleavage assay",
+"E. coli in vitro biochemical assay in vitro RNA-DNA hybrid cleavage assay gel electrophoresis / radioactive or fluorescent cleavage assay",
+"E. coli in vitro RNA-DNA hybrid cleavage assay in vitro biochemical assay gel electrophoresis / radioactive or fluorescent cleavage assay",
+"Escherichia coli gel electrophoresis / radioactive or fluorescent cleavage assay",
+"E. coli in vitro RNA-DNA hybrid cleavage assay in vitro biochemical assay protocol",
+"E. coli RNase H1 R-loop cleavage RNA-DNA hybrid length in vitro assay",
+"RNase H1 binding RNA-DNA hybrid substrate length dependence biochemical assay",
+"R-loop degradation RNase H RNA polymerase protection assay E. coli",
+"in vitro R-loop cleavage assay RNase H1 variable hybrid length gel electrophoresis",
+"RNA polymerase R-loop protection RNase H degradation biochemical reconstitution"
+],
+"profile": {
+"condition": "variable RNA-DNA hybrid lengths; presence or absence of RNA polymerase",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "in vitro RNA-DNA hybrid cleavage assay",
+"expression_type": null,
+"gene_or_construct": "RNase H1",
+"intent_family": "general_protocol_search",
+"intent_specific": {
+"enzyme": "RNase H1",
+"interaction_type": "binding and cleavage",
+"protective_factor": "RNA polymerase",
+"substrate": "R-loops of different RNA-DNA hybrid lengths",
+"variable": "RNA-DNA hybrid length"
+},
+"method": "biochemical binding and cleavage assay",
+"modification_type": null,
+"organism": "E. coli",
+"protocol_difficulty": null,
+"readout": "RNA-DNA hybrid cleavage efficiency; RNA polymerase protection of R-loops",
+"readout_assay": "gel electrophoresis / radioactive or fluorescent cleavage assay",
+"required_equipment": [],
+"sample_type": "in vitro biochemical assay",
+"sub_intent": "general_protocol_search",
+"target": "R-loops / RNA-DNA hybrids",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"How does GABA inhibition of vasopressin neurons in the supraoptic nucleus change in bile duct-ligated cirrhotic rats, and does intracellular chloride dysregulation contribute?": {
+"cqs": [
+"How does GABA inhibition of vasopressin neurons in the supraoptic nucleus change in bile duct-ligated cirrhotic rats, and does intracellular chloride dysregulation contribute?"
+],
+"profile": {
+"condition": "bile duct-ligated cirrhosis",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": null,
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": null,
+"intent_specific": {
+"disease_model": "bile duct ligation (BDL) cirrhotic rat",
+"ion": "chloride (Cl-)",
+"neurotransmitter": "GABA",
+"receptor_type": "GABA-A",
+"topic": "chloride homeostasis, GABAergic signaling, neuroendocrinology"
+},
+"method": null,
+"modification_type": null,
+"organism": "rat",
+"protocol_difficulty": null,
+"readout": null,
+"readout_assay": null,
+"required_equipment": [],
+"sample_type": null,
+"sub_intent": null,
+"target": "GABA inhibition, intracellular chloride, vasopressin neurons",
+"timeline": null,
+"tissue_or_cell_type": "supraoptic nucleus vasopressin neurons"
+}
+},
+"How does H3.3 histone variant downregulation affect B cell to plasma cell differentiation and chromatin accessibility changes in mice?": {
+"cqs": [
+"mouse B cells / plasma cells chromatin accessibility, B cell to plasma cell differentiation",
+"Mus musculus chromatin accessibility, B cell to plasma cell differentiation",
+"mouse B cells / plasma cells protocol",
+"mouse H3.3 histone variant knockdown or downregulation primary cells B cells / plasma cells chromatin accessibility, B cell to plasma cell differentiation B cell to plasma cell differentiation H3f3a or H3f3b (H3.3 encoding genes) H3.3 chromatin accessibility",
+"How does H3.3 histone variant downregulation affect B cell to plasma cell differentiation and chromatin accessibility changes in mice?"
+],
+"profile": {
+"condition": "B cell to plasma cell differentiation",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": null,
+"expression_type": null,
+"gene_or_construct": "H3f3a or H3f3b (H3.3 encoding genes)",
+"intent_family": "gene_expression_analysis",
+"intent_specific": {
+"biological_process": "B cell to plasma cell differentiation",
+"chromatin_readout": "chromatin accessibility",
+"histone_variant": "H3.3",
+"modification_type": "knockdown or downregulation"
+},
+"method": null,
+"modification_type": "knockdown or downregulation",
+"organism": "mouse",
+"protocol_difficulty": null,
+"readout": "chromatin accessibility, B cell to plasma cell differentiation",
+"readout_assay": null,
+"required_equipment": [],
+"sample_type": "primary cells",
+"sub_intent": "gene_knockdown",
+"target": "H3.3 histone variant",
+"timeline": null,
+"tissue_or_cell_type": "B cells / plasma cells"
+}
+},
+"How does SRPK1-mediated protamine phosphorylation trigger protamine-to-histone exchange and chromatin reprogramming in fertilized mouse oocytes?": {
+"cqs": [
+"How does SRPK1-mediated protamine phosphorylation trigger protamine-to-histone exchange and chromatin reprogramming in fertilized mouse oocytes?"
+],
+"profile": {
+"condition": "fertilization",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": null,
+"expression_type": null,
+"gene_or_construct": "SRPK1",
+"intent_family": null,
+"intent_specific": {
+"topic": "SRPK1-mediated protamine phosphorylation and protamine-to-histone exchange during chromatin reprogramming"
+},
+"method": null,
+"modification_type": null,
+"organism": "mouse",
+"protocol_difficulty": null,
+"readout": null,
+"readout_assay": null,
+"required_equipment": [],
+"sample_type": null,
+"sub_intent": null,
+"target": "SRPK1, protamine, histone",
+"timeline": null,
+"tissue_or_cell_type": "fertilized oocyte"
+}
+},
+"How does TMEM127 loss affect RET receptor endocytosis and surface accumulation to drive constitutive signaling in pheochromocytoma cells?": {
+"cqs": [
+"human pheochromocytoma cells flow cytometry, immunofluorescence, western blot",
+"human pheochromocytoma cells receptor endocytosis assay, surface protein accumulation assay flow cytometry, immunofluorescence, western blot",
+"human receptor endocytosis assay, surface protein accumulation assay pheochromocytoma cells flow cytometry, immunofluorescence, western blot",
+"Homo sapiens flow cytometry, immunofluorescence, western blot",
+"human receptor endocytosis assay, surface protein accumulation assay pheochromocytoma cells protocol",
+"RET receptor endocytosis assay pheochromocytoma cells TMEM127 knockout",
+"receptor surface accumulation flow cytometry RET pheochromocytoma",
+"TMEM127 loss-of-function RET constitutive signaling western blot",
+"receptor tyrosine kinase endocytosis trafficking assay live cell imaging",
+"RET surface biotinylation internalization assay pheochromocytoma"
+],
+"profile": {
+"condition": "TMEM127 loss",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "receptor endocytosis assay, surface protein accumulation assay",
+"expression_type": null,
+"gene_or_construct": "TMEM127",
+"intent_family": "gene_expression_analysis",
+"intent_specific": {
+"disease_context": "pheochromocytoma",
+"modification_type": "loss-of-function / knockout",
+"pathway": "receptor tyrosine kinase endocytosis / recycling",
+"phenotype_of_interest": "constitutive RET signaling due to impaired endocytosis",
+"receptor": "RET"
+},
+"method": null,
+"modification_type": "loss-of-function / knockout",
+"organism": "human",
+"protocol_difficulty": null,
+"readout": "RET surface levels, endocytosis rate, constitutive signaling",
+"readout_assay": "flow cytometry, immunofluorescence, western blot",
+"required_equipment": [],
+"sample_type": "cell line",
+"sub_intent": "phenotyping_assay",
+"target": "RET receptor",
+"timeline": null,
+"tissue_or_cell_type": "pheochromocytoma cells"
+}
+},
+"How does alanyl-tRNA synthetase maintain chiral selectivity against D-alanine and what role does DTD play in correcting D-amino acid mischarging during translation?": {
+"cqs": [
+"How does alanyl-tRNA synthetase maintain chiral selectivity against D-alanine and what role does DTD play in correcting D-amino acid mischarging during translation?"
+],
+"profile": {
+"condition": null,
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": null,
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": null,
+"intent_specific": {},
+"method": null,
+"modification_type": null,
+"organism": null,
+"protocol_difficulty": null,
+"readout": null,
+"readout_assay": null,
+"required_equipment": [],
+"sample_type": null,
+"sub_intent": null,
+"target": null,
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"How does beta-cell SENP1 knockout affect incretin-stimulated insulin secretion and glucose tolerance in high-fat diet mice?": {
+"cqs": [
+"mouse knockout SENP1 pancreatic beta-cells protocol",
+"Mus musculus SENP1 knockout",
+"mouse knockout glucose tolerance test (GTT), insulin secretion assay, GLP-1/GIP stimulation assay",
+"mouse pancreatic beta-cells knockout SENP1",
+"mouse beta-cell specific conditional knockout conditional gene knockout (Cre-lox or similar) SENP1 knockout pancreatic islets / in vivo mouse model pancreatic beta-cells incretin-stimulated insulin secretion, glucose tolerance glucose tolerance test (GTT), insulin secretion assay, GLP-1/GIP stimulation assay high-fat diet (HFD) beta-cell specific high-fat diet GLP-1, GIP glucose tolerance test insulin secretion incretin-stimulated GSIS",
+"beta-cell specific SENP1 knockout mouse insulin secretion protocol",
+"pancreatic islet GLP-1 incretin-stimulated insulin secretion assay high-fat diet mouse",
+"glucose tolerance test high-fat diet mouse pancreatic beta-cell conditional knockout",
+"mouse islet isolation GSIS incretin GLP-1 GIP stimulation protocol",
+"Cre-lox beta-cell conditional knockout HFD glucose homeostasis phenotyping"
+],
+"profile": {
+"condition": "high-fat diet (HFD)",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "conditional gene knockout (Cre-lox or similar)",
+"expression_type": null,
+"gene_or_construct": "SENP1",
+"intent_family": "gene_nucleic_acid_manipulation",
+"intent_specific": {
+"diet_model": "high-fat diet",
+"gene_target": "SENP1",
+"incretin_hormones": "GLP-1, GIP",
+"knockout_specificity": "beta-cell specific",
+"modification_type": "knockout",
+"phenotype_readouts": [
+"glucose tolerance test",
+"insulin secretion",
+"incretin-stimulated GSIS"
+]
+},
+"method": "beta-cell specific conditional knockout",
+"modification_type": "knockout",
+"organism": "mouse",
+"protocol_difficulty": null,
+"readout": "incretin-stimulated insulin secretion, glucose tolerance",
+"readout_assay": "glucose tolerance test (GTT), insulin secretion assay, GLP-1/GIP stimulation assay",
+"required_equipment": [],
+"sample_type": "pancreatic islets / in vivo mouse model",
+"sub_intent": "genome_editing",
+"target": "SENP1",
+"timeline": null,
+"tissue_or_cell_type": "pancreatic beta-cells"
+}
+},
+"How does climate variability influence reproductive isolation and hybridization dynamics between Mimulus guttatus and Mimulus nasutus in natural admixed populations using whole-genome sequencing?": {
+"cqs": [
+"Mimulus guttatus and Mimulus nasutus natural admixed populations population genomics / admixture analysis",
+"Mimulus guttatus and Mimulus nasutus natural admixed populations whole-genome sequencing (WGS) population genomics / admixture analysis",
+"Mimulus guttatus and Mimulus nasutus whole-genome sequencing (WGS) natural admixed populations population genomics / admixture analysis",
+"Mimulus guttatus and Mimulus nasutus population genomics / admixture analysis",
+"Mimulus guttatus and Mimulus nasutus whole-genome sequencing (WGS) natural admixed populations protocol"
+],
+"profile": {
+"condition": "climate variability",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "whole-genome sequencing (WGS)",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"analysis_type": "population genomics",
+"environmental_variable": "climate variability",
+"genomic_approach": "whole-genome resequencing",
+"study_focus": "reproductive isolation, hybridization, introgression"
+},
+"method": "whole-genome sequencing",
+"modification_type": null,
+"organism": "Mimulus guttatus and Mimulus nasutus",
+"protocol_difficulty": null,
+"readout": "admixture and hybridization dynamics",
+"readout_assay": "population genomics / admixture analysis",
+"required_equipment": [],
+"sample_type": "natural admixed populations",
+"sub_intent": "sequencing_prep",
+"target": "reproductive isolation and hybridization dynamics",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"How does elevation drive natural selection on group aggregation behavior across globally sampled wild C. elegans strains using GWAS and heritability analysis?": {
+"cqs": [
+"C. elegans wild strains behavioral assay",
+"C. elegans wild strains genome-wide association study (GWAS), heritability analysis behavioral assay",
+"C. elegans genome-wide association study (GWAS), heritability analysis wild strains behavioral assay",
+"C. elegans behavioral assay",
+"C. elegans genome-wide association study (GWAS), heritability analysis wild strains protocol",
+"C. elegans wild strains aggregation behavior GWAS natural variation",
+"C. elegans bordering clumping behavioral phenotype heritability genome-wide association",
+"wild C. elegans population genetics elevation selection behavioral assay",
+"C. elegans natural isolates social feeding aggregation GWAS SNP mapping",
+"C. elegans behavioral quantitative genetics heritability analysis globally sampled strains"
+],
+"profile": {
+"condition": "elevation gradient (globally sampled strains)",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "genome-wide association study (GWAS), heritability analysis",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"analysis_type": [
+"GWAS",
+"heritability estimation"
+],
+"environmental_factor": "elevation",
+"natural_variation": true,
+"population_genetics": true,
+"selection_pressure": "natural selection",
+"strain_collection": "globally sampled wild C. elegans strains"
+},
+"method": "GWAS and heritability analysis",
+"modification_type": null,
+"organism": "C. elegans",
+"protocol_difficulty": null,
+"readout": "aggregation behavior phenotype",
+"readout_assay": "behavioral assay",
+"required_equipment": [],
+"sample_type": "wild strains",
+"sub_intent": "general_protocol_search",
+"target": "group aggregation behavior",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"How does microglial DISC1 knockout affect synaptic pruning and spatial memory in mice through actin cytoskeletal dysregulation?": {
+"cqs": [
+"mouse knockout DISC1 microglia protocol",
+"Mus musculus DISC1 knockout",
+"mouse knockout synapse quantification, Morris water maze / Barnes maze, actin polymerization assay",
+"mouse microglia knockout DISC1",
+"mouse CRISPR/Cas9 or conditional knockout genome editing / conditional knockout DISC1 knockout primary microglia / brain tissue microglia synaptic pruning, spatial memory, actin cytoskeleton synapse quantification, Morris water maze / Barnes maze, actin polymerization assay microglial DISC1 loss-of-function high actin cytoskeletal regulation synaptic pruning deficits and spatial memory impairment microglial-specific microglia-specific knockout preferred actin cytoskeletal dysregulation as mechanistic readout",
+"microglial DISC1 knockout synaptic pruning mouse protocol",
+"conditional microglia-specific gene knockout CRISPR mouse brain",
+"microglia actin cytoskeleton phagocytosis synapse elimination assay",
+"mouse spatial memory Morris water maze Barnes maze behavioral protocol",
+"microglial synapse engulfment immunofluorescence quantification mouse brain"
+],
+"profile": {
+"condition": "microglial DISC1 loss-of-function",
+"constraints": [
+"microglia-specific knockout preferred",
+"actin cytoskeletal dysregulation as mechanistic readout"
+],
+"delivery_method": null,
+"difficulty": "high",
+"equipment": [],
+"experimental_method": "genome editing / conditional knockout",
+"expression_type": null,
+"gene_or_construct": "DISC1",
+"intent_family": "gene_nucleic_acid_manipulation",
+"intent_specific": {
+"cell_type_specificity": "microglial-specific",
+"modification_type": "knockout",
+"pathway": "actin cytoskeletal regulation",
+"phenotype_of_interest": "synaptic pruning deficits and spatial memory impairment"
+},
+"method": "CRISPR/Cas9 or conditional knockout",
+"modification_type": "knockout",
+"organism": "mouse",
+"protocol_difficulty": "high",
+"readout": "synaptic pruning, spatial memory, actin cytoskeleton",
+"readout_assay": "synapse quantification, Morris water maze / Barnes maze, actin polymerization assay",
+"required_equipment": [],
+"sample_type": "primary microglia / brain tissue",
+"sub_intent": "genome_editing",
+"target": "DISC1",
+"timeline": null,
+"tissue_or_cell_type": "microglia"
+}
+},
+"How does phosphorylated Rab8 and Rab10 binding to LRRK2 create a feed-forward loop that amplifies kinase activity at membranes in Parkinson's disease?": {
+"cqs": [
+"How does phosphorylated Rab8 and Rab10 binding to LRRK2 create a feed-forward loop that amplifies kinase activity at membranes in Parkinson's disease?"
+],
+"profile": {
+"condition": null,
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": null,
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": null,
+"intent_specific": {},
+"method": null,
+"modification_type": null,
+"organism": null,
+"protocol_difficulty": null,
+"readout": null,
+"readout_assay": null,
+"required_equipment": [],
+"sample_type": null,
+"sub_intent": null,
+"target": null,
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"How does proline-to-serine tRNA mistranslation differentially affect gene expression in male versus female Drosophila using RNA-seq transcriptomics?": {
+"cqs": [
+"Drosophila whole organism or tissue RNA-seq",
+"Drosophila whole organism or tissue bulk RNA-seq transcriptomics RNA-seq",
+"Drosophila bulk RNA-seq transcriptomics whole organism or tissue RNA-seq",
+"Drosophila RNA-seq",
+"Drosophila bulk RNA-seq transcriptomics whole organism or tissue protocol"
+],
+"profile": {
+"condition": "proline-to-serine mistranslation vs wild-type, male vs female",
+"constraints": [
+"sex-stratified analysis",
+"male vs female comparison"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "bulk RNA-seq transcriptomics",
+"expression_type": null,
+"gene_or_construct": "tRNA (Pro to Ser mistranslating variant)",
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"analysis_type": "differential gene expression",
+"mistranslation_type": "proline-to-serine tRNA",
+"modification_type": "mistranslation (tRNA mutation)",
+"sex_comparison": "male vs female"
+},
+"method": "RNA-seq",
+"modification_type": "mistranslation (tRNA mutation)",
+"organism": "Drosophila",
+"protocol_difficulty": null,
+"readout": "differential gene expression by sex",
+"readout_assay": "RNA-seq",
+"required_equipment": [],
+"sample_type": "whole organism or tissue",
+"sub_intent": "sequencing_prep",
+"target": "proline-to-serine tRNA mistranslation",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"How does reference population size and linkage disequilibrium pattern affect genomic breeding value prediction accuracy using GBLUP and weighted GBLUP in multi-population beef cattle scenarios?": {
+"cqs": [
+"How does reference population size and linkage disequilibrium pattern affect genomic breeding value prediction accuracy using GBLUP and weighted GBLUP in multi-population beef cattle scenarios?"
+],
+"profile": {
+"condition": "multi-population scenario, varying reference population size, varying LD patterns",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": null,
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": null,
+"intent_specific": {
+"factors": [
+"reference population size",
+"linkage disequilibrium pattern"
+],
+"scenario": "multi-population beef cattle",
+"statistical_model": "GBLUP, weighted GBLUP",
+"topic": "genomic breeding value prediction accuracy"
+},
+"method": "GBLUP, weighted GBLUP",
+"modification_type": null,
+"organism": "beef cattle",
+"protocol_difficulty": null,
+"readout": null,
+"readout_assay": null,
+"required_equipment": [],
+"sample_type": null,
+"sub_intent": null,
+"target": null,
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"How does storing wastewater solids at different temperatures and freeze-thaw cycles affect SARS-CoV-2 RNA measurements for epidemiological surveillance?": {
+"cqs": [
+"SARS-CoV-2 wastewater solids / sludge RT-qPCR",
+"SARS-CoV-2 wastewater solids / sludge wastewater epidemiological surveillance RT-qPCR",
+"SARS-CoV-2 wastewater epidemiological surveillance wastewater solids / sludge RT-qPCR",
+"SARS-CoV-2 RT-qPCR",
+"SARS-CoV-2 wastewater epidemiological surveillance wastewater solids / sludge protocol",
+"SARS-CoV-2 RNA stability wastewater solids storage temperature RT-qPCR",
+"freeze-thaw cycles SARS-CoV-2 RNA wastewater sludge quantification",
+"wastewater epidemiology SARS-CoV-2 RNA extraction storage conditions",
+"wastewater-based surveillance SARS-CoV-2 RNA degradation temperature effects",
+"RT-qPCR SARS-CoV-2 wastewater solids freeze-thaw RNA recovery"
+],
+"profile": {
+"condition": "temperature variation and freeze-thaw cycles during storage",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "wastewater epidemiological surveillance",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"application": "epidemiological surveillance",
+"matrix": "wastewater solids",
+"storage_conditions": "multiple temperatures and freeze-thaw cycles"
+},
+"method": "RT-qPCR / RNA extraction",
+"modification_type": null,
+"organism": "SARS-CoV-2",
+"protocol_difficulty": null,
+"readout": "RNA concentration / quantification",
+"readout_assay": "RT-qPCR",
+"required_equipment": [],
+"sample_type": "wastewater solids / sludge",
+"sub_intent": "general_protocol_search",
+"target": "SARS-CoV-2 RNA",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"How does the G2019S LRRK2 mutation affect cilia loss and Hedgehog signaling in striatal neurons of mouse models?": {
+"cqs": [
+"How does the G2019S LRRK2 mutation affect cilia loss and Hedgehog signaling in striatal neurons of mouse models?"
+],
+"profile": {
+"condition": "G2019S mutation",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": null,
+"expression_type": null,
+"gene_or_construct": "LRRK2",
+"intent_family": null,
+"intent_specific": {
+"cell_type": "striatal neurons",
+"gene": "LRRK2",
+"model": "mouse",
+"mutation": "G2019S",
+"phenotype": "cilia loss and Hedgehog signaling disruption"
+},
+"method": null,
+"modification_type": null,
+"organism": "mouse",
+"protocol_difficulty": null,
+"readout": "cilia loss, Hedgehog signaling",
+"readout_assay": null,
+"required_equipment": [],
+"sample_type": null,
+"sub_intent": null,
+"target": "LRRK2 G2019S",
+"timeline": null,
+"tissue_or_cell_type": "striatal neurons"
+}
+},
+"How does wearing soft-soled shoes affect gait kinematics and spatiotemporal parameters in newly walking toddlers compared to barefoot walking?": {
+"cqs": [
+"How does wearing soft-soled shoes affect gait kinematics and spatiotemporal parameters in newly walking toddlers compared to barefoot walking?"
+],
+"profile": {
+"condition": null,
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": null,
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": null,
+"intent_specific": {},
+"method": null,
+"modification_type": null,
+"organism": null,
+"protocol_difficulty": null,
+"readout": null,
+"readout_assay": null,
+"required_equipment": [],
+"sample_type": null,
+"sub_intent": null,
+"target": null,
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"How should I standardize fasting, cage-changing, and glucose tolerance test protocols in mouse diabetes research to improve reproducibility and animal welfare?": {
+"cqs": [
+"mouse blood glucometer / AUC calculation",
+"mouse blood glucose tolerance test (GTT) glucometer / AUC calculation",
+"mouse glucose tolerance test (GTT) blood glucometer / AUC calculation",
+"Mus musculus glucometer / AUC calculation",
+"mouse glucose tolerance test (GTT) blood protocol",
+"mouse glucose tolerance test standardized protocol fasting reproducibility",
+"intraperitoneal glucose tolerance test mouse diabetes model fasting duration",
+"oral glucose tolerance test mouse fasting cage change animal welfare",
+"GTT mouse protocol blood glucose AUC standardization",
+"mouse diabetes phenotyping fasting protocol reproducibility animal welfare"
+],
+"profile": {
+"condition": "fasting, diabetes model",
+"constraints": [
+"reproducibility",
+"animal welfare",
+"standardized fasting",
+"cage-changing protocol"
+],
+"delivery_method": "intraperitoneal injection or oral gavage",
+"difficulty": "moderate",
+"equipment": [
+"glucometer",
+"insulin syringe",
+"metabolic cage"
+],
+"experimental_method": "glucose tolerance test (GTT)",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "phenotyping_physiology",
+"intent_specific": {
+"delivery_method": "intraperitoneal injection or oral gavage",
+"diabetes_model": "unspecified",
+"fasting_duration": "unspecified",
+"glucose_dose": "unspecified",
+"route_of_administration": "unspecified",
+"standardization_focus": [
+"fasting",
+"cage-changing",
+"GTT protocol"
+]
+},
+"method": "glucose tolerance test",
+"modification_type": null,
+"organism": "mouse",
+"protocol_difficulty": "moderate",
+"readout": "blood glucose levels over time",
+"readout_assay": "glucometer / AUC calculation",
+"required_equipment": [
+"glucometer",
+"insulin syringe"
+],
+"sample_type": "whole animal",
+"sub_intent": "phenotyping_assay",
+"target": "blood glucose",
+"timeline": null,
+"tissue_or_cell_type": "blood"
+}
+},
+"How to extract high molecular weight DNA from filamentous fungi for long-read third-generation sequencing to get complete genome assemblies?": {
+"cqs": [
+"filamentous fungi mycelium long-read sequencing (PacBio or Oxford Nanopore)",
+"filamentous fungi mycelium HMW DNA extraction for long-read sequencing long-read sequencing (PacBio or Oxford Nanopore)",
+"filamentous fungi HMW DNA extraction for long-read sequencing mycelium long-read sequencing (PacBio or Oxford Nanopore)",
+"filamentous fungi long-read sequencing (PacBio or Oxford Nanopore)",
+"filamentous fungi HMW DNA extraction for long-read sequencing mycelium protocol",
+"high molecular weight DNA extraction filamentous fungi Oxford Nanopore sequencing",
+"HMW genomic DNA isolation fungi PacBio long-read sequencing genome assembly",
+"ultra-high molecular weight DNA extraction Aspergillus Neurospora mycelium",
+"filamentous fungi gDNA extraction protocol third-generation sequencing cell wall lysis",
+"intact DNA extraction fungi long-read sequencing complete genome assembly"
+],
+"profile": {
+"condition": null,
+"constraints": [
+"high molecular weight DNA",
+"third-generation sequencing",
+"complete genome assembly"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "HMW DNA extraction for long-read sequencing",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"assembly_goal": "complete genome assembly",
+"dna_quality": "high molecular weight",
+"sequencing_platform": "long-read (PacBio / Oxford Nanopore)",
+"special_consideration": "cell wall disruption without excessive shearing"
+},
+"method": "HMW DNA extraction",
+"modification_type": null,
+"organism": "filamentous fungi",
+"protocol_difficulty": null,
+"readout": "complete genome assembly",
+"readout_assay": "long-read sequencing (PacBio or Oxford Nanopore)",
+"required_equipment": [],
+"sample_type": "mycelium",
+"sub_intent": "sequencing_prep",
+"target": "high molecular weight genomic DNA",
+"timeline": null,
+"tissue_or_cell_type": "mycelium"
+}
+},
+"How to optimize PCR conditions for amplifying a high GC-content EGFR promoter region to detect SNPs at positions -216G>T and -191C>A?": {
+"cqs": [
+"human SNP genotyping / Sanger sequencing or allele-specific PCR",
+"human PCR optimization for high GC-content amplification and SNP detection SNP genotyping / Sanger sequencing or allele-specific PCR",
+"Homo sapiens SNP genotyping / Sanger sequencing or allele-specific PCR",
+"human PCR optimization for high GC-content amplification and SNP detection protocol",
+"human PCR PCR optimization for high GC-content amplification and SNP detection EGFR promoter region SNP detection at -216G>T and -191C>A SNP genotyping / Sanger sequencing or allele-specific PCR high GC-content template EGFR promoter -216G>T -191C>A high GC content DMSO betaine GC enhancer buffer GC-optimized or hot-start polymerase high GC-content amplification SNP positions -216G>T and -191C>A",
+"PCR optimization high GC-content EGFR promoter SNP detection",
+"high GC PCR protocol DMSO betaine EGFR promoter amplification",
+"GC-rich PCR conditions optimization human EGFR promoter region",
+"allele-specific PCR SNP genotyping high GC promoter EGFR",
+"PCR troubleshooting high GC template GC enhancer polymerase EGFR"
+],
+"profile": {
+"condition": "high GC-content template",
+"constraints": [
+"high GC-content amplification",
+"SNP positions -216G>T and -191C>A"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "PCR optimization for high GC-content amplification and SNP detection",
+"expression_type": null,
+"gene_or_construct": "EGFR",
+"intent_family": "gene_expression_analysis",
+"intent_specific": {
+"challenge": "high GC content",
+"gene": "EGFR",
+"pcr_additives_of_interest": [
+"DMSO",
+"betaine",
+"GC enhancer buffer"
+],
+"polymerase_type": "GC-optimized or hot-start polymerase",
+"region": "promoter",
+"snp_positions": [
+"-216G>T",
+"-191C>A"
+]
+},
+"method": "PCR",
+"modification_type": null,
+"organism": "human",
+"protocol_difficulty": null,
+"readout": "SNP detection at -216G>T and -191C>A",
+"readout_assay": "SNP genotyping / Sanger sequencing or allele-specific PCR",
+"required_equipment": [
+"thermocycler"
+],
+"sample_type": null,
+"sub_intent": "pcr_qpcr",
+"target": "EGFR promoter region",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Identify extrachromosomal circular DNA including oncogene amplifications from nanopore long-read sequencing data using a graph-based bioinformatics pipeline in human cancer cells.": {
+"cqs": [
+"human human cancer cells graph-based bioinformatics pipeline for eccDNA detection",
+"human human cancer cells Oxford Nanopore Technology (ONT) long-read sequencing with graph-based bioinformatics pipeline graph-based bioinformatics pipeline for eccDNA detection",
+"human Oxford Nanopore Technology (ONT) long-read sequencing with graph-based bioinformatics pipeline human cancer cells graph-based bioinformatics pipeline for eccDNA detection",
+"Homo sapiens graph-based bioinformatics pipeline for eccDNA detection",
+"human Oxford Nanopore Technology (ONT) long-read sequencing with graph-based bioinformatics pipeline human cancer cells protocol",
+"extrachromosomal circular DNA nanopore long-read sequencing human cancer cells",
+"eccDNA detection ONT sequencing graph-based pipeline oncogene amplification",
+"circular DNA identification nanopore sequencing cancer genome graph assembly",
+"extrachromosomal DNA amplification long-read sequencing bioinformatics human tumor",
+"eccDNA nanopore sequencing pipeline oncogene amplification human cancer cell line"
+],
+"profile": {
+"condition": null,
+"constraints": [
+"graph-based pipeline",
+"long-read data",
+"oncogene amplification detection"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [
+"Oxford Nanopore sequencer",
+"bioinformatics compute cluster"
+],
+"experimental_method": "Oxford Nanopore Technology (ONT) long-read sequencing with graph-based bioinformatics pipeline",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"analysis_type": "graph-based bioinformatics",
+"cancer_relevance": "oncogene amplifications",
+"read_type": "long-read",
+"sample_source": "human cancer cell lines or tumor samples",
+"sequencing_platform": "Oxford Nanopore Technology (ONT)",
+"target_DNA_type": "extrachromosomal circular DNA (eccDNA)"
+},
+"method": "nanopore long-read sequencing",
+"modification_type": null,
+"organism": "human",
+"protocol_difficulty": null,
+"readout": "eccDNA identification including oncogene amplifications",
+"readout_assay": "graph-based bioinformatics pipeline for eccDNA detection",
+"required_equipment": [
+"Oxford Nanopore sequencer",
+"bioinformatics compute cluster"
+],
+"sample_type": "cancer cells",
+"sub_intent": "sequencing_prep",
+"target": "extrachromosomal circular DNA (eccDNA), oncogene amplifications",
+"timeline": null,
+"tissue_or_cell_type": "human cancer cells"
+}
+},
+"Identify proteins localized at specific genomic loci like telomeres using dCas9-APEX2 proximity labeling and mass spectrometry in living human cells.": {
+"cqs": [
+"human human cells mass spectrometry",
+"human human cells dCas9-APEX2 proximity labeling mass spectrometry",
+"human dCas9-APEX2 proximity labeling human cells mass spectrometry",
+"Homo sapiens mass spectrometry",
+"human dCas9-APEX2 proximity labeling human cells protocol",
+"dCas9-APEX2 proximity labeling telomere proteomics human cells",
+"APEX2 locus-specific chromatin proteomics mass spectrometry living cells",
+"dCas9 proximity labeling genomic loci protein identification mass spectrometry",
+"telomere associated protein profiling APEX2 biotinylation human cells",
+"CasID APEX2 dCas9 chromatin proteomics specific genomic region"
+],
+"profile": {
+"condition": "living cells",
+"constraints": [
+"living cells",
+"specific genomic loci"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "dCas9-APEX2 proximity labeling",
+"expression_type": null,
+"gene_or_construct": "dCas9-APEX2",
+"intent_family": "protein_work",
+"intent_specific": {
+"approach": "locus-specific chromatin proteomics",
+"downstream_analysis": "mass spectrometry",
+"labeling_enzyme": "APEX2",
+"locus": "telomeres",
+"targeting_system": "dCas9"
+},
+"method": "proximity labeling",
+"modification_type": null,
+"organism": "human",
+"protocol_difficulty": null,
+"readout": "protein identification",
+"readout_assay": "mass spectrometry",
+"required_equipment": [],
+"sample_type": "living cells",
+"sub_intent": "protein_detection",
+"target": "telomeres",
+"timeline": null,
+"tissue_or_cell_type": "human cells"
+}
+},
+"Identifying new drug candidates against Schistosoma using cheminformatics databases and ex vivo larval and adult worm assays to overcome praziquantel resistance.": {
+"cqs": [
+"Schistosoma larval (cercariae/schistosomula) and adult worm stages ex vivo worm motility/viability assay",
+"Schistosoma larval (cercariae/schistosomula) and adult worm stages cheminformatics database screening followed by ex vivo larval and adult worm drug assay ex vivo worm motility/viability assay",
+"Schistosoma cheminformatics database screening followed by ex vivo larval and adult worm drug assay larval (cercariae/schistosomula) and adult worm stages ex vivo worm motility/viability assay",
+"Schistosoma ex vivo worm motility/viability assay",
+"Schistosoma cheminformatics database screening followed by ex vivo larval and adult worm drug assay larval (cercariae/schistosomula) and adult worm stages protocol"
+],
+"profile": {
+"condition": "praziquantel resistance context",
+"constraints": [
+"overcome praziquantel resistance"
+],
+"delivery_method": "compound treatment (small molecule)",
+"difficulty": null,
+"equipment": [],
+"experimental_method": "cheminformatics database screening followed by ex vivo larval and adult worm drug assay",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "phenotyping_physiology",
+"intent_specific": {
+"cheminformatics_tools": "public cheminformatics databases (e.g., ChEMBL, PubChem, DrugBank)",
+"delivery_method": "compound treatment (small molecule)",
+"drug_discovery_stage": "hit identification",
+"parasite_stages": [
+"schistosomula",
+"adult worms"
+],
+"resistance_context": "praziquantel resistance"
+},
+"method": "cheminformatics virtual screening + ex vivo worm motility/viability assay",
+"modification_type": null,
+"organism": "Schistosoma",
+"protocol_difficulty": null,
+"readout": "worm motility, viability, morphological damage",
+"readout_assay": "ex vivo worm motility/viability assay",
+"required_equipment": [],
+"sample_type": "ex vivo larval and adult worms",
+"sub_intent": "phenotyping_assay",
+"target": "praziquantel-resistant Schistosoma",
+"timeline": null,
+"tissue_or_cell_type": "larval (cercariae/schistosomula) and adult worm stages"
+}
+},
+"Integrate transcription factor activity, metabolite levels, and metabolic fluxes from scRNA-seq data into a joint latent factor model to better characterize functional cell states in cancer.": {
+"cqs": [
+"human cancer cells latent factor model integration",
+"human cancer cells joint latent factor modeling of multi-modal single-cell data latent factor model integration",
+"human joint latent factor modeling of multi-modal single-cell data cancer cells latent factor model integration",
+"Homo sapiens latent factor model integration",
+"human joint latent factor modeling of multi-modal single-cell data cancer cells protocol"
+],
+"profile": {
+"condition": "cancer",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "joint latent factor modeling of multi-modal single-cell data",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"analysis_goal": "characterize functional cell states",
+"data_type": "scRNA-seq",
+"modalities": [
+"transcription factor activity",
+"metabolite levels",
+"metabolic fluxes"
+],
+"model_type": "joint latent factor model"
+},
+"method": "scRNA-seq",
+"modification_type": null,
+"organism": "human",
+"protocol_difficulty": null,
+"readout": "functional cell states",
+"readout_assay": "latent factor model integration",
+"required_equipment": [],
+"sample_type": "cancer cells",
+"sub_intent": "sequencing_prep",
+"target": "transcription factor activity, metabolite levels, metabolic fluxes",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Intratracheal LPS mouse model of acute lung injury histopathology in aged C57BL/6J mice to study ARDS pathogenesis in elderly.": {
+"cqs": [
+"mouse (C57BL/6J, aged) lung histopathology (H&E, lung injury scoring)",
+"mouse (C57BL/6J, aged) lung intratracheal LPS instillation histopathology (H&E, lung injury scoring)",
+"mouse (C57BL/6J, aged) intratracheal LPS instillation lung histopathology (H&E, lung injury scoring)",
+"mouse (C57BL/6J, aged) histopathology (H&E, lung injury scoring)",
+"mouse (C57BL/6J, aged) intratracheal LPS instillation lung protocol",
+"intratracheal LPS acute lung injury mouse histopathology protocol",
+"LPS-induced ALI C57BL/6 aged mice lung injury scoring",
+"mouse ARDS model intratracheal instillation LPS histology",
+"intratracheal LPS instillation protocol aged C57BL/6J lung inflammation",
+"acute lung injury mouse model LPS H&E histopathology ARDS"
+],
+"profile": {
+"condition": "LPS-induced acute lung injury; aged mice",
+"constraints": [
+"aged C57BL/6J mice",
+"ARDS model",
+"elderly biology focus"
+],
+"delivery_method": "intratracheal",
+"difficulty": null,
+"equipment": [],
+"experimental_method": "intratracheal LPS instillation",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "phenotyping_physiology",
+"intent_specific": {
+"delivery_method": "intratracheal",
+"disease_model": "acute lung injury (ALI) / ARDS",
+"inducing_agent": "LPS (lipopolysaccharide)",
+"mouse_age": "aged",
+"mouse_strain": "C57BL/6J",
+"readout_details": "histopathology, lung injury scoring",
+"research_context": "ARDS pathogenesis in elderly",
+"route_of_administration": "intratracheal"
+},
+"method": "intratracheal LPS instillation",
+"modification_type": null,
+"organism": "mouse (C57BL/6J, aged)",
+"protocol_difficulty": null,
+"readout": "histopathology",
+"readout_assay": "histopathology (H&E, lung injury scoring)",
+"required_equipment": [],
+"sample_type": "lung tissue",
+"sub_intent": "phenotyping_assay",
+"target": "acute lung injury / ARDS pathogenesis",
+"timeline": null,
+"tissue_or_cell_type": "lung"
+}
+},
+"Isolating and genetically characterizing new marine phytoplankton strains from Canadian waters using long-read sequencing of rRNA genes to build reference databases for species identification.": {
+"cqs": [
+"marine phytoplankton whole cell / culture taxonomic / phylogenetic classification",
+"marine phytoplankton whole cell / culture long-read amplicon sequencing of rRNA genes taxonomic / phylogenetic classification",
+"marine phytoplankton long-read amplicon sequencing of rRNA genes whole cell / culture taxonomic / phylogenetic classification",
+"marine phytoplankton taxonomic / phylogenetic classification",
+"marine phytoplankton long-read amplicon sequencing of rRNA genes whole cell / culture protocol"
+],
+"profile": {
+"condition": "Canadian marine waters",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "long-read amplicon sequencing of rRNA genes",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"database_target": "species identification reference database",
+"isolation_method": null,
+"rRNA_target": null,
+"sequencing_platform": null
+},
+"method": "long-read sequencing",
+"modification_type": null,
+"organism": "marine phytoplankton",
+"protocol_difficulty": null,
+"readout": "reference database construction for species identification",
+"readout_assay": "taxonomic / phylogenetic classification",
+"required_equipment": [],
+"sample_type": "environmental isolates",
+"sub_intent": "sequencing_prep",
+"target": "rRNA genes (18S, 16S, or ITS)",
+"timeline": null,
+"tissue_or_cell_type": "whole cell / culture"
+}
+},
+"Looking for methods to detect or remove heterophilic antibody interference in plasma p-tau217 immunoassays used for Alzheimer's biomarker testing.": {
+"cqs": [
+"human plasma immunoassay (ELISA or MSD or Simoa)",
+"human plasma immunoassay immunoassay (ELISA or MSD or Simoa)",
+"human immunoassay plasma immunoassay (ELISA or MSD or Simoa)",
+"Homo sapiens immunoassay (ELISA or MSD or Simoa)",
+"human immunoassay plasma protocol"
+],
+"profile": {
+"condition": "heterophilic antibody interference",
+"constraints": [
+"Alzheimer's biomarker context",
+"plasma matrix"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "immunoassay",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "protein_work",
+"intent_specific": {
+"application": "Alzheimer's disease biomarker testing",
+"biomarker": "p-tau217",
+"goal": "detect or remove heterophilic antibody interference",
+"interference_type": "heterophilic antibody"
+},
+"method": "immunoassay",
+"modification_type": null,
+"organism": "human",
+"protocol_difficulty": null,
+"readout": "p-tau217 concentration",
+"readout_assay": "immunoassay (ELISA or MSD or Simoa)",
+"required_equipment": [],
+"sample_type": "plasma",
+"sub_intent": "protein_detection",
+"target": "p-tau217",
+"timeline": null,
+"tissue_or_cell_type": "plasma"
+}
+},
+"Map mouse primary motor cortex cell types using single-cell RNA-seq and epigenomics to build a multimodal reference atlas of neuronal and non-neuronal populations.": {
+"cqs": [
+"mouse primary motor cortex (M1), neuronal and non-neuronal cells transcriptomic and chromatin accessibility profiling per cell",
+"mouse primary motor cortex (M1), neuronal and non-neuronal cells scRNA-seq, snATAC-seq or equivalent epigenomic profiling transcriptomic and chromatin accessibility profiling per cell",
+"mouse scRNA-seq, snATAC-seq or equivalent epigenomic profiling primary motor cortex (M1), neuronal and non-neuronal cells transcriptomic and chromatin accessibility profiling per cell",
+"Mus musculus transcriptomic and chromatin accessibility profiling per cell",
+"mouse scRNA-seq, snATAC-seq or equivalent epigenomic profiling primary motor cortex (M1), neuronal and non-neuronal cells protocol",
+"mouse primary motor cortex single-cell RNA-seq cell type atlas",
+"mouse brain snRNA-seq snATAC-seq multimodal epigenomics protocol",
+"single nucleus ATAC-seq mouse cortex neuronal non-neuronal isolation",
+"mouse motor cortex single cell multiome 10x Genomics cell type classification",
+"scRNA-seq epigenomics joint profiling mouse brain reference atlas"
+],
+"profile": {
+"condition": null,
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "scRNA-seq, snATAC-seq or equivalent epigenomic profiling",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"atlas_goal": "multimodal reference atlas",
+"brain_region": "primary motor cortex",
+"cell_populations": [
+"neuronal",
+"non-neuronal"
+],
+"modalities": [
+"scRNA-seq",
+"epigenomics"
+]
+},
+"method": "single-cell RNA-seq and epigenomics (multimodal)",
+"modification_type": null,
+"organism": "mouse",
+"protocol_difficulty": null,
+"readout": "multimodal cell type reference atlas",
+"readout_assay": "transcriptomic and chromatin accessibility profiling per cell",
+"required_equipment": [],
+"sample_type": "primary tissue",
+"sub_intent": "sequencing_prep",
+"target": "cell type transcriptomes and epigenomes",
+"timeline": null,
+"tissue_or_cell_type": "primary motor cortex (M1), neuronal and non-neuronal cells"
+}
+},
+"Map protein-DNA interactions genome-wide using antibody-tethered methyltransferase and Nanopore long-read sequencing to profile binding in repetitive regions and detect haplotype-specific interactions.": {
+"cqs": [
+"Nanopore long-read sequencing with m6A detection",
+"antibody-tethered adenine methyltransferase footprinting with Oxford Nanopore sequencing Nanopore long-read sequencing with m6A detection",
+"antibody-tethered adenine methyltransferase footprinting with Oxford Nanopore sequencing protocol",
+"CUT&TAG-like antibody-tethered methyltransferase (e.g. DamID or m6A-TRACER / pA-M.EcoGII) followed by Nanopore long-read sequencing antibody-tethered adenine methyltransferase footprinting with Oxford Nanopore sequencing genome-wide protein-DNA interaction map including repetitive regions and haplotype-specific binding Nanopore long-read sequencing with m6A detection high antibody-tethered methyltransferase (pA/pG-M.EcoGII or similar) Oxford Nanopore Technologies (ONT) long-read N6-adenine methylation (m6A) long reads spanning repetitive elements and phasing haplotypes DamID m6A-TRACER BIND&MODIFY CUT&TAG Fiber-seq must resolve repetitive genomic regions must enable haplotype-specific interaction detection requires m6A methylation detection via Nanopore direct sequencing",
+"CUT&TAG-like antibody-tethered methyltransferase (e.g. DamID or m6A-TRACER / pA-M.EcoGII) followed by Nanopore long-read sequencing antibody-tethered adenine methyltransferase footprinting with Oxford Nanopore sequencing genome-wide protein-DNA interaction map including repetitive regions and haplotype-specific binding Nanopore long-read sequencing with m6A detection high antibody-tethered methyltransferase (pA/pG-M.EcoGII or similar) Oxford Nanopore Technologies (ONT) long-read N6-adenine methylation (m6A) long reads spanning repetitive elements and phasing haplotypes DamID m6A-TRACER BIND&MODIFY CUT&TAG Fiber-seq must resolve repetitive genomic regions must enable haplotype-specific interaction detection requires m6A methylation detection via Nanopore direct sequencing must resolve repetitive genomic regions must enable haplotype-specific interaction detection requires m6A methylation detection via Nanopore direct sequencing"
+],
+"profile": {
+"condition": null,
+"constraints": [
+"must resolve repetitive genomic regions",
+"must enable haplotype-specific interaction detection",
+"requires m6A methylation detection via Nanopore direct sequencing"
+],
+"delivery_method": null,
+"difficulty": "high",
+"equipment": [
+"Oxford Nanopore sequencer (e.g. PromethION or MinION)"
+],
+"experimental_method": "antibody-tethered adenine methyltransferase footprinting with Oxford Nanopore sequencing",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"chromatin_profiling_method": "antibody-tethered methyltransferase (pA/pG-M.EcoGII or similar)",
+"key_advantage": "long reads spanning repetitive elements and phasing haplotypes",
+"modification_detected": "N6-adenine methylation (m6A)",
+"related_methods": [
+"DamID",
+"m6A-TRACER",
+"BIND&MODIFY",
+"CUT&TAG",
+"Fiber-seq"
+],
+"sequencing_platform": "Oxford Nanopore Technologies (ONT) long-read"
+},
+"method": "CUT&TAG-like antibody-tethered methyltransferase (e.g. DamID or m6A-TRACER / pA-M.EcoGII) followed by Nanopore long-read sequencing",
+"modification_type": null,
+"organism": null,
+"protocol_difficulty": "high",
+"readout": "genome-wide protein-DNA interaction map including repetitive regions and haplotype-specific binding",
+"readout_assay": "Nanopore long-read sequencing with m6A detection",
+"required_equipment": [
+"Oxford Nanopore sequencer"
+],
+"sample_type": null,
+"sub_intent": "sequencing_prep",
+"target": null,
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Map protein-protein interactions among Arabidopsis transcription factors using a high-throughput yeast two-hybrid sequencing approach.": {
+"cqs": [
+"Arabidopsis thaliana yeast (S. cerevisiae) expressing Arabidopsis transcription factor constructs NGS-based interaction scoring",
+"Arabidopsis thaliana yeast (S. cerevisiae) expressing Arabidopsis transcription factor constructs high-throughput yeast two-hybrid with next-generation sequencing readout NGS-based interaction scoring",
+"Arabidopsis thaliana high-throughput yeast two-hybrid with next-generation sequencing readout yeast (S. cerevisiae) expressing Arabidopsis transcription factor constructs NGS-based interaction scoring",
+"arabidopsis NGS-based interaction scoring",
+"Arabidopsis thaliana high-throughput yeast two-hybrid with next-generation sequencing readout yeast (S. cerevisiae) expressing Arabidopsis transcription factor constructs protocol",
+"Arabidopsis transcription factor yeast two-hybrid sequencing high-throughput protein interaction",
+"Y2H-seq Arabidopsis transcription factor interactome library screening",
+"high-throughput yeast two-hybrid NGS protein-protein interaction Arabidopsis",
+"Arabidopsis TF-TF interaction mapping Y2H next-generation sequencing",
+"yeast two-hybrid all-by-all transcription factor network Arabidopsis sequencing"
+],
+"profile": {
+"condition": null,
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "high-throughput yeast two-hybrid with next-generation sequencing readout",
+"expression_type": null,
+"gene_or_construct": "Arabidopsis transcription factor library",
+"intent_family": "protein_work",
+"intent_specific": {
+"bait_prey_strategy": "transcription factor vs transcription factor (all-by-all or matrix)",
+"interaction_type": "protein-protein",
+"scale": "high-throughput",
+"sequencing_approach": "next-generation sequencing"
+},
+"method": "yeast two-hybrid sequencing (Y2H-seq)",
+"modification_type": null,
+"organism": "Arabidopsis thaliana",
+"protocol_difficulty": null,
+"readout": "protein-protein interactions",
+"readout_assay": "NGS-based interaction scoring",
+"required_equipment": [],
+"sample_type": "yeast (S. cerevisiae) expressing Arabidopsis transcription factor constructs",
+"sub_intent": "protein_detection",
+"target": "transcription factors",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Mapping protein-RNA contact sites at single amino acid and nucleotide resolution using crosslinking with isotope-labeled RNA and tandem mass spectrometry in ribonucleoprotein complexes.": {
+"cqs": [
+"ribonucleoprotein complexes tandem mass spectrometry (MS/MS)",
+"ribonucleoprotein complexes CLIR-MS (crosslinking with isotope-labeled RNA and tandem MS) tandem mass spectrometry (MS/MS)",
+"CLIR-MS (crosslinking with isotope-labeled RNA and tandem MS) ribonucleoprotein complexes tandem mass spectrometry (MS/MS)",
+"tandem mass spectrometry (MS/MS)",
+"CLIR-MS (crosslinking with isotope-labeled RNA and tandem MS) ribonucleoprotein complexes protocol",
+"protein-RNA crosslinking isotope-labeled RNA tandem mass spectrometry RNP contact site mapping",
+"CLIR-MS ribonucleoprotein protein-RNA interface single amino acid nucleotide resolution",
+"UV crosslinking isotope-labeled RNA MS/MS peptide-RNA adduct identification",
+"crosslinking mass spectrometry RNA binding protein contact site single residue resolution",
+"RNP complex protein-RNA interaction site mapping crosslinking tandem MS proteomics"
+],
+"profile": {
+"condition": null,
+"constraints": [
+"single amino acid resolution",
+"single nucleotide resolution",
+"isotope-labeled RNA",
+"ribonucleoprotein complexes"
+],
+"delivery_method": null,
+"difficulty": "advanced",
+"equipment": [
+"mass spectrometer"
+],
+"experimental_method": "CLIR-MS (crosslinking with isotope-labeled RNA and tandem MS)",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "protein_work",
+"intent_specific": {
+"complex_type": "ribonucleoprotein (RNP)",
+"crosslinking_type": "UV crosslinking",
+"labeling_strategy": "isotope-labeled RNA",
+"ms_approach": "tandem mass spectrometry",
+"resolution": "single amino acid and nucleotide"
+},
+"method": "crosslinking with isotope-labeled RNA and tandem mass spectrometry",
+"modification_type": null,
+"organism": null,
+"protocol_difficulty": "advanced",
+"readout": "single amino acid and nucleotide resolution contact site mapping",
+"readout_assay": "tandem mass spectrometry (MS/MS)",
+"required_equipment": [
+"mass spectrometer",
+"UV crosslinker"
+],
+"sample_type": "ribonucleoprotein complexes",
+"sub_intent": "protein_detection",
+"target": "protein-RNA contact sites",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Measuring strontium, oxygen, and carbon isotope variation within single human third molar enamel samples to assess how caries affect isotopic integrity for forensic and archaeological mobility studies.": {
+"cqs": [
+"human third molar enamel TIMS / MC-ICP-MS for Sr; IRMS for O and C",
+"human third molar enamel multi-isotope ratio mass spectrometry (Sr, O, C) TIMS / MC-ICP-MS for Sr; IRMS for O and C",
+"human multi-isotope ratio mass spectrometry (Sr, O, C) third molar enamel TIMS / MC-ICP-MS for Sr; IRMS for O and C",
+"Homo sapiens TIMS / MC-ICP-MS for Sr; IRMS for O and C",
+"human multi-isotope ratio mass spectrometry (Sr, O, C) third molar enamel protocol",
+"human tooth enamel strontium oxygen carbon isotope sampling protocol",
+"dental enamel isotope ratio analysis caries archaeological samples",
+"intra-tooth enamel micro-sampling Sr O C isotope mass spectrometry",
+"third molar enamel isotopic integrity caries MC-ICP-MS IRMS",
+"incremental enamel sampling strontium oxygen isotope forensic mobility"
+],
+"profile": {
+"condition": "carious vs. non-carious enamel; intra-tooth variation",
+"constraints": [
+"assess caries impact on isotopic integrity",
+"forensic and archaeological application",
+"intra-sample spatial resolution"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [
+"MC-ICP-MS",
+"TIMS",
+"IRMS",
+"laser ablation system"
+],
+"experimental_method": "multi-isotope ratio mass spectrometry (Sr, O, C)",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"application": "forensic and archaeological mobility studies",
+"caries_effect": "assess whether carious lesions compromise isotopic signal",
+"isotopes_of_interest": [
+"87Sr/86Sr",
+"\u03b418O",
+"\u03b413C"
+],
+"sample_preparation": "micro-sampling or laser ablation of enamel",
+"sampling_strategy": "intra-tooth / incremental enamel sampling"
+},
+"method": "isotope ratio analysis",
+"modification_type": null,
+"organism": "human",
+"protocol_difficulty": null,
+"readout": "isotopic variation within single enamel samples",
+"readout_assay": "TIMS / MC-ICP-MS for Sr; IRMS for O and C",
+"required_equipment": [],
+"sample_type": "dental enamel",
+"sub_intent": "general_protocol_search",
+"target": "strontium isotopes, oxygen isotopes, carbon isotopes",
+"timeline": null,
+"tissue_or_cell_type": "third molar enamel"
+}
+},
+"Metabolic RNA labeling with 4-thiouridine combined with sequencing to measure transcription rates and RNA decay dynamics simultaneously in mouse embryonic stem cells.": {
+"cqs": [
+"mouse mouse embryonic stem cells (mESCs) RNA sequencing with metabolic labeling",
+"mouse mouse embryonic stem cells (mESCs) 4sU-seq / SLAM-seq / TimeLapse-seq RNA sequencing with metabolic labeling",
+"mouse 4sU-seq / SLAM-seq / TimeLapse-seq mouse embryonic stem cells (mESCs) RNA sequencing with metabolic labeling",
+"Mus musculus RNA sequencing with metabolic labeling",
+"mouse 4sU-seq / SLAM-seq / TimeLapse-seq mouse embryonic stem cells (mESCs) protocol",
+"4-thiouridine metabolic RNA labeling sequencing mouse embryonic stem cells",
+"4sU-seq transcription rate RNA decay mESC protocol",
+"SLAM-seq 4sU labeling RNA dynamics mouse stem cells",
+"TimeLapse-seq metabolic labeling nascent RNA mouse ESC",
+"4sU pulse-chase RNA sequencing transcription decay dynamics stem cells"
+],
+"profile": {
+"condition": null,
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "4sU-seq / SLAM-seq / TimeLapse-seq",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"cell_type": "mouse embryonic stem cells",
+"labeling_reagent": "4-thiouridine (4sU)",
+"measurement_goals": [
+"transcription rates",
+"RNA decay dynamics"
+],
+"simultaneous_measurement": true
+},
+"method": "metabolic RNA labeling with 4-thiouridine (4sU) combined with sequencing",
+"modification_type": null,
+"organism": "mouse",
+"protocol_difficulty": null,
+"readout": "transcription rates and RNA decay dynamics",
+"readout_assay": "RNA sequencing with metabolic labeling",
+"required_equipment": [],
+"sample_type": "embryonic stem cells",
+"sub_intent": "sequencing_prep",
+"target": null,
+"timeline": null,
+"tissue_or_cell_type": "mouse embryonic stem cells (mESCs)"
+}
+},
+"Monitoring acetogenic bacteria communities in biogas digesters using FTHFS gene amplicon sequencing and high-throughput analysis to track community shifts and improve process stability.": {
+"cqs": [
+"acetogenic bacteria anaerobic digester biomass/sludge amplicon sequencing / metagenetic profiling",
+"acetogenic bacteria anaerobic digester biomass/sludge PCR amplification of FTHFS gene + high-throughput sequencing amplicon sequencing / metagenetic profiling",
+"acetogenic bacteria PCR amplification of FTHFS gene + high-throughput sequencing anaerobic digester biomass/sludge amplicon sequencing / metagenetic profiling",
+"acetogenic bacteria amplicon sequencing / metagenetic profiling",
+"acetogenic bacteria PCR amplification of FTHFS gene + high-throughput sequencing anaerobic digester biomass/sludge protocol",
+"FTHFS gene amplicon sequencing acetogenic bacteria anaerobic digester",
+"acetogen community profiling FTHFS amplicon high-throughput sequencing biogas",
+"formyltetrahydrofolate synthetase gene PCR sequencing biogas digester microbial community",
+"acetogenic bacteria 16S FTHFS amplicon sequencing anaerobic digestion community dynamics",
+"FTHFS functional gene amplicon sequencing protocol microbial community biogas"
+],
+"profile": {
+"condition": "biogas digester operation; community shift monitoring",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "PCR amplification of FTHFS gene + high-throughput sequencing",
+"expression_type": null,
+"gene_or_construct": "FTHFS",
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"analysis_type": "high-throughput amplicon sequencing",
+"application": "community shift tracking and process stability improvement",
+"environment": "anaerobic biogas digester",
+"marker_gene": "FTHFS (formyltetrahydrofolate synthetase)",
+"sequencing_platform": null
+},
+"method": "amplicon sequencing",
+"modification_type": null,
+"organism": "acetogenic bacteria",
+"protocol_difficulty": null,
+"readout": "microbial community composition and dynamics",
+"readout_assay": "amplicon sequencing / metagenetic profiling",
+"required_equipment": [],
+"sample_type": "biogas digester community (mixed microbial)",
+"sub_intent": "sequencing_prep",
+"target": "FTHFS gene (formyltetrahydrofolate synthetase)",
+"timeline": null,
+"tissue_or_cell_type": "anaerobic digester biomass/sludge"
+}
+},
+"Monitoring diabetic versus normal cutaneous wound healing in adult zebrafish using optical coherence tomography angiography to track vascular and tissue remodeling over time.": {
+"cqs": [
+"zebrafish cutaneous skin wound OCTA imaging",
+"zebrafish cutaneous skin wound optical coherence tomography angiography OCTA imaging",
+"zebrafish optical coherence tomography angiography cutaneous skin wound OCTA imaging",
+"zebrafish OCTA imaging",
+"zebrafish optical coherence tomography angiography cutaneous skin wound protocol",
+"zebrafish diabetic wound healing optical coherence tomography angiography",
+"adult zebrafish cutaneous wound healing OCTA vascular remodeling",
+"diabetic zebrafish skin wound healing imaging longitudinal",
+"zebrafish wound healing angiogenesis OCT time-course protocol",
+"optical coherence tomography angiography tissue remodeling zebrafish"
+],
+"profile": {
+"condition": "diabetic versus normal wound healing",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [
+"optical coherence tomography angiography system"
+],
+"experimental_method": "optical coherence tomography angiography",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "phenotyping_physiology",
+"intent_specific": {
+"biological_process": "cutaneous wound healing",
+"comparison_group": "normal (non-diabetic) zebrafish",
+"disease_model": "diabetic zebrafish",
+"imaging_modality": "OCTA",
+"monitoring_type": "longitudinal time-course"
+},
+"method": "optical coherence tomography angiography (OCTA)",
+"modification_type": null,
+"organism": "zebrafish",
+"protocol_difficulty": null,
+"readout": "vascular and tissue remodeling over time",
+"readout_assay": "OCTA imaging",
+"required_equipment": [
+"OCT/OCTA imaging system"
+],
+"sample_type": "adult zebrafish",
+"sub_intent": "phenotyping_assay",
+"target": "vascular and tissue remodeling",
+"timeline": "longitudinal / time-course",
+"tissue_or_cell_type": "cutaneous skin wound"
+}
+},
+"Multi-omics analysis of gut microbiome metabolic changes including metabolomics and metatranscriptomics in Parkinson's disease patients versus healthy controls to identify functional microbial alterations.": {
+"cqs": [
+"human gut microbiome fecal/intestinal microbial community metabolite profiling and transcriptomic profiling",
+"human gut microbiome fecal/intestinal microbial community metabolomics and metatranscriptomics metabolite profiling and transcriptomic profiling",
+"human gut microbiome metabolomics and metatranscriptomics fecal/intestinal microbial community metabolite profiling and transcriptomic profiling",
+"human gut microbiome metabolite profiling and transcriptomic profiling",
+"human gut microbiome metabolomics and metatranscriptomics fecal/intestinal microbial community protocol"
+],
+"profile": {
+"condition": "Parkinson's disease patients versus healthy controls",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "metabolomics and metatranscriptomics",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"comparison": "Parkinson's disease vs healthy controls",
+"focus": "functional microbial alterations",
+"omics_types": [
+"metabolomics",
+"metatranscriptomics"
+],
+"sample_source": "human gut"
+},
+"method": "multi-omics",
+"modification_type": null,
+"organism": "human gut microbiome",
+"protocol_difficulty": null,
+"readout": "functional microbial alterations",
+"readout_assay": "metabolite profiling and transcriptomic profiling",
+"required_equipment": [],
+"sample_type": "gut microbiome",
+"sub_intent": "sequencing_prep",
+"target": "microbial metabolic pathways",
+"timeline": null,
+"tissue_or_cell_type": "fecal/intestinal microbial community"
+}
+},
+"Multiomics longitudinal profiling of serial biopsies from a metastatic breast cancer patient to track tumor evolution, immune microenvironment changes, and therapy resistance mechanisms over time.": {
+"cqs": [
+"human metastatic breast cancer tissue tumor clonal evolution, immune cell composition changes, resistance gene signatures",
+"human metastatic breast cancer tissue multi-omics (WGS/WES, RNA-seq, ATAC-seq, proteomics, or combinations) tumor clonal evolution, immune cell composition changes, resistance gene signatures",
+"human multi-omics (WGS/WES, RNA-seq, ATAC-seq, proteomics, or combinations) metastatic breast cancer tissue tumor clonal evolution, immune cell composition changes, resistance gene signatures",
+"Homo sapiens tumor clonal evolution, immune cell composition changes, resistance gene signatures",
+"human multi-omics (WGS/WES, RNA-seq, ATAC-seq, proteomics, or combinations) metastatic breast cancer tissue protocol"
+],
+"profile": {
+"condition": "metastatic breast cancer, serial timepoints under therapy",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "multi-omics (WGS/WES, RNA-seq, ATAC-seq, proteomics, or combinations)",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"biological_questions": [
+"tumor evolution",
+"immune microenvironment dynamics",
+"therapy resistance mechanisms"
+],
+"biopsy_type": "serial biopsies",
+"cancer_type": "metastatic breast cancer",
+"omics_layers": null,
+"profiling_type": "longitudinal"
+},
+"method": "multi-omics longitudinal profiling",
+"modification_type": null,
+"organism": "human",
+"protocol_difficulty": null,
+"readout": "tumor clonal evolution, immune cell composition changes, resistance gene signatures",
+"readout_assay": null,
+"required_equipment": [],
+"sample_type": "serial tumor biopsies",
+"sub_intent": "sequencing_prep",
+"target": "tumor evolution, immune microenvironment, therapy resistance mechanisms",
+"timeline": "longitudinal (multiple timepoints)",
+"tissue_or_cell_type": "metastatic breast cancer tissue"
+}
+},
+"Multiplex RT-qPCR assay to rapidly distinguish Omicron subvariants of SARS-CoV-2 in clinical samples without whole genome sequencing.": {
+"cqs": [
+"Multiplex RT-qPCR assay to rapidly distinguish Omicron subvariants of SARS-CoV-2 in clinical samples without whole genome sequencing."
+],
+"profile": {}
+},
+"Newly isolated lytic phage active against multidrug-resistant Pseudomonas aeruginosa strains characterized genomically and tested in Galleria mellonella infection model for phage therapy applications.": {
+"cqs": [
+"Pseudomonas aeruginosa and Galleria mellonella lytic bacteriophage plaque assay, survival assay, genomic analysis",
+"Pseudomonas aeruginosa and Galleria mellonella lytic bacteriophage phage isolation, whole genome sequencing, in vivo infection assay plaque assay, survival assay, genomic analysis",
+"Pseudomonas aeruginosa and Galleria mellonella phage isolation, whole genome sequencing, in vivo infection assay lytic bacteriophage plaque assay, survival assay, genomic analysis",
+"Pseudomonas aeruginosa and Galleria mellonella plaque assay, survival assay, genomic analysis",
+"Pseudomonas aeruginosa and Galleria mellonella phage isolation, whole genome sequencing, in vivo infection assay lytic bacteriophage protocol",
+"lytic bacteriophage isolation Pseudomonas aeruginosa plaque assay protocol",
+"phage genomic characterization whole genome sequencing MDR Pseudomonas aeruginosa",
+"Galleria mellonella infection model Pseudomonas aeruginosa survival assay",
+"bacteriophage characterization multidrug-resistant P. aeruginosa phage therapy",
+"Galleria mellonella larvae phage therapy in vivo model protocol"
+],
+"profile": {
+"condition": "multidrug-resistant bacterial infection, phage therapy",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "phage isolation, whole genome sequencing, in vivo infection assay",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "general_protocol_search",
+"intent_specific": {
+"application": "phage therapy",
+"characterization_type": "genomic",
+"host_bacterium": "multidrug-resistant Pseudomonas aeruginosa",
+"in_vivo_model": "Galleria mellonella",
+"phage_type": "lytic"
+},
+"method": "phage isolation, genomic characterization, Galleria mellonella infection model",
+"modification_type": null,
+"organism": "Pseudomonas aeruginosa and Galleria mellonella",
+"protocol_difficulty": null,
+"readout": "phage activity against MDR P. aeruginosa, survival in Galleria mellonella",
+"readout_assay": "plaque assay, survival assay, genomic analysis",
+"required_equipment": [],
+"sample_type": "lytic bacteriophage",
+"sub_intent": "general_protocol_search",
+"target": "multidrug-resistant Pseudomonas aeruginosa",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Nuclear staining and flow cytometry cell cycle analysis protocol for Malassezia yeast with thick lipid-rich cell walls using DAPI or propidium iodide.": {
+"cqs": [
+"Malassezia yeast whole cells flow cytometry",
+"Malassezia yeast whole cells nuclear staining and flow cytometry cell cycle analysis flow cytometry",
+"Malassezia yeast nuclear staining and flow cytometry cell cycle analysis whole cells flow cytometry",
+"Malassezia yeast flow cytometry",
+"Malassezia yeast nuclear staining and flow cytometry cell cycle analysis whole cells protocol",
+"Malassezia flow cytometry cell cycle DAPI nuclear staining protocol",
+"Malassezia yeast propidium iodide staining flow cytometry permeabilization",
+"fungal yeast cell cycle analysis flow cytometry thick cell wall permeabilization DAPI",
+"Malassezia cell wall permeabilization zymolyase enzymatic treatment nuclear staining",
+"yeast PI DAPI staining cell cycle flow cytometry fixation ethanol protocol"
+],
+"profile": {
+"condition": "thick lipid-rich cell walls",
+"constraints": [
+"thick lipid-rich cell walls require specialized permeabilization",
+"DAPI or propidium iodide as nuclear stain options",
+"Malassezia requires lipid supplementation in media"
+],
+"delivery_method": null,
+"difficulty": "high",
+"equipment": [
+"flow cytometer"
+],
+"experimental_method": "nuclear staining and flow cytometry cell cycle analysis",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "microscopy_imaging",
+"intent_specific": {
+"cell_wall_challenge": "lipid-rich thick cell wall requires enzymatic or detergent-based permeabilization",
+"fixation_method": "likely ethanol or paraformaldehyde fixation required",
+"organism_specific_notes": "Malassezia is lipophilic and may require lipid-supplemented media during culture",
+"permeabilization_needed": true,
+"stain_options": [
+"DAPI",
+"propidium iodide"
+]
+},
+"method": "flow cytometry",
+"modification_type": null,
+"organism": "Malassezia yeast",
+"protocol_difficulty": "high - thick lipid-rich cell wall poses permeabilization challenge",
+"readout": "cell cycle distribution",
+"readout_assay": "flow cytometry",
+"required_equipment": [
+"flow cytometer"
+],
+"sample_type": "yeast cells",
+"sub_intent": "phenotyping_assay",
+"target": "nuclear DNA",
+"timeline": null,
+"tissue_or_cell_type": "whole cells"
+}
+},
+"One-step CRISPR-Cpf1 and AAV system for knocking in CAR constructs while simultaneously knocking out checkpoint genes in human T cells.": {
+"cqs": [
+"human multiplex knock-in and knock-out checkpoint genes human T cells protocol",
+"Homo sapiens simultaneous checkpoint genes knock-in and knock-out AAV (adeno-associated virus) + RNP electroporation",
+"human knock-in and knock-out AAV (adeno-associated virus) + RNP electroporation",
+"human human T cells knock-in and knock-out checkpoint genes",
+"human CRISPR-Cpf1 (Cas12a) and AAV-mediated HDR CRISPR-Cpf1 with AAV donor template checkpoint genes knock-in and knock-out AAV (adeno-associated virus) + RNP electroporation primary T cells human T cells one-step combined knock-in and knock-out CAR construct Cpf1 (Cas12a) AAV electroporation (assumed) one-step protocol simultaneous knock-in and knock-out"
+],
+"profile": {
+"condition": "one-step combined knock-in and knock-out",
+"constraints": [
+"one-step protocol",
+"simultaneous knock-in and knock-out"
+],
+"delivery_method": "AAV (adeno-associated virus) + RNP electroporation",
+"difficulty": null,
+"equipment": [],
+"experimental_method": "CRISPR-Cpf1 with AAV donor template",
+"expression_type": null,
+"gene_or_construct": "CAR construct",
+"intent_family": "gene_nucleic_acid_manipulation",
+"intent_specific": {
+"delivery_method": "AAV (adeno-associated virus) + RNP electroporation",
+"donor_delivery": "AAV",
+"knock_in_target": "CAR construct",
+"knock_out_target": "checkpoint genes",
+"modification_type": "knock-in and knock-out",
+"nuclease": "Cpf1 (Cas12a)",
+"rnp_delivery": "electroporation (assumed)"
+},
+"method": "CRISPR-Cpf1 (Cas12a) and AAV-mediated HDR",
+"modification_type": "knock-in and knock-out",
+"organism": "human",
+"protocol_difficulty": null,
+"readout": null,
+"readout_assay": null,
+"required_equipment": [],
+"sample_type": "primary T cells",
+"sub_intent": "multiplex_gene_modification",
+"target": "checkpoint genes",
+"timeline": null,
+"tissue_or_cell_type": "human T cells"
+}
+},
+"Optimized protocol for isolating and maintaining quiescent hepatic stellate cells from mouse liver using Nycodenz gradient and serum-free culture conditions to study fibrosis activation in vitro.": {
+"cqs": [
+"mouse hepatic stellate cells (quiescent) fibrosis activation assay",
+"mouse hepatic stellate cells (quiescent) Nycodenz gradient isolation, serum-free culture fibrosis activation assay",
+"mouse Nycodenz gradient isolation, serum-free culture hepatic stellate cells (quiescent) fibrosis activation assay",
+"Mus musculus fibrosis activation assay",
+"mouse Nycodenz gradient isolation, serum-free culture hepatic stellate cells (quiescent) protocol",
+"mouse hepatic stellate cell isolation Nycodenz gradient quiescent",
+"quiescent hepatic stellate cell isolation serum-free culture mouse liver",
+"mouse liver stellate cell Nycodenz density gradient centrifugation protocol",
+"hepatic stellate cell isolation fibrosis activation in vitro mouse",
+"quiescent HSC isolation serum-free culture fibrosis model mouse liver"
+],
+"profile": {
+"condition": "serum-free culture conditions",
+"constraints": [
+"quiescent state preservation",
+"serum-free conditions",
+"in vitro fibrosis activation model"
+],
+"delivery_method": null,
+"difficulty": "advanced",
+"equipment": [
+"centrifuge",
+"Nycodenz gradient"
+],
+"experimental_method": "Nycodenz gradient isolation, serum-free culture",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "protein_work",
+"intent_specific": {
+"application": "fibrosis activation study",
+"cell_state": "quiescent",
+"culture_condition": "serum-free",
+"isolation_method": "Nycodenz density gradient",
+"liver_cell_type": "hepatic stellate cells"
+},
+"method": "Nycodenz density gradient centrifugation",
+"modification_type": null,
+"organism": "mouse",
+"protocol_difficulty": "advanced",
+"readout": "fibrosis activation in vitro",
+"readout_assay": "fibrosis activation assay",
+"required_equipment": [
+"centrifuge",
+"Nycodenz gradient"
+],
+"sample_type": "primary cells",
+"sub_intent": "protein_extraction",
+"target": "hepatic stellate cells",
+"timeline": null,
+"tissue_or_cell_type": "hepatic stellate cells (quiescent)"
+}
+},
+"Optimized sheep somatic cell nuclear transfer protocol combining zona-free cloning, embryo aggregation, and caffeine-based cytoplast activation control to improve blastocyst development and offspring production efficiency.": {
+"cqs": [
+"sheep (Ovis aries) somatic donor cells embryo development assessment, blastocyst rate, live offspring rate",
+"sheep (Ovis aries) somatic donor cells zona-free cloning with embryo aggregation and caffeine-based cytoplast activation embryo development assessment, blastocyst rate, live offspring rate",
+"sheep (Ovis aries) zona-free cloning with embryo aggregation and caffeine-based cytoplast activation somatic donor cells embryo development assessment, blastocyst rate, live offspring rate",
+"sheep (Ovis aries) embryo development assessment, blastocyst rate, live offspring rate",
+"sheep (Ovis aries) zona-free cloning with embryo aggregation and caffeine-based cytoplast activation somatic donor cells protocol",
+"sheep somatic cell nuclear transfer zona-free cloning protocol blastocyst development",
+"ovine SCNT embryo aggregation caffeine activation cytoplast",
+"zona-free sheep cloning nuclear transfer blastocyst efficiency",
+"sheep SCNT caffeine cytoplast activation embryo development protocol",
+"ovine somatic cell nuclear transfer aggregation offspring production optimization"
+],
+"profile": {
+"condition": "caffeine treatment for cytoplast activation control",
+"constraints": [
+"zona-free cloning approach",
+"embryo aggregation strategy",
+"caffeine-based activation control",
+"optimize blastocyst development",
+"improve offspring production efficiency"
+],
+"delivery_method": "nuclear transfer / micromanipulation",
+"difficulty": "advanced",
+"equipment": [
+"micromanipulator",
+"electrofusion system",
+"embryo culture system"
+],
+"experimental_method": "zona-free cloning with embryo aggregation and caffeine-based cytoplast activation",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "organism_transformation",
+"intent_specific": {
+"activation_agent": "caffeine",
+"aggregation": true,
+"cloning_method": "zona-free SCNT",
+"delivery_method": "nuclear transfer / micromanipulation",
+"embryo_stage_readout": "blastocyst",
+"species_category": "large livestock"
+},
+"method": "somatic cell nuclear transfer (SCNT)",
+"modification_type": null,
+"organism": "sheep (Ovis aries)",
+"protocol_difficulty": "advanced",
+"readout": "blastocyst development rate and offspring production efficiency",
+"readout_assay": "embryo development assessment, blastocyst rate, live offspring rate",
+"required_equipment": [
+"micromanipulator",
+"electrofusion chamber",
+"CO2 incubator",
+"stereomicroscope"
+],
+"sample_type": "somatic cells",
+"sub_intent": "cloning",
+"target": null,
+"timeline": null,
+"tissue_or_cell_type": "somatic donor cells"
+}
+},
+"Pooled CRISPR knockout of multiple tumor suppressors in mouse lung cancer models with barcode sequencing to quantify individual tumor growth effects.": {
+"cqs": [
+"mouse multiplex CRISPR knockout multiple tumor suppressors lung tumor protocol",
+"Mus musculus simultaneous multiple tumor suppressors CRISPR knockout",
+"mouse CRISPR knockout barcode sequencing",
+"mouse lung tumor CRISPR knockout multiple tumor suppressors",
+"mouse pooled CRISPR screen pooled CRISPR knockout with barcode sequencing multiple tumor suppressors CRISPR knockout lung cancer model lung tumor individual tumor growth effects barcode sequencing pooled knockout tumor suppressors in vivo mouse lung cancer",
+"pooled CRISPR knockout screen mouse lung cancer tumor barcode sequencing",
+"in vivo pooled CRISPR library mouse lung tumor suppressor screen",
+"CRISPR pooled sgRNA screen lung adenocarcinoma mouse barcode NGS",
+"multiplex CRISPR knockout tumor suppressor mouse lung model clonal barcode tracking",
+"in vivo CRISPR screen mouse lung cancer lentiviral library sequencing tumor growth"
+],
+"profile": {
+"condition": "lung cancer model",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "pooled CRISPR knockout with barcode sequencing",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "gene_nucleic_acid_manipulation",
+"intent_specific": {
+"editing_approach": "knockout",
+"model_type": "in vivo mouse lung cancer",
+"modification_type": "CRISPR knockout",
+"quantification": "barcode sequencing",
+"screen_type": "pooled",
+"targets": "tumor suppressors"
+},
+"method": "pooled CRISPR screen",
+"modification_type": "CRISPR knockout",
+"organism": "mouse",
+"protocol_difficulty": null,
+"readout": "individual tumor growth effects",
+"readout_assay": "barcode sequencing",
+"required_equipment": [],
+"sample_type": "lung cancer model",
+"sub_intent": "multiplex_gene_modification",
+"target": "multiple tumor suppressors",
+"timeline": null,
+"tissue_or_cell_type": "lung tumor"
+}
+},
+"Pooling pig skeletal muscle satellite cells from multiple donors to create myoblast cell pools that represent average proliferative and differentiation behavior for long-term in vitro studies.": {
+"cqs": [
+"pig (Sus scrofa) skeletal muscle satellite cells / myoblasts proliferative and differentiation behavior",
+"pig (Sus scrofa) skeletal muscle satellite cells / myoblasts satellite cell isolation, pooling, long-term in vitro culture proliferative and differentiation behavior",
+"pig (Sus scrofa) satellite cell isolation, pooling, long-term in vitro culture skeletal muscle satellite cells / myoblasts proliferative and differentiation behavior",
+"pig (Sus scrofa) proliferative and differentiation behavior",
+"pig (Sus scrofa) satellite cell isolation, pooling, long-term in vitro culture skeletal muscle satellite cells / myoblasts protocol"
+],
+"profile": {
+"condition": "multiple donor pooling for averaged biological representation",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "satellite cell isolation, pooling, long-term in vitro culture",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "phenotyping_physiology",
+"intent_specific": {
+"cell_source": "skeletal muscle",
+"culture_goal": "representative proliferation and differentiation",
+"pooling_strategy": "multi-donor pooling",
+"study_type": "long-term in vitro"
+},
+"method": "cell pooling from multiple donors",
+"modification_type": null,
+"organism": "pig (Sus scrofa)",
+"protocol_difficulty": null,
+"readout": "proliferative and differentiation behavior",
+"readout_assay": null,
+"required_equipment": [],
+"sample_type": "primary cells",
+"sub_intent": "growth_assay",
+"target": null,
+"timeline": "long-term in vitro",
+"tissue_or_cell_type": "skeletal muscle satellite cells / myoblasts"
+}
+},
+"Pull down vault RNA binding proteins from human lung epithelial cells using antisense DNA probes and UV crosslinking followed by mass spectrometry to identify vtRNA interactors.": {
+"cqs": [
+"vault RNA (vtRNA) binding proteins human protocol",
+"human protein purification",
+"human vault RNA (vtRNA) binding proteins protein extraction purification",
+"vault RNA (vtRNA) binding proteins recombinant protein purification protocol",
+"human antisense DNA probe pulldown with UV crosslinking followed by mass spectrometry RNA pulldown / ChIRP-MS / RAP-MS vault RNA (vtRNA) binding proteins antisense DNA oligonucleotide probes cell lysate lung epithelial cells interacting protein identification mass spectrometry (proteomics) UV crosslinking vault RNA (vtRNA) high vault RNA / vtRNA UV crosslinking (CLIP-based) mass spectrometry biotinylated antisense DNA probe capture human lung epithelial (e.g. A549, BEAS-2B)",
+"vault RNA antisense DNA probe pulldown UV crosslinking mass spectrometry human cells",
+"vtRNA interactome ChIRP-MS lung epithelial cell lysate",
+"RNA pulldown biotinylated antisense oligonucleotide UV crosslink proteomics human",
+"ncRNA binding protein identification RAP-MS antisense probe human lung epithelial",
+"CLIP antisense DNA capture vault RNA RBP mass spectrometry A549 BEAS-2B"
+],
+"profile": {
+"condition": "UV crosslinking",
+"constraints": [],
+"delivery_method": "antisense DNA oligonucleotide probes",
+"difficulty": "high",
+"equipment": [
+"UV crosslinker",
+"mass spectrometer"
+],
+"experimental_method": "RNA pulldown / ChIRP-MS / RAP-MS",
+"expression_type": null,
+"gene_or_construct": "vault RNA (vtRNA)",
+"intent_family": "protein_work",
+"intent_specific": {
+"cell_line_context": "human lung epithelial (e.g. A549, BEAS-2B)",
+"crosslinking": "UV crosslinking (CLIP-based)",
+"delivery_method": "antisense DNA oligonucleotide probes",
+"downstream_analysis": "mass spectrometry",
+"probe_type": "antisense DNA oligonucleotide probes",
+"pulldown_strategy": "biotinylated antisense DNA probe capture",
+"rna_target": "vault RNA / vtRNA"
+},
+"method": "antisense DNA probe pulldown with UV crosslinking followed by mass spectrometry",
+"modification_type": null,
+"organism": "human",
+"protocol_difficulty": "high",
+"readout": "interacting protein identification",
+"readout_assay": "mass spectrometry (proteomics)",
+"required_equipment": [
+"UV crosslinker",
+"mass spectrometer",
+"streptavidin beads or equivalent"
+],
+"sample_type": "cell lysate",
+"sub_intent": "protein_purification",
+"target": "vault RNA (vtRNA) binding proteins",
+"timeline": null,
+"tissue_or_cell_type": "lung epithelial cells"
+}
+},
+"R package for calibrating and converting raw fluorescence units from flow cytometry and plate reader data into absolute units for GFP expression in engineered E. coli.": {
+"cqs": [
+"E. coli E. coli GFP fluorescence quantification",
+"E. coli E. coli fluorescence calibration and unit conversion GFP fluorescence quantification",
+"E. coli fluorescence calibration and unit conversion E. coli GFP fluorescence quantification",
+"Escherichia coli GFP fluorescence quantification",
+"E. coli fluorescence calibration and unit conversion E. coli protocol",
+"R package fluorescence calibration flow cytometry plate reader GFP E. coli absolute units",
+"calibrate raw fluorescence units MEFL GFP flow cytometry R protocol",
+"fluorescence unit conversion plate reader flow cytometer engineered E. coli R",
+"GFP expression absolute units calibration beads flow cytometry R package protocol",
+"synthetic biology fluorescence calibration R tool E. coli plate reader flow cytometry"
+],
+"profile": {
+"condition": null,
+"constraints": [
+"R package",
+"calibration from raw fluorescence units to absolute units"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [
+"flow cytometer",
+"plate reader"
+],
+"experimental_method": "fluorescence calibration and unit conversion",
+"expression_type": null,
+"gene_or_construct": "GFP",
+"intent_family": "gene_expression_analysis",
+"intent_specific": {
+"calibration_target": "raw fluorescence to absolute units (e.g., MEFL or molecules of equivalent fluorescein)",
+"host_organism": "E. coli",
+"instruments": [
+"flow cytometer",
+"plate reader"
+],
+"reporter": "GFP",
+"software_tool_type": "R package"
+},
+"method": "flow cytometry and plate reader fluorescence measurement",
+"modification_type": null,
+"organism": "E. coli",
+"protocol_difficulty": null,
+"readout": "absolute fluorescence units (calibrated)",
+"readout_assay": "GFP fluorescence quantification",
+"required_equipment": [
+"flow cytometer",
+"plate reader"
+],
+"sample_type": "engineered bacterial cells",
+"sub_intent": "general_protocol_search",
+"target": "GFP expression",
+"timeline": null,
+"tissue_or_cell_type": "E. coli"
+}
+},
+"Rat auxiliary partial liver transplant model with arterial anastomosis and retrorsine treatment to study recipient cell recruitment into regenerating liver grafts.": {
+"cqs": [
+"rat liver histology, chimerism analysis, cell tracking",
+"rat liver auxiliary partial orthotopic liver transplantation (APOLT) histology, chimerism analysis, cell tracking",
+"rat auxiliary partial orthotopic liver transplantation (APOLT) liver histology, chimerism analysis, cell tracking",
+"rat histology, chimerism analysis, cell tracking",
+"rat auxiliary partial orthotopic liver transplantation (APOLT) liver protocol",
+"rat auxiliary partial liver transplantation arterial anastomosis surgical protocol",
+"auxiliary partial orthotopic liver transplant rat retrorsine preconditioning",
+"rat APOLT model hepatic artery reconstruction retrorsine recipient cell repopulation",
+"partial liver graft rat model retrorsine hepatocyte recruitment chimerism",
+"auxiliary liver transplant rat microsurgery portal vein hepatic artery bile duct anastomosis"
+],
+"profile": {
+"condition": "retrorsine pretreatment of recipient to suppress native liver regeneration",
+"constraints": [
+"arterial anastomosis required",
+"retrorsine preconditioning of recipient",
+"partial liver graft (typically 30-50% of donor liver mass)",
+"rat model"
+],
+"delivery_method": "surgical transplantation",
+"difficulty": "advanced",
+"equipment": [],
+"experimental_method": "auxiliary partial orthotopic liver transplantation (APOLT)",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "general_protocol_search",
+"intent_specific": {
+"anastomosis_types": [
+"hepatic artery",
+"portal vein",
+"inferior vena cava",
+"bile duct"
+],
+"animal_model": "rat (commonly Lewis, Sprague-Dawley, or syngeneic/allogeneic pairs)",
+"delivery_method": "surgical transplantation",
+"graft_size": "partial liver (30-50%)",
+"preconditioning_agent": "retrorsine (pyrrolizidine alkaloid)",
+"preconditioning_purpose": "block recipient hepatocyte proliferation to favor graft repopulation by donor or recipient cells",
+"study_focus": "recipient cell recruitment and repopulation of regenerating liver graft",
+"surgical_components": [
+"portal vein anastomosis",
+"arterial anastomosis",
+"biliary reconstruction",
+"partial hepatectomy of donor liver"
+],
+"transplant_model": "auxiliary partial orthotopic liver transplantation (APOLT)"
+},
+"method": "auxiliary partial liver transplantation with arterial anastomosis and retrorsine pretreatment",
+"modification_type": null,
+"organism": "rat",
+"protocol_difficulty": "advanced",
+"readout": "recipient cell recruitment and liver regeneration",
+"readout_assay": "histology, chimerism analysis, cell tracking",
+"required_equipment": [],
+"sample_type": "liver graft",
+"sub_intent": "general_protocol_search",
+"target": "recipient cell recruitment into regenerating liver grafts",
+"timeline": null,
+"tissue_or_cell_type": "liver"
+}
+},
+"Recovering and classifying archaeal viruses from marine estuaries that infect Poseidoniales archaea using metagenomic sequencing and phylogenetic analysis.": {
+"cqs": [
+"Poseidoniales archaea marine estuary environmental sample phylogenetic analysis",
+"Poseidoniales archaea marine estuary environmental sample metagenomics phylogenetic analysis",
+"Poseidoniales archaea metagenomics marine estuary environmental sample phylogenetic analysis",
+"Poseidoniales archaea phylogenetic analysis",
+"Poseidoniales archaea metagenomics marine estuary environmental sample protocol",
+"archaeal virus metagenomics marine estuary recovery classification",
+"Poseidoniales archaea viral metagenomics sequencing protocol",
+"marine viromics archaeal virus identification phylogenetic analysis",
+"environmental metagenomics viral contig recovery archaea estuarine",
+"archaeal virome binning classification marine sediment metagenomics"
+],
+"profile": {
+"condition": "marine estuary environment",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "metagenomics",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"analysis_type": "viral metagenomics, phylogenetics, virus classification",
+"environment": "marine estuary",
+"host_taxon": "Poseidoniales archaea",
+"sequencing_type": "metagenomic",
+"virus_type": "archaeal viruses"
+},
+"method": "metagenomic sequencing and phylogenetic analysis",
+"modification_type": null,
+"organism": "Poseidoniales archaea",
+"protocol_difficulty": null,
+"readout": "viral recovery and classification",
+"readout_assay": "phylogenetic analysis",
+"required_equipment": [],
+"sample_type": "marine estuary environmental sample",
+"sub_intent": "sequencing_prep",
+"target": "archaeal viruses infecting Poseidoniales archaea",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Review 3D in vitro human skin models as alternatives to animal testing for toxicology and risk assessment studies.": {
+"cqs": [
+"human skin toxicology assay",
+"human skin toxicology and risk assessment toxicology assay",
+"human toxicology and risk assessment skin toxicology assay",
+"Homo sapiens toxicology assay",
+"human toxicology and risk assessment skin protocol",
+"3D reconstructed human skin model toxicology in vitro protocol",
+"human skin equivalent cytotoxicity assay alternative animal testing",
+"3D in vitro epidermis model risk assessment dermal toxicity",
+"reconstructed human epidermis irritation test protocol EpiDerm EpiSkin",
+"3D skin organotypic model chemical safety assessment in vitro"
+],
+"profile": {
+"condition": "alternative to animal testing",
+"constraints": [
+"animal testing alternative",
+"risk assessment"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "toxicology and risk assessment",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "general_protocol_search",
+"intent_specific": {
+"alternative_testing": true,
+"application": "toxicology and risk assessment",
+"model_type": "3D reconstructed human skin",
+"regulatory_context": "animal testing alternatives"
+},
+"method": "3D in vitro skin model",
+"modification_type": null,
+"organism": "human",
+"protocol_difficulty": null,
+"readout": "toxicity assessment",
+"readout_assay": "toxicology assay",
+"required_equipment": [],
+"sample_type": "3D in vitro skin model",
+"sub_intent": "general_protocol_search",
+"target": null,
+"timeline": null,
+"tissue_or_cell_type": "skin"
+}
+},
+"Screen fungal isolates from a plant microorganism collection for antimycobacterial activity against M. abscessus using a bioluminescence-based medium-throughput assay to find new antibiotic compounds.": {
+"cqs": [
+"Screen fungal isolates from a plant microorganism collection for antimycobacterial activity against M. abscessus using a bioluminescence-based medium-throughput assay to find new antibiotic compounds."
+],
+"profile": {}
+},
+"Search for large serine recombinases with high efficiency for site-specific integration of large DNA payloads into human cells without double-strand breaks.": {
+"cqs": [
+"large serine recombinase site-specific integration human cells",
+"LSR-mediated large DNA payload integration human genome no DSB",
+"serine integrase site-specific recombination human cell line high efficiency",
+"phiC31 or Bxb1 integrase large cargo integration human cells",
+"recombinase-mediated cassette exchange large DNA human genome editing"
+],
+"profile": {
+"condition": "no double-strand breaks; large DNA payload",
+"constraints": [
+"no double-strand breaks",
+"large DNA payload integration",
+"high efficiency"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "site-specific integration without double-strand breaks",
+"expression_type": null,
+"gene_or_construct": "large serine recombinase",
+"intent_family": "gene_nucleic_acid_manipulation",
+"intent_specific": {
+"dsb_free": true,
+"integration_type": "site-specific",
+"modification_type": "site-specific recombination",
+"payload_size": "large DNA",
+"recombinase_type": "large serine recombinase"
+},
+"method": "large serine recombinase (LSR)-mediated integration",
+"modification_type": "site-specific recombination",
+"organism": "human",
+"protocol_difficulty": null,
+"readout": null,
+"readout_assay": null,
+"required_equipment": [],
+"sample_type": null,
+"sub_intent": "genome_editing",
+"target": null,
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Search query: does the human domesticated transposase gene PGBD5 retain active cut-and-paste DNA transposition activity in human cells?": {
+"cqs": [
+"human cut-and-paste DNA transposition PGBD5 human cells protocol",
+"Homo sapiens PGBD5 cut-and-paste DNA transposition",
+"human cut-and-paste DNA transposition transposition activity",
+"human human cells cut-and-paste DNA transposition PGBD5",
+"human transposase activity assay cut-and-paste transposition assay PGBD5 cut-and-paste DNA transposition human cells transposition activity endogenous PGBD5 expression in human cells domesticated human transposase"
+],
+"profile": {
+"condition": "endogenous PGBD5 expression in human cells",
+"constraints": [],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "cut-and-paste transposition assay",
+"expression_type": null,
+"gene_or_construct": "PGBD5",
+"intent_family": "gene_nucleic_acid_manipulation",
+"intent_specific": {
+"activity_type": "cut-and-paste DNA transposition",
+"host_organism": "human cells",
+"modification_type": "cut-and-paste DNA transposition",
+"transposase_gene": "PGBD5",
+"transposase_origin": "domesticated human transposase"
+},
+"method": "transposase activity assay",
+"modification_type": "cut-and-paste DNA transposition",
+"organism": "human",
+"protocol_difficulty": null,
+"readout": "transposition activity",
+"readout_assay": null,
+"required_equipment": [],
+"sample_type": "human cells",
+"sub_intent": "genome_editing",
+"target": "PGBD5",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Sequencing a complete genome from a single tiny marine worm specimen of a rare nemertodermatid xenacoelomorph using low-input long-read methods for comparative genomics.": {
+"cqs": [
+"nemertodermatid xenacoelomorph marine worm whole body / single tiny organism comparative genomics",
+"nemertodermatid xenacoelomorph marine worm whole body / single tiny organism low-input long-read whole genome sequencing comparative genomics",
+"nemertodermatid xenacoelomorph marine worm low-input long-read whole genome sequencing whole body / single tiny organism comparative genomics",
+"nemertodermatid xenacoelomorph marine worm comparative genomics",
+"nemertodermatid xenacoelomorph marine worm low-input long-read whole genome sequencing whole body / single tiny organism protocol"
+],
+"profile": {
+"condition": "single specimen, rare/limited material",
+"constraints": [
+"ultra-low input DNA",
+"single specimen",
+"rare organism",
+"complete genome assembly required",
+"long-read platform"
+],
+"delivery_method": null,
+"difficulty": "high",
+"equipment": [],
+"experimental_method": "low-input long-read whole genome sequencing",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"application": "comparative genomics",
+"dna_amplification_needed": true,
+"genome_coverage_goal": "complete/chromosome-level",
+"input_challenge": "single tiny specimen - nanogram to subnanogram DNA input",
+"sequencing_platform": "long-read (PacBio HiFi or Oxford Nanopore)"
+},
+"method": "long-read sequencing (low-input)",
+"modification_type": null,
+"organism": "nemertodermatid xenacoelomorph marine worm",
+"protocol_difficulty": "high - ultra-low input DNA from rare single specimen",
+"readout": "whole genome sequence",
+"readout_assay": "comparative genomics",
+"required_equipment": [],
+"sample_type": "single specimen (whole organism)",
+"sub_intent": "sequencing_prep",
+"target": "complete genome",
+"timeline": null,
+"tissue_or_cell_type": "whole body / single tiny organism"
+}
+},
+"Sequencing packaged AAV genome to check for mutations or truncations using a simple low-input NGS method suitable for academic labs without GMP resources.": {
+"cqs": [
+"AAV (adeno-associated virus) packaged AAV vector / viral particles whole genome sequencing / amplicon sequencing",
+"AAV (adeno-associated virus) packaged AAV vector / viral particles low-input NGS library preparation whole genome sequencing / amplicon sequencing",
+"AAV (adeno-associated virus) low-input NGS library preparation packaged AAV vector / viral particles whole genome sequencing / amplicon sequencing",
+"AAV (adeno-associated virus) whole genome sequencing / amplicon sequencing",
+"AAV (adeno-associated virus) low-input NGS library preparation packaged AAV vector / viral particles protocol",
+"AAV genome sequencing NGS library preparation low input",
+"packaged AAV DNA next-generation sequencing mutation detection protocol",
+"AAV vector genome integrity sequencing ssDNA library prep",
+"adeno-associated virus genome NGS truncation analysis academic lab",
+"AAV ITR sequencing Illumina low-input simple protocol"
+],
+"profile": {
+"condition": "low-input, no GMP resources, academic lab setting",
+"constraints": [
+"low DNA input",
+"suitable for academic labs",
+"no GMP infrastructure required",
+"simple library prep workflow"
+],
+"delivery_method": null,
+"difficulty": "low-to-moderate",
+"equipment": [],
+"experimental_method": "low-input NGS library preparation",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"analysis_goal": "detect mutations and truncations",
+"genome_type": "single-stranded DNA (ssDNA)",
+"library_prep_preference": "simple, low-input",
+"sequencing_approach": "NGS",
+"virus_type": "AAV"
+},
+"method": "NGS / next-generation sequencing",
+"modification_type": null,
+"organism": "AAV (adeno-associated virus)",
+"protocol_difficulty": "low-to-moderate",
+"readout": "mutations and truncations in AAV genome",
+"readout_assay": "whole genome sequencing / amplicon sequencing",
+"required_equipment": [],
+"sample_type": "packaged AAV vector / viral particles",
+"sub_intent": "sequencing_prep",
+"target": "AAV genome (packaged DNA)",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Show me an R tool for visualizing and comparing quality control metrics across multiple Oxford Nanopore MinION flowcell sequencing runs.": {
+"cqs": [
+"QC visualization",
+"long-read sequencing QC QC visualization",
+"long-read sequencing QC protocol",
+"Oxford Nanopore MinION long-read sequencing QC quality control metrics QC visualization multiple flowcell runs comparison R multi-flowcell R tool multi-run comparison",
+"Oxford Nanopore MinION long-read sequencing QC quality control metrics QC visualization multiple flowcell runs comparison R multi-flowcell R tool multi-run comparison R tool multi-run comparison",
+"Oxford Nanopore MinION QC R visualization multiple runs",
+"Nanopore sequencing quality control R package flowcell comparison",
+"MinION multi-run QC metrics R NanoStat NanoPlot",
+"long-read sequencing QC dashboard R Nanopore flowcell",
+"Nanopore MinION sequencing run comparison R workflow QC"
+],
+"profile": {
+"condition": "multiple flowcell runs comparison",
+"constraints": [
+"R tool",
+"multi-run comparison"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [
+"Oxford Nanopore MinION"
+],
+"experimental_method": "long-read sequencing QC",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"analysis_tool_language": "R",
+"comparison_type": "multi-flowcell",
+"platform": "Oxford Nanopore MinION",
+"qc_metrics": true
+},
+"method": "Oxford Nanopore MinION",
+"modification_type": null,
+"organism": null,
+"protocol_difficulty": null,
+"readout": "quality control metrics",
+"readout_assay": "QC visualization",
+"required_equipment": [
+"Oxford Nanopore MinION"
+],
+"sample_type": null,
+"sub_intent": "sequencing_prep",
+"target": null,
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Single-cell RNA sequencing protocol for anaerobic Bacteroidota gut bacteria using FACS sorting and MATQ-seq with ribosomal RNA depletion in Bacteroides thetaiotaomicron.": {
+"cqs": [
+"Bacteroides thetaiotaomicron single bacterial cells scRNA-seq with rRNA depletion",
+"Bacteroides thetaiotaomicron single bacterial cells single-cell RNA sequencing (scRNA-seq) scRNA-seq with rRNA depletion",
+"Bacteroides thetaiotaomicron single-cell RNA sequencing (scRNA-seq) single bacterial cells scRNA-seq with rRNA depletion",
+"Bacteroides thetaiotaomicron scRNA-seq with rRNA depletion",
+"Bacteroides thetaiotaomicron single-cell RNA sequencing (scRNA-seq) single bacterial cells protocol",
+"single-cell RNA sequencing anaerobic bacteria FACS sorting MATQ-seq",
+"Bacteroides thetaiotaomicron scRNA-seq ribosomal RNA depletion protocol",
+"bacterial single-cell transcriptomics FACS sort rRNA depletion anaerobic",
+"MATQ-seq gut microbiota single cell transcriptome Bacteroidota",
+"anaerobic chamber FACS bacterial scRNA-seq library preparation rRNA removal"
+],
+"profile": {
+"condition": "anaerobic",
+"constraints": [
+"ribosomal RNA depletion",
+"anaerobic handling",
+"Bacteroidota-compatible"
+],
+"delivery_method": "FACS sorting",
+"difficulty": null,
+"equipment": [
+"FACS sorter"
+],
+"experimental_method": "single-cell RNA sequencing (scRNA-seq)",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"anaerobic_conditions": true,
+"cell_isolation": "FACS sorting",
+"delivery_method": "FACS sorting",
+"phylum": "Bacteroidota",
+"rRNA_depletion": true,
+"sequencing_method": "MATQ-seq",
+"single_cell": true
+},
+"method": "MATQ-seq",
+"modification_type": null,
+"organism": "Bacteroides thetaiotaomicron",
+"protocol_difficulty": null,
+"readout": "single-cell transcriptomics",
+"readout_assay": "scRNA-seq with rRNA depletion",
+"required_equipment": [
+"FACS sorter",
+"anaerobic chamber"
+],
+"sample_type": "anaerobic gut bacteria",
+"sub_intent": "sequencing_prep",
+"target": "transcriptome",
+"timeline": null,
+"tissue_or_cell_type": "single bacterial cells"
+}
+},
+"Single-tube barcoding method to co-tag long DNA fragments for haplotype phasing and structural variant detection using short-read sequencing in human genome assembly.": {
+"cqs": [
+"human genomic DNA short-read sequencing",
+"human genomic DNA linked-read library preparation short-read sequencing",
+"human linked-read library preparation genomic DNA short-read sequencing",
+"Homo sapiens short-read sequencing",
+"human linked-read library preparation genomic DNA protocol",
+"single-tube linked-read library preparation human genome haplotype phasing",
+"co-barcoding long DNA fragments short-read sequencing structural variant detection human",
+"single-tube barcode co-tagging high molecular weight DNA Illumina sequencing",
+"linked-read barcoding protocol human genome assembly phasing short-read",
+"single-tube HMW DNA barcoding library prep haplotype phasing structural variants"
+],
+"profile": {
+"condition": null,
+"constraints": [
+"single-tube reaction",
+"short-read sequencing compatible",
+"human genome assembly"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "linked-read library preparation",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"application": "haplotype phasing and structural variant detection",
+"genome_assembly_context": "human",
+"library_type": "linked-read / barcoded long-fragment",
+"sequencing_platform": "short-read (e.g., Illumina)"
+},
+"method": "single-tube barcoding / co-tagging",
+"modification_type": null,
+"organism": "human",
+"protocol_difficulty": null,
+"readout": "haplotype phasing and structural variant detection",
+"readout_assay": "short-read sequencing",
+"required_equipment": [],
+"sample_type": "genomic DNA",
+"sub_intent": "sequencing_prep",
+"target": "long DNA fragments",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Standardized methods for isolating and analyzing extracellular RNA from biofluids including best practices for biofluid collection, particle separation, and exRNA profiling across different vesicle types.": {
+"cqs": [
+"human biofluid RNA sequencing / small RNA-seq / qPCR",
+"human biofluid particle separation, RNA extraction, exRNA sequencing/profiling RNA sequencing / small RNA-seq / qPCR",
+"human particle separation, RNA extraction, exRNA sequencing/profiling biofluid RNA sequencing / small RNA-seq / qPCR",
+"Homo sapiens RNA sequencing / small RNA-seq / qPCR",
+"human particle separation, RNA extraction, exRNA sequencing/profiling biofluid protocol",
+"extracellular RNA isolation biofluid standardized protocol exosome microvesicle",
+"exRNA profiling plasma serum particle separation ultracentrifugation small RNA-seq",
+"biofluid collection best practices exRNA sequencing vesicle fractionation",
+"exosome RNA extraction urine plasma size exclusion chromatography RNA-seq",
+"extracellular vesicle RNA isolation human biofluid miRNA profiling standardized"
+],
+"profile": {
+"condition": "biofluid collection and processing",
+"constraints": [
+"standardized methods",
+"best practices for biofluid collection",
+"multiple vesicle types"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "particle separation, RNA extraction, exRNA sequencing/profiling",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "sequencing_omics",
+"intent_specific": {
+"biofluid_types": "plasma, serum, urine, CSF, saliva",
+"profiling_methods": "small RNA-seq, miRNA profiling, RNA-seq",
+"separation_methods": "ultracentrifugation, size exclusion chromatography, precipitation",
+"vesicle_types": "exosomes, microvesicles, HDL-associated, protein-RNA complexes"
+},
+"method": "exRNA isolation and profiling",
+"modification_type": null,
+"organism": "human",
+"protocol_difficulty": null,
+"readout": "exRNA profile across vesicle types",
+"readout_assay": "RNA sequencing / small RNA-seq / qPCR",
+"required_equipment": [],
+"sample_type": "biofluid",
+"sub_intent": "sequencing_prep",
+"target": "extracellular RNA (exRNA)",
+"timeline": null,
+"tissue_or_cell_type": null
+}
+},
+"Standardizing cell-free microRNA profiling from serum or plasma using spike-in controls and Two-tailed RT-qPCR to assess RNA isolation quality and inhibition in liquid biopsy workflows.": {
+"cqs": [
+"human liquid biopsy Two-tailed RT-qPCR",
+"human liquid biopsy Two-tailed RT-qPCR with spike-in controls Two-tailed RT-qPCR",
+"human Two-tailed RT-qPCR with spike-in controls liquid biopsy Two-tailed RT-qPCR",
+"Homo sapiens Two-tailed RT-qPCR",
+"human Two-tailed RT-qPCR with spike-in controls liquid biopsy protocol",
+"cell-free microRNA profiling serum plasma two-tailed RT-qPCR spike-in controls",
+"liquid biopsy miRNA isolation quality control spike-in RT-qPCR",
+"circulating miRNA quantification plasma serum spike-in normalization qPCR",
+"two-tailed RT-qPCR cell-free RNA inhibition assessment liquid biopsy",
+"extracellular miRNA profiling serum RNA extraction quality control qPCR"
+],
+"profile": {
+"condition": "spike-in controls for normalization and quality control",
+"constraints": [
+"liquid biopsy workflow",
+"spike-in normalization",
+"inhibition detection"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [],
+"experimental_method": "Two-tailed RT-qPCR with spike-in controls",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "gene_expression_analysis",
+"intent_specific": {
+"inhibition_assessment": true,
+"liquid_biopsy": true,
+"miRNA_profiling": true,
+"normalization_strategy": "spike-in controls",
+"rna_isolation_qc": true,
+"spike_in_controls": true
+},
+"method": "Two-tailed RT-qPCR",
+"modification_type": null,
+"organism": "human",
+"protocol_difficulty": "intermediate",
+"readout": "microRNA expression levels, RNA isolation quality, inhibition assessment",
+"readout_assay": "Two-tailed RT-qPCR",
+"required_equipment": [
+"qPCR thermocycler",
+"spectrophotometer or fluorometer"
+],
+"sample_type": "serum or plasma",
+"sub_intent": "pcr_qpcr",
+"target": "cell-free microRNA",
+"timeline": null,
+"tissue_or_cell_type": "liquid biopsy"
+}
+},
+"Track individual NLRP3 inflammasome ASC speck formation and dissolution over time in live macrophages using single-cell imaging to compare dynamics across different triggers.": {
+"cqs": [
+"mouse or human macrophages time-lapse fluorescence microscopy",
+"mouse or human macrophages single-cell live imaging time-lapse fluorescence microscopy",
+"mouse or human single-cell live imaging macrophages time-lapse fluorescence microscopy",
+"mouse or human time-lapse fluorescence microscopy",
+"mouse or human single-cell live imaging macrophages protocol"
+],
+"profile": {
+"condition": "multiple inflammasome triggers (e.g., nigericin, ATP, silica crystals)",
+"constraints": [
+"single-cell resolution",
+"longitudinal tracking of individual cells",
+"comparison across multiple triggers"
+],
+"delivery_method": null,
+"difficulty": null,
+"equipment": [
+"fluorescence microscope",
+"live-cell imaging chamber",
+"incubation system"
+],
+"experimental_method": "single-cell live imaging",
+"expression_type": null,
+"gene_or_construct": "ASC (PYCARD)",
+"intent_family": "microscopy_imaging",
+"intent_specific": {
+"imaging_modality": "live-cell time-lapse fluorescence microscopy",
+"readout_metrics": [
+"speck formation time",
+"speck dissolution time",
+"speck frequency per cell",
+"speck size/intensity"
+],
+"reporter": "ASC-GFP or ASC-mCherry fluorescent fusion",
+"speck_tracking": "single-cell longitudinal tracking",
+"triggers_to_compare": [
+"nigericin",
+"ATP",
+"silica",
+"MSU crystals"
+]
+},
+"method": "live-cell fluorescence time-lapse microscopy",
+"modification_type": null,
+"organism": "mouse or human",
+"protocol_difficulty": null,
+"readout": "ASC speck formation and dissolution dynamics over time",
+"readout_assay": "time-lapse fluorescence microscopy",
+"required_equipment": [
+"confocal or widefield fluorescence microscope with live-cell stage incubator",
+"time-lapse imaging software"
+],
+"sample_type": "primary macrophages or macrophage cell line",
+"sub_intent": "microscopy",
+"target": "NLRP3 inflammasome ASC speck",
+"timeline": null,
+"tissue_or_cell_type": "macrophages"
+}
+},
+"Using FIB/SEM serial cross-sections to visualize chromatin fiber organization and diameter distribution inside human metaphase chromosomes.": {
+"cqs": [
+"human metaphase chromosomes ultrastructural imaging / morphometry",
+"human metaphase chromosomes focused ion beam scanning electron microscopy (FIB-SEM) ultrastructural imaging / morphometry",
+"human focused ion beam scanning electron microscopy (FIB-SEM) metaphase chromosomes ultrastructural imaging / morphometry",
+"Homo sapiens ultrastructural imaging / morphometry",
+"human focused ion beam scanning electron microscopy (FIB-SEM) metaphase chromosomes protocol",
+"FIB-SEM serial sectioning human metaphase chromosomes chromatin ultrastructure",
+"focused ion beam SEM chromosome preparation chromatin fiber imaging",
+"FIB-SEM serial cross-section chromatin fiber diameter measurement",
+"electron microscopy metaphase chromosome sample preparation cryo-FIB",
+"FIB-SEM 3D reconstruction chromatin organization nuclear ultrastructure human cells"
+],
+"profile": {
+"condition": "metaphase",
+"constraints": [
+"serial cross-sections",
+"fiber diameter measurement"
+],
+"delivery_method": null,
+"difficulty": "advanced",
+"equipment": [
+"FIB-SEM"
+],
+"experimental_method": "focused ion beam scanning electron microscopy (FIB-SEM)",
+"expression_type": null,
+"gene_or_construct": null,
+"intent_family": "microscopy_imaging",
+"intent_specific": {
+"chromosome_stage": "metaphase",
+"imaging_modality": "FIB-SEM",
+"measurement": "diameter distribution",
+"section_type": "serial cross-sections",
+"structural_target": "chromatin fiber"
+},
+"method": "FIB-SEM serial sectioning",
+"modification_type": null,
+"organism": "human",
+"protocol_difficulty": "advanced",
+"readout": "chromatin fiber organization and diameter distribution",
+"readout_assay": "ultrastructural imaging / morphometry",
+"required_equipment": [
+"focused ion beam scanning electron microscope"
+],
+"sample_type": "metaphase chromosomes",
+"sub_intent": "microscopy",
+"target": "chromatin fiber",
+"timeline": null,
+"tissue_or_cell_type": "metaphase chromosomes"
+}
+},
+"Whole-genome sequencing of SARS-CoV-2 clinical samples from Uganda using the ARTIC amplicon protocol to characterize viral lineages and phylogenetic relationships.": {
+"cqs": [
+"Whole-genome sequencing of SARS-CoV-2 clinical samples from Uganda using the ARTIC amplicon protocol to characterize viral lineages and phylogenetic relationships."
+],
+"profile": {}
+}
+}

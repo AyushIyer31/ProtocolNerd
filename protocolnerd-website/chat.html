@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Protocol Nerd</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f5f6fa;
+      color: #1a1a2e;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    header h1 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1a1a2e;
+    }
+
+    /* Brand logo in the app header (full lockup, so the text title is hidden but
+       kept for screen readers). */
+    .header-logo { height: 38px; width: auto; display: block; }
+    .visually-hidden {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+    }
+
+    header span.badge {
+      font-size: 12px;
+      background: #eef2ff;
+      color: #4361ee;
+      border-radius: 12px;
+      padding: 3px 10px;
+      font-weight: 500;
+    }
+
+    /* Contact link, pushed to the top-right corner. Blue = clickable. */
+    header .contact-link {
+      margin-left: auto;
+      font-size: 13px;
+      font-weight: 600;
+      color: #4361ee;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    header .contact-link:hover { text-decoration: underline; }
+
+    #chat-container {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 860px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .message {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    /* Neutral charcoal (NOT the button blue, and no blue tint) so message bubbles
+       never read as clickable — vivid blue is reserved for actual buttons/links.
+       Applies to every user bubble, including echoes like "Searching N…". */
+    .message.user .bubble {
+      background: #3b3f47;
+      color: #fff;
+      align-self: flex-end;
+      border-radius: 18px 18px 4px 18px;
+      padding: 12px 16px;
+      max-width: 70%;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .message.assistant .bubble {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 18px 18px 18px 4px;
+      padding: 16px;
+      max-width: 100%;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .explanation {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.7;
+      margin-bottom: 14px;
+      padding: 12px 14px;
+      background: #f0f4ff;
+      border-left: 3px solid #4361ee;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .results-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .protocol-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      padding: 14px 16px;
+      background: #fafafa;
+      transition: border-color 0.15s;
+    }
+
+    .protocol-card:hover { border-color: #4361ee; }
+
+    .protocol-card .rank {
+      font-size: 11px;
+      font-weight: 700;
+      color: #8a90a0;               /* muted gray — a label, not a clickable link */
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+
+    .protocol-card .title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .protocol-card .title a {
+      color: #1a0dab;               /* Google-style blue link */
+      text-decoration: none;
+    }
+    .protocol-card .title a:hover { text-decoration: underline; }
+    .protocol-card .title a:visited { color: #681da8; }  /* visited purple, like search results */
+
+    .protocol-card .desc {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .protocol-card .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 12px;
+      color: #777;
+    }
+
+    .protocol-card .meta .tag {
+      background: #eef2ff;
+      color: #4361ee;
+      border-radius: 10px;
+      padding: 2px 8px;
+      font-weight: 500;
+    }
+
+    .protocol-card .score-bar {
+      height: 3px;
+      background: #e0e0e0;
+      border-radius: 2px;
+      margin-top: 10px;
+      overflow: hidden;
+    }
+
+    .protocol-card .score-bar .fill {
+      height: 100%;
+      background: #4361ee;
+      border-radius: 2px;
+    }
+
+    .thinking {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #888;
+      font-size: 14px;
+      padding: 8px 0;
+    }
+
+    .dot-anim span {
+      display: inline-block;
+      width: 6px; height: 6px;
+      background: #4361ee;
+      border-radius: 50%;
+      animation: bounce 1.2s infinite;
+    }
+    .dot-anim span:nth-child(2) { animation-delay: 0.2s; }
+    .dot-anim span:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes bounce {
+      0%, 80%, 100% { transform: translateY(0); opacity: 0.4; }
+      40% { transform: translateY(-6px); opacity: 1; }
+    }
+
+    #input-area {
+      background: #fff;
+      border-top: 1px solid #e0e0e0;
+      padding: 16px 24px;
+    }
+
+    #input-row {
+      display: flex;
+      gap: 10px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    #query-input {
+      flex: 1;
+      border: 1.5px solid #d0d5e8;
+      border-radius: 24px;
+      padding: 12px 20px;
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.15s;
+      font-family: inherit;
+    }
+
+    #query-input:focus { border-color: #4361ee; }
+
+    #send-btn {
+      background: #4361ee;
+      color: #fff;
+      border: none;
+      border-radius: 24px;
+      padding: 12px 24px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s;
+      font-family: inherit;
+      white-space: nowrap;
+    }
+
+    #send-btn:hover { background: #3451d1; }
+    #send-btn:disabled { background: #b0bbf0; cursor: not-allowed; }
+
+    .hint {
+      font-size: 12px;
+      color: #aaa;
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    .empty-state {
+      text-align: center;
+      color: #aaa;
+      margin: auto;
+      padding: 40px;
+    }
+
+    .empty-state .hero-logo { width: 200px; height: auto; display: block; margin: 0 auto 18px; }
+    .empty-state h2 { font-size: 22px; font-weight: 600; color: #555; margin-bottom: 10px; }
+    .empty-state p { font-size: 14px; line-height: 1.7; }
+
+    .example-queries {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 18px;
+    }
+
+    .example-queries button {
+      background: #fff;
+      border: 1px solid #d0d5e8;
+      border-radius: 20px;
+      padding: 8px 16px;
+      font-size: 13px;
+      color: #555;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.15s;
+    }
+
+    .example-queries button:hover {
+      background: #eef2ff;
+      border-color: #4361ee;
+      color: #4361ee;
+    }
+
+    .error-bubble {
+      background: #fff3f3;
+      border: 1px solid #ffb3b3;
+      color: #c0392b;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 14px;
+    }
+
+    /* Clarification bubble — styled slightly differently to stand out */
+    .clarification-bubble {
+      background: #fffbea;
+      border: 1px solid #f0c040;
+      border-left: 3px solid #f0c040;
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+      font-size: 14px;
+      color: #5a4a00;
+      line-height: 1.6;
+    }
+
+    .quick-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .quick-option-btn {
+      background: #fffbea;
+      border: 1.5px solid #f0c040;
+      border-radius: 18px;
+      color: #7a5c00;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 16px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      transition: all 0.15s ease;
+    }
+
+    .quick-option-btn:hover {
+      background: #f0c040;
+      color: #3a2e00;
+      transform: translateY(-1px);
+      box-shadow: 0 3px 8px rgba(240,192,64,0.45);
+    }
+
+    .quick-option-btn:active { transform: translateY(0); box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+
+    .quick-options-hint {
+      margin-top: 8px;
+      font-size: 11px;
+      font-style: italic;
+      color: #9a8a4a;
+    }
+
+    .query-selection-card {
+      background: #f8fbff;
+      border: 1px solid #cbd8f5;
+      border-radius: 8px;
+      margin-top: 12px;
+      padding: 14px;
+    }
+
+    .query-selection-card h3 {
+      color: #263047;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .query-selection-card p {
+      color: #5c6475;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .candidate-query-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .candidate-query-row {
+      align-items: center;
+      background: #fff;
+      border: 1px solid #dce3f5;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      gap: 10px;
+      padding: 9px 11px;
+      transition: border-color .12s, background .12s;
+    }
+    .candidate-query-row:hover { border-color: #9db4f5; background: #f6f9ff; }
+    .candidate-query-row input[type="checkbox"] {
+      accent-color: #4361ee;
+      cursor: pointer;
+      flex: 0 0 auto;
+      height: 16px;
+      width: 16px;
+    }
+
+    .candidate-query-text {
+      color: #29324a;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .candidate-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .candidate-query-btn,
+    .candidate-search-all-btn {
+      background: #4361ee;
+      border: none;
+      border-radius: 14px;
+      color: #fff;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 12px;
+      white-space: nowrap;
+    }
+
+    .candidate-query-btn.secondary {
+      background: #fff;
+      border: 1px solid #cbd8f5;
+      color: #4361ee;
+    }
+    /* Disabled/dead state (0 selected): grey, not the live-blue — signals it does
+       nothing right now. */
+    .candidate-query-btn.disabled {
+      background: #cfd4e0;
+      color: #f4f6fc;
+      cursor: default;
+      box-shadow: none;
+    }
+
+    .candidate-edit-row {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .candidate-edit-row input {
+      border: 1px solid #cbd8f5;
+      border-radius: 16px;
+      flex: 1;
+      font-family: inherit;
+      font-size: 13px;
+      padding: 8px 12px;
+    }
+
+    .profile-card {
+      background: #f8fafc;
+      border: 1px solid #dce3f0;
+      border-radius: 8px;
+      margin: 12px 0;
+      padding: 12px;
+    }
+
+    .profile-card h3 {
+      color: #29324a;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 7px;
+    }
+
+    .profile-field {
+      background: #fff;
+      border: 1px solid #e5e9f3;
+      border-radius: 6px;
+      padding: 7px 9px;
+    }
+
+    .profile-field .label {
+      color: #7a8399;
+      display: block;
+      font-size: 11px;
+      margin-bottom: 2px;
+    }
+
+    .profile-field .value {
+      color: #263047;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .profile-field.missing .value {
+      color: #a0a7b8;
+      font-weight: 500;
+    }
+
+    .profile-field.optional {
+      border-style: dashed;
+      border-color: #d4d9e6;
+      opacity: 0.8;
+    }
+
+    .profile-field .optional-tag {
+      color: #a0a7b8;
+      font-size: 9px;
+      font-weight: 400;
+      margin-left: 4px;
+    }
+
+    .match-explanation {
+      background: #fff;
+      border: 1px solid #e5e9f3;
+      border-radius: 6px;
+      color: #4b5568;
+      font-size: 12px;
+      line-height: 1.5;
+      margin-top: 10px;
+      padding: 8px 10px;
+    }
+
+    .match-explanation strong {
+      color: #29324a;
+    }
+
+    /* Expanded queries shown as small tags below the explanation */
+    .expanded-queries {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #888;
+    }
+
+    .expanded-queries span {
+      display: inline-block;
+      background: #f0f4ff;
+      border: 1px solid #d0d5e8;
+      border-radius: 10px;
+      padding: 2px 10px;
+      margin: 3px 3px 0 0;
+      color: #4361ee;
+      font-size: 11px;
+    }
+
+    .expanded-queries .label {
+      background: none;
+      border: none;
+      color: #aaa;
+      padding: 2px 4px 2px 0;
+      font-style: italic;
+    }
+
+    /* Feedback section shown after search results */
+    .feedback-section {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    .feedback-section p {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 8px;
+    }
+
+    .feedback-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .feedback-btn {
+      background: #fff;
+      border: 1px solid #d0d5e8;
+      border-radius: 16px;
+      padding: 5px 12px;
+      font-size: 12px;
+      color: #4361ee;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.15s;
+    }
+
+    .feedback-btn:hover {
+      background: #eef2ff;
+      border-color: #4361ee;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img class="header-logo" src="assets/ProtocolNerd_Logo.png" alt="Protocol Nerd" />
+  <h1>Protocol Nerd</h1>
+  <label id="ctl-search-mode" style="display:none; font-size: 12px; color: #666; align-items: center; gap: 5px;">
+    Search Mode
+    <select id="search-mode-select" style="padding: 6px 10px; border: 1px solid #d0d5e8; border-radius: 6px; font-size: 13px; cursor: pointer;">
+      <option value="local" selected>Local RAG (Fast)</option>
+      <option value="live">Live API (Comprehensive)</option>
+    </select>
+  </label>
+  <span class="badge" id="domain-badge" style="display:none;"></span>
+  <span class="badge" id="index-badge">Loading index...</span>
+  <a class="contact-link" href="about.html">About</a>
+  <a class="contact-link" style="margin-left:16px;" href="mailto:iyer.ayush31@gmail.com">✉ Contact</a>
+</header>
+
+<div id="debug-banner" style="display:none; background:#7c3aed; color:#fff; text-align:center; padding:6px 12px; font-size:13px; font-weight:600; letter-spacing:.3px;">
+  🐞 DEBUG MODE — extra controls visible
+</div>
+<div id="debug-models" style="display:none; background:#faf5ff; border-bottom:1px solid #e9d5ff; color:#4b2a6a; padding:8px 14px; font-size:12px; line-height:1.7;">
+  <strong>🧠 LLM models in use</strong>
+  &nbsp;·&nbsp; General <span style="color:#7c3aed;">(chitchat · intent · profile · query generation · explanations)</span>: <b>Claude Sonnet 4.6</b>
+  &nbsp;·&nbsp; Re-ranker <span style="color:#7c3aed;">(orders the results)</span>: <b>Claude Haiku 4.5</b>
+  &nbsp;·&nbsp; Eval / LLM-as-judge: <b>Llama 3.2</b> <span style="color:#7c3aed;">(local, eval pipeline only — never in the live app)</span>
+  <div id="debug-build" style="margin-top:5px; padding-top:5px; border-top:1px solid #e9d5ff;">
+    <strong>🚀 Deployment</strong> &nbsp;·&nbsp; <span id="dbg-build-text">checking…</span>
+    &nbsp;·&nbsp; <a href="query_logs.html" style="color:#7c3aed;font-weight:700;">🗒️ Query logs →</a>
+  </div>
+</div>
+
+<div id="chat-container">
+  <div class="empty-state" id="empty-state">
+    <img class="hero-logo" src="assets/ProtocolNerd_Logo.png" alt="Protocol Nerd" />
+    <h2>Find the right protocol</h2>
+    <p>Describe what experiment you need to run.<br>The assistant will find the most relevant protocols and papers.</p>
+    <div class="example-queries">
+      <button onclick="useExample(this)">RNA extraction from plant tissue</button>
+      <button onclick="useExample(this)">PCR protocol for gene cloning</button>
+      <button onclick="useExample(this)">western blot for protein detection</button>
+      <button onclick="useExample(this)">CRISPR gene editing in mammalian cells</button>
+      <button onclick="useExample(this)">arabidopsis transformation protocol</button>
+      <button onclick="useExample(this)">cell viability assay</button>
+      <button onclick="useExample(this)">Find protocols that can allow in-planta tests in which genes are modified.</button>
+      <button onclick="useExample(this)">Find protocols that allow more than one transcription factor to be modified at the same time for mice.</button>
+      <button onclick="useExample(this)">Find protocols that test for drought tolerance in Rice.</button>
+    </div>
+  </div>
+</div>
+
+<div id="input-area">
+  <div id="input-row">
+    <input
+      id="query-input"
+      type="text"
+      placeholder="e.g. RNA extraction from plant leaves..."
+      autocomplete="off"
+    />
+    <button id="send-btn" onclick="sendQuery()">Search</button>
+  </div>
+  <p class="hint">Press Enter to search &nbsp;·&nbsp; Searching <span id="protocol-count">...</span> protocols</p>
+</div>
+
+<script src="env.js"></script>
+<script>
+  const BACKEND = (
+    window.PROTOCOLSNERD_API_URL ||
+    window.PROTOCOLSNERD_BACKEND_URL ||
+    window.env?.FRONTEND_FLOW?.API_URL ||
+    'http://localhost:8001'
+  ).replace(/\/+$/, '');
+
+  // Conversation id for server-side query logging: one per page load, sent with every
+  // /chat request so a user's new-query -> clarify -> select -> search steps group together
+  // in the logs. Regenerated on a full reload (a fresh visit = a fresh session).
+  const SESSION_ID = (window.crypto && crypto.randomUUID)
+    ? crypto.randomUUID()
+    : 'sess-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 10);
+
+  // Used only for deliberate refinement flows such as feedback buttons.
+  // Clarification answers keep using the profile state instead.
+  let skipClarification = false;
+
+  // Remembers the last successfully searched query for feedback prefill
+  let lastSearchQuery = '';
+
+  // Client-side conversation state for the current experimental goal.
+  let experimentProfile = null;
+  let currentExperimentQuery = '';
+  let latestCandidateQueries = [];
+  let pendingSearchConfirmed = false;
+  let pendingSelectedSearchQuery = '';
+  let pendingSearchAll = false;
+  // When the user ticks a subset in the suggested-search checklist, this holds
+  // exactly those queries — sent as candidate_search_queries so the backend's
+  // "search all" path runs only the ticked subset. null = not a subset search.
+  let pendingSearchQueriesOverride = null;
+  // True after the assistant asks a clarification — the next message is its answer,
+  // so the backend should refine (not reset) the current experiment profile.
+  let awaitingClarificationAnswer = false;
+  // The field of the clarification the assistant last asked. Sent back with the
+  // answer so the backend knows exactly which field to fill or skip — needed for
+  // LLM-driven clarifications where the rule-based path can't infer the field.
+  let pendingClarificationField = null;
+  // The exact question + option chips currently shown for the pending clarification,
+  // echoed back so "why this question?" re-shows the identical chips.
+  let pendingClarificationQuestion = '';
+  let pendingClarificationOptions = [];
+  // What the assistant is currently showing ("query_selection" | "results" |
+  // "clarification"). Sent to the backend so a meta-question's "these/this"
+  // resolves to what the user is actually looking at.
+  let clientView = null;
+  // Most recent search results + the DOM container holding their cards, so the
+  // "Reorder results based on X" buttons can re-rank them in place.
+  let lastResults = [];
+  let lastResultsGridId = null;
+  let resultsGridSeq = 0;
+
+  // -------------------------------------------------------------------------
+  // Startup: health check and protocol count
+  // -------------------------------------------------------------------------
+
+  async function checkHealth() {
+    try {
+      const r = await fetch(`${BACKEND}/health`);
+      const data = await r.json();
+      if (data.status === 'healthy' || data.status === 'degraded') {
+        markBackendOnline('Connected');
+      }
+    } catch {
+      document.getElementById('index-badge').textContent = 'Backend offline';
+      document.getElementById('index-badge').style.background = '#fff0f0';
+      document.getElementById('index-badge').style.color = '#c0392b';
+    }
+  }
+
+  async function updateProtocolCount() {
+    try {
+      const r = await fetch(`${BACKEND}/chat`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          query: 'PCR',
+          top_k: 1,
+          explain: false,
+          skip_clarification: true,
+          search_mode: 'local',
+          no_log: true,   // warmup/count ping — keep it out of the query logs
+        }),
+      });
+      if (r.ok) {
+        const data = await r.json();
+        const count = data.total_protocols_indexed || 0;
+        document.getElementById('protocol-count').textContent = count.toLocaleString();
+        markBackendOnline(`${count.toLocaleString()} protocols indexed`);
+      }
+    } catch {}
+  }
+
+  function markBackendOnline(text = 'Connected') {
+    const badge = document.getElementById('index-badge');
+    if (!badge) return;
+    badge.textContent = text;
+    badge.style.background = '#eef2ff';
+    badge.style.color = '#4361ee';
+  }
+
+  // Show which domain the session was routed to (detected from the first query).
+  const DOMAIN_STYLE = {
+    biology:   { label: '🧬 Biology',   bg: '#e8f5e9', color: '#2e7d32' },
+    chemistry: { label: '⚗️ Chemistry', bg: '#ede7f6', color: '#5e35b1' },
+  };
+  function setDomainBadge(domain) {
+    const badge = document.getElementById('domain-badge');
+    if (!badge) return;
+    const s = DOMAIN_STYLE[domain] || { label: '🔬 ' + domain, bg: '#eceff1', color: '#455a64' };
+    badge.textContent = 'Domain: ' + s.label;
+    badge.style.background = s.bg;
+    badge.style.color = s.color;
+    badge.style.display = '';
+  }
+
+  // Debug mode — accessed via /debug.html (which sets ?debug=1) or ?debug. Reveals
+  // dev-only controls (Search Mode + Per source) and dev-only result details
+  // ("Also searched" / "Structured query").
+  const IS_DEBUG = (function () {
+    const params = new URLSearchParams(location.search);
+    return params.has('debug') || /debug\.html$/i.test(location.pathname);
+  })();
+  if (IS_DEBUG) {
+    ['ctl-search-mode'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.style.display = 'flex';
+    });
+    const banner = document.getElementById('debug-banner');
+    if (banner) banner.style.display = 'block';
+    const dbgModels = document.getElementById('debug-models');
+    if (dbgModels) dbgModels.style.display = 'block';
+    loadBuildInfo();
+  }
+
+  // Which commit is actually serving this page. Asked for only in debug mode, and a
+  // failure here must never disturb the app — the panel just says so.
+  function loadBuildInfo() {
+    const el = document.getElementById('dbg-build-text');
+    if (!el) return;
+    fetch(`${BACKEND}/fetch_backend_mode`)
+      .then(r => r.ok ? r.json() : Promise.reject(r.status))
+      .then(d => {
+        const b = (d && d.build) || {};
+        const sha = b.sha || 'unknown';
+        let when = '—';
+        if (b.built_at) {
+          const t = new Date(b.built_at);
+          when = isNaN(t) ? b.built_at : t.toLocaleString(undefined,
+            { year: 'numeric', month: 'short', day: 'numeric',
+              hour: '2-digit', minute: '2-digit' });
+        }
+        const origin = b.source === 'image' ? 'deployed image'
+                     : b.source === 'git' ? 'local checkout'
+                     : 'version unavailable';
+        const m = d.models || {};
+        el.innerHTML = `commit <b>${sha}</b> &nbsp;·&nbsp; built <b>${when}</b>` +
+          ` <span style="color:#7c3aed;">(${origin})</span>` +
+          (m.reranker ? ` &nbsp;·&nbsp; re-ranker <b>${m.reranker}</b>` : '');
+      })
+      .catch(() => { el.textContent = 'could not reach the backend for version info'; });
+  }
+
+  checkHealth();
+  updateProtocolCount();
+
+  // Auto-run a query handed off from the landing page (chat.html?q=...).
+  (function () {
+    const q = new URLSearchParams(location.search).get('q');
+    if (q && q.trim()) {
+      const input = document.getElementById('query-input');
+      if (input) { input.value = q.trim(); sendQuery(); }
+    }
+  })();
+
+  document.getElementById('query-input').addEventListener('keydown', e => {
+    if (e.key === 'Enter' && !e.shiftKey) sendQuery();
+  });
+
+  function useExample(btn) {
+    resetExperimentState();
+    document.getElementById('query-input').value = btn.textContent;
+    sendQuery();
+  }
+
+  // -------------------------------------------------------------------------
+  // DOM helpers
+  // -------------------------------------------------------------------------
+
+  function appendMessage(role, html) {
+    const emptyState = document.getElementById('empty-state');
+    if (emptyState) emptyState.remove();
+    const container = document.getElementById('chat-container');
+    const msg = document.createElement('div');
+    msg.className = `message ${role}`;
+    msg.innerHTML = html;
+    container.appendChild(msg);
+    container.scrollTop = container.scrollHeight;
+    return msg;
+  }
+
+  function escapeHtml(str) {
+    return (str || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function escapeAttr(str) {
+    return escapeHtml(str).replace(/"/g, '&quot;');
+  }
+
+  function humanizeProfileValue(value) {
+    if (!value) return value;
+    return String(value).replace(/_/g, ' ');
+  }
+
+  // Flattens a field value that may come back as an array or a nested object
+  // (e.g. chemistry's reaction_conditions: {solvent, temperature, catalyst, ...})
+  // into a readable string, instead of Array.toString or "[object Object]".
+  function formatFieldValue(value) {
+    if (value === null || value === undefined || value === '') return value;
+    if (Array.isArray(value)) return value.join(', ');
+    if (typeof value === 'object') {
+      return Object.values(value)
+        .filter(v => v && String(v).trim() && String(v).trim().toLowerCase() !== 'not specified')
+        .join(', ');
+    }
+    return humanizeProfileValue(value);
+  }
+
+  function renderIntentSpecific(profile) {
+    const raw = profile?.intent_specific;
+    if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return '';
+    const parts = Object.entries(raw)
+      .filter(([_, value]) => value !== null && value !== undefined && value !== '' && !(Array.isArray(value) && !value.length))
+      .map(([key, value]) => {
+        const shown = Array.isArray(value) ? value.join(', ') : String(value);
+        return `${humanizeProfileValue(key)}: ${shown}`;
+      });
+    return parts.join('; ');
+  }
+
+  function resetExperimentState() {
+    experimentProfile = null;
+    currentExperimentQuery = '';
+    latestCandidateQueries = [];
+    pendingSearchConfirmed = false;
+    pendingSelectedSearchQuery = '';
+    pendingSearchAll = false;
+    skipClarification = false;
+    awaitingClarificationAnswer = false;
+  }
+
+  // Per-domain profile rendering. Adding a domain means adding ONE entry here
+  // (rows + its required-fields map), not editing any rendering logic — the
+  // renderer below never names a domain. Falls back to the default entry for a
+  // domain that has no config yet.
+  const DOMAIN_PROFILE_VIEW = {
+    biology: {
+      rows: (profile, intent) => [
+        ['Intent', intent?.label || profile.experimental_method || 'unknown'],
+        ['Intent family', intent?.intent_family_label || humanizeProfileValue(profile.intent_family)],
+        ['Sub-intent', intent?.sub_intent_label || humanizeProfileValue(profile.sub_intent)],
+        ['Organism', profile.organism],
+        ['Sample type', profile.sample_type],
+        ['System', profile.tissue_or_cell_type],
+        ['Target', profile.target],
+        ['Gene/construct', profile.gene_or_construct],
+        ['Modification type', profile.modification_type],
+        ['Method', profile.method || profile.experimental_method],
+        ['Delivery method', profile.delivery_method],
+        ['Expression type', profile.expression_type],
+        ['Readout', profile.readout || profile.readout_assay],
+        ['Condition', profile.condition],
+        ['Timeline', profile.timeline],
+        ['Equipment', Array.isArray(profile.equipment) && profile.equipment.length ? profile.equipment.join(', ') : (Array.isArray(profile.required_equipment) ? profile.required_equipment.join(', ') : profile.required_equipment)],
+        ['Difficulty', profile.difficulty || profile.protocol_difficulty],
+        ['Constraints', Array.isArray(profile.constraints) ? profile.constraints.join(', ') : profile.constraints],
+        ['Intent-specific', renderIntentSpecific(profile)],
+      ],
+      requiredFieldsByIntent: {
+        gene_modification:             ['Organism', 'Modification type', 'System'],
+        genome_editing:                ['Organism', 'Modification type', 'System'],
+        multiplex_gene_modification:   ['Organism', 'Modification type', 'System', 'Target'],
+        gene_overexpression:           ['Organism', 'Expression type', 'System'],
+        gene_knockdown:                ['Organism', 'Method'],
+        stress_tolerance_assay:        ['Organism', 'Condition', 'Readout'],
+        protein_purification:          ['Target', 'Organism'],
+        pcr_qpcr:                      ['Organism', 'Readout'],
+        transformation:                ['Organism', 'Method'],
+        microscopy:                    ['Organism', 'System'],
+        sequencing_prep:               ['Organism', 'Readout'],
+        cloning:                       ['Organism', 'Target'],
+        mutagenesis:                   ['Organism', 'Modification type'],
+        western_blot:                  ['Organism', 'Target'],
+        immunoprecipitation:           ['Organism', 'Target'],
+        protein_extraction:            ['Organism'],
+        growth_assay:                  ['Organism', 'Readout'],
+        gas_exchange:                  ['Organism'],
+        phenotyping_assay:             ['Organism', 'Readout'],
+        general_protocol_search:       ['Method'],
+      },
+    },
+    chemistry: {
+      rows: (profile, intent) => [
+        ['Intent', intent?.label || humanizeProfileValue(profile.reaction_type) || 'unknown'],
+        ['Intent family', intent?.intent_family_label || humanizeProfileValue(profile.intent_family)],
+        ['Sub-intent', intent?.sub_intent_label || humanizeProfileValue(profile.sub_intent)],
+        ['Product / compound', formatFieldValue(profile.compound)],
+        ['Starting material', formatFieldValue(profile.starting_material)],
+        ['Reaction / technique', formatFieldValue(profile.reaction_type)],
+        ['Catalyst / reagent', formatFieldValue(profile.catalyst)],
+        ['Solvent', formatFieldValue(profile.solvent)],
+        ['Temperature', formatFieldValue(profile.temperature)],
+        ['Reaction time', formatFieldValue(profile.timeline)],
+        ['Purification', formatFieldValue(profile.purification)],
+        ['Characterization', formatFieldValue(profile.characterization)],
+        ['Scale', formatFieldValue(profile.scale)],
+        ['Equipment', formatFieldValue(profile.equipment)],
+        ['Constraints', formatFieldValue(profile.constraints)],
+        ['Difficulty', formatFieldValue(profile.difficulty)],
+        ['Intent-specific', renderIntentSpecific(profile)],
+      ],
+      requiredFieldsByIntent: {
+        organic_synthesis:         ['Product / compound', 'Reaction / technique'],
+        purification:              ['Product / compound', 'Purification'],
+        characterization:          ['Product / compound', 'Characterization'],
+        extraction:                ['Product / compound', 'Reaction / technique'],
+        electrochemistry:          ['Product / compound', 'Reaction / technique'],
+        materials_synthesis:       ['Product / compound', 'Reaction / technique'],
+        general_chemistry_search:  ['Product / compound'],
+      },
+    },
+  };
+  const DEFAULT_PROFILE_VIEW_DOMAIN = 'biology';
+
+  function renderExperimentProfile(profile, intent, domain) {
+    if (!profile) return '';
+    // `domain` is the backend's authoritative domain name (response.domain).
+    // intent_family is only a fallback: biology sets it to a sub-family
+    // ("protein_work"), so it is NOT a reliable domain key on its own.
+    const domainName = domain || profile.intent_family || intent?.intent_family;
+    const view = DOMAIN_PROFILE_VIEW[domainName] || DOMAIN_PROFILE_VIEW[DEFAULT_PROFILE_VIEW_DOMAIN];
+
+    const rows = view.rows(profile, intent);
+    const requiredFieldsByIntent = view.requiredFieldsByIntent;
+    const alwaysRequired = ['Intent'];
+    const subIntent = profile.sub_intent || intent?.sub_intent || intent?.intent || '';
+    const requiredSet = new Set([
+      ...alwaysRequired,
+      ...(requiredFieldsByIntent[subIntent] || []),
+    ]);
+
+    const fields = rows.map(([label, value]) => {
+      const shown = value && String(value).trim() ? String(value) : 'not specified';
+      const missingClass = shown === 'not specified' ? ' missing' : '';
+      const isOptional = !requiredSet.has(label) && !alwaysRequired.includes(label);
+      const optionalClass = isOptional ? ' optional' : '';
+      return `
+        <div class="profile-field${missingClass}${optionalClass}">
+          <span class="label">${escapeHtml(label)}</span>
+          <span class="value">${escapeHtml(shown)}</span>
+        </div>
+      `;
+    }).join('');
+
+    return `
+      <div class="profile-card">
+        <div style="display:flex; justify-content:space-between; align-items:baseline; gap:10px;">
+          <h3 style="margin-bottom:0;">Structured experiment profile</h3>
+          <span style="font-size:11px; color:#9aa0ae; font-style:italic; white-space:nowrap;">* some fields are optional</span>
+        </div>
+        <div class="profile-grid" style="margin-top:8px;">${fields}</div>
+      </div>
+    `;
+  }
+
+  function renderQuickOptions(options) {
+    if (!options) return '';
+    // "Skip" already means "not sure / no preference", so drop any option that
+    // duplicates it — the dedicated gray Skip button below covers that case.
+    // Drop anything that means "not sure / no preference" — the Skip button covers
+    // it. Exact matches for short words (any/either) plus prefix matches so LLM
+    // variants like "not sure / flexible" are caught too.
+    const SKIP_EXACT = /^(not sure|unsure|no idea|idk|no preference|no opinion|any|either|whatever|skip|don'?t know|do(es)? not matter|doesn'?t matter)$/i;
+    const SKIP_PREFIX = /^(not sure|unsure|don'?t know|no preference)\b/i;
+    options = options.filter(o => {
+      const t = String(o).trim();
+      return t && !SKIP_EXACT.test(t) && !SKIP_PREFIX.test(t);
+    });
+    return `
+      <div class="quick-options">
+        ${options.map(option => {
+          const encoded = JSON.stringify(option).replace(/"/g, '&quot;');
+          return `
+          <button class="quick-option-btn" onclick="sendQuickAnswer(${encoded})">
+            ${escapeHtml(option)}
+          </button>
+        `;
+        }).join('')}
+        <button class="quick-option-btn" style="background-color: #f0f0f0; color: #666;" onclick="sendQuickAnswer('Skip')">
+          Skip
+        </button>
+      </div>
+      <div class="quick-options-hint">Others: please specify in the search box</div>
+    `;
+  }
+
+  function sendQuickAnswer(answer) {
+    const input = document.getElementById('query-input');
+    input.value = answer;
+    sendQuery();
+  }
+
+  // Suggested searches — a CHECKLIST: tick the questions you want to run, then
+  // "Search selected". (Not radio buttons — several can be picked, but not all.)
+  function renderQuerySelection(queries) {
+    if (!queries || !queries.length) return '';
+    // Neutralize any PRIOR "Suggested searches" cards still in the chat history so
+    // their checkboxes/ids don't merge with this new one. Without this, the whole
+    // document had e.g. 10 `.candidate-check` boxes (5 old + 5 new), so "Select all"
+    // and the count picked up both cards. Only the latest card stays interactive.
+    document.querySelectorAll('.query-selection-card').forEach(card => {
+      card.querySelectorAll('.candidate-check').forEach(cb => { cb.disabled = true; cb.classList.remove('candidate-check'); });
+      card.querySelectorAll('[id]').forEach(el => el.removeAttribute('id'));
+      card.querySelectorAll('button').forEach(b => { b.disabled = true; b.classList.add('disabled'); b.onclick = null; });
+      card.classList.add('query-selection-card--past');
+    });
+    latestCandidateQueries = queries;
+    const rows = queries.map((query, i) => `
+      <label class="candidate-query-row">
+        <input type="checkbox" class="candidate-check" value="${i}" checked onchange="updateSelectedCount()" />
+        <span class="candidate-query-text">${i + 1}. ${escapeHtml(query)}</span>
+      </label>
+    `).join('');
+    return `
+      <div class="query-selection-card">
+        <h3>Suggested searches</h3>
+        <p>Tick the questions you want to search, then click <strong>Search selected</strong>.</p>
+        <div class="candidate-query-list">${rows}</div>
+        <div class="candidate-actions">
+          <button id="search-selected-btn" class="candidate-query-btn" onclick="confirmSelectedCandidateSearch()">
+            <span id="selected-count-label">Search selected (${queries.length})</span>
+          </button>
+          <button class="candidate-query-btn secondary" onclick="setAllCandidateChecks(true)">Select all</button>
+          <button class="candidate-query-btn secondary" onclick="setAllCandidateChecks(false)">Clear</button>
+        </div>
+        <div class="candidate-edit-row" id="candidate-edit-row" style="display:none;">
+          <input id="candidate-query-input" placeholder="…or type your own search" />
+          <button class="candidate-query-btn" onclick="confirmEditedCandidateSearch()">Search this</button>
+        </div>
+      </div>
+    `;
+  }
+
+  function getCheckedCandidateQueries() {
+    return Array.from(document.querySelectorAll('.candidate-check'))
+      .filter(b => b.checked)
+      .map(b => latestCandidateQueries[parseInt(b.value, 10)])
+      .filter(Boolean);
+  }
+
+  function updateSelectedCount() {
+    const count = getCheckedCandidateQueries().length;
+    const label = document.getElementById('selected-count-label');
+    if (label) label.textContent = `Search selected (${count})`;
+    // "…or type your own" is only useful when nothing is ticked — hide it otherwise.
+    const editRow = document.getElementById('candidate-edit-row');
+    if (editRow) editRow.style.display = count === 0 ? 'flex' : 'none';
+    // Dead button: with 0 ticked, "Search selected" does nothing — show it disabled
+    // (grey) so a live-blue button always means it's actually actionable.
+    const searchBtn = document.getElementById('search-selected-btn');
+    if (searchBtn) searchBtn.classList.toggle('disabled', count === 0);
+  }
+
+  function setAllCandidateChecks(checked) {
+    document.querySelectorAll('.candidate-check').forEach(b => { b.checked = checked; });
+    updateSelectedCount();
+  }
+
+  // Search the ticked subset. Reuses the backend "search all" path but restricted
+  // to the queries we send in candidate_search_queries (i.e. just the checked ones).
+  function confirmSelectedCandidateSearch() {
+    const selected = getCheckedCandidateQueries();
+    if (!selected.length) return;
+    pendingSearchConfirmed = true;
+    pendingSearchAll = true;
+    pendingSearchQueriesOverride = selected;
+    pendingSelectedSearchQuery = selected[0];
+    const input = document.getElementById('query-input');
+    input.value = selected.length === 1 ? selected[0] : `Searching ${selected.length} selected queries...`;
+    sendQuery();
+  }
+
+  function confirmEditedCandidateSearch() {
+    const edited = document.getElementById('candidate-query-input')?.value?.trim() || '';
+    if (!edited) return;
+    pendingSearchConfirmed = true;
+    pendingSearchAll = false;
+    pendingSearchQueriesOverride = null;
+    pendingSelectedSearchQuery = edited;
+    const input = document.getElementById('query-input');
+    input.value = edited;
+    sendQuery();
+  }
+
+  function renderMatchNotes(result) {
+    const parts = [];
+    if (result.why_it_matches) {
+      parts.push(`<div><strong>Why it matches:</strong> ${escapeHtml(result.why_it_matches)}</div>`);
+    }
+    if (result.may_not_fit && result.may_not_fit.length) {
+      parts.push(`<div><strong>May not fit:</strong> ${escapeHtml(result.may_not_fit.join(' '))}</div>`);
+    }
+    if (result.assumptions && result.assumptions.length) {
+      parts.push(`<div><strong>Assumptions:</strong> ${escapeHtml(result.assumptions.join(' '))}</div>`);
+    }
+    if (result.missing_information && result.missing_information.length) {
+      parts.push(`<div><strong>Still missing:</strong> ${escapeHtml(result.missing_information.join(', '))}</div>`);
+    }
+    return parts.length ? `<div class="match-explanation">${parts.join('')}</div>` : '';
+  }
+
+  // -------------------------------------------------------------------------
+  // Result cards rendering + reorder-by-criterion
+  // -------------------------------------------------------------------------
+
+  // Which per-result profile signal each "Reorder by" button boosts.
+  const REORDER_SIGNAL = {
+    organism:  'organism_match',
+    technique: 'method_match',
+    sample:    'tissue_match',
+    goal:      'readout_match',
+  };
+  const REORDER_BOOST = 6;  // how strongly a matching result is bumped up
+
+  // Score used to size the bar and order the cards. Honors a temporary
+  // reorder boost (_reorder_score) when one has been applied.
+  function resultScore(r) {
+    if (typeof r._reorder_score === 'number') return r._reorder_score;
+    return r.blend_score ?? r.profile_score ?? r.combined_score ?? r.score ?? 0;
+  }
+
+  function resultCardsHtml(results) {
+    const maxScore = Math.max(1e-6, ...results.map(resultScore));
+    let html = '<div class="results-grid" style="margin-top:12px;">';
+    results.forEach((r, i) => {
+      const scorePercent = Math.round((resultScore(r) / maxScore) * 100);
+      const authorsText = (r.authors || []).slice(0, 2).join(', ')
+        + (r.authors && r.authors.length > 2 ? ' et al.' : '');
+      const keywords = (r.keywords || []).slice(0, 4)
+        .map(k => `<span class="tag">${escapeHtml(k)}</span>`).join('');
+      const link = r.url
+        ? r.url
+        : (r.uri ? `https://www.protocols.io/view/${r.uri}` : 'https://www.protocols.io');
+      const matchBadge = r.match_count > 1
+        ? `<span class="tag" style="background:#e8f5e9;color:#2e7d32;">matched ${r.match_count} queries</span>`
+        : '';
+      const reqBadge = r.required_terms && r.required_terms.length
+        ? `<span class="tag" style="background:#f3e5f5;color:#6a1b9a;">must: ${r.required_terms.join(' + ')}</span>`
+        : '';
+      // Keyed by source so a new retriever gets a correct badge by adding one
+      // entry here, instead of being mislabelled by a two-way branch.
+      const SOURCE_BADGE = {
+        'pubmed':     { label: 'PubMed',     bg: '#e3f2fd', color: '#1565c0' },
+        'europepmc':  { label: 'Europe PMC', bg: '#e0f2f1', color: '#00695c' },
+        'protocols.io': { label: 'protocols.io', bg: '#ede7f6', color: '#5e35b1' },
+      };
+      const sb = SOURCE_BADGE[r.source] || SOURCE_BADGE['protocols.io'];
+      const sourceBadge = `<span class="tag" style="background:${sb.bg};color:${sb.color};">${escapeHtml(sb.label)}</span>`;
+      html += `
+        <div class="protocol-card">
+          <div class="rank">Match #${i + 1} ${sourceBadge}</div>
+          <div class="title">
+            <a href="${escapeHtml(link)}" target="_blank" rel="noopener">${escapeHtml(r.title || 'Untitled Protocol')}</a>
+          </div>
+          ${r.description ? `<div class="desc">${escapeHtml(r.description.slice(0, 200))}${r.description.length > 200 ? '…' : ''}</div>` : ''}
+          <div class="meta">
+            ${authorsText ? `<span>👤 ${escapeHtml(authorsText)}</span>` : ''}
+            ${r.doi ? `<span>DOI: ${escapeHtml(r.doi)}</span>` : ''}
+            ${keywords}
+            ${matchBadge}
+            ${reqBadge}
+          </div>
+          ${renderMatchNotes(r)}
+          <div class="score-bar"><div class="fill" style="width:${scorePercent}%"></div></div>
+        </div>
+      `;
+    });
+    html += '</div>';
+    return html;
+  }
+
+  // Reorder the current results by boosting one criterion's match signal, then
+  // re-render the cards in place (highest boosted score first).
+  function reorderResults(criterion) {
+    const key = REORDER_SIGNAL[criterion];
+    const grid = lastResultsGridId ? document.getElementById(lastResultsGridId) : null;
+    if (!key || !grid || !lastResults.length) return;
+    lastResults.forEach(r => {
+      const base = r.profile_score ?? r.blend_score ?? r.score ?? 0;
+      const signal = (r.profile_signals && r.profile_signals[key]) || 0;
+      r._reorder_score = base + REORDER_BOOST * signal;
+    });
+    lastResults.sort((a, b) => (b._reorder_score || 0) - (a._reorder_score || 0));
+    grid.innerHTML = resultCardsHtml(lastResults);
+  }
+
+  // -------------------------------------------------------------------------
+  // Main send function
+  // -------------------------------------------------------------------------
+
+  async function sendQuery() {
+    const input = document.getElementById('query-input');
+    const btn = document.getElementById('send-btn');
+    const query = input.value.trim();
+    if (!query) return;
+
+    input.value = '';
+    btn.disabled = true;
+
+    // Capture the flag for this request, then reset it
+    const skipThisTime = skipClarification;
+    skipClarification = false;
+    // If the assistant just asked a clarification, this message answers it.
+    const isClarificationAnswer = awaitingClarificationAnswer;
+    awaitingClarificationAnswer = false;
+    // The field that clarification was asking about (authoritative pending field).
+    const clarificationFieldForRequest = isClarificationAnswer ? pendingClarificationField : null;
+    // Echo the exact question + chips currently shown, so "why this question?" can
+    // re-show the identical clarification (rule- or LLM-generated).
+    const clarificationQuestionForRequest = isClarificationAnswer ? pendingClarificationQuestion : null;
+    const clarificationOptionsForRequest = isClarificationAnswer ? pendingClarificationOptions : null;
+    pendingClarificationField = null;
+    const conversationForRequest = currentExperimentQuery || null;
+    const searchConfirmed = pendingSearchConfirmed;
+    const selectedSearchQuery = pendingSelectedSearchQuery || query;
+    const searchAll = pendingSearchAll;
+    // For a subset ("Search selected"), send only the ticked queries; otherwise
+    // send the full candidate list so cross-turn context still resolves.
+    const candidateQueriesForRequest = pendingSearchQueriesOverride
+      ? [...pendingSearchQueriesOverride]
+      : [...latestCandidateQueries];
+    const payloadQuery = searchConfirmed
+      ? (searchAll ? (candidateQueriesForRequest[0] || selectedSearchQuery) : selectedSearchQuery)
+      : query;
+    pendingSearchConfirmed = false;
+    pendingSelectedSearchQuery = '';
+    pendingSearchAll = false;
+    pendingSearchQueriesOverride = null;
+
+    appendMessage('user', `<div class="bubble">${escapeHtml(query)}</div>`);
+
+    const thinkingMsg = appendMessage('assistant', `
+      <div class="bubble">
+        <div class="thinking">
+          <div class="dot-anim"><span></span><span></span><span></span></div>
+          <span>Thinking...</span>
+        </div>
+      </div>
+    `);
+
+    try {
+      const selectedProvider = 'claude';  // Claude provider: Sonnet for general calls, Haiku for the re-ranker.
+      const searchModeSelect = document.getElementById('search-mode-select');
+      const selectedSearchMode = searchModeSelect ? searchModeSelect.value : 'local';
+      // The source mix is no longer a UI choice: the re-ranker weighs protocols.io and
+      // PubMed against each other and keeps the best 10 on merit (no reserved slots).
+      // null -> backend default, which sizes the result page.
+      const blendMix = null;
+      // Model is always chosen by the backend default; the UI no longer offers a switch.
+      const selectedModel = null;
+
+      // Debug-only: wall-clock timer from hitting search to results rendered.
+      const searchStartMs = performance.now();
+
+      const resp = await fetch(`${BACKEND}/chat`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          query: payloadQuery,
+          session_id: SESSION_ID,
+          top_k: 5,
+          explain: true,
+          skip_clarification: skipThisTime,
+          search_mode: selectedSearchMode,
+          experiment_profile: experimentProfile,
+          conversation_query: conversationForRequest,
+          search_confirmed: searchConfirmed,
+          selected_search_query: selectedSearchQuery,
+          search_all: searchAll,
+          candidate_search_queries: candidateQueriesForRequest,
+          is_clarification_answer: isClarificationAnswer,
+          pending_field: clarificationFieldForRequest,
+          pending_clarification_question: clarificationQuestionForRequest,
+          pending_clarification_options: clarificationOptionsForRequest,
+          provider: selectedProvider || null,
+          model: selectedModel,
+          blend_mix: blendMix,
+          client_view: clientView,
+        }),
+      });
+
+      thinkingMsg.remove();
+
+      if (!resp.ok) {
+        const err = await resp.json().catch(() => ({}));
+        appendMessage('assistant', `<div class="bubble"><div class="error-bubble">Error: ${escapeHtml(err.detail || resp.statusText)}</div></div>`);
+        return;
+      }
+
+      const data = await resp.json();
+      markBackendOnline();
+      if (data.domain) setDomainBadge(data.domain);
+
+      // -- New topic detected: backend cleared the carried-over profile --
+      if (data.new_search) {
+        experimentProfile = null;
+        currentExperimentQuery = '';
+        appendMessage('assistant', `
+          <div class="bubble">
+            <div class="clarification-bubble">🔄 <strong>Starting a new search</strong> — I cleared the previous experiment context since this looks like a different topic.</div>
+          </div>
+        `);
+      }
+
+      if (data.experiment_profile) experimentProfile = data.experiment_profile;
+      if (data.conversation_query) currentExperimentQuery = data.conversation_query;
+
+      // -- Pipeline explanation ("how are these ranked / generated?") --
+      // Renders the answer in place; deliberately does NOT clear the current
+      // query card / results state, so the user keeps their context.
+      if (data.intent === 'explanation') {
+        appendMessage('assistant', `<div class="bubble"><div class="clarification-bubble">${escapeHtml(data.reply || '')}</div></div>`);
+        return;
+      }
+
+      // -- Domain not supported yet (e.g. the router classified this as chemistry) --
+      if (data.intent === 'unsupported_domain') {
+        latestCandidateQueries = [];
+        appendMessage('assistant', `<div class="bubble"><div class="clarification-bubble" style="border-left:3px solid #d97706;">
+          <div style="font-weight:600;margin-bottom:4px;">Not supported yet</div>
+          ${escapeHtml(data.reply || '')}
+        </div></div>`);
+        return;
+      }
+
+      // -- Chitchat --
+      if (data.intent === 'chitchat') {
+        latestCandidateQueries = [];
+        appendMessage('assistant', `<div class="bubble">${escapeHtml(data.reply || '')}</div>`);
+        return;
+      }
+
+      // -- Clarification needed --
+      if (data.intent === 'clarification') {
+        clientView = 'clarification';
+        latestCandidateQueries = [];
+        // The user's next message answers this clarification — flag it so the
+        // backend refines the profile instead of treating it as a new topic.
+        awaitingClarificationAnswer = true;
+        pendingClarificationField = data.clarification?.field || null;
+        // Remember the exact question + chips so "why this question?" can echo the
+        // SAME ones back (works for rule- and LLM-generated clarifications alike).
+        pendingClarificationQuestion = data.clarification?.question || '';
+        pendingClarificationOptions = Array.isArray(data.clarification?.options) ? data.clarification.options : [];
+        // A side-explanation (e.g. "why are you asking this?") sets suppress_profile
+        // — show just the explanation, not the full profile card again.
+        const profileHtml = data.suppress_profile
+          ? ''
+          : renderExperimentProfile(data.experiment_profile, data.experiment_intent, data.domain);
+        appendMessage('assistant', `
+          <div class="bubble">
+            <div class="clarification-bubble">
+              ${escapeHtml(data.reply || '')}
+              ${renderQuickOptions(data.clarification?.options || [])}
+            </div>
+            ${profileHtml}
+          </div>
+        `);
+        return;
+      }
+
+      // -- Candidate search query selection --
+      if (data.intent === 'query_selection') {
+        clientView = 'query_selection';
+        latestCandidateQueries = data.candidate_search_queries || [];
+        appendMessage('assistant', `
+          <div class="bubble">
+            ${renderExperimentProfile(data.experiment_profile, data.experiment_intent, data.domain)}
+            ${renderQuerySelection(latestCandidateQueries)}
+          </div>
+        `);
+        return;
+      }
+
+      // -- Search results --
+      clientView = 'results';
+      lastSearchQuery = data.search_query || query;
+
+      let html = '<div class="bubble">';
+
+      // Which LLM produced these results (provider + model).
+      if (data.llm_model) {
+        html += `<div style="font-size:11px;color:#8a8f9c;margin-bottom:10px;">
+          🧠 Model: <strong style="color:#5e35b1;">${escapeHtml(data.llm_model)}</strong>
+          <span style="color:#aab;">(${escapeHtml(data.llm_provider || '')})</span>
+        </div>`;
+      }
+
+      html += renderExperimentProfile(data.experiment_profile, data.experiment_intent, data.domain);
+
+      // LLM results-summary explanation — dev-only detail, shown only in debug mode.
+      if (IS_DEBUG && data.explanation) {
+        html += `<div class="explanation">${escapeHtml(data.explanation)}</div>`;
+      }
+
+      // Exact queries/variants sent to each source — dev-only, debug mode only.
+      if (IS_DEBUG && data.expanded_queries && data.expanded_queries.length) {
+        const tags = data.expanded_queries
+          .map(q => `<span>${escapeHtml(q)}</span>`)
+          .join('');
+        html += `
+          <div class="expanded-queries">
+            <span class="label">→ protocols.io / RAG (${data.expanded_queries.length} variants):</span>${tags}
+          </div>
+        `;
+      }
+
+      if (IS_DEBUG && data.pubmed_queries && data.pubmed_queries.length) {
+        const rows = data.pubmed_queries.map(p => {
+          const sel = escapeHtml(p.selected || '');
+          const core = escapeHtml(p.core || '');
+          return `<div style="margin:2px 0;"><span style="color:#1565c0;">${core}</span>`
+               + ` <span style="color:#9aa0ae;">(${p.hits} hits — from "${sel}")</span></div>`;
+        }).join('');
+        html += `
+          <div class="expanded-queries">
+            <span class="label">→ PubMed (${data.pubmed_queries.length} quer${data.pubmed_queries.length === 1 ? 'y' : 'ies'}):</span>
+            <div>${rows}</div>
+          </div>
+        `;
+      }
+
+      if (IS_DEBUG && data.search_query && data.search_query !== query) {
+        html += `
+          <div class="expanded-queries">
+            <span class="label">Structured query:</span><span>${escapeHtml(data.search_query)}</span>
+          </div>
+        `;
+      }
+
+      // Protocol result cards
+      // Result cards go in a uniquely-id'd container so the reorder buttons can
+      // re-render them in place. Store the results for reordering.
+      (data.results || []).forEach(r => { delete r._reorder_score; });
+      lastResults = data.results || [];
+      lastResultsGridId = 'results-grid-' + (++resultsGridSeq);
+      // Total time from search click to results shown, just above the cards.
+      if (lastResults.length) {
+        const elapsedSec = ((performance.now() - searchStartMs) / 1000).toFixed(2);
+        html += `<div style="font-size:12px; color:#7c3aed; font-weight:600; margin:4px 0 8px;">⏱️ ${elapsedSec}s to results</div>`;
+      }
+      html += `<div id="${lastResultsGridId}">${resultCardsHtml(lastResults)}</div>`;
+
+      // Reorder section — re-rank the same results by boosting a criterion.
+      if (data.feedback_prompt) {
+        html += `
+          <div class="feedback-section">
+            <p>Reorder results based on:</p>
+            <div class="feedback-buttons">
+              <button class="feedback-btn" onclick="reorderResults('organism')">Organism</button>
+              <button class="feedback-btn" onclick="reorderResults('technique')">Technique</button>
+              <button class="feedback-btn" onclick="reorderResults('sample')">Sample type</button>
+              <button class="feedback-btn" onclick="reorderResults('goal')">Goal / readout</button>
+            </div>
+          </div>
+        `;
+      }
+
+      html += '</div>';
+      appendMessage('assistant', html);
+
+      // Deliver the user straight to the first citation (Match #1).
+      if (lastResults.length && lastResultsGridId) {
+        requestAnimationFrame(() => {
+          const firstCard = document.querySelector(`#${lastResultsGridId} .protocol-card`);
+          if (firstCard) firstCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      }
+
+    } catch (e) {
+      thinkingMsg.remove();
+      // This catch wraps the fetch AND the rendering below it, so distinguish the
+      // two: a render bug reporting itself as "backend is down" sends you chasing
+      // a server that answered fine.
+      console.error('Chat request failed:', e);
+      const isNetwork = e instanceof TypeError && /fetch|network/i.test(e.message || '');
+      const body = isNetwork
+        ? 'Could not reach the backend. Is it running?<br><code>python run.py</code>'
+        : `The backend responded, but the reply could not be displayed.<br><code>${escapeHtml(String((e && e.message) || e))}</code>`;
+      appendMessage('assistant', `<div class="bubble"><div class="error-bubble">${body}</div></div>`);
+    } finally {
+      btn.disabled = false;
+      input.focus();
+    }
+  }
+</script>
+
+</body>
+</html>

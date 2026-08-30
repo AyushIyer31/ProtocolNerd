@@ -1,0 +1,101 @@
+pmid,query,used_in_methods_protocol_ids,hit
+26406119,Search query: does the human domesticated transposase gene PGBD5 retain active cut-and-paste DNA transposition activity in human cells?,121687,False
+37242601,Identifying new drug candidates against Schistosoma using cheminformatics databases and ex vivo larval and adult worm assays to overcome praziquantel resistance.,122031,False
+28009756,Rat auxiliary partial liver transplant model with arterial anastomosis and retrorsine treatment to study recipient cell recruitment into regenerating liver grafts.,121741,True
+30940689,Single-tube barcoding method to co-tag long DNA fragments for haplotype phasing and structural variant detection using short-read sequencing in human genome assembly.,122070,True
+39237830,Map protein-DNA interactions genome-wide using antibody-tethered methyltransferase and Nanopore long-read sequencing to profile binding in repetitive regions and detect haplotype-specific interactions.,51194|55936,True
+29735996,Identify proteins localized at specific genomic loci like telomeres using dCas9-APEX2 proximity labeling and mass spectrometry in living human cells.,122009,True
+41676688,How does elevation drive natural selection on group aggregation behavior across globally sampled wild C. elegans strains using GWAS and heritability analysis?,44774,False
+36460793,Comparing single-cell versus single-nucleus RNA sequencing cell-type composition differences in matched fresh versus frozen human colon and liver tissue.,22144,False
+41457950,Looking for methods to detect or remove heterophilic antibody interference in plasma p-tau217 immunoassays used for Alzheimer's biomarker testing.,259411,True
+41053825,Multi-omics analysis of gut microbiome metabolic changes including metabolomics and metatranscriptomics in Parkinson's disease patients versus healthy controls to identify functional microbial alterations.,121607,False
+41413855,How does reference population size and linkage disequilibrium pattern affect genomic breeding value prediction accuracy using GBLUP and weighted GBLUP in multi-population beef cattle scenarios?,239360,False
+42082551,Track individual NLRP3 inflammasome ASC speck formation and dissolution over time in live macrophages using single-cell imaging to compare dynamics across different triggers.,310914,True
+28945705,Metabolic RNA labeling with 4-thiouridine combined with sequencing to measure transcription rates and RNA decay dynamics simultaneously in mouse embryonic stem cells.,116161,False
+41652543,How do I sequence and assemble a plant genome from scratch using Oxford Nanopore long-read sequencing as a beginner?,33432|43337,False
+34596274,"How should I standardize fasting, cage-changing, and glucose tolerance test protocols in mouse diabetes research to improve reproducibility and animal welfare?",247022,False
+28530655,Pooled CRISPR knockout of multiple tumor suppressors in mouse lung cancer models with barcode sequencing to quantify individual tumor growth effects.,121893|121894,False
+25665179,Delivering siRNA specifically to osteoblasts using aptamer-functionalized lipid nanoparticles to silence Plekho1 and promote bone formation in osteoporotic rodents.,121611,True
+35853087,"Analyze how retracted scientific papers continue to be cited by characterizing citing articles across disciplines, sentiment, and topics using metadata extraction and topic modeling.",45556,False
+28394336,Fast open-database search tool for identifying peptide modifications in mass spectrometry proteomics data using fragment-ion indexing to catch post-translational and chemical modifications typically missed.,121866,True
+30010754,Chromosome-level reference genome assembly for Betta splendens to study genetic basis of aggression using Hi-C scaffolding and comparative genomics.,12801,True
+31873830,Pooling pig skeletal muscle satellite cells from multiple donors to create myoblast cell pools that represent average proliferative and differentiation behavior for long-term in vitro studies.,121278,False
+39596330,"How does E. coli RNase H1 bind and cleave R-loops of different RNA-DNA hybrid lengths, and does RNA polymerase protect these structures from degradation?",237311,True
+34552577,Screen fungal isolates from a plant microorganism collection for antimycobacterial activity against M. abscessus using a bioluminescence-based medium-throughput assay to find new antibiotic compounds.,50594|50595|50675,False
+31077316,Draft de novo genome assembly of Indian peafowl using hybrid Illumina and Oxford Nanopore sequencing to improve scaffold contiguity and repeat resolution.,13216,False
+38388166,"Comparing qPCR, culture, and shotgun metagenomics to quantify Klebsiella pneumoniae abundance in turkey versus broiler poultry gut microbiome samples.",28094,True
+37829276,Sequencing a complete genome from a single tiny marine worm specimen of a rare nemertodermatid xenacoelomorph using low-input long-read methods for comparative genomics.,18087|239646,False
+30268511,How do I optimize mammosphere assay seeding density to avoid cell aggregation when measuring breast cancer stem cell frequency in MCF-7 cells?,121476,True
+40872802,Newly isolated lytic phage active against multidrug-resistant Pseudomonas aeruginosa strains characterized genomically and tested in Galleria mellonella infection model for phage therapy applications.,1744,False
+35438621,How to extract high molecular weight DNA from filamentous fungi for long-read third-generation sequencing to get complete genome assemblies?,12875|38624|54341,True
+28607482,"How are primordial germ cells specified in pig embryos compared to humans, focusing on SOX17, BLIMP1, WNT, and BMP signaling during gastrulation?",121900,True
+29641611,Comparing cost-effectiveness of oyster reef and wetland restoration versus seawalls for reducing coastal flood risk along the US Gulf Coast under climate change scenarios.,9528,True
+30625152,Genome-scale metabolic model with protein structures for Staphylococcus aureus USA300 to predict gene essentiality and metabolic responses under different growth conditions.,13137,False
+36329019,Convert arbitrary fluorescence units from microplate reader measurements into absolute protein concentrations per bacterial cell using fluorescent protein calibrants without requiring protein purification.,54885,False
+42007381,Intratracheal LPS mouse model of acute lung injury histopathology in aged C57BL/6J mice to study ARDS pathogenesis in elderly.,239679,True
+40163522,How does climate variability influence reproductive isolation and hybridization dynamics between Mimulus guttatus and Mimulus nasutus in natural admixed populations using whole-genome sequencing?,37534,True
+35711922,Identify extrachromosomal circular DNA including oncogene amplifications from nanopore long-read sequencing data using a graph-based bioinformatics pipeline in human cancer cells.,122089,False
+30052755,Show me an R tool for visualizing and comparing quality control metrics across multiple Oxford Nanopore MinION flowcell sequencing runs.,6285,False
+33114549,Find the DNA binding motif of a CRP-family transcription factor in Thermus thermophilus using in vitro selection to identify regulated genes in this extremophile.,18635|39818,True
+33970926,How does wearing soft-soled shoes affect gait kinematics and spatiotemporal parameters in newly walking toddlers compared to barefoot walking?,45989,True
+32333689,"Measuring strontium, oxygen, and carbon isotope variation within single human third molar enamel samples to assess how caries affect isotopic integrity for forensic and archaeological mobility studies.",24517,True
+39251619,Nuclear staining and flow cytometry cell cycle analysis protocol for Malassezia yeast with thick lipid-rich cell walls using DAPI or propidium iodide.,2344,True
+28346450,Mapping protein-RNA contact sites at single amino acid and nucleotide resolution using crosslinking with isotope-labeled RNA and tandem mass spectrometry in ribonucleoprotein complexes.,121864,False
+32854500,R package for calibrating and converting raw fluorescence units from flow cytometry and plate reader data into absolute units for GFP expression in engineered E. coli.,21741|27409,False
+34740201,Computational modeling tool to simulate electrical stimulation and recording from rat visceral nerves accounting for anatomical variability in fascicle size and axon diameter.,19271|19927|36536,False
+31855083,Sequencing packaged AAV genome to check for mutations or truncations using a simple low-input NGS method suitable for academic labs without GMP resources.,16985,False
+34462260,How does beta-cell SENP1 knockout affect incretin-stimulated insulin secretion and glucose tolerance in high-fat diet mice?,14815|19145,True
+42524695,"Integrate transcription factor activity, metabolite levels, and metabolic fluxes from scRNA-seq data into a joint latent factor model to better characterize functional cell states in cancer.",252068,False
+36360315,"Find differentially expressed genes and pathogenic variants shared across vitamin K deficiency-related conditions like myocardial infarction, renal failure, and prostate cancer using systems genetics and lncRNA analysis.",46880,False
+38902223,How does H3.3 histone variant downregulation affect B cell to plasma cell differentiation and chromatin accessibility changes in mice?,122074,False
+34457243,Whole-genome sequencing of SARS-CoV-2 clinical samples from Uganda using the ARTIC amplicon protocol to characterize viral lineages and phylogenetic relationships.,36007,False
+34484143,Monitoring acetogenic bacteria communities in biogas digesters using FTHFS gene amplicon sequencing and high-throughput analysis to track community shifts and improve process stability.,37580,False
+39777783,Recovering and classifying archaeal viruses from marine estuaries that infect Poseidoniales archaea using metagenomic sequencing and phylogenetic analysis.,57770|830|845,False
+36149401,How does phosphorylated Rab8 and Rab10 binding to LRRK2 create a feed-forward loop that amplifies kinase activity at membranes in Parkinson's disease?,50829,False
+37425958,How does TMEM127 loss affect RET receptor endocytosis and surface accumulation to drive constitutive signaling in pheochromocytoma cells?,256618,False
+37337093,"How does GABA inhibition of vasopressin neurons in the supraoptic nucleus change in bile duct-ligated cirrhotic rats, and does intracellular chloride dysregulation contribute?",121261,True
+32169215,How does SRPK1-mediated protamine phosphorylation trigger protamine-to-histone exchange and chromatin reprogramming in fertilized mouse oocytes?,121580,True
+42539119,Does the C. elegans gustatory receptor LITE-1 function as both a photoreceptor and chemoreceptor for diacetyl avoidance behavior?,22617,False
+30862831,Standardizing cell-free microRNA profiling from serum or plasma using spike-in controls and Two-tailed RT-qPCR to assess RNA isolation quality and inhibition in liquid biopsy workflows.,121717,False
+38989890,How does proline-to-serine tRNA mistranslation differentially affect gene expression in male versus female Drosophila using RNA-seq transcriptomics?,3315,False
+38863673,Find tumor-specific mutation-derived splice junctions from RNA-seq data in melanoma patients to identify neoantigen candidates for immunotherapy.,11534,True
+34616066,Map mouse primary motor cortex cell types using single-cell RNA-seq and epigenomics to build a multimodal reference atlas of neuronal and non-neuronal populations.,11605,True
+26320937,"Standardized methods for isolating and analyzing extracellular RNA from biofluids including best practices for biofluid collection, particle separation, and exRNA profiling across different vesicle types.",121622,True
+28650476,Map protein-protein interactions among Arabidopsis transcription factors using a high-throughput yeast two-hybrid sequencing approach.,121906,True
+36045295,Engineering yeast to produce vinblastine precursors vindoline and catharanthine from scratch using heterologous plant genes expressed in Saccharomyces cerevisiae.,36887,False
+36555794,Multiplex RT-qPCR assay to rapidly distinguish Omicron subvariants of SARS-CoV-2 in clinical samples without whole genome sequencing.,199148|55889,False
+38819130,How did the FDA use wastewater sequencing to track SARS-CoV-2 variant prevalence across US communities during the COVID-19 pandemic using next-generation sequencing?,53258|53350|53493,False
+40880479,How does microglial DISC1 knockout affect synaptic pruning and spatial memory in mice through actin cytoskeletal dysregulation?,161270,False
+40875780,Detecting mosquito salivary protein-specific IgE in human serum using a capture ELISA to avoid IgG interference and improve sensitivity for diagnosing Aedes aegypti bite allergy.,211793,True
+30804551,One-step CRISPR-Cpf1 and AAV system for knocking in CAR constructs while simultaneously knocking out checkpoint genes in human T cells.,122091,False
+36824594,Draft genome assembly and annotation of the Australian banjo frog Limnodynastes dumerilii to serve as a reference for amphibian phylogenomics.,33534|33594,True
+29901420,How can I standardize and validate macrophage-conditioned medium quality to optimize hybridoma cell survival and monoclonal antibody production using a bioassay?,201300,False
+34658337,How does the G2019S LRRK2 mutation affect cilia loss and Hedgehog signaling in striatal neurons of mouse models?,43690,True
+41559478,How do HCN channel properties in supragranular pyramidal neurons compare across primate species using patch-seq and single-nucleus RNA sequencing?,52136,False
+38273288,Estimate cell-type proportions in bulk human cortex tissue using DNA methylation-based deconvolution with a reference panel including neuronal and glial subtypes for EWAS studies.,42445,False
+34447628,How does storing wastewater solids at different temperatures and freeze-thaw cycles affect SARS-CoV-2 RNA measurements for epidemiological surveillance?,55692,True
+42367214,Combine RNAscope FISH with immunohistochemistry on mouse brain sections to detect and quantify specific mRNA transcripts within defined neuronal cell populations at single-cell resolution.,217486,False
+36217031,Search for large serine recombinases with high efficiency for site-specific integration of large DNA payloads into human cells without double-strand breaks.,28026,False
+30397333,Comparative genomics analysis of parasitic nematodes and flatworms to identify expanded gene families and potential drug targets across multiple worm species.,122011|122015|122022|122026|122028|122029,True
+29269866,Epigenome-wide DNA methylation differences in white blood cells associated with intravenous drug use and hepatitis C coinfection in HIV-positive patients.,121966,True
+21702933,"How do lymphatic endothelial cells form new vessels in adult pathological models like corneal assay and lymphangioma, examined by transmission electron microscopy?",121131,False
+36951106,How does alanyl-tRNA synthetase maintain chiral selectivity against D-alanine and what role does DTD play in correcting D-amino acid mischarging during translation?,121325,False
+42391002,Single-cell RNA sequencing protocol for anaerobic Bacteroidota gut bacteria using FACS sorting and MATQ-seq with ribosomal RNA depletion in Bacteroides thetaiotaomicron.,258601,False
+35243422,"Multiomics longitudinal profiling of serial biopsies from a metastatic breast cancer patient to track tumor evolution, immune microenvironment changes, and therapy resistance mechanisms over time.",47595,False
+39359233,Review 3D in vitro human skin models as alternatives to animal testing for toxicology and risk assessment studies.,237191,False
+30462808,Does LT4-induced subclinical hyperthyroidism cause oxidative stress and redox imbalance in thyroidectomy patients receiving TSH suppression therapy?,24110,False
+33350435,Optimized protocol for isolating and maintaining quiescent hepatic stellate cells from mouse liver using Nycodenz gradient and serum-free culture conditions to study fibrosis activation in vitro.,281914,True
+30271992,Compare metabarcoding versus morphology-based taxonomy for assessing meiofaunal biodiversity in benthic invertebrate communities to identify method-dependent biases in diversity estimates.,121300,True
+39510801,Comparing proteomes of mouse macrophage cell lines like RAW264.7 and J774A.1 versus primary bone marrow-derived macrophages using mass spectrometry to find the best model for inflammation research.,162311|206474,True
+21572423,"How do basement membrane gaps form during vulval invasion in C. elegans, and what role do integrins play in regulating basement membrane remodeling?",121336,True
+24218132,How to optimize PCR conditions for amplifying a high GC-content EGFR promoter region to detect SNPs at positions -216G>T and -191C>A?,239411,True
+29256496,Genome-wide STARR-seq screen to identify active enhancers in human cells while controlling for plasmid-based artifacts like interferon response and ORI promoter activity.,121971|121973|121974|121975,True
+33923007,Assessing heavy metal contamination and land capability classification of agricultural soils in Abu Dhabi using geochemical indices and multivariate statistics.,20442,True
+33529123,"Optimized sheep somatic cell nuclear transfer protocol combining zona-free cloning, embryo aggregation, and caffeine-based cytoplast activation control to improve blastocyst development and offspring production efficiency.",35043,True
+37237607,Monitoring diabetic versus normal cutaneous wound healing in adult zebrafish using optical coherence tomography angiography to track vascular and tissue remodeling over time.,28876,True
+41800616,Pull down vault RNA binding proteins from human lung epithelial cells using antisense DNA probes and UV crosslinking followed by mass spectrometry to identify vtRNA interactors.,200568,False
+35528780,Comparing bioinformatics tools for metatranscriptomic analysis of Microcystis harmful algal blooms to determine which best captures gene expression and community composition.,28312|38526|49795|49797|51001,True
+33996275,Comparing ultrafiltration versus iron chloride flocculation for concentrating and purifying viral DNA from wastewater and environmental water samples before metagenomic sequencing.,822,True
+32488088,Using FIB/SEM serial cross-sections to visualize chromatin fiber organization and diameter distribution inside human metaphase chromosomes.,121164,True
+39664262,Isolating and genetically characterizing new marine phytoplankton strains from Canadian waters using long-read sequencing of rRNA genes to build reference databases for species identification.,38081,False
+28877184,How do you perform real-time RT-qPCR gene expression analysis on bacterial and mammalian RNA samples aboard the International Space Station in microgravity conditions?,7166,False
