@@ -39,3 +39,9 @@ missfont.log
 
 # Methods-judge verdict cache: rebuildable, and keyed by judge model
 protocolnerd-backend/benchmarking/citation_grounded_eval/.methods_confirm_chemistry_cache.json
+
+# Local-only logo conversions: this machine lacks Ghostscript, so white stubs
+# stand in for the MDPI EPS logos. Overleaf and full TeX installs convert the
+# real EPS files themselves and must never receive the stubs.
+Documentation/paper/Definitions/logo-mdpi-eps-converted-to.pdf
+Documentation/paper/Definitions/logo-updates-eps-converted-to.pdf

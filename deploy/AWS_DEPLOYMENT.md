@@ -126,6 +126,42 @@ the index is baked at image build time, so a refresh is: re-run the crawl
 updated `data/`, and deploy as above. **There is no scheduled update in the
 current architecture** — nothing refreshes the corpus until someone does this.
 
+
+## Custom domain: protocolnerd.org
+
+Cloudflare (registrar + DNS, proxied, Full strict) serves the domain through a
+Worker (`deploy/cloudflare-worker.js`, routes `protocolnerd.org/*` and
+`www.protocolnerd.org/*`) that proxies to the ECS Express service hostname.
+That hostname rides the routing rule ECS rewrites on every blue/green deploy,
+so the domain follows each deployment automatically and needs no post-deploy
+action. Verified by deliberately breaking the fallback path with the Worker
+live: the site stayed up.
+
+As dormant fallback, apex and `www` CNAME records point at the ALB's DNS name,
+an ACM certificate for both names is attached to the HTTPS listener via SNI,
+and listener rule priority 10 routes the two hostnames to the service's target
+groups. The fallback only matters if the Worker routes are removed, and then
+this caveat applies:
+
+**Post-deploy step, required only when serving via the fallback rule:** ECS Express flips traffic between a blue/green
+pair of target groups on every deployment by rewriting its own rule's weights.
+The protocolnerd.org rule does not get rewritten, so after every rollout copy
+the ForwardConfig weights from the express rule (priority 1) to the domain rule
+(priority 10):
+
+```bash
+L=$(aws elbv2 describe-listeners --region us-east-1 \
+  --load-balancer-arn <ALB_ARN> --query "Listeners[0].ListenerArn" --output text)
+CFG=$(aws elbv2 describe-rules --region us-east-1 --listener-arn "$L" \
+  --query "Rules[?Priority=='1'].Actions[0]" --output json | python3 -c "import sys,json; print(json.dumps(json.load(sys.stdin)))")
+aws elbv2 modify-rule --region us-east-1 \
+  --rule-arn $(aws elbv2 describe-rules --region us-east-1 --listener-arn "$L" --query "Rules[?Priority=='10'].RuleArn" --output text) \
+  --actions "$CFG"
+```
+
+With the Worker in place this sync is unnecessary; it is kept for the day the
+fallback path is in use.
+
 ## Legacy files in this directory
 
 `backend_startup.sh`, `incremental_update.py`, `protocols-update.service`, and
