@@ -12,7 +12,7 @@ chemistry ships as a second domain built on the same extension mechanism.
 
 A bench scientist describes an experiment in plain English. ProtocolNerd turns that into a
 structured experiment profile, asks a clarifying question when a required detail is missing,
-searches a curated corpus of **22,724 Protocols.io protocols** plus PubMed, and returns a
+searches a curated corpus of **22,724 Protocols.io protocols** plus the domain's literature source (PubMed for biology, Europe PMC for chemistry), and returns a
 single ranked list explaining why each result fits and what it does not cover.
 
 ## Why it exists
@@ -28,7 +28,7 @@ sources so the fit judgement happens before you start reading.
 1. **Domain routing** — a Claude call decides which scientific domain the request belongs to,
    from a menu each registered domain declares about itself. Biology and chemistry are
    registered; the rest of the request runs with the routed domain's fields and prompts.
-2. **Profile building** — Claude extracts a structured 22-field experiment profile (organism,
+2. **Profile building** — Claude extracts a structured experiment profile (22 fields in biology, 13 in chemistry: organism,
    technique, sample type, readout, conditions, …). Fields it cannot infer are marked
    "not specified" rather than guessed.
 3. **Clarification** — if a required field is missing, the system asks one targeted question
@@ -38,12 +38,12 @@ sources so the fit judgement happens before you start reading.
 5. **Retrieval** — TF-IDF and semantic (all-MiniLM-L6-v2) search over the local corpus, merged
    with Reciprocal Rank Fusion, plus the domain's literature lane: a live PubMed search for
    biology, Europe PMC's Methods-section search for chemistry.
-6. **Re-ranking** — a rule-based pass, then two Claude Haiku passes: protocols alone, then
+6. **Re-ranking** — a rule-based pass, then two Claude Haiku 4.5 passes: protocols alone, then
    protocols and papers jointly. Protocols and papers compete in one ranking, no source quotas.
 7. **Explanation** — every result carries why it matches, what may not fit, and which profile
    fields remain unresolved.
 
-A request with no clarification uses six model calls before results appear.
+A request with no clarification uses seven model calls before results appear: the confirmation request repeats domain routing, so four Sonnet calls join three Haiku calls.
 
 ## Quick start
 
@@ -91,6 +91,7 @@ template). The only required key is `ANTHROPIC_API_KEY`.
 |---|---|
 | `ANTHROPIC_API_KEY` | Required. All default model calls go to Claude. |
 | `CLAUDE_MODEL` | Default `claude-sonnet-4-6`. |
+| `RERANKER_MODEL` | Default `claude-haiku-4-5`, used for the two re-ranking passes and the PubMed query. |
 | `LLM_PROVIDER` | `claude` (default), `openai`, `gemini`, or `ollama`. |
 | `NCBI_API_KEY` | Optional. Raises PubMed rate limits. |
 | `PROTOCOLS_IO_TOKEN` | Needed only to rebuild the corpus. |
@@ -177,7 +178,7 @@ for how to reproduce these.
 ## Corpus
 
 Protocols.io has no bulk-export API, so the corpus is built by searching its public API with a
-curated list of 761 terms covering molecular and cell biology techniques, organisms, sample
+curated list of 761 terms covering biology techniques, organisms, sample
 types, and assays. Protocols are deduplicated by ID.
 
 ```bash

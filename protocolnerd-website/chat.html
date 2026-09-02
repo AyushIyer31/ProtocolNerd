@@ -594,6 +594,47 @@
       background: #eef2ff;
       border-color: #4361ee;
     }
+
+    /* --- Download-as-PDF report ------------------------------------- */
+    .download-btn {
+      background: #fff; color: #5e35b1; border: 1.5px solid #5e35b1;
+      border-radius: 7px; padding: 5px 14px; font-size: 12.5px; font-weight: 600;
+      cursor: pointer;
+    }
+    .download-btn:hover { background: #f3eefc; }
+    #print-report { display: none; }
+    @media print {
+      /* When a report print is active, the report is the only visible child. */
+      body.printing-report > *:not(#print-report) { display: none !important; }
+      body.printing-report #print-report { display: block !important; }
+      #print-report { color: #111; font-size: 12.5px; }
+      #print-report h1 { font-size: 20px; margin: 0 0 2px; }
+      #print-report .pr-sub { color: #666; font-size: 11px; margin-bottom: 14px; }
+      #print-report h2 {
+        font-size: 15px; margin: 18px 0 8px; padding-bottom: 3px;
+        border-bottom: 1.5px solid #5e35b1;
+      }
+      #print-report .protocol-card { break-inside: avoid; page-break-inside: avoid;
+        border: 1px solid #ddd; box-shadow: none; margin-bottom: 10px; }
+      #print-report .pr-url { font-size: 11px; color: #444; word-break: break-all; }
+      #print-report .pr-qa { margin: 6px 0; }
+      #print-report .pr-qa .q { font-weight: 600; }
+      #print-report .score-bar { display: none; }
+      /* Ink-dark overrides: the screen greys are too light on paper. */
+      #print-report .rank { color: #1a1a1a; font-weight: 700; }
+      #print-report .rank .tag { color: #1a1a1a; background: #eee; border: 1px solid #bbb; }
+      #print-report .meta, #print-report .meta span { color: #222; }
+      #print-report .desc { color: #1a1a1a; }
+      #print-report .tag { color: #222; background: #f0f0f0; }
+      #print-report .match-explanation, #print-report .match-explanation div { color: #1a1a1a; }
+      #print-report .profile-card h3 { color: #111; }
+      #print-report .profile-field .label { color: #111; font-weight: 700; }
+      #print-report .profile-field .value { color: #1a1a1a; }
+      #print-report .profile-field.missing .value,
+      #print-report .profile-field.optional .value { color: #444; }
+      #print-report .pr-sub { color: #333; }
+      #print-report .pr-url { color: #222; }
+    }
   </style>
 </head>
 <body>
@@ -714,6 +755,10 @@
   let lastResults = [];
   let lastResultsGridId = null;
   let resultsGridSeq = 0;
+  // Everything the downloadable report needs about the current search:
+  // the user's original request, each follow-up question with its answer,
+  // and what was finally searched. Reset when a fresh request starts.
+  let searchLog = { userQuery: '', clarifications: [], queriesRun: [], profile: null, intent: null, domain: null };
 
   // -------------------------------------------------------------------------
   // Startup: health check and protocol count
@@ -1254,6 +1299,69 @@
     return html;
   }
 
+  // ---------------------------------------------------------------------
+  // Download the current output as a PDF, via the browser's print-to-PDF.
+  // Order per Prof. Shasha: the top results first, then everything known
+  // about the query: the request, the profile, and the follow-up questions.
+  // ---------------------------------------------------------------------
+  function buildPrintReportHtml(results, log) {
+    const when = new Date().toLocaleString();
+    let h = `<h1>ProtocolNerd search report</h1>
+      <div class="pr-sub">${escapeHtml(when)} &nbsp;·&nbsp; protocolnerd.org</div>`;
+
+    h += `<h2>Top ${results.length} result${results.length === 1 ? '' : 's'}</h2>`;
+    results.forEach((r, i) => {
+      const link = r.url || (r.uri ? `https://www.protocols.io/view/${r.uri}` : '');
+      const authorsText = (r.authors || []).slice(0, 4).join(', ')
+        + (r.authors && r.authors.length > 4 ? ' et al.' : '');
+      const src = r.source === 'pubmed' ? 'PubMed' : (r.source === 'europepmc' ? 'Europe PMC' : 'protocols.io');
+      h += `<div class="protocol-card">
+        <div class="rank">Match #${i + 1} &nbsp;·&nbsp; ${escapeHtml(src)}</div>
+        <div class="title">${escapeHtml(r.title || 'Untitled')}</div>
+        ${link ? `<div class="pr-url">${escapeHtml(link)}</div>` : ''}
+        ${authorsText ? `<div class="meta"><span>${escapeHtml(authorsText)}</span>${r.doi ? `<span> · DOI: ${escapeHtml(r.doi)}</span>` : ''}</div>` : ''}
+        ${r.description ? `<div class="desc">${escapeHtml(r.description.slice(0, 400))}${r.description.length > 400 ? '…' : ''}</div>` : ''}
+        ${renderMatchNotes(r)}
+      </div>`;
+    });
+
+    h += `<h2>About this search</h2>`;
+    if (log.userQuery) h += `<div class="pr-qa"><span class="q">Request:</span> ${escapeHtml(log.userQuery)}</div>`;
+    if (log.domain) h += `<div class="pr-qa"><span class="q">Domain:</span> ${escapeHtml(log.domain)}</div>`;
+    if (log.clarifications.length) {
+      h += `<div class="pr-qa"><span class="q">Follow-up questions:</span></div>`;
+      log.clarifications.forEach(c => {
+        h += `<div class="pr-qa" style="margin-left:14px;">Q: ${escapeHtml(c.question)}<br>A: ${escapeHtml(c.answer || '(skipped)')}</div>`;
+      });
+    }
+    if (log.queriesRun.length) {
+      h += `<div class="pr-qa"><span class="q">Queries searched:</span> ${log.queriesRun.map(escapeHtml).join(' &nbsp;·&nbsp; ')}</div>`;
+    }
+    h += renderExperimentProfile(log.profile, log.intent, log.domain);
+    return h;
+  }
+
+  function downloadResultsPdf() {
+    if (!lastResults.length) return;
+    let report = document.getElementById('print-report');
+    if (!report) {
+      report = document.createElement('div');
+      report.id = 'print-report';
+      document.body.appendChild(report);
+    }
+    report.innerHTML = buildPrintReportHtml(lastResults, searchLog);
+    const oldTitle = document.title;
+    document.title = 'ProtocolNerd_results_' + new Date().toISOString().slice(0, 10);
+    document.body.classList.add('printing-report');
+    const cleanup = () => {
+      document.body.classList.remove('printing-report');
+      document.title = oldTitle;
+      window.removeEventListener('afterprint', cleanup);
+    };
+    window.addEventListener('afterprint', cleanup);
+    window.print();
+  }
+
   // Reorder the current results by boosting one criterion's match signal, then
   // re-render the cards in place (highest boosted score first).
   function reorderResults(criterion) {
@@ -1281,6 +1389,15 @@
 
     input.value = '';
     btn.disabled = true;
+
+    // Report log: a message that neither answers a clarification nor confirms a
+    // search starts a fresh request; a clarification answer attaches to its question.
+    if (awaitingClarificationAnswer) {
+      const open = searchLog.clarifications[searchLog.clarifications.length - 1];
+      if (open && !open.answer) open.answer = query;
+    } else if (!pendingSearchConfirmed) {
+      searchLog = { userQuery: query, clarifications: [], queriesRun: [], profile: null, intent: null, domain: null };
+    }
 
     // Capture the flag for this request, then reset it
     const skipThisTime = skipClarification;
@@ -1427,6 +1544,7 @@
         // SAME ones back (works for rule- and LLM-generated clarifications alike).
         pendingClarificationQuestion = data.clarification?.question || '';
         pendingClarificationOptions = Array.isArray(data.clarification?.options) ? data.clarification.options : [];
+        searchLog.clarifications.push({ question: data.clarification?.question || data.reply || '', answer: '' });
         // A side-explanation (e.g. "why are you asking this?") sets suppress_profile
         // — show just the explanation, not the full profile card again.
         const profileHtml = data.suppress_profile
@@ -1460,6 +1578,12 @@
       // -- Search results --
       clientView = 'results';
       lastSearchQuery = data.search_query || query;
+      searchLog.profile = data.experiment_profile || searchLog.profile;
+      searchLog.intent = data.experiment_intent || searchLog.intent;
+      searchLog.domain = data.domain || searchLog.domain;
+      searchLog.queriesRun = (data.expanded_queries && data.expanded_queries.length)
+        ? data.expanded_queries : [lastSearchQuery];
+      if (!searchLog.userQuery) searchLog.userQuery = query;
 
       let html = '<div class="bubble">';
 
@@ -1522,7 +1646,10 @@
       // Total time from search click to results shown, just above the cards.
       if (lastResults.length) {
         const elapsedSec = ((performance.now() - searchStartMs) / 1000).toFixed(2);
-        html += `<div style="font-size:12px; color:#7c3aed; font-weight:600; margin:4px 0 8px;">⏱️ ${elapsedSec}s to results</div>`;
+        html += `<div style="display:flex; justify-content:space-between; align-items:center; margin:4px 0 8px;">
+          <span style="font-size:12px; color:#7c3aed; font-weight:600;">⏱️ ${elapsedSec}s to results</span>
+          <button class="download-btn" onclick="downloadResultsPdf()">⬇ Download Results</button>
+        </div>`;
       }
       html += `<div id="${lastResultsGridId}">${resultCardsHtml(lastResults)}</div>`;
 
