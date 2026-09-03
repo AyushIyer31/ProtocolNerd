@@ -634,6 +634,12 @@
       #print-report .profile-field.optional .value { color: #444; }
       #print-report .pr-sub { color: #333; }
       #print-report .pr-url { color: #222; }
+      #print-report .pr-proto { break-before: page; page-break-before: always;
+        border-top: 2px solid #5e35b1; padding-top: 10px; margin-top: 14px; }
+      #print-report .pr-proto h3 { font-size: 14px; margin: 0 0 2px; color: #111; }
+      #print-report .pr-proto ol { margin: 6px 0 0 18px; padding: 0; }
+      #print-report .pr-proto li { margin-bottom: 4px; color: #1a1a1a; }
+      #print-report .pr-proto .pr-mat { color: #1a1a1a; margin-top: 6px; }
     }
   </style>
 </head>
@@ -1304,7 +1310,7 @@
   // Order per Prof. Shasha: the top results first, then everything known
   // about the query: the request, the profile, and the follow-up questions.
   // ---------------------------------------------------------------------
-  function buildPrintReportHtml(results, log) {
+  function buildPrintReportHtml(results, log, texts) {
     const when = new Date().toLocaleString();
     let h = `<h1>ProtocolNerd search report</h1>
       <div class="pr-sub">${escapeHtml(when)} &nbsp;·&nbsp; protocolnerd.org</div>`;
@@ -1338,18 +1344,43 @@
       h += `<div class="pr-qa"><span class="q">Queries searched:</span> ${log.queriesRun.map(escapeHtml).join(' &nbsp;·&nbsp; ')}</div>`;
     }
     h += renderExperimentProfile(log.profile, log.intent, log.domain);
+
+    // Full text of every Protocols.io result, so the reader can interrogate
+    // the protocols (or hand one to an LLM) without leaving the report.
+    if (texts && texts.length) {
+      h += `<h2>Full Protocol Texts</h2>`;
+      texts.forEach(({ rank, data }) => {
+        h += `<div class="pr-proto">
+          <h3>Match #${rank}: ${escapeHtml(data.title)}</h3>
+          ${data.uri ? `<div class="pr-url">https://www.protocols.io/view/${escapeHtml(data.uri)}</div>` : ''}
+          ${data.materials ? `<div class="pr-mat"><strong>Materials:</strong> ${escapeHtml(data.materials)}</div>` : ''}
+          ${data.guidelines ? `<div class="pr-mat"><strong>Guidelines:</strong> ${escapeHtml(data.guidelines)}</div>` : ''}
+          <ol>${data.steps.map(s => `<li>${escapeHtml(s)}</li>`).join('')}</ol>
+        </div>`;
+      });
+    }
     return h;
   }
 
-  function downloadResultsPdf() {
+  async function downloadResultsPdf() {
     if (!lastResults.length) return;
+    // Pull the full text of each Protocols.io result; papers have none.
+    // A failed fetch just omits that protocol's appendix entry.
+    const texts = (await Promise.all(lastResults.map(async (r, i) => {
+      if (!r.id || r.source === 'pubmed' || r.source === 'europepmc') return null;
+      try {
+        const resp = await fetch(`${BACKEND}/protocol_text/${r.id}`);
+        if (!resp.ok) return null;
+        return { rank: i + 1, data: await resp.json() };
+      } catch { return null; }
+    }))).filter(Boolean);
     let report = document.getElementById('print-report');
     if (!report) {
       report = document.createElement('div');
       report.id = 'print-report';
       document.body.appendChild(report);
     }
-    report.innerHTML = buildPrintReportHtml(lastResults, searchLog);
+    report.innerHTML = buildPrintReportHtml(lastResults, searchLog, texts);
     const oldTitle = document.title;
     document.title = 'ProtocolNerd_results_' + new Date().toISOString().slice(0, 10);
     document.body.classList.add('printing-report');

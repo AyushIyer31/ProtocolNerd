@@ -1665,6 +1665,32 @@ def get_build_info() -> Dict[str, Any]:
     return {"sha": sha or "unknown", "built_at": built_at or "", "source": source}
 
 
+@app.get("/protocol_text/{protocol_id}")
+def protocol_text(protocol_id: int):
+    """Full text of one corpus protocol, for the downloadable results report.
+
+    The report includes each Protocols.io result's complete steps so a reader
+    can interrogate the protocol (or hand it to an LLM) without leaving the
+    PDF. Reads straight from the corpus JSON baked into the image; papers
+    (PubMed / Europe PMC) have no entry here and the frontend skips them.
+    """
+    from protocol_rag import _draftjs_to_text
+    path = PROTOCOLS_DATA_DIR / f"{protocol_id}.json"
+    if not path.exists():
+        raise HTTPException(status_code=404, detail="protocol not found")
+    with open(path) as f:
+        p = json.load(f)
+    return {
+        "id": p.get("id"),
+        "title": p.get("title") or "",
+        "uri": p.get("uri") or "",
+        "doi": p.get("doi") or "",
+        "materials": _draftjs_to_text(p.get("materials_text"))[:4000],
+        "guidelines": _draftjs_to_text(p.get("guidelines"))[:2000],
+        "steps": [s for s in (p.get("steps") or []) if s],
+    }
+
+
 @app.get("/health")
 def health_check():
     # Note: we intentionally do NOT probe Ollama here. Ollama is a local-dev-only
