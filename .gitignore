@@ -45,3 +45,10 @@ protocolnerd-backend/benchmarking/citation_grounded_eval/.methods_confirm_chemis
 # real EPS files themselves and must never receive the stubs.
 Documentation/paper/Definitions/logo-mdpi-eps-converted-to.pdf
 Documentation/paper/Definitions/logo-updates-eps-converted-to.pdf
+
+# Benchmark-construction caches: large, rebuildable, and keyed by the model or
+# source that produced them. The benchmarks and results they generated are
+# committed; the caches themselves are local state.
+protocolnerd-backend/benchmarking/citation_grounded_eval/.epmc_*.json
+protocolnerd-backend/benchmarking/citation_grounded_eval/.chemrxiv_*.json
+protocolnerd-backend/benchmarking/citation_grounded_eval/.precedence_cache.json
