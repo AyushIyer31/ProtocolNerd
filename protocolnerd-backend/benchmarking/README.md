@@ -71,28 +71,71 @@ A hit is credited when **any** Methods-confirmed protocol for that paper lands i
 the top 10. Inputs without a `used_in_methods_protocol_ids` column fall back to
 the single originally-cited protocol.
 
-## The chemistry extension
+## The chemistry extension (superseded)
 
-The same methodology applied to a second domain, differing only in the seeds. The
-evaluated set is `citation_ground_truth_Chemistry_100.csv`, n=100 matching biology,
-committed as-is. See `CHEMISTRY_SET_PROVENANCE.md` for how it was built.
+The first chemistry evaluation reused the biology methodology unchanged: ground
+truth was a protocols.io protocol id, and only the seeds differed. The paper no
+longer reports it, because a protocols.io identifier can never be the right answer
+for a procedure published inside a paper; the Europe PMC benchmark below replaced
+it. The set and script are kept because they still run and document the earlier
+result. The evaluated set is `citation_ground_truth_Chemistry_100.csv`, n=100
+matching biology, committed as-is. See `CHEMISTRY_SET_PROVENANCE.md` for how it was
+built.
 
 ```bash
 cd citation_grounded_eval
 ./run_chemistry_findrate.sh          # 32.0%, 90% CI 24-40%
 ```
 
-Europe PMC is a chemistry-only search source in the product, but is deliberately
-excluded from the find-rate measurement: ground truth is always a protocols.io
-protocol id, so a paper can never BE the right answer and any slot it takes could
-only depress the score for reasons unrelated to retrieval quality. Its effect on
-the live product is measured separately:
+Europe PMC cannot be scored by that measurement: its ground truth is always a
+protocols.io protocol id, so a paper can never BE the right answer. The Europe PMC
+evaluation below exists for exactly that reason. Europe PMC's effect on the live
+product is measured separately:
 
 | Script | Measures |
 |---|---|
 | `run_epmc_ab.sh` | find rate with Europe PMC on vs off, one identical code path |
 | `epmc_surfacing_analysis.py` | where Europe PMC lands in the live top 10 |
 | `slot_occupancy_analysis.py` | PubMed slot occupancy, chemistry 3.0 vs biology 2.3 of 10 |
+
+## The Europe PMC chemistry benchmark (paper Section 6.4)
+
+Chemistry procedures are published inside papers, so this benchmark makes a paper
+the correct answer. A pair is a protocol paper **X** in Europe PMC and a paper **P**
+that cites X from its own Methods section, verified twice: the citation must appear
+as an `xref` inside a Methods-type section of P's full text, and the judge prompt
+(chemist role) must confirm from that section that P used X's procedure. A paper
+presenting a protocol of its own therefore never enters as a citing paper. Each
+query is written from P's title and abstract alone, so the query model never sees X.
+
+Because a protocol published inside a paper has no identifier a scientist would
+recognise, **a result counts as finding X when it cites a work X also cites**: the
+two share methodological ancestry. Scoring is a set intersection over reference
+lists, taken from Europe PMC where available and Crossref otherwise, so a retrieved
+paper does not need to be open access. No language model is involved in scoring.
+
+| Script | Role |
+|---|---|
+| `build_epmc_grounded_benchmark.py` | finds X, its citers, and confirms the pairs |
+| `finalize_epmc_benchmark.py` | writes one query per pair, emits the CSV |
+| `run_epmc_grounded_test.py` | runs a configuration and reports exact-match find rate |
+| `precedence_overlap.py` | scores the shared-ancestry find rate reported in the paper |
+
+```bash
+cd citation_grounded_eval
+python precedence_overlap.py --arm epmc_lit         --v2 --relaxed   # Europe PMC alone
+python precedence_overlap.py --arm epmc_pubmed_lit  --v2 --relaxed   # + PubMed
+```
+
+| Configuration | Find rate | 90% CI | Result file |
+|---|---|---|---|
+| Europe PMC alone | 31/100 | 24-39% | `results/EPMC_precedence_EuropePMC_100.csv` |
+| **Europe PMC + PubMed** | **45/100** | 37-53% | `results/EPMC_precedence_EuropePMC_PubMed_100.csv` |
+
+Both arms are literature-only: they skip the protocols.io shortlist, so the
+comparison isolates the second literature source. The benchmark is
+`citation_grounded_eval/EPMC_citation_ground_truth_Chemistry_100.csv`, in the same
+schema as the biology set, and its pairs are listed in Appendix D of the paper.
 
 ### Checking without re-running
 

@@ -168,9 +168,21 @@ from its own Methods section to have actually used a specific Protocols.io proto
 | LLM + web search, given the same short query | 19% |
 | DP (Wang et al. Detailed Prompt) keyword baseline | 22% |
 
-The chemistry extension, evaluated on its own 100 confirmed pairs with the same method and no
-baseline comparison, finds the confirmed protocol 32% of the time against a corpus built for
-biology.
+The chemistry domain is evaluated separately, against ground truth drawn from Europe PMC where
+the correct answer is itself a paper, because chemistry procedures are published inside papers
+rather than deposited in protocol repositories. A pair is a protocol paper X and a paper P that
+cites X from its own Methods section. Since a protocol published inside a paper has no
+identifier a scientist would recognise, a result counts as finding X when it cites a work X
+also cites, so the two share methodological ancestry.
+
+| Chemistry configuration | Find rate (top 10) |
+|---|---|
+| Europe PMC alone | 31% |
+| **Europe PMC + PubMed** | **45%** |
+
+Both are scored on the same 100 pairs, in
+`citation_grounded_eval/EPMC_citation_ground_truth_Chemistry_100.csv`. The paper reports this
+in Section 6.4.
 
 See [protocolnerd-backend/benchmarking/README.md](protocolnerd-backend/benchmarking/README.md)
 for how to reproduce these.
