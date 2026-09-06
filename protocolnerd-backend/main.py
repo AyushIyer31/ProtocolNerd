@@ -354,6 +354,31 @@ def run_local_candidate_searches(
     }
 
 
+def _dedupe_papers(items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Drop repeats across the literature lanes, keeping the first occurrence.
+
+    Europe PMC indexes MEDLINE, so a domain that searches both it and PubMed can
+    receive the same article twice and spend two of ten slots on one paper.
+    Matching is by PMID, then DOI, then normalised title, because a record may
+    carry an identifier in one lane and not the other.
+    """
+    out, seen = [], set()
+    for r in items:
+        pmid = str(r.get("pmid") or "").strip()
+        doi = str(r.get("doi") or "").strip().lower()
+        title = " ".join(str(r.get("title") or "").lower().split())
+        keys = {f"pmid:{pmid}" for _ in (1,) if pmid}
+        if doi:
+            keys.add(f"doi:{doi}")
+        if title:
+            keys.add(f"title:{title}")
+        if keys & seen:
+            continue
+        seen |= keys
+        out.append(r)
+    return out
+
+
 def _parse_blend_mix(mix: Optional[str]) -> tuple:
     """Parse a blend-mix string "P+M" into (protocols_k, pubmed_k). Defaults to
     8+2. Accepts "10+0", "8+2", "5+5", etc.; falls back to 8+2 on anything odd."""
@@ -1307,7 +1332,7 @@ async def chat(req: ChatRequest):
     _combined_on = _rerank_on and reranker.combined_pubmed_enabled(req.rerank_combined)
     if _combined_on:
         fetch_k = max(fetch_k, per_provider + pubmed_k + 2)
-    if req.search_mode == "live":
+    if req.search_mode == "live" and current_domain().uses_protocol_corpus:
         try:
             live = await loop.run_in_executor(
                 executor,
@@ -1339,6 +1364,12 @@ async def chat(req: ChatRequest):
             )
             results = local["results"]
             expanded = local["expanded"]
+    elif not current_domain().uses_protocol_corpus:
+        # The corpus is a biology corpus. A domain that does not declare it skips
+        # the lane entirely and answers from its literature sources alone.
+        results, expanded = [], list(search_queries or [])
+        logging.info(f"Protocols.io lane off: domain '{current_domain().name}' answers "
+                     f"from {list(current_domain().paper_sources)}.")
     else:
         local = await loop.run_in_executor(
             executor,
@@ -1436,6 +1467,10 @@ async def chat(req: ChatRequest):
         # it more to choose from can only help. The lexical-blend fallback still uses
         # exactly pubmed_k (see results_by_source below).
         _pm_keep = max(pubmed_k, reranker.COMBINED_PUBMED_CANDIDATES) if _combined_on else pubmed_k
+        if not current_domain().uses_protocol_corpus:
+            # No protocols to backfill with: the top 10 has to come from the
+            # paper lanes alone, so keep enough to survive de-duplication.
+            _pm_keep = max(_pm_keep, per_provider + pubmed_k)
         _pm_pool = len(pubmed_results)
         for r in pubmed_results:
             r.setdefault("source", "pubmed")
@@ -1480,7 +1515,11 @@ async def chat(req: ChatRequest):
     # PubMed is always present; europepmc appears ONLY for domains that enable it
     # (chemistry), so for a biology request `_paper_pool == pubmed_results` and the
     # subset test is the same one as before -- identical branch, identical pool.
-    _paper_pool = list(pubmed_results) + list(results_by_source.get("europepmc") or [])
+    # Europe PMC first, then PubMed, matching the order the evaluation of the
+    # chemistry domain measured: the re-ranker sees a numbered list, so the order
+    # is part of the configuration, and on a duplicate the Europe PMC record is
+    # the one kept (it more often carries a DOI).
+    _paper_pool = _dedupe_papers(list(results_by_source.get("europepmc") or []) + list(pubmed_results))
     if (_combined_on and _paper_pool
             and set(results_by_source) <= {"protocols.io", "pubmed", "europepmc"}):
         # #2: re-rank protocols.io (wide pool) + paper candidates JOINTLY so the LLM

@@ -38,7 +38,7 @@ interface in `base.py`:
 - its profile fields and clarification logic
 - its prompts, one file per domain (`biology_prompts.py`, `chemistry_prompts.py`)
 - `paper_sources` — which literature lane runs alongside protocols.io
-  (biology: PubMed; chemistry: Europe PMC)
+  (biology: PubMed; chemistry: Europe PMC and PubMed)
 
 Registration is two lines in `registry.py`. Retrieval, fusion, re-ranking, and
 explanation are reused unchanged because they operate on the structured profile

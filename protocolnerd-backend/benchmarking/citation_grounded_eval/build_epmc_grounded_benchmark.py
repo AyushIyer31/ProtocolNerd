@@ -312,6 +312,41 @@ def x_is_chemistry(x: Dict[str, Any]) -> bool:
     return out.startswith("CHEM")
 
 
+def query_routes_chemistry(pr: Dict[str, Any], cache: Dict[str, str]) -> bool:
+    """Does the query this pair will pose actually reach the chemistry domain?
+
+    The crawler selects X for being a chemistry protocol paper, but the query is
+    written from the citing paper P, which is often a biology study that used a
+    chemistry method. Such a query routes to biology, where the chemistry
+    literature lanes never run, so the pair cannot exercise what it is meant to
+    measure. Gating here keeps the benchmark aligned with the shipped router.
+    """
+    key = pr["p_pmid"]
+    if key not in cache:
+        user = f"TITLE: {pr['p_title']}\nABSTRACT: {pr['p_abstract'][:2000]}"
+        q = _llm(QUERY_PROMPT_FOR_ROUTING, user, "claude-sonnet-4-6").strip().strip('"')
+        if not q:
+            cache[key] = "unknown"
+        else:
+            try:
+                from domains.registry import route
+                cache[key] = route(q).name
+            except Exception:
+                cache[key] = "unknown"
+        json.dump(cache, open(SCRIPT_DIR / ".epmc_routing_cache.json", "w"))
+    return cache[key] == "chemistry"
+
+
+QUERY_PROMPT_FOR_ROUTING = (
+    "You are a bench chemist. Given a lab protocol or a research paper's title and "
+    "abstract, write ONE natural-language sentence that a scientist would type into a "
+    "search tool when they need this exact item. Describe the experimental goal, "
+    "material or sample, and technique in your own words, in a single sentence. Do NOT "
+    "copy the title verbatim, paraphrase and use everyday phrasing. Sound like a real "
+    "request a scientist would type. Exactly one sentence, under 30 words. No quotes, "
+    "no preamble. Return only the sentence.")
+
+
 def judge_pair(pr: Dict[str, Any]) -> bool:
     user = (f"PROTOCOL TITLE: {pr['x_title']}\n"
             f"PROTOCOL DESCRIPTION: {pr['x_abstract'][:1200]}\n\n"
@@ -329,9 +364,11 @@ def _load_json(path: Path, default):
 
 def run(per_query: int, citer_cap: int, per_x_checks: int, stop_at: int,
         out_path: Path, max_per_x: int = 99, refs_gate: bool = False,
-        oa_only: bool = False, exhaustive: bool = False) -> None:
+        oa_only: bool = False, exhaustive: bool = False,
+        route_gate: bool = False) -> None:
     domain_cache = _load_json(SCRIPT_DIR / ".epmc_domain_cache.json", {})
     refsgate_cache = _load_json(SCRIPT_DIR / ".epmc_refsgate_cache.json", {})
+    routing_cache = _load_json(SCRIPT_DIR / ".epmc_routing_cache.json", {})
     judge_cache = _load_json(SCRIPT_DIR / ".epmc_judge_cache.json", {})
     # resume: keep max_per_x pairs per existing X, skip those X's entirely
     prior = _load_json(out_path, [])
@@ -397,6 +434,9 @@ def run(per_query: int, citer_cap: int, per_x_checks: int, stop_at: int,
             if not judge_cache[jkey]:
                 continue
             funnel["judge_confirmed"] += 1
+            if route_gate and not query_routes_chemistry(pr, routing_cache):
+                funnel["routed_elsewhere"] = funnel.get("routed_elsewhere", 0) + 1
+                continue
             del pr["p_methods"]
             pairs.append(pr)
             print(f"  [{len(pairs):>3}/{stop_at}] X: {x['x_title'][:46]:<48} <- P: {c['p_title'][:40]}",
@@ -413,6 +453,8 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--probe", action="store_true", help="small-cap feasibility run")
     ap.add_argument("--target", type=int, default=100)
+    ap.add_argument("--route-gate", action="store_true",
+                    help="keep a pair only if its query routes to the chemistry domain")
     ap.add_argument("--exhaustive", action="store_true",
                     help="deep-page the corpus instead of relying on seed queries")
     ap.add_argument("--v2", action="store_true",
@@ -424,7 +466,8 @@ if __name__ == "__main__":
     elif args.v2:
         run(per_query=100, citer_cap=40, per_x_checks=10, stop_at=args.target,
             out_path=SCRIPT_DIR / "epmc_ground_truth_chemistry_v2.json", max_per_x=1,
-            refs_gate=True, oa_only=True, exhaustive=args.exhaustive)
+            refs_gate=True, oa_only=True, exhaustive=args.exhaustive,
+            route_gate=args.route_gate)
     else:
         run(per_query=60, citer_cap=40, per_x_checks=10, stop_at=args.target,
             out_path=SCRIPT_DIR / "epmc_ground_truth_chemistry.json", max_per_x=1)

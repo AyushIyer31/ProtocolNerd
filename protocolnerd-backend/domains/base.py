@@ -47,6 +47,11 @@ class Domain:
     # source chosen for one domain cannot change another domain's result set.
     paper_sources: Tuple[str, ...] = ("pubmed",)
 
+    # Whether the domain searches the local Protocols.io corpus. Chemistry sets
+    # this False: the corpus is a biology corpus, and chemistry procedures live
+    # inside papers, so its results come from the literature lanes alone.
+    uses_protocol_corpus: bool = True
+
     # Back-compat alias: older code called these "extra" sources on top of an
     # always-on PubMed lane. Nothing declares it any more; kept as an empty
     # default so stale readers see "no extras" rather than crashing.

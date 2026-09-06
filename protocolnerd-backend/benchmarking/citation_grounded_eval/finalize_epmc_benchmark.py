@@ -41,7 +41,9 @@ def main() -> int:
     for i, pr in enumerate(pairs, 1):
         key = pr["p_pmid"]
         if key not in cache:
-            user = f"TITLE: {pr['p_title']}\nABSTRACT: {pr['p_abstract'][:2000]}"
+            # Abstract only, matching the biology benchmark: withholding the title
+            # keeps the query from echoing the citing paper back as the answer.
+            user = f"Abstract: {pr['p_abstract'][:2000]}"
             q = (call_llm(messages=[{"role": "system", "content": QUERY_PROMPT},
                                     {"role": "user", "content": user}],
                           temperature=0.0, provider="claude",

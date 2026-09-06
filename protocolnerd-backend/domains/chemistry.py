@@ -171,13 +171,20 @@ class ChemistryDomain(Domain):
         "electrochemistry; polymer and nanoparticle synthesis"
     )
 
-    # Chemistry's literature lane is Europe PMC instead of PubMed. Protocols.io
-    # holds almost no synthetic chemistry (21 results across ten core
-    # techniques, zero for Suzuki coupling / Grignard / RAFT / Schlenk line),
-    # while Europe PMC's METHODS: field search reaches procedures published
-    # inside papers, which is where chemistry methods actually live. Biology
-    # keeps the base default ("pubmed",), so its result set is unchanged.
-    paper_sources = ("europepmc",)
+    # Chemistry searches both literature lanes. Protocols.io holds almost no
+    # synthetic chemistry (21 results across ten core techniques, zero for
+    # Suzuki coupling / Grignard / RAFT / Schlenk line), while Europe PMC's
+    # METHODS: field search reaches procedures published inside papers, which
+    # is where chemistry methods actually live. PubMed is kept alongside it
+    # because the citation-grounded evaluation found the pair substantially
+    # better than Europe PMC alone: 45% against 31% on the same 100 queries.
+    # Biology keeps the base default ("pubmed",), so its results are unchanged.
+    paper_sources = ("europepmc", "pubmed")
+
+    # Protocols.io holds almost no synthetic chemistry, so searching it spends
+    # top-10 slots on biology protocols. Chemistry answers from Europe PMC and
+    # PubMed only, which is also the configuration the evaluation measures.
+    uses_protocol_corpus = False
 
     # Signature terms for the keyword fallback router (see registry).
     keywords = (

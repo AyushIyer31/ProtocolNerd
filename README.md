@@ -12,7 +12,7 @@ chemistry ships as a second domain built on the same extension mechanism.
 
 A bench scientist describes an experiment in plain English. ProtocolNerd turns that into a
 structured experiment profile, asks a clarifying question when a required detail is missing,
-searches a curated corpus of **22,724 Protocols.io protocols** plus the domain's literature source (PubMed for biology, Europe PMC for chemistry), and returns a
+searches a curated corpus of **22,724 Protocols.io protocols** plus the domain's literature sources (PubMed for biology, Europe PMC and PubMed for chemistry), and returns a
 single ranked list explaining why each result fits and what it does not cover.
 
 ## Why it exists
@@ -121,7 +121,7 @@ protocolnerd-backend/
     base.py                the Domain interface a new domain implements
     registry.py            LLM router + keyword fallback
     biology.py             the primary domain (paper Section 5); pairs with PubMed
-    chemistry.py           second domain (paper Section 6); pairs with Europe PMC
+    chemistry.py           second domain (paper Section 6); pairs with Europe PMC + PubMed
   retrievers.py            retrieval sources, gated per domain
   europepmc_client.py      Europe PMC METHODS: search (chemistry's literature lane)
   protocol_rag.py          TF-IDF index and search
@@ -153,7 +153,7 @@ The router needs no edit either: it builds its menu from the one-line `descripti
 registered domain declares about itself.
 
 `chemistry.py` is the worked example, live in the deployed system: it declares 13 chemistry
-profile fields and its own prompts, pairs protocols.io with Europe PMC instead of PubMed, and
+profile fields and its own prompts, pairs protocols.io with Europe PMC and PubMed, and
 was evaluated with the same citation-grounded method as biology (paper Section 6).
 
 ## Evaluation
