@@ -171,8 +171,10 @@ from its own Methods section to have actually used a specific Protocols.io proto
 |---|---|
 | **ProtocolNerd** | **46%** |
 | LLM + web search, given the full abstract | 34% |
-| LLM + web search, given the same short query | 19% |
 | DP (Wang et al. Detailed Prompt) keyword baseline | 22% |
+
+Every row is scored on the same 100 pairs, in
+`citation_grounded_eval/citation_ground_truth_Biology_100.csv`.
 
 The chemistry domain is evaluated separately, against ground truth drawn from Europe PMC where
 the correct answer is itself a paper, because chemistry procedures are published inside papers
