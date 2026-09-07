@@ -370,6 +370,10 @@ def run(per_query: int, citer_cap: int, per_x_checks: int, stop_at: int,
     refsgate_cache = _load_json(SCRIPT_DIR / ".epmc_refsgate_cache.json", {})
     routing_cache = _load_json(SCRIPT_DIR / ".epmc_routing_cache.json", {})
     judge_cache = _load_json(SCRIPT_DIR / ".epmc_judge_cache.json", {})
+    # X's already walked to exhaustion without yielding a pair. Without this,
+    # every resume re-fetches their citers and full texts from scratch: the
+    # expensive citer and methods work is the one step nothing else caches.
+    barren = set(_load_json(SCRIPT_DIR / ".epmc_barren_cache.json", []))
     # resume: keep max_per_x pairs per existing X, skip those X's entirely
     prior = _load_json(out_path, [])
     kept: Dict[str, List[Dict[str, Any]]] = {}
@@ -395,7 +399,7 @@ def run(per_query: int, citer_cap: int, per_x_checks: int, stop_at: int,
     for x in xs:
         if len(pairs) >= stop_at:
             break
-        if x["x_pmid"] in done_x:
+        if x["x_pmid"] in done_x or x["x_pmid"] in barren:
             continue
         dkey = x["x_pmid"]
         if dkey not in domain_cache:
@@ -409,6 +413,7 @@ def run(per_query: int, citer_cap: int, per_x_checks: int, stop_at: int,
         funnel["x_oa_tagged_refs"] = funnel.get("x_oa_tagged_refs", 0) + 1
         if len(pairs) >= stop_at:
             break
+        _pairs_before_x = len(pairs)
         cs = citers(x["x_pmid"], citer_cap)
         time.sleep(0.3)
         if cs:
@@ -443,6 +448,9 @@ def run(per_query: int, citer_cap: int, per_x_checks: int, stop_at: int,
                   flush=True)
             if sum(1 for q in pairs if q["x_pmid"] == x["x_pmid"]) >= max_per_x:
                 break
+        if len(pairs) == _pairs_before_x:
+            barren.add(x["x_pmid"])
+            json.dump(sorted(barren), open(SCRIPT_DIR / ".epmc_barren_cache.json", "w"))
     print("\nfunnel:", json.dumps(funnel))
     print(f"candidate pairs (pre-LLM): {len(pairs)}")
     out_path.write_text(json.dumps(pairs, indent=1))
