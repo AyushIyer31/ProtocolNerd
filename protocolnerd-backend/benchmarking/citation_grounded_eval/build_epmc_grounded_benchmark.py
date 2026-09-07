@@ -444,6 +444,10 @@ def run(per_query: int, citer_cap: int, per_x_checks: int, stop_at: int,
                 continue
             del pr["p_methods"]
             pairs.append(pr)
+            # Checkpoint on every find. The file used to be written only after
+            # the loop, so a run that died late lost everything it had found:
+            # twelve hours of work can sit in memory otherwise.
+            out_path.write_text(json.dumps(pairs, indent=1))
             print(f"  [{len(pairs):>3}/{stop_at}] X: {x['x_title'][:46]:<48} <- P: {c['p_title'][:40]}",
                   flush=True)
             if sum(1 for q in pairs if q["x_pmid"] == x["x_pmid"]) >= max_per_x:

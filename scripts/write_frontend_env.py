@@ -28,7 +28,7 @@ def main() -> None:
     window.env = {{
         FRONTEND_FLOW: {{
             SITE_NAME: "ProtocolsNerd",
-            SITE_LOGO: "assets/protocols_nerd_default_logo.png",
+            SITE_LOGO: "assets/ProtocolNerd_Logo.png",
             SITE_ICON: "CN",
             SITE_TAGLINE: "Local AI document analysis with agentic and prompt-based execution modes.",
             DISCLAIMER: "This tool performs local document analysis using Ollama. No data leaves your machine. Results should be reviewed by a qualified professional.",

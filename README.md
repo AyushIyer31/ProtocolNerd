@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://protocolnerd.org">
+    <img src="protocolnerd-website/assets/ProtocolNerd_Logo.png" alt="ProtocolNerd" width="240">
+  </a>
+</p>
+
 # ProtocolNerd
 
 [![Python Version](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
@@ -12,7 +18,7 @@ chemistry ships as a second domain built on the same extension mechanism.
 
 A bench scientist describes an experiment in plain English. ProtocolNerd turns that into a
 structured experiment profile, asks a clarifying question when a required detail is missing,
-searches a curated corpus of **22,724 Protocols.io protocols** plus the domain's literature sources (PubMed for biology, Europe PMC and PubMed for chemistry), and returns a
+searches a curated corpus of **22,793 Protocols.io protocols** plus the domain's literature sources (PubMed for biology, Europe PMC and PubMed for chemistry), and returns a
 single ranked list explaining why each result fits and what it does not cover.
 
 ## Why it exists
@@ -234,3 +240,10 @@ build SHA, so you can confirm what is actually live.
 | `GET` | `/sse?session_id=...` | Progress stream for a session |
 | `GET` | `/fetch_backend_mode` | Backend mode and available strategies |
 | `GET` | `/ollama_status` | Ollama reachability and local models |
+
+## Research team
+
+| # | Author | Affiliation | Role | Contact |
+|---|--------|-------------|------|---------|
+| 1 | Ayush Iyer | Dougherty Valley High School, San Ramon, CA | Lead author | iyer.ayush31@gmail.com |
+| 2 | Dennis Shasha | Courant Institute of Mathematical Sciences, New York University | Faculty advisor | shasha@cs.nyu.edu |

@@ -249,6 +249,7 @@ def main():
         rows = rows[:args.limit]
 
     report, hits = [], []
+    out = Path(R.RESULTS_DIR) / f"epmc_grounded_{args.arm}{suffix}{v2tag}{args.fresh}_precedence{'_relaxed' if args.relaxed else ''}_{('from%d_' % args.offset) if args.offset else ''}{len(rows)}.csv"
     for i, r in enumerate(rows, 1):
         x_prec = precedence(r["protocol_id"], r["protocol_doi"], cache, fallback_all_refs=True)
         final_ids, slim = R.run_one(r["query"], args.arm, cache_tag)
@@ -271,10 +272,19 @@ def main():
                        "precedence_hit": bool(hit_detail), "detail": hit_detail,
                        "papers_returned": n_papers, "papers_traceable": n_traceable,
                        "x_imm_size": len(x_prec) - (2 if r["protocol_doi"] else 1)})
-        print(f"  [{i:>3}/{len(rows)}] {'HIT ' if hit_detail else 'miss'}  {hit_detail[:70] or r['query'][:60]}",
-              flush=True)
+        # Write the file on every row. Scoring takes hours and the results used
+        # to be written only after the loop, so an interrupted run left nothing
+        # to inspect and nothing to resume from.
+        with open(out, "w", newline="") as _f:
+            _w = csv.DictWriter(_f, fieldnames=list(report[0].keys()))
+            _w.writeheader(); _w.writerows(report)
+        _run = sum(hits)
+        print(f"  [{i:>3}/{len(rows)}] {'HIT ' if hit_detail else 'miss'}  "
+              f"running {_run}/{len(hits)} ({100*_run/len(hits):.0f}%)  "
+              f"{hit_detail[:56] or r['query'][:48]}", flush=True)
 
-    out = Path(R.RESULTS_DIR) / f"epmc_grounded_{args.arm}{suffix}{v2tag}{args.fresh}_precedence{'_relaxed' if args.relaxed else ''}_{('from%d_' % args.offset) if args.offset else ''}{len(rows)}.csv"
+    # The rows were already flushed one at a time inside the loop; rewrite once
+    # at the end so the file is tidy even if the incremental writer raced.
     with open(out, "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(report[0].keys()))
         w.writeheader(); w.writerows(report)

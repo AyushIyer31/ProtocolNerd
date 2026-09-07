@@ -1736,12 +1736,25 @@ def health_check():
     # provider; on hosted deploys (Claude/OpenAI) there is no Ollama server, so the
     # probe would just block until it times out (~3.8s) on every page load.
     storage_ok = SESSIONS_DIR.exists()
-    status = "healthy" if storage_ok else "degraded"
+
+    # Report what actually loaded, not just that the process is up. Both search
+    # indexes are built into the image over a corpus that changes every refresh,
+    # and a silently empty or truncated index leaves the service answering
+    # requests with nothing to answer from. A deploy check that only sees
+    # "process alive" would pass that. Counting here costs nothing and needs no
+    # network, so it is safe for an automated post-deploy gate to act on.
+    corpus = {
+        "index_loaded": PROTOCOL_INDEX is not None,
+        "protocols": len(PROTOCOL_INDEX["protocols"]) if PROTOCOL_INDEX else 0,
+        "dense_index": DENSE_INDEX_CACHE.exists(),
+    }
+    status = "healthy" if (storage_ok and corpus["index_loaded"]) else "degraded"
 
     return {
         "status": status,
         "storage_dir": str(SESSIONS_DIR),
         "storage_ready": storage_ok,
+        "corpus": corpus,
         "message": "Application is running",
         "build": get_build_info(),
     }
