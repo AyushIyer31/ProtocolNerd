@@ -14,7 +14,7 @@ An interactive AI research assistant for **scientific protocol discovery**, buil
 NYU research project with Prof. Dennis Shasha. Biology is the primary, evaluated domain;
 chemistry ships as a second domain built on the same extension mechanism.
 
-**Live:** <https://protocolnerd.wirelessnerd.org>
+**Live:** <https://protocolnerd.org>
 
 A bench scientist describes an experiment in plain English. ProtocolNerd turns that into a
 structured experiment profile, asks a clarifying question when a required detail is missing,

@@ -1,15 +1,28 @@
 # ProtocolNerd — AWS Deployment
 
-The live system runs as a single container on **ECS Fargate** behind an ALB, with
-**Cloudflare** in front. There is no EC2 instance and nothing to SSH into: a deploy
-is build → push → new task-definition revision → service update.
+The live system runs as a single container on **ECS Fargate** with **Cloudflare** in
+front. There is no EC2 instance and nothing to SSH into: a deploy is build → push →
+new task-definition revision → service update.
+
+Two hostnames reach the service, by different paths:
 
 ```
-Cloudflare (protocolnerd.wirelessnerd.org, TLS)
-  └─> ALB ecs-express-gateway-alb  (HTTP :80 target group)
-        └─> ECS Fargate service protocolsnerd  (container :8080)
-              image: <account>.dkr.ecr.us-east-1.amazonaws.com/protocolsnerd:<git sha>
+protocolnerd.org, www  (the public domain)
+  └─> Cloudflare Worker  (deploy/cloudflare-worker.js)
+        └─> ECS Express hostname  pr-<id>.ecs.us-east-1.on.aws
+              └─> ECS Fargate service protocolsnerd  (container :8080)
+                    image: <account>.dkr.ecr.us-east-1.amazonaws.com/protocolsnerd:<git sha>
+
+protocolnerd.wirelessnerd.org  (dormant fallback)
+  └─> Cloudflare (TLS)
+        └─> ALB ecs-express-gateway-alb  (HTTP :80 target group)
+              └─> the same ECS Fargate service
 ```
+
+ECS rewrites the Express hostname's routing rule on every blue/green deployment, so
+the public domain follows each deploy on its own. The ALB listener rule at priority
+10 and its ACM certificate stay in place but need a manual weight sync after a
+deploy, which is why that path is kept only as a fallback.
 
 | Piece | Value |
 |---|---|
@@ -81,11 +94,11 @@ The rollout takes 10–12 minutes including connection draining on the old task.
 
 ```bash
 # The stamp must match what you shipped; "source": "image" means it was baked in.
-curl -s https://protocolnerd.wirelessnerd.org/health | python3 -m json.tool
+curl -s https://protocolnerd.org/health | python3 -m json.tool
 
 # Per-domain source pairing (biology: protocols.io + PubMed;
 # chemistry: protocols.io + Europe PMC). Check the "source" field of results.
-curl -s -X POST https://protocolnerd.wirelessnerd.org/chat \
+curl -s -X POST https://protocolnerd.org/chat \
   -H "Content-Type: application/json" \
   -d '{"query":"Suzuki coupling of aryl boronic acid","search_mode":"local",
        "top_k":3,"explain":false,"no_log":true,
