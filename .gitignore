@@ -37,6 +37,11 @@ data/protocol_dense.npy
 *.synctex.gz
 missfont.log
 
+# build.sh transcripts for the MDPI revision: pdflatex/bibtex console output,
+# regenerated on every build and only read to count errors.
+Documentation/paper/review_1/p[0-9].txt
+Documentation/paper/review_1/bib.txt
+
 # Methods-judge verdict cache: rebuildable, and keyed by judge model
 protocolnerd-backend/benchmarking/citation_grounded_eval/.methods_confirm_chemistry_cache.json
 
@@ -45,6 +50,8 @@ protocolnerd-backend/benchmarking/citation_grounded_eval/.methods_confirm_chemis
 # real EPS files themselves and must never receive the stubs.
 Documentation/paper/Definitions/logo-mdpi-eps-converted-to.pdf
 Documentation/paper/Definitions/logo-updates-eps-converted-to.pdf
+Documentation/paper/review_1/Definitions/logo-mdpi-eps-converted-to.pdf
+Documentation/paper/review_1/Definitions/logo-updates-eps-converted-to.pdf
 
 # Benchmark-construction caches: large, rebuildable, and keyed by the model or
 # source that produced them. The benchmarks and results they generated are
