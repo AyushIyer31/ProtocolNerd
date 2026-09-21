@@ -704,7 +704,7 @@
     />
     <button id="send-btn" onclick="sendQuery()">Search</button>
   </div>
-  <p class="hint">Press Enter to search &nbsp;·&nbsp; Searching <span id="protocol-count">...</span> protocols</p>
+  <p class="hint">Press Enter to search &nbsp;·&nbsp; Searching <span id="protocol-count">...</span> protocols<span id="corpus-freshness"></span></p>
 </div>
 
 <script src="env.js"></script>
@@ -770,10 +770,23 @@
   // Startup: health check and protocol count
   // -------------------------------------------------------------------------
 
+  let corpusCrawledAt = '';
+
+  // Sources the ACTIVE domain can search, sent by the backend with every reply
+  // (biology: protocols.io + PubMed; chemistry: Europe PMC + PubMed). Rendered as
+  // tick-boxes in the Suggested searches card so the list follows the domain
+  // rather than being hardcoded here.
+  let availableSources = [];
+  const SOURCE_LABEL = { 'protocols.io': 'Protocols.io', 'pubmed': 'PubMed', 'europepmc': 'Europe PMC' };
+
   async function checkHealth() {
     try {
       const r = await fetch(`${BACKEND}/health`);
       const data = await r.json();
+      // When the corpus was last crawled. Shown beside the protocol count so a
+      // user can tell "not crawled yet" from "ranked too low". Absent on an
+      // older corpus, in which case the badge just omits it.
+      corpusCrawledAt = (data.corpus && data.corpus.crawled_at) || '';
       if (data.status === 'healthy' || data.status === 'degraded') {
         markBackendOnline('Connected');
       }
@@ -803,8 +816,24 @@
         const count = data.total_protocols_indexed || 0;
         document.getElementById('protocol-count').textContent = count.toLocaleString();
         markBackendOnline(`${count.toLocaleString()} protocols indexed`);
+        showCorpusFreshness();
       }
     } catch {}
+  }
+
+  // Corpus freshness in the search hint. "Last updated" deliberately attaches the
+  // date to the refresh rather than to coverage: the corpus is what 761 keyword
+  // searches returned, not an exhaustive snapshot, and the tooltip says so.
+  function showCorpusFreshness() {
+    const el = document.getElementById('corpus-freshness');
+    if (!el || !corpusCrawledAt) return;
+    const d = new Date(corpusCrawledAt);
+    if (isNaN(d)) return;
+    const shown = d.toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
+    el.textContent = `\u00A0\u00A0\u00B7\u00A0\u00A0Last updated ${shown}`;
+    el.title = `The corpus was last refreshed on ${shown} by searching Protocols.io for 761 technique and organism terms. `
+             + `Protocols published since then, or matching none of those terms, are not in the index yet, `
+             + `so a protocol can be missing rather than simply ranked low.`;
   }
 
   function markBackendOnline(text = 'Connected') {
@@ -877,8 +906,10 @@
       .catch(() => { el.textContent = 'could not reach the backend for version info'; });
   }
 
-  checkHealth();
-  updateProtocolCount();
+  // Sequenced, not parallel: the badge text is built in updateProtocolCount
+  // and needs the crawl date that checkHealth fetches. checkHealth catches
+  // its own errors, so the count still runs if the health probe fails.
+  checkHealth().then(updateProtocolCount);
 
   // Auto-run a query handed off from the landing page (chat.html?q=...).
   (function () {
@@ -1136,6 +1167,7 @@
     // and the count picked up both cards. Only the latest card stays interactive.
     document.querySelectorAll('.query-selection-card').forEach(card => {
       card.querySelectorAll('.candidate-check').forEach(cb => { cb.disabled = true; cb.classList.remove('candidate-check'); });
+      card.querySelectorAll('.source-check').forEach(cb => { cb.disabled = true; cb.classList.remove('source-check'); });
       card.querySelectorAll('[id]').forEach(el => el.removeAttribute('id'));
       card.querySelectorAll('button').forEach(b => { b.disabled = true; b.classList.add('disabled'); b.onclick = null; });
       card.classList.add('query-selection-card--past');
@@ -1152,6 +1184,7 @@
         <h3>Suggested searches</h3>
         <p>Tick the questions you want to search, then click <strong>Search selected</strong>.</p>
         <div class="candidate-query-list">${rows}</div>
+        ${renderSourcePicker()}
         <div class="candidate-actions">
           <button id="search-selected-btn" class="candidate-query-btn" onclick="confirmSelectedCandidateSearch()">
             <span id="selected-count-label">Search selected (${queries.length})</span>
@@ -1167,6 +1200,36 @@
     `;
   }
 
+  // Source picker. Everything ticked by default, which is the behaviour a request
+  // gets when it sends no selection at all, so the default path is unchanged.
+  function renderSourcePicker() {
+    if (!availableSources.length) return '';
+    const boxes = availableSources.map(s => `
+      <label class="candidate-query-row" style="padding:6px 10px;">
+        <input type="checkbox" class="source-check" value="${escapeHtml(s)}" checked onchange="updateSourceSelection()" />
+        <span class="candidate-query-text">${escapeHtml(SOURCE_LABEL[s] || s)}</span>
+      </label>`).join('');
+    return `
+      <p style="margin:10px 0 6px;">Search in:</p>
+      <div class="candidate-query-list" id="source-picker">${boxes}</div>`;
+  }
+
+  function getCheckedSources() {
+    return Array.from(document.querySelectorAll('.source-check'))
+      .filter(c => c.checked).map(c => c.value);
+  }
+
+  // Untick every source and there is nothing to search, so block it the same way
+  // zero ticked queries is blocked rather than firing a request that returns nothing.
+  function updateSourceSelection() {
+    const btn = document.getElementById('search-selected-btn');
+    if (!btn) return;
+    const none = availableSources.length && getCheckedSources().length === 0;
+    btn.disabled = none || getCheckedCandidateQueries().length === 0;
+    btn.classList.toggle('disabled', btn.disabled);
+    btn.title = none ? 'Pick at least one source to search' : '';
+  }
+
   function getCheckedCandidateQueries() {
     return Array.from(document.querySelectorAll('.candidate-check'))
       .filter(b => b.checked)
@@ -1178,6 +1241,7 @@
     const count = getCheckedCandidateQueries().length;
     const label = document.getElementById('selected-count-label');
     if (label) label.textContent = `Search selected (${count})`;
+    updateSourceSelection();
     // "…or type your own" is only useful when nothing is ticked — hide it otherwise.
     const editRow = document.getElementById('candidate-edit-row');
     if (editRow) editRow.style.display = count === 0 ? 'flex' : 'none';
@@ -1498,6 +1562,9 @@
           experiment_profile: experimentProfile,
           conversation_query: conversationForRequest,
           search_confirmed: searchConfirmed,
+          // Only meaningful on a confirmed search; omitted otherwise so the backend
+          // applies its default of every source the domain declares.
+          selected_sources: searchConfirmed ? getCheckedSources() : null,
           selected_search_query: selectedSearchQuery,
           search_all: searchAll,
           candidate_search_queries: candidateQueriesForRequest,
@@ -1523,6 +1590,8 @@
       const data = await resp.json();
       markBackendOnline();
       if (data.domain) setDomainBadge(data.domain);
+      if (Array.isArray(data.available_sources) && data.available_sources.length)
+        availableSources = data.available_sources;
 
       // -- New topic detected: backend cleared the carried-over profile --
       if (data.new_search) {

@@ -5,7 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from sse_starlette.sse import EventSourceResponse
 from pydantic import BaseModel
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Set
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
 
@@ -198,6 +198,11 @@ class ChatRequest(BaseModel):
     client_view: Optional[str] = None
     # How many results to pull from EACH source (protocols.io + PubMed) before
     # blending. UI-configurable; defaults to 5 per source. (Legacy symmetric knob.)
+    # Sources the user ticked in the Suggested searches card before searching.
+    # None or empty means every source the domain declares, so a client that never
+    # sends the field behaves exactly as before.
+    selected_sources: Optional[List[str]] = None
+
     results_per_provider: int = 5
     # Asymmetric blend mix "P+M" = P protocols.io + M PubMed in the top-10.
     # Default 8+2 (best grade-2 coverage + near-best nDCG in held-out eval).
@@ -910,6 +915,7 @@ async def chat(req: ChatRequest):
                 "query": query,
                 "intent": "explanation",
                 "domain": domain.name,
+                "available_sources": domain_sources(domain),
                 "experiment_intent": {},
                 "experiment_profile": req.experiment_profile,  # preserve context
                 "new_search": False,
@@ -992,6 +998,7 @@ async def chat(req: ChatRequest):
                 "query": query,
                 "intent": "clarification",
                 "domain": domain.name,
+                "available_sources": domain_sources(domain),
                 "experiment_intent": {},
                 "experiment_profile": exp_prof,
                 "new_search": False,
@@ -1098,6 +1105,7 @@ async def chat(req: ChatRequest):
                 "query": query,
                 "intent": "chitchat",
                 "domain": domain.name,
+                "available_sources": domain_sources(domain),
                 "experiment_intent": {},
                 "experiment_profile": None,  # Don't store profile for chitchat (prevents new_search false positives)
                 "new_search": False,
@@ -1149,6 +1157,7 @@ async def chat(req: ChatRequest):
                 "query": query,
                 "intent": "clarification",
                 "domain": domain.name,
+                "available_sources": domain_sources(domain),
                 "experiment_intent": experiment_intent,
                 "experiment_profile": experiment_profile,
                 "new_search": new_search,
@@ -1176,6 +1185,7 @@ async def chat(req: ChatRequest):
                     "query": query,
                     "intent": "chitchat",
                     "domain": domain.name,
+                    "available_sources": domain_sources(domain),
                     "experiment_intent": {},
                     "experiment_profile": None,  # Don't store profile for chitchat
                 "new_search": False,
@@ -1239,7 +1249,9 @@ async def chat(req: ChatRequest):
                     "query": query,
                     "intent": "clarification",
                     "domain": domain.name,
+                    "available_sources": domain_sources(domain),
                 "domain": domain.name,
+                "available_sources": domain_sources(domain),
                     "experiment_intent": experiment_intent,
                     "experiment_profile": experiment_profile,
                     "new_search": new_search,
@@ -1274,6 +1286,7 @@ async def chat(req: ChatRequest):
             "query": query,
             "intent": "query_selection",
             "domain": domain.name,
+            "available_sources": domain_sources(domain),
             "experiment_intent": experiment_intent,
             "experiment_profile": experiment_profile,
             "new_search": new_search,
@@ -1332,7 +1345,16 @@ async def chat(req: ChatRequest):
     _combined_on = _rerank_on and reranker.combined_pubmed_enabled(req.rerank_combined)
     if _combined_on:
         fetch_k = max(fetch_k, per_provider + pubmed_k + 2)
-    if req.search_mode == "live" and current_domain().uses_protocol_corpus:
+    # Which lanes this request may use. The domain still decides what is possible;
+    # the user's tick-boxes only narrow that. `_use_corpus` replaces the bare
+    # uses_protocol_corpus test below so a deselected corpus behaves exactly like a
+    # domain that never declared one, which is a path already exercised by chemistry.
+    _sources_on = active_sources(current_domain(), req.selected_sources)
+    _use_corpus = current_domain().uses_protocol_corpus and "protocols.io" in _sources_on
+    if set(_sources_on) != set(domain_sources(current_domain())):
+        logging.info(f"🔎 Sources limited to {sorted(_sources_on)} "
+                     f"(domain offers {domain_sources(current_domain())})")
+    if req.search_mode == "live" and _use_corpus:
         try:
             live = await loop.run_in_executor(
                 executor,
@@ -1364,7 +1386,7 @@ async def chat(req: ChatRequest):
             )
             results = local["results"]
             expanded = local["expanded"]
-    elif not current_domain().uses_protocol_corpus:
+    elif not _use_corpus:
         # The corpus is a biology corpus. A domain that does not declare it skips
         # the lane entirely and answers from its literature sources alone.
         results, expanded = [], list(search_queries or [])
@@ -1419,7 +1441,7 @@ async def chat(req: ChatRequest):
     # fetched by the registry loop below). A domain that does not declare
     # "pubmed" skips this lane entirely rather than searching a source that
     # does not cover its discipline.
-    _pubmed_lane_on = "pubmed" in (current_domain().paper_sources or ())
+    _pubmed_lane_on = "pubmed" in (current_domain().paper_sources or ()) and "pubmed" in _sources_on
     if not _pubmed_lane_on and pubmed_k > 0:
         logging.info(f"PubMed lane off: domain '{current_domain().name}' pairs "
                      f"protocols.io with {list(current_domain().paper_sources)}.")
@@ -1467,7 +1489,7 @@ async def chat(req: ChatRequest):
         # it more to choose from can only help. The lexical-blend fallback still uses
         # exactly pubmed_k (see results_by_source below).
         _pm_keep = max(pubmed_k, reranker.COMBINED_PUBMED_CANDIDATES) if _combined_on else pubmed_k
-        if not current_domain().uses_protocol_corpus:
+        if not _use_corpus:
             # No protocols to backfill with: the top 10 has to come from the
             # paper lanes alone, so keep enough to survive de-duplication.
             _pm_keep = max(_pm_keep, per_provider + pubmed_k)
@@ -1503,7 +1525,7 @@ async def chat(req: ChatRequest):
         search_mode=req.search_mode,
     )
     for name, retriever in RETRIEVERS.items():
-        if name in results_by_source or not retriever.is_enabled():
+        if name in results_by_source or name not in _sources_on or not retriever.is_enabled():
             continue
         try:
             results_by_source[name] = await loop.run_in_executor(executor, retriever.retrieve, ctx)
@@ -1590,6 +1612,7 @@ async def chat(req: ChatRequest):
         "query": query,
         "intent": "search",
         "domain": domain.name,
+        "available_sources": domain_sources(domain),
         "experiment_intent": experiment_intent,
         "experiment_profile": experiment_profile,
         "new_search": new_search,
@@ -1684,6 +1707,48 @@ BUILD_SHA = os.getenv("BUILD_SHA", "").strip()
 BUILD_DATE = os.getenv("BUILD_DATE", "").strip()
 
 
+def domain_sources(domain) -> List[str]:
+    """Every source this domain can search, protocol corpus first.
+
+    Built from the domain's own declarations rather than a hardcoded list, so a
+    domain added later offers its sources to the user without touching this file."""
+    out: List[str] = []
+    if domain.uses_protocol_corpus:
+        out.append("protocols.io")
+    out.extend(domain.paper_sources or ())
+    return out
+
+
+def active_sources(domain, selected: Optional[List[str]]) -> Set[str]:
+    """The user's chosen sources, intersected with what the domain actually has.
+
+    Absent or empty means all of them. A selection naming nothing the domain has
+    also means all: deselecting every source would otherwise return an empty
+    result set with no explanation, which is worse than ignoring the request."""
+    available = set(domain_sources(domain))
+    if not selected:
+        return available
+    chosen = {s.strip() for s in selected if isinstance(s, str) and s.strip()}
+    return (chosen & available) or available
+
+
+@lru_cache(maxsize=1)
+def get_corpus_meta() -> Dict[str, Any]:
+    """When the protocol corpus was last crawled, written by fetch_protocols.py.
+
+    Deliberately NOT the image build date: a code-only rebuild advances that
+    while the corpus is untouched, so showing it would tell a user the corpus is
+    fresher than it is. Absent on an older corpus, in which case callers show
+    nothing rather than guessing."""
+    try:
+        meta = json.loads((Path(__file__).resolve().parent.parent
+                           / "data" / "corpus_meta.json").read_text())
+        return {"crawled_at": meta.get("crawled_at") or "",
+                "newest_published_on": meta.get("newest_published_on")}
+    except Exception:  # noqa: BLE001 - freshness reporting must never break /health
+        return {"crawled_at": "", "newest_published_on": None}
+
+
 @lru_cache(maxsize=1)
 def get_build_info() -> Dict[str, Any]:
     sha, built_at, source = BUILD_SHA, BUILD_DATE, "image"
@@ -1747,6 +1812,7 @@ def health_check():
         "index_loaded": PROTOCOL_INDEX is not None,
         "protocols": len(PROTOCOL_INDEX["protocols"]) if PROTOCOL_INDEX else 0,
         "dense_index": DENSE_INDEX_CACHE.exists(),
+        **get_corpus_meta(),
     }
     status = "healthy" if (storage_ok and corpus["index_loaded"]) else "degraded"
 

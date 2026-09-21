@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import argparse
 import json
+from datetime import datetime, timezone
 import logging
 import os
 import time
@@ -1298,6 +1299,22 @@ def fetch_and_cache(
 
     # Write / overwrite the index
     index_path.write_text(json.dumps(index_entries, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    # Record when this crawl finished. The image build date is not a usable
+    # stand-in: a code-only rebuild advances it while the corpus is untouched,
+    # which would overstate freshness to the user. newest_published_on is the
+    # content-derived cross-check, so a stale crawl cannot hide behind a fresh
+    # timestamp. Read back by /health and shown in the interface.
+    published = [e.get("published_on") for e in index_entries
+                 if isinstance(e.get("published_on"), (int, float))]
+    meta_path = index_path.parent / "corpus_meta.json"
+    meta_path.write_text(json.dumps({
+        "crawled_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "protocols": len(index_entries),
+        "newest_published_on": max(published) if published else None,
+        "keywords_searched": len(keywords),
+    }, indent=2), encoding="utf-8")
+    log.info(f"Wrote {meta_path}")
     log.info(f"\nDone. {total_new} new protocols cached. Total in index: {len(index_entries)}")
     log.info(f"Index: {index_path}")
     log.info(f"Protocols dir: {output_dir}")
