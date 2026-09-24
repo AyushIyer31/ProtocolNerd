@@ -196,9 +196,10 @@ class ChatRequest(BaseModel):
     # What the client is currently showing ("query_selection" | "results" |
     # "clarification"), so a meta-question's "these/this" resolves to the right thing.
     client_view: Optional[str] = None
-    # The results currently on screen, sent back so a question about them can be
-    # answered from the protocols themselves. The service keeps no session state,
-    # so the client is the only place these still exist.
+    # Every result currently on screen, in display order, sent back so a question
+    # about one of them can be answered from its own text. The service keeps no
+    # session state, so the client is the only place these still exist. Each is
+    # reloaded in full by id before it is explained (_shown_results_full_text).
     shown_results: Optional[List[Dict[str, Any]]] = None
     # How many results to pull from EACH source (protocols.io + PubMed) before
     # blending. UI-configurable; defaults to 5 per source. (Legacy symmetric knob.)
@@ -384,6 +385,48 @@ def _dedupe_papers(items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         if keys & seen:
             continue
         seen |= keys
+        out.append(r)
+    return out
+
+
+def _shown_results_full_text(shown: Optional[List[Dict[str, Any]]]) -> List[Dict[str, Any]]:
+    """Give each result the client sent back its full text before it is explained.
+
+    The client holds only what the search returned: a 400-character excerpt of a
+    protocols.io description and a 400-character cut of a PubMed abstract. The
+    explanation prompt reads up to DESCRIPTION_CHARS, and the faithfulness it was
+    measured at (0.75 on RAGAS) came from full records cut there, so handing it
+    the excerpt would reproduce the mid-sentence cut that scored 0.55.
+
+    protocols.io results are reloaded from the corpus JSON by id, which the image
+    carries. PubMed results use the abstract the client already has. Europe PMC
+    results carry their full abstract as the description already. A result whose
+    record is missing, such as a live protocols.io hit outside the corpus, keeps
+    what the client sent. Order is preserved, since it is the order on screen.
+    """
+    from protocol_rag import _draftjs_to_text
+    out: List[Dict[str, Any]] = []
+    for r in shown or []:
+        r = dict(r)
+        source = r.get("source") or "protocols.io"
+        if source == "pubmed":
+            if r.get("abstract"):
+                r["description"] = r["abstract"]
+        elif source == "protocols.io":
+            try:
+                path = PROTOCOLS_DATA_DIR / f"{int(r.get('id'))}.json"
+            except (TypeError, ValueError):
+                path = None
+            if path is not None and path.exists():
+                try:
+                    with open(path) as f:
+                        p = json.load(f)
+                    r["description"] = (_draftjs_to_text(p.get("description"))
+                                        or r.get("description") or "")
+                    r["materials_text"] = (_draftjs_to_text(p.get("materials_text"))
+                                           or r.get("materials_text") or "")
+                except (OSError, ValueError):
+                    pass
         out.append(r)
     return out
 
@@ -916,10 +959,12 @@ async def chat(req: ChatRequest):
         )
         # answer_session_message knows how the pipeline works but not what these
         # particular protocols say, so a question about the results themselves is
-        # handed to explain_matches, which has their text.
+        # handed to explain_matches with every result on screen, each carrying its
+        # full text rather than the excerpt the search returned.
         if _explain == EXPLAIN_RESULTS_SENTINEL:
             _explain = await loop.run_in_executor(
-                executor, explain_matches, query, (req.shown_results or [])[:3]
+                executor, explain_matches, query,
+                _shown_results_full_text(req.shown_results),
             ) if req.shown_results else ""
         if _explain:
             return {

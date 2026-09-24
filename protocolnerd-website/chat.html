@@ -1597,12 +1597,14 @@
           model: selectedModel,
           blend_mix: blendMix,
           client_view: clientView,
-          // The results on screen, so a question about one of them can be answered
-          // from its own text. The service keeps no session state, so this is the
-          // only place they still exist. Trimmed to what the explanation prompt reads.
-          shown_results: lastResults.slice(0, 3).map(r => ({
-            id: r.id, title: r.title, description: r.description,
-            materials_text: r.materials_text, why: r.why_it_matches,
+          // Every result on screen, in the order shown, so a question about "the 4th
+          // one" resolves to the fourth card. The service keeps no session state, so
+          // this is the only place they still exist. The description here is only
+          // the excerpt the search returned: the service reloads protocols.io records
+          // in full by id, and reads a paper from the abstract sent alongside.
+          shown_results: lastResults.map(r => ({
+            id: r.id, source: r.source, title: r.title, description: r.description,
+            materials_text: r.materials_text, abstract: r.abstract, why: r.why_it_matches,
           })),
         }),
       });

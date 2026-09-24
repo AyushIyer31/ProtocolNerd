@@ -383,14 +383,27 @@ def _keyword_fallback(query: str) -> Dict[str, Any]:
 DESCRIPTION_CHARS = 1000
 
 
+_SOURCE_LABELS = {
+    "pubmed": "PubMed article",
+    "europepmc": "Europe PMC article",
+}
+
+
 def explain_matches(query: str, results: List[Dict[str, Any]]) -> str:
     """
-    Plain-English explanation of why the top protocols match the query.
+    Plain-English answer about the results, from their own text.
+
+    Every result passed in is shown to the model, numbered in the order given,
+    which is the order on screen, so "the 4th one" is Match #4. Each carries its
+    source, since the same list holds protocols.io protocols and papers and the
+    answer should not describe a paper as a bench protocol. The system prompt is
+    the one the paper prints and is deliberately unchanged.
     """
     protocol_summaries = ""
-    for i, result in enumerate(results[:3], 1):
+    for i, result in enumerate(results, 1):
+        source = _SOURCE_LABELS.get(result.get("source") or "", "protocols.io protocol")
         protocol_summaries += (
-            f"\nMatch #{i}: {result.get('title', '')}\n"
+            f"\nMatch #{i} ({source}): {result.get('title', '')}\n"
             f"  Description: {(result.get('description') or '')[:DESCRIPTION_CHARS]}\n"
             f"  Materials: {(result.get('materials_text') or '')[:120]}\n"
             f"  Why it ranked: {result.get('why', '')}\n"
