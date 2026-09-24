@@ -35,6 +35,7 @@ import os
 import re
 import threading
 import time
+import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -50,19 +51,35 @@ RETENTION_DAYS = int(os.getenv("QUERY_LOG_RETENTION_DAYS", "0") or 0)  # 0 = kee
 # is set, each daily file is mirrored to S3 so it survives -- that is what makes the logs
 # durable in production. Bucket unset (e.g. local dev) => S3 is a no-op, local file only.
 #
-# We re-upload the WHOLE current daily file (it's tiny KB) on a debounce, overwriting the
-# same object, rather than streaming each line: idempotent, crash-safe, and one PUT/minute
-# regardless of traffic. Worst-case loss on a hard task kill is one flush interval of records.
+# We re-upload the WHOLE current daily file (it's tiny KB), overwriting the same object,
+# rather than streaming each line: idempotent, crash-safe, and one PUT per interval
+# regardless of traffic.
+#
+# A background thread does the upload, once per S3_FLUSH_SECONDS, for any file appended
+# since its last upload. It used to happen inside the request path on a debounce, which
+# meant the only trigger was the NEXT request: the last records of a burst sat on local
+# disk until someone else searched, sometimes an hour later. Now every record is in S3
+# within one interval regardless of traffic, and the request path never waits on a PUT.
+# Worst-case loss on a hard task kill (no SIGTERM) is one interval of records.
+#
+# Each task writes its own object, query_results_DATE.WRITER.log. Tasks overlap on every
+# canary rollout (old and new run side by side through two bake windows) and all day when
+# the desired count is above one; with one shared object they overwrote each other's
+# records. The reader merges every writer's object for a date, plus the legacy unsuffixed
+# object and the local file.
 S3_BUCKET = os.getenv("QUERY_LOG_S3_BUCKET", "").strip()
 S3_PREFIX = os.getenv("QUERY_LOG_S3_PREFIX", "query_logs/").strip()
 S3_FLUSH_SECONDS = int(os.getenv("QUERY_LOG_S3_FLUSH_SECONDS", "60") or 60)
+# On ECS the container's hostname is its container id, unique per task.
+WRITER_ID = (re.sub(r"[^A-Za-z0-9-]", "", os.getenv("QUERY_LOG_S3_WRITER_ID")
+                    or os.getenv("HOSTNAME") or "")[:32] or uuid.uuid4().hex[:12])
 
 _lock = threading.Lock()
 _last_prune_day: Optional[str] = None
 _s3_client: Any = None
 _s3_broken = False
-_last_flush_ts = 0.0
-_last_flush_path: Optional[Path] = None
+_dirty: set = set()            # local files with records not yet uploaded; guarded by _lock
+_flusher_started = False
 
 
 def _s3():
@@ -81,32 +98,58 @@ def _s3():
     return _s3_client
 
 
-def _upload(path: Path) -> None:
+def _s3_key(path: Path) -> str:
+    """This task's object for a daily file: query_results_DATE.WRITER.log under the prefix."""
+    return S3_PREFIX + path.name[:-len(".log")] + f".{WRITER_ID}.log"
+
+
+def _upload_bytes(path: Path, body: bytes) -> bool:
     c = _s3()
-    if c is None or not path.exists():
-        return
+    if c is None:
+        return True                                   # S3 off or broken: nothing to retry
     try:
         # put_object (single synchronous call) rather than upload_file's threaded transfer
         # manager: the daily file is tiny, and this stays reliable inside the atexit flush,
         # where boto3's thread pool is already gone ("cannot schedule new futures").
-        c.put_object(Bucket=S3_BUCKET, Key=S3_PREFIX + path.name,
-                     Body=path.read_bytes(), ContentType="application/x-ndjson")
+        c.put_object(Bucket=S3_BUCKET, Key=_s3_key(path), Body=body,
+                     ContentType="application/x-ndjson")
+        return True
     except Exception as e:  # noqa: BLE001 — S3 must never break the request path
         log.warning(f"query_logger: S3 upload of {path.name} failed ({e}).")
+        return False
 
 
-def _maybe_flush_s3(path: Path) -> None:
-    """Debounced mirror of the current daily file to S3; finalizes the file on day rollover."""
-    global _last_flush_ts, _last_flush_path
+def _flush_dirty() -> None:
+    """Upload every file appended since its last upload. The bytes are read under the lock
+    so a record is never half-read; the PUTs happen outside it so appends never wait on
+    the network. A failed upload leaves the file dirty for the next tick."""
+    with _lock:
+        pending = [(p, p.read_bytes()) for p in _dirty if p.exists()]
+        _dirty.clear()
+    for p, body in pending:
+        if not _upload_bytes(p, body):
+            with _lock:
+                _dirty.add(p)
+
+
+def _flush_loop() -> None:
+    while True:
+        time.sleep(S3_FLUSH_SECONDS)
+        try:
+            _flush_dirty()
+        except Exception as e:  # noqa: BLE001 — the thread must outlive any one failure
+            log.warning(f"query_logger: S3 flush failed ({e}).")
+
+
+def _mark_dirty(path: Path) -> None:
+    """Called under _lock after an append. Starts the flusher thread on first use."""
+    global _flusher_started
     if not S3_BUCKET:
         return
-    now = time.time()
-    if _last_flush_path is not None and _last_flush_path != path:
-        _upload(_last_flush_path)                      # push yesterday's completed file
-        _last_flush_path, _last_flush_ts = None, 0.0
-    if _last_flush_path is None or (now - _last_flush_ts) >= S3_FLUSH_SECONDS:
-        _upload(path)
-        _last_flush_ts, _last_flush_path = now, path
+    _dirty.add(path)
+    if not _flusher_started:
+        _flusher_started = True
+        threading.Thread(target=_flush_loop, name="query-log-s3-flush", daemon=True).start()
 
 
 def _today() -> str:
@@ -181,21 +224,21 @@ def log_event(event: str, *, session_id: Optional[str], **fields: Any) -> None:
             with open(path, "a", encoding="utf-8") as fh:
                 fh.write(line + "\n")
             _prune_old_logs()
-            _maybe_flush_s3(path)
+            _mark_dirty(path)
     except Exception as e:  # noqa: BLE001 — logging must never break the request path
         log.warning(f"query_logger: failed to record '{event}' ({e})")
 
 
 @atexit.register
 def _flush_on_exit() -> None:
-    """Final S3 push on graceful shutdown so the last debounce window isn't lost."""
+    """Final S3 push on graceful shutdown so the last interval's records aren't lost."""
     if S3_BUCKET:
-        with _lock:
-            _upload(_daily_path())
+        _flush_dirty()
 
 
 # --- Read side (for the debug log viewer) ------------------------------------------
-_NAME_RE = re.compile(r"query_results_(\d{4}-\d{2}-\d{2})\.log$")
+_NAME_RE = re.compile(r"query_results_(\d{4}-\d{2}-\d{2})(?:\.[A-Za-z0-9-]+)?\.log$")
+_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 
 def _date_from_name(name: str) -> Optional[str]:
@@ -227,28 +270,39 @@ def list_dates() -> List[str]:
 
 
 def read_records(date: str) -> List[Dict[str, Any]]:
-    """Parsed JSON records for one day, in write order. Reads S3 (durable, complete across
-    restarts) when configured, else the local file. Malformed lines are skipped."""
-    if not _NAME_RE.search(f"query_results_{date}.log"):
+    """Parsed JSON records for one day, in time order, merged from every source: each
+    writer's S3 object (durable, complete across restarts), the legacy unsuffixed object,
+    and the local file, which holds this task's last interval before it is uploaded.
+    Duplicate lines collapse, so a record both uploaded and still on disk appears once.
+    Malformed lines are skipped."""
+    if not _DATE_RE.match(date):
         return []                                    # reject anything not a plain date
-    text = ""
+    texts: List[str] = []
     c = _s3()
     if c is not None:
         try:
-            obj = c.get_object(Bucket=S3_BUCKET, Key=S3_PREFIX + f"query_results_{date}.log")
-            text = obj["Body"].read().decode("utf-8")
-        except Exception:  # noqa: BLE001 — missing object is normal
-            text = ""
-    if not text:
-        path = LOG_DIR / f"query_results_{date}.log"
-        if path.exists():
-            text = path.read_text(encoding="utf-8")
-    out = []
-    for line in text.splitlines():
-        line = line.strip()
-        if line:
+            paginator = c.get_paginator("list_objects_v2")
+            for page in paginator.paginate(Bucket=S3_BUCKET, Prefix=S3_PREFIX + f"query_results_{date}"):
+                for obj in page.get("Contents", []):
+                    if _date_from_name(obj["Key"].rsplit("/", 1)[-1]) == date:
+                        body = c.get_object(Bucket=S3_BUCKET, Key=obj["Key"])["Body"].read()
+                        texts.append(body.decode("utf-8"))
+        except Exception as e:  # noqa: BLE001 — fall through to whatever is local
+            log.warning(f"query_logger: S3 read for {date} failed ({e}).")
+    path = LOG_DIR / f"query_results_{date}.log"
+    if path.exists():
+        texts.append(path.read_text(encoding="utf-8"))
+    seen: set = set()
+    out: List[Dict[str, Any]] = []
+    for text in texts:
+        for line in text.splitlines():
+            line = line.strip()
+            if not line or line in seen:
+                continue
+            seen.add(line)
             try:
                 out.append(json.loads(line))
             except json.JSONDecodeError:
                 pass
+    out.sort(key=lambda r: str(r.get("ts", "")))    # stable, so ties keep write order
     return out

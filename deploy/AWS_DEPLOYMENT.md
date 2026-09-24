@@ -112,7 +112,7 @@ Environment (task definition, plain values):
 | Variable | Purpose |
 |---|---|
 | `ENABLE_EUROPEPMC` | Kill switch for the Europe PMC lane. `1` in production; `0` forces it off everywhere. Chemistry declares the source; biology never sees it either way. |
-| `QUERY_LOGGING_ENABLED`, `QUERY_LOG_S3_BUCKET`, `QUERY_LOG_S3_PREFIX`, `QUERY_LOG_VIEWER_OPEN` | Query logging to S3 and the log viewer. |
+| `QUERY_LOGGING_ENABLED`, `QUERY_LOG_S3_BUCKET`, `QUERY_LOG_S3_PREFIX`, `QUERY_LOG_VIEWER_OPEN` | Query logging to S3 and the log viewer. Each task uploads its own object, `query_results_DATE.WRITER.log`, on a background thread every `QUERY_LOG_S3_FLUSH_SECONDS` (default 60), so records land within a minute regardless of traffic and overlapping tasks never overwrite each other. `WRITER` is the container id (`HOSTNAME`), or `QUERY_LOG_S3_WRITER_ID` if set. The viewer merges every object for a date. |
 
 Secrets (task definition `secrets`, from Secrets Manager): `ANTHROPIC_API_KEY`,
 `OPENAI_API_KEY`, `PROTOCOLS_IO_TOKEN`.
