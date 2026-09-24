@@ -15,6 +15,8 @@ compatibility shim over this module so existing imports keep working.
 from __future__ import annotations
 
 import logging
+
+import llm_trace
 import os
 import time
 from pathlib import Path
@@ -128,6 +130,9 @@ class OpenAIProvider(LLMProvider):
         for attempt in range(MAX_RETRIES):
             try:
                 resp = client.chat.completions.create(**kwargs)
+                _u = getattr(resp, "usage", None)
+                llm_trace.note_usage(getattr(_u, "prompt_tokens", None),
+                                     getattr(_u, "completion_tokens", None), attempt + 1)
                 return resp.choices[0].message.content or ""
             except Exception as e:  # noqa: BLE001
                 status = getattr(e, "status_code", None)
@@ -202,6 +207,9 @@ class ClaudeProvider(LLMProvider):
                     system=system or "You are a helpful assistant.",
                     messages=convo or [{"role": "user", "content": ""}],
                 )
+                _u = getattr(resp, "usage", None)
+                llm_trace.note_usage(getattr(_u, "input_tokens", None),
+                                     getattr(_u, "output_tokens", None), attempt + 1)
                 return "".join(b.text for b in resp.content if b.type == "text").strip()
             except Exception as e:  # noqa: BLE001
                 status = getattr(e, "status_code", None)
@@ -356,6 +364,9 @@ class OllamaProvider(LLMProvider):
         for attempt in range(MAX_RETRIES):
             try:
                 resp = client.chat.completions.create(**kwargs)
+                _u = getattr(resp, "usage", None)
+                llm_trace.note_usage(getattr(_u, "prompt_tokens", None),
+                                     getattr(_u, "completion_tokens", None), attempt + 1)
                 return resp.choices[0].message.content or ""
             except (RateLimitError, APITimeoutError, APIConnectionError) as e:
                 logging.warning(f"[Ollama attempt {attempt + 1}/{MAX_RETRIES}] {e}")
@@ -415,10 +426,12 @@ def call_llm(
 ) -> str:
     """Resolve the active provider and dispatch a chat call. "" on failure.
     `model` overrides the provider's default model for this one call."""
-    return get_provider(provider).chat(
-        messages=messages,
-        temperature=temperature,
-        top_p=top_p,
-        response_format=response_format,
-        model=model,
-    )
+    p = get_provider(provider)
+    if not llm_trace.enabled():
+        return p.chat(messages=messages, temperature=temperature, top_p=top_p,
+                      response_format=response_format, model=model)
+    with llm_trace.call(model or p.get_model(), p.name) as c:
+        out = p.chat(messages=messages, temperature=temperature, top_p=top_p,
+                     response_format=response_format, model=model)
+        c.result(out)
+    return out

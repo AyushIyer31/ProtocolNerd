@@ -196,6 +196,10 @@ class ChatRequest(BaseModel):
     # What the client is currently showing ("query_selection" | "results" |
     # "clarification"), so a meta-question's "these/this" resolves to the right thing.
     client_view: Optional[str] = None
+    # The results currently on screen, sent back so a question about them can be
+    # answered from the protocols themselves. The service keeps no session state,
+    # so the client is the only place these still exist.
+    shown_results: Optional[List[Dict[str, Any]]] = None
     # How many results to pull from EACH source (protocols.io + PubMed) before
     # blending. UI-configurable; defaults to 5 per source. (Legacy symmetric knob.)
     # Sources the user ticked in the Suggested searches card before searching.
@@ -905,11 +909,18 @@ async def chat(req: ChatRequest):
     # pipeline. No keyword gate — fully LLM-driven.
     if (has_active_experiment_context and not new_search and not req.is_clarification_answer
             and not (req.search_confirmed or req.search_all)):
-        from claude_client import answer_session_message
+        from claude_client import answer_session_message, EXPLAIN_RESULTS_SENTINEL
         _explain = await loop.run_in_executor(
             executor, answer_session_message, query,
             req.experiment_profile, req.candidate_search_queries, req.client_view,
         )
+        # answer_session_message knows how the pipeline works but not what these
+        # particular protocols say, so a question about the results themselves is
+        # handed to explain_matches, which has their text.
+        if _explain == EXPLAIN_RESULTS_SENTINEL:
+            _explain = await loop.run_in_executor(
+                executor, explain_matches, query, (req.shown_results or [])[:3]
+            ) if req.shown_results else ""
         if _explain:
             return {
                 "query": query,

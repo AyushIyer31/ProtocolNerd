@@ -373,6 +373,16 @@ def _keyword_fallback(query: str) -> Dict[str, Any]:
     }
 
 
+# How much of each protocol's description the explanation prompt is shown. At 200 the
+# cut landed mid-sentence on most records, and the model completed the thought from its
+# own knowledge, which measured as unfaithful: RAGAS faithfulness on the answer to "what
+# does the first one actually do?" rose from 0.55 to 0.75 over 30 benchmark queries when
+# this was widened, and answers scoring below 0.5 fell from 13 of 30 to 1. The median
+# description is 458 characters, so 1000 truncates few of them, and the extra input costs
+# about a tenth of a percent of a request.
+DESCRIPTION_CHARS = 1000
+
+
 def explain_matches(query: str, results: List[Dict[str, Any]]) -> str:
     """
     Plain-English explanation of why the top protocols match the query.
@@ -381,7 +391,7 @@ def explain_matches(query: str, results: List[Dict[str, Any]]) -> str:
     for i, result in enumerate(results[:3], 1):
         protocol_summaries += (
             f"\nMatch #{i}: {result.get('title', '')}\n"
-            f"  Description: {(result.get('description') or '')[:200]}\n"
+            f"  Description: {(result.get('description') or '')[:DESCRIPTION_CHARS]}\n"
             f"  Materials: {(result.get('materials_text') or '')[:120]}\n"
             f"  Why it ranked: {result.get('why', '')}\n"
         )
@@ -703,6 +713,12 @@ _VIEW_DESCRIPTIONS = {
 }
 
 
+# Returned instead of prose when the user is asking about the specific results on
+# screen rather than about how the pipeline works. The caller answers those with
+# explain_matches, which is given the protocols' own text.
+EXPLAIN_RESULTS_SENTINEL = "__EXPLAIN_RESULTS__"
+
+
 def answer_session_message(
     user_message: str,
     profile: Optional[Dict[str, Any]] = None,
@@ -733,6 +749,10 @@ def answer_session_message(
     system = (
         "You are a friendly lab protocol search assistant. The user is mid-session. RIGHT NOW they "
         f"are looking at: {view_desc}. Classify their message and respond accordingly:\n\n"
+        "0. QUESTION about the SPECIFIC results on screen: what a particular match is or does, "
+        "why that one rather than another, whether it suits their sample. Reply with exactly "
+        "__EXPLAIN_RESULTS__ and nothing else; a later step answers those from the protocols' "
+        "own text. Use this only when answering would require reading a protocol.\n"
         "1. QUESTION about how the app works or about this session — e.g. how the suggested queries "
         "are generated or ordered, how the results are ranked, why a profile field was chosen, what "
         "a field means. Answer in 2-4 sentences of plain prose (no markdown), using ONLY the facts "

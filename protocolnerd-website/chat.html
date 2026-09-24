@@ -1337,7 +1337,7 @@
     // rationale, so that is the part a scientist should weigh for themselves.
     let html = '<p class="result-caveat">Why each result matches is computed from the '
              + 'experiment profile you confirmed. The order is produced by a language '
-             + 'model and may differ from a practising scientist\'s judgment.</p>'
+             + 'model and may differ from a practicing scientist\'s judgment.</p>'
              + '<div class="results-grid" style="margin-top:12px;">';
     results.forEach((r, i) => {
       const scorePercent = Math.round((resultScore(r) / maxScore) * 100);
@@ -1573,7 +1573,11 @@
           query: payloadQuery,
           session_id: SESSION_ID,
           top_k: 5,
-          explain: true,
+          // The narrative summary renders only under IS_DEBUG, so asking for it in
+          // normal use spent ~5s and a third of a cent per search on text nobody
+          // reads. The per-result annotations users do see are computed by rule and
+          // are unaffected. The API still honours explain for callers that want it.
+          explain: IS_DEBUG,
           skip_clarification: skipThisTime,
           search_mode: selectedSearchMode,
           experiment_profile: experimentProfile,
@@ -1593,6 +1597,13 @@
           model: selectedModel,
           blend_mix: blendMix,
           client_view: clientView,
+          // The results on screen, so a question about one of them can be answered
+          // from its own text. The service keeps no session state, so this is the
+          // only place they still exist. Trimmed to what the explanation prompt reads.
+          shown_results: lastResults.slice(0, 3).map(r => ({
+            id: r.id, title: r.title, description: r.description,
+            materials_text: r.materials_text, why: r.why_it_matches,
+          })),
         }),
       });
 
