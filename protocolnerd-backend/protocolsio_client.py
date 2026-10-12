@@ -100,7 +100,12 @@ def _normalize(raw: Dict[str, Any]) -> Dict[str, Any]:
     doi = (raw.get("doi") or "").strip()
     slug = raw.get("uri") or ""
     if doi:
-        link = doi if doi.startswith("http") else f"https://{doi}"
+        if doi.startswith(("https://", "http://")):
+            link = doi
+        elif doi.startswith(("doi.org/", "dx.doi.org/")):
+            link = f"https://{doi}"
+        else:
+            link = f"https://doi.org/{doi}"
     elif raw.get("url"):
         link = raw["url"]
     elif slug:
