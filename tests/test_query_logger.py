@@ -8,14 +8,6 @@ import tempfile
 import unittest
 from pathlib import Path
 
-_TMP = tempfile.mkdtemp()
-os.environ.update({
-    "QUERY_LOG_DIR": _TMP,
-    "QUERY_LOG_S3_BUCKET": "test-bucket",
-    "QUERY_LOG_S3_PREFIX": "query_logs/",
-    "QUERY_LOG_S3_WRITER_ID": "writerA",
-    "QUERY_LOG_S3_FLUSH_SECONDS": "3600",        # the tests flush by hand
-})
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "protocolnerd-backend"))
 import query_logger as ql  # noqa: E402
 
@@ -49,15 +41,30 @@ def _line(ts, session, query):
 
 class QueryLoggerS3Test(unittest.TestCase):
     def setUp(self):
+        # The app may import query_logger before this test is collected. Set module
+        # configuration per test rather than relying on process-global import order.
+        from unittest.mock import patch
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        self.tmp = Path(tmp.name)
+        for name, value in {
+            "ENABLED": True, "LOG_DIR": self.tmp, "S3_BUCKET": "test-bucket",
+            "S3_PREFIX": "query_logs/", "WRITER_ID": "writerA",
+            "S3_FLUSH_SECONDS": 3600, "_flusher_started": True,
+        }.items():
+            patcher = patch.object(ql, name, value)
+            patcher.start()
+            self.addCleanup(patcher.stop)
+        # Prevent a background flusher from racing the manual assertions.
         self.s3 = FakeS3()
         ql._s3_client = self.s3
         ql._s3_broken = False
         with ql._lock:
             ql._dirty.clear()
-        for f in Path(_TMP).glob("*.log"):
+        for f in self.tmp.glob("*.log"):
             f.unlink()
         self.date = ql._today()
-        self.local = Path(_TMP) / f"query_results_{self.date}.log"
+        self.local = self.tmp / f"query_results_{self.date}.log"
 
     def test_record_reaches_s3_on_flush_without_another_request(self):
         ql.log_event("search", session_id="s1", original_query="drought rice")
