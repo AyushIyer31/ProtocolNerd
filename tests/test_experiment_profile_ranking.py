@@ -534,7 +534,7 @@ class ExperimentProfileRankingTest(unittest.TestCase):
         self.assertEqual(profile["target"], "transcription factors")
         self.assertEqual(profile["modification_type"], "CRISPR / genome editing")
         self.assertEqual(clarification["field"], "tissue_or_cell_type")
-        self.assertEqual(clarification["question"], "What mouse system should be modified or tested?")
+        self.assertEqual(clarification["question"], "What animal system should be modified or tested?")
         for option in ["whole animal / in vivo", "embryo", "primary cells", "cell line", "specific tissue or organ"]:
             self.assertIn(option, clarification["options"])
         self.assertNotIn("leaf tissue", clarification["options"])
