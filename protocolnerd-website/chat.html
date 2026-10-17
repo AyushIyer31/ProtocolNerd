@@ -228,6 +228,7 @@
 
     #input-row {
       display: flex;
+      align-items: center;
       gap: 10px;
       max-width: 860px;
       margin: 0 auto;
@@ -246,22 +247,24 @@
 
     #query-input:focus { border-color: #4361ee; }
 
+    /* Secondary action: the primary search is "Search selected" in the
+       candidate-query card, so this stays small and outlined. */
     #send-btn {
-      background: #4361ee;
-      color: #fff;
-      border: none;
-      border-radius: 24px;
-      padding: 12px 24px;
-      font-size: 15px;
+      background: #fff;
+      color: #4361ee;
+      border: 1.5px solid #cbd8f5;
+      border-radius: 18px;
+      padding: 8px 16px;
+      font-size: 13px;
       font-weight: 600;
       cursor: pointer;
-      transition: background 0.15s;
+      transition: background 0.15s, border-color 0.15s;
       font-family: inherit;
       white-space: nowrap;
     }
 
-    #send-btn:hover { background: #3451d1; }
-    #send-btn:disabled { background: #b0bbf0; cursor: not-allowed; }
+    #send-btn:hover { background: #eef2fd; border-color: #4361ee; }
+    #send-btn:disabled { background: #f4f6fc; color: #b0bbf0; border-color: #e2e7f5; cursor: not-allowed; }
 
     .hint {
       font-size: 12px;
@@ -421,6 +424,7 @@
     .candidate-actions {
       display: flex;
       flex-wrap: wrap;
+      align-items: center;
       gap: 8px;
       margin-bottom: 4px;
     }
@@ -437,6 +441,14 @@
       font-weight: 600;
       padding: 6px 12px;
       white-space: nowrap;
+    }
+
+    /* The primary search action: full-size pill, the scale the bottom bar's
+       button used to have. */
+    #search-selected-btn {
+      border-radius: 24px;
+      font-size: 15px;
+      padding: 12px 24px;
     }
 
     .candidate-query-btn.secondary {
