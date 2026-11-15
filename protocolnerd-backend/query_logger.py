@@ -301,7 +301,9 @@ def read_records(date: str) -> List[Dict[str, Any]]:
                 continue
             seen.add(line)
             try:
-                out.append(json.loads(line))
+                record = json.loads(line)
+                if isinstance(record, dict):
+                    out.append(record)
             except json.JSONDecodeError:
                 pass
     out.sort(key=lambda r: str(r.get("ts", "")))    # stable, so ties keep write order
