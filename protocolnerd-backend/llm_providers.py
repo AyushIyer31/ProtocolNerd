@@ -166,7 +166,7 @@ class ClaudeProvider(LLMProvider):
             if not api_key:
                 logging.warning("ANTHROPIC_API_KEY not set; Claude provider unavailable.")
                 return None
-            logging.info(f"✅ ANTHROPIC_API_KEY found: {api_key[:30]}...")
+            logging.info("Anthropic API key configured; initializing Claude client.")
             try:
                 import anthropic
             except ImportError:
