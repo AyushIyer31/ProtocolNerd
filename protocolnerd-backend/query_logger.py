@@ -285,8 +285,11 @@ def read_records(date: str) -> List[Dict[str, Any]]:
             for page in paginator.paginate(Bucket=S3_BUCKET, Prefix=S3_PREFIX + f"query_results_{date}"):
                 for obj in page.get("Contents", []):
                     if _date_from_name(obj["Key"].rsplit("/", 1)[-1]) == date:
-                        body = c.get_object(Bucket=S3_BUCKET, Key=obj["Key"])["Body"].read()
-                        texts.append(body.decode("utf-8"))
+                        try:
+                            body = c.get_object(Bucket=S3_BUCKET, Key=obj["Key"])["Body"].read()
+                            texts.append(body.decode("utf-8"))
+                        except Exception as e:  # noqa: BLE001 - one writer must not hide the others
+                            log.warning(f"query_logger: S3 object read for {date} failed ({e}).")
         except Exception as e:  # noqa: BLE001 — fall through to whatever is local
             log.warning(f"query_logger: S3 read for {date} failed ({e}).")
     path = LOG_DIR / f"query_results_{date}.log"
